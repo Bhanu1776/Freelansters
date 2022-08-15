@@ -134,3 +134,90 @@ html{
 
 
 /** ------------------------------------------------------------------------------ */
+
+
+#carasol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #333333d4;
+    border-radius: 23px;
+    z-index: 5;
+    height: 583px;
+    margin: 17px 45px;
+    /* box-shadow: 0px 0px 10px 2px #c4c8a6 */
+    box-shadow:
+      0px 0px 2.5px -5px rgba(0, 0, 0, 0.019),
+      0px 0px 5.7px -5px rgba(0, 0, 0, 0.032),
+      0px 0px 10.2px -5px rgba(0, 0, 0, 0.044),
+      0px 0px 17.3px -5px rgba(0, 0, 0, 0.058),
+      0px 0px 30.5px -5px rgba(0, 0, 0, 0.075),
+      0px 0px 83px -5px rgba(0, 0, 0, 0.11);
+}
+
+
+    
+.slider {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 23px;
+  }
+  
+  .slide {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0;
+    overflow: hidden;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+  }
+  
+  .btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 18px;
+  }
+  
+  .btn:active {
+    transform: scale(1.1);
+  }
+  
+  .btn-prev {
+    top: 45%;
+    left: 2%;
+  }
+  
+  .btn-next {
+    top: 45%;
+    right: 2%;
+  }
+
+  /* .slider {
+    display: flex;
+    width: 400vw;
+    
+  }
+  .slide{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
