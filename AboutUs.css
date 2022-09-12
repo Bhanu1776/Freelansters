@@ -1,0 +1,147 @@
+body{
+    margin: 0px;
+    padding: 50px 0px;
+    box-sizing: border-box;
+    font-family: 'Andada Pro', serif;
+}
+
+h1{
+    text-align: center;
+    color: #102770;
+    font-size:45px ;
+    font-weight: bold;
+}
+.container{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+    margin: auto;
+} 
+
+.about-card{
+    background-color: #fdefc2;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    margin: 0px 25px;
+    padding: 30px 70px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px black;
+}
+
+.img{
+    display: inline-block;
+height:130px ;
+width: 130px;
+margin-bottom: 0px;
+z-index: 1;
+position: relative;
+}
+
+.img::before{
+    content: "";
+    width:100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: #102770;
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left:0;
+    opacity: 0.2;
+    transform: scale(3);
+    transition:all 0.3s linear 0s;
+}
+
+.about-card:hover .img::before{
+    height:100%;
+
+}
+
+.img:after{
+    content: "";
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #102770;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+}
+
+.img img{
+    width:100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.8s ease 0s;
+}
+
+.about-card:hover .img img{
+    box-shadow: 0 0 0 14px white;
+    transform: scale(0.7);
+}
+
+.info{
+    margin-bottom: 30px;
+}
+
+.info h3{
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+
+}
+
+.info span{
+    display: block;
+    font-size: 15px;
+    color: #4e5052;
+}
+
+.social{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    /* text-decoration: none; */
+    background: #102770;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.about-card:hover .social{
+    bottom: 0;
+    /* height: 50px; */
+}
+
+.social li{
+    display: inline-block;    
+}
+
+.social li a{
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 17px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+}
+
+.social li a:hover{
+    color: #102770;
+    background:#fdefc2  ;
+}
+
+
+
+
+
+
+
