@@ -7,29 +7,40 @@
 }
 
 body{
+  /* background-image: url('bg.svg'); */
+  /* background-repeat:no-repeat ; */
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 1.7;
 	color: var(--primary-color);
-	background-color: #1f2029;
+	background-color: rgb(26, 26, 26);
+  
 	overflow-x: hidden;
 }
 
 
-.container{
-    display: flex;
-    /* border: 2px solid red; */
-    /* background-color: goldenrod; */
-    height: 550px;
-    margin:70px 350px;
-    width: 742px;
-
+.Glass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255 , 255 , 255 , 0.18);
+  /* background-color: #041139; */
+  height: 575px;
+  /* margin: 70px 350px; */
+  width: 395px;
+  background: rgba(255 , 255 , 255 , -0.75);
+  box-shadow: 0 8px 32px 0 rgb(3 38 135 / 37%);
+  backdrop-filter: blur(3.5px);
+  border-radius: 10px;
+  position: absolute;
+  margin: 50px 37%;
 }
-img{
+
+/* img{
     margin:15px 10px;
     height: 336px;
-}
+} */
 .left {
     /* background: white; */
     height: 350px;
@@ -55,8 +66,9 @@ img{
   
   .right{
     /* border: 2px solid blue; */
-    width: 50%;
-    
+    width: 380px;
+    margin: 50px auto;
+    /* height:800px; */
     }
 
 
@@ -146,11 +158,11 @@ h6 span{
   position: relative;
   width: 440px;
   max-width: 100%;
-  height: 430px;
+  height: 405px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   perspective: 800px;
-  margin-top: 60px;
+  margin-top: 56px;
 }
 .card-3d-wrapper {
   width: 100%;
@@ -166,7 +178,7 @@ h6 span{
   width: 100%;
   height: 100%;
   background-color: #2a2b38;
-  /* background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg'); */
+  background-image: url('https://i.pinimg.com/736x/34/72/e3/3472e3738fe0e022ab0945adab59459a.jpg');
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 300%;
@@ -328,15 +340,123 @@ h6 span{
   color: #ffeba7;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: -77px;
+}
 
-
-/* .mb-4, .my-4 {
-    margin-bottom: 0.5rem!important;
+ .mb-4, .my-4 {
+    margin-bottom: -5px!important;
 }
 
 .pt-5, .py-5 {
-    padding-top: 2rem!important;
+    padding-top: 21px!important;
 }
 .pb-5, .py-5 {
-    padding-bottom: 4rem!important;
-} */
+    padding-bottom: 23px!important;
+} 
+/* .py-5{
+padding-top: 1rem!important;} */
+
+#sbtn{
+  margin: 15px;
+}
+#wrep{
+  height:430px;
+
+}
+
+
+
+
+.shape-img1 {
+  position: absolute;
+  z-index: -1;
+  height: auto;
+  animation: 3s linear 0s infinite normal none running moveLeftBounce;
+  /* width: 79%; */
+  left: 2%;
+  top: 102%;
+}
+
+.shape-img2 {
+  position: absolute;
+  -webkit-transform: translateY(-20%) translateX(-15%);
+  transform: translateY(-20%) translateX(-15%);
+  z-index: -1;
+  -webkit-animation: animationFramesOne 20s infinite linear;
+  animation: animationFramesOne 20s infinite linear;
+  left: 40%;
+  top: 17%;
+}
+
+.shape-img3 {
+  position: absolute;
+  z-index: -1;
+  -webkit-animation: rotate3d 4s linear infinite;
+  animation: rotate3d 4s linear infinite;
+  left: 26%;
+  bottom: 107%;
+}
+.shape-img4 {
+  position: absolute;
+  z-index: -1;
+  bottom: 72%;
+  left: -3%;
+}
+.shape-img5 {
+  position: absolute;
+  z-index: -1;
+  -webkit-animation: moveLeftBounce 3s linear infinite;
+  animation: moveLeftBounce 3s linear infinite;
+  left: 28%;
+  bottom: -16%;
+}
+.shape-img6 {
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  z-index: -1;
+  -webkit-animation: rotate3d 4s linear infinite;
+  animation: rotate3d 4s linear infinite;
+  left: 0;
+  right: 0;
+  top: 111%;
+}
+.shape-img7 {
+  position: absolute;
+  z-index: -1;
+  -webkit-animation: moveBounce 5s linear infinite;
+  animation: moveBounce 5s linear infinite;
+  left: 40%;
+  bottom: 28%;
+}
+.shape-img8 {
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  z-index: -1;
+  -webkit-animation: moveLeftBounce 3s linear infinite;
+  animation: moveLeftBounce 3s linear infinite;
+  bottom: 12%;
+  right: 25%;
+}
+.shape-img9 {
+  position: absolute;
+  z-index: -1;
+  -webkit-animation: moveScale 3s linear infinite;
+  animation: moveScale 3s linear infinite;
+  right: 10%;
+  bottom: 113%;
+}
+.shape-img10 {
+  position: absolute;
+  z-index: -1;
+  -webkit-animation: moveLeftBounce 3s linear infinite;
+  animation: moveLeftBounce 3s linear infinite;
+  left: 32%;
+  bottom: 134%;
+}
