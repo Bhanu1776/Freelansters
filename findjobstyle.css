@@ -1,0 +1,187 @@
+:root{
+    --cate-text: rgb(76, 76, 244);
+    --cate-foot-text: rgba(59, 58, 58, 0.974)
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.findjobs{
+    display: flex;
+    /* border: 1px black solid; */
+}
+
+#filer-title{
+    color: rgb(112, 112, 216);
+    padding-top: 2em;
+}
+
+.filter{
+    width: 18vw;
+    height: 100vh;
+    margin: 7rem 1.5rem;
+    border: 1px black solid;
+    padding: 0rem 3rem;
+}
+
+
+.cate-jobs{
+    display: grid;
+    grid-column: auto;
+    row-gap: 0.5rem;
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+.cate-time {
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    margin-top: 2em;
+    font-size: 1.1rem;
+}
+
+.cate-time span input{
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+#cate-post-old{
+    margin-bottom: 2em;
+}
+
+.cate-budget p{
+    margin-top: 2em;
+    font-size: 1.1rem;
+}
+
+.cate-budget select{
+    margin-top: 1em;
+    font-size: 1.1rem;
+}
+
+.cate-budget input {
+    font-size: 1.1rem;
+    size: 10px;
+}
+/* .cate-budget p{
+    margin: 2px;
+} */
+
+
+
+/* DISPLAYED JOBS CARDS ON THE RIGHT OF THE PAGE  */
+.jobs{
+    display: flex;
+    width: 80vw;
+    margin: 7rem 2rem;
+    border: 1px black solid;
+}
+
+.inside-jobs{
+    display: flex; 
+    flex-wrap: wrap;
+    /* justify-content: center;
+    align-items: center; */
+    padding: 30px;
+    row-gap:20px;    
+    column-gap: 20px;
+}
+
+.inside-jobs li{
+    list-style-type: none;
+    height: 400px;
+    width: 300px;
+    background-color: rgba(254, 6, 6, 0.059);
+    text-align:center;
+    margin: 10px 3px;
+}
+
+.inside-jobs li:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.images-jobs {
+    width: inherit;
+    overflow: hidden;
+}
+
+.images-jobs img {
+    width: 100%;
+}
+.cate-content .cate-title{
+    display:flex;
+    padding: 2px;
+    color: blue;
+    background-color: white;
+    border: 1px var(--cate-text) solid;
+    box-shadow: inset 0 0 0 0 var(--cate-text);
+    border-radius: 10px;
+    transition: ease-out 0.3s;
+    outline: none;
+    margin: 5px 10px;
+}
+
+.cate-content .cate-title:hover{ 
+    color: white;
+    border-color: blue;
+    box-shadow: inset 300px 0 0 0 var(--cate-text);
+}
+
+.cate-foot{
+    color:var(--cate-foot-text);
+    font-weight: bold;
+    margin-top: 20px;
+    margin-right: 10px;
+    text-align: end;
+}
+
+
+
+
+/* ------------------------------------------------------ */
+
+/* CARSOUSEL DISPLAY OF IMAGES INSIDE CARDS */
+
+
+/* .slides-images {
+    width: 100%;
+    display: flex;
+    animation: slide 16s infinite;
+} */
+
+/* @keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    
+    25% {
+        transform: translateX(0);
+    }
+
+    30% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(-100%);
+    }
+
+    55% {
+        transform: translateX(-200%);
+    }
+
+    75% {
+        transform: translateX(-200%);
+    }
+
+    80% {
+        transform: translateX(-300%);
+    }
+
+    100% {
+        transform: translateX(-300%);
+    }
+} */
