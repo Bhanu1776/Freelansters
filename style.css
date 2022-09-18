@@ -18,6 +18,10 @@ html{
     --accent-color: #1CD6CE;                    /*#00c8aa*/
     --section-font: 'Acme', sans-serif;
     --primary-font: 'PT Serif', serif;
+    --clr-neutral-900: hsl(207, 19%, 9%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-accent-400: hsl(142, 90%, 61%);
+    --padding: 1.5rem;
 }
 
 /** ------------------------------------------------------------------------------ */
@@ -585,6 +589,180 @@ html{
 
 /** ------------------------------------------------------------------------------ */
 
+
+/** Categories */
+
+
+
+/** ------------------------------------------------------------------------------ */
+
+
+
+/** About Us */
+
+#divider2{
+  position: absolute;
+  background: #1CD6CE;
+  border-radius: 50px;
+  height: 4px;
+  width: 116px;
+  margin-left: 692px;
+  margin-top: -19px;
+}
+
+h1{
+  text-align: center;
+  color: #102770;
+  font-size:45px ;
+  font-weight: bold;
+  font-family: 'Andada Pro', serif;
+
+}
+.container{
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+  margin: auto;
+  margin-top: 1.5em;
+} 
+
+.about-card{
+  background-color: #e2dbfb;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  margin: 0px 25px;
+  padding: 30px 70px;
+  border-radius: 5px;
+  box-shadow:
+  2.9px 3.4px 3.6px rgba(0, 0, 0, 0.045),
+  7.9px 9.3px 10px rgba(0, 0, 0, 0.065),
+  19px 22.3px 24.1px rgba(0, 0, 0, 0.085),
+  63px 74px 80px rgba(0, 0, 0, 0.13);
+}
+
+.img{
+display: inline-block;
+height:130px ;
+width: 130px;
+margin-bottom: 0px;
+z-index: 1;
+position: relative;
+cursor: pointer;
+}
+
+.img::before{
+  content: "";
+  width:100%;
+  height: 0;
+  border-radius: 50%;
+  background-color: #102770;
+  position: absolute;
+  bottom: 135%;
+  right: 0;
+  left:0;
+  opacity: 0.2;
+  transform: scale(3);
+  transition:all 0.3s linear 0s;
+  cursor: pointer;
+}
+
+.about-card:hover .img::before{
+  height:100%;
+
+}
+
+.img:after{
+  content: "";
+  width:100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #102770;
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: -1;
+  cursor: pointer;
+}
+
+.img img{
+  width:100%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.8s ease 0s;
+  cursor: pointer;
+}
+
+.about-card:hover .img img{
+  box-shadow: 0 0 0 14px white;
+  transform: scale(0.7);
+  cursor: pointer;
+}
+
+.info{
+  margin-bottom: 30px;
+}
+
+.info h3{
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  font-family: 'Andada Pro', serif;
+}
+
+.info span{
+  display: block;
+  font-size: 15px;
+  color: #4e5052;
+  font-family: 'Andada Pro', serif;
+
+}
+
+.social{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  /* text-decoration: none; */
+  background: #102770;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: all 0.5s ease 0s;
+}
+
+.about-card:hover .social{
+  bottom: 0;
+  /* height: 50px; */
+}
+
+.social li{
+  display: inline-block;    
+}
+
+.social li a{
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  font-size: 17px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3 ease 0s;
+  font-family: 'Andada Pro', serif;
+
+}
+
+.social li a:hover{
+  color: #102770;
+  background:#a4d5d351  ;
+}
+
+/** ------------------------------------------------------------------------------ */
+
+
 /** Footer */
 #foot{
   position: relative;
@@ -619,6 +797,7 @@ html{
   font-family: var(--primary-font);
   top: 100px;
   left: 119px;
+  color: white;
 }
 .s-loc{
   position: absolute;
@@ -662,3 +841,4 @@ html{
   color: var(--shady-white-color);
 }
 
+/** ------------------------------------------------------------------------------ */
