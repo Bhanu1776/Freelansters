@@ -1,0 +1,259 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--shady-white-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/** Css Variables */
+:root {
+    --shady-white-color: #f5f5f5;
+    /* #fafffe*/
+    --accent-color: #1cd6ce;
+    /*#00c8aa*/
+    --section-font: "Acme", sans-serif;
+    --primary-font: "PT Serif", serif;
+}
+
+/** ------------------------------------------------------------------------------ */
+
+/** Navigation bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    height: 54px;
+}
+
+#logo {
+    /* font-family: 'cursive', 'Caveat'; */
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-left: 50px;
+    color: var(--shady-white-color);
+}
+
+#logo:hover {
+    transform: scale(1.1);
+}
+
+#navbar ul {
+    display: flex;
+    z-index: 2;
+    margin: auto;
+}
+
+#navbar ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    font-size: 1.2rem;
+    margin-right: 50px;
+}
+
+#navbar ul li a {
+    position: relative;
+    text-decoration: none;
+    font-family: "PT Serif", serif;
+    color: var(--shady-white-color);
+}
+
+.active {
+    color: #1cd6ce !important;
+}
+
+/* .active::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: black;
+} */
+
+#navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: rgb(187, 187, 187);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+#navbar ul li a:hover::after {
+    transform: scale(1);
+    transform-origin: left;
+}
+
+/** Navbar Login Button */
+#ndb {
+    margin-right: 50px;
+}
+
+#navbar button {
+    display: inline-block;
+    position: relative;
+    background: transparent;
+    text-decoration: none;
+    font-family: "PT Serif", serif;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 23px;
+    color: white;
+    border: 2px solid white;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    width: 82px;
+    height: 32px;
+    transition: all 0.35s;
+}
+
+#navbar button:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--accent-color);
+    transition: all 0.35s;
+    z-index: -1;
+}
+
+#navbar button:hover {
+    color: #fff;
+    border: 0px solid var(--accent-color);
+    transform: scale(1.05);
+}
+
+#navbar button:hover:after {
+    width: 100%;
+}
+
+/** ------------------------------------------------------------------------------ */
+
+.static {
+    /* border: 2px solid red; */
+    position: relative;
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+}
+
+.static::before {
+    content: " ";
+    position: absolute;
+    background-image: url("https://images.unsplash.com/photo-1498354178607-a79df2916198?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1888&q=80");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+.static h1 {
+    font-family: "Noto Serif Georgian", serif;
+    font-size: 4rem;
+    text-align: center;
+    color: var(--shady-white-color);
+}
+
+.static p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.4em;
+
+    text-align: center;
+    color: var(--shady-white-color);
+    /* padding: 0px 60px; */
+}
+
+.textArea {
+    /* border: 2px solid blue; */
+    position: absolute;
+    width: 60vw;
+}
+
+/** ------------------------------------------------------------------------------ */
+
+.findlan_filter{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(168, 252, 223);
+}
+
+.container_frelan{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap:wrap;
+
+
+}
+
+.freelan_list{
+    display: flex;
+    background-color:rgb(242, 195, 195);
+    border-radius: 10px;
+    width: 60vw ;
+    height: 25vh;
+    margin: 0.5em 2em;
+  
+}
+
+.freelan_list:hover{
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.freelan_list img{
+    height: inherit;
+    border-radius: 200%;
+    padding:10px;
+}
+
+.freelan_info{
+    margin: 1em
+}
+
+.freelan_name{
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.freelan_exp{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+
+.freelan_exp li{
+    background-color: rgb(164, 187, 210);
+    color: red;
+    font-size: 0.9em;
+    list-style: none;
+    border-radius: 10px ;
+    padding: 10px;
+
+}
