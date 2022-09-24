@@ -610,36 +610,32 @@ html{
   padding: 10rem 0 0;
 }
 
-.car1 {
-  color: rgb(0, 0, 0);
-}
-
 .card-1 {
-  background-image: url(img/graphic_design.png);
+  background-image: url(Img/graphic_design.png);
 }
 
 .card-2 {
-  background-image: url(img/article_writing.png);
+  background-image: url(Img/article_writing.png);
 }
 
 .card-3 {
-  background-image: url(img/video_editing.png);
+  background-image: url(Img/video_editing.png);
 }
 
 .card-4 {
-  background-image: url(img/accountant.jpg);
+  background-image: url(Img/accountant.jpg);
 }
 
 .card-5 {
-  background-image: url(img/android_developer.png);
+  background-image: url(Img/android_developer.png);
 }
 
 .card-6 {
-  background-image: url(img/data_entry.png);
+  background-image: url(Img/data_entry.png);
 }
 
 .card-7 {
-  background-image: url(img/logistics.jpg);
+  background-image: url(Img/logistics.jpg);
 }
 
 /* When the card is hovered */
@@ -693,6 +689,7 @@ html{
 .card-title {
   position: relative;
   width: max-content;
+  color: #000000;
 }
 
 /* Card title Line */
@@ -719,6 +716,7 @@ html{
   color: rgb(255, 255, 255 / 0.85);
   text-align: left;
   padding: 10px;
+  color:#000000;
 }
 
 .button {
