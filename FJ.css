@@ -26,17 +26,22 @@ html {
 #navbar {
   display: flex;
   align-items: center;
-  position: sticky;
+  position:fixed;
   top: 0px;
   z-index: 2;
   height: 54px;
+  width: 100%;
+  transition: 0.6s;
+  
 }
+
 #logo {
   /* font-family: 'cursive', 'Caveat'; */
   display: inline-block;
   font-size: 1.5rem;
   margin-left: 50px;
   color: var(--shady-white-color);
+  transition: 0.6s;
 }
 #logo:hover {
   transform: scale(1.1);
@@ -59,6 +64,7 @@ html {
   text-decoration: none;
   font-family: "PT Serif", serif;
   color: var(--shady-white-color);
+  transition: 0.6s;
 }
 .active {
   color: #1cd6ce !important;
@@ -133,20 +139,60 @@ html {
   width: 100%;
 }
 
+nav.black{
+  padding: 5px 50px;
+  background-color:  #202124;
+  height: 50px;
+}
+nav.black #logo{
+  color: #fff;}
+
+  nav.black #nav-a{
+    color: #fff;
+  }
+
+  nav.black #nav-btn,  nav.black #navbar button:focus{
+    color: #fff;
+    border: 2px solid #fff;
+  }
+
+  nav.black #navbar button:hover{
+  color:#000000;
+  border: 2px solid #000000;
+  } 
+    
+  
+
+  nav.black #nav-a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+nav.black #nav-a:hover::after{
+    transform: scale(1);
+    transform-origin: left;
+} 
+
 /** ------------------------------------------------------------------------------ */
 
-.static {
+section.static{
   /* border: 2px solid red; */
   position: relative;
-  width: 99vw;
-  height: 85vh;
+  width: 98.9vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-
   top: 0;
 }
-.static::before {
+ section.static::before {
   content: " ";
   position: absolute;
   background-image: url("https://images.unsplash.com/photo-1498354178607-a79df2916198?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1888&q=80");
@@ -157,13 +203,13 @@ html {
   width: 100%;
   z-index: -1;
   filter: brightness(50%);
-}
-.static h1 {
+} 
+section.static h1 {
   font-family: "Noto Serif Georgian", serif;
   font-size: 4rem;
   text-align: center;
   color: var(--shady-white-color);
-}
+} */
 .static p {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.4em;
@@ -171,7 +217,7 @@ html {
   text-align: center;
   color: var(--shady-white-color);
   /* padding: 0px 60px; */
-}
+ }
 .textArea {
   /* border: 2px solid blue; */
   position: absolute;

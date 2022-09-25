@@ -22,3 +22,15 @@ function reset() {
     range.textContent = 0;
 }
 
+//* Logic to implement sticky navbar
+
+$(window).on('scroll', function() {
+    if ($(window).scrollTop()) {
+        $('nav').addClass('black');
+        
+    }
+    else {
+        $('nav').removeClass('black');
+    }
+})
+
