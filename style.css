@@ -28,6 +28,10 @@ html{
 
 
 /** Navigation bar */
+/* nav{
+background-color: #fff;} */
+
+
 #navbar{
     display: flex;
     align-items: center;
@@ -35,12 +39,14 @@ html{
     top: 0px;
     z-index: 2;
     height: 54px;
+    transition: 0.6s;
 }
 #logo{
     /* font-family: 'cursive', 'Caveat'; */
     display: inline-block;
     font-size: 1.5rem;
     margin-left: 50px;
+    transition: 0.6s;
 }
 #logo:hover{
     transform: scale(1.1);
@@ -63,6 +69,7 @@ html{
     text-decoration: none;
     font-family: 'PT Serif', serif;
     color: black;
+    transition: 0.6s;
 }
 .active{
     color: #1CD6CE !important;
@@ -167,6 +174,49 @@ html{
       opacity: 0;
     }
   } */
+
+  nav.sticky{
+    padding: 5px 50px;
+    background-color: #000000;
+    height: 50px;
+  
+  }
+
+  nav.sticky #logo{
+  color: #fff;}
+
+  nav.sticky #nav-a{
+    color: #fff;
+  }
+
+  nav.sticky #nav-btn,  nav.sticky #navbar button:focus{
+    color: #fff;
+    border: 2px solid #fff;
+  }
+
+  nav.sticky #navbar button:hover{
+  color:#000000;
+  border: 5px solid #000000;
+  } 
+    
+  
+
+  nav.sticky #nav-a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+nav.sticky #nav-a:hover::after{
+    transform: scale(1);
+    transform-origin: left;
+} 
 
 /** ------------------------------------------------------------------------------ */
 
@@ -591,7 +641,7 @@ html{
 /** Categories */
 /* Cards for Landing page */
 
-/* *,
+/* 
 ::before,
 ::after {
   box-sizing: border-box;
@@ -623,7 +673,7 @@ html{
 
 .card-1 {
   background-image: url(Img/graphic_design.png);
-  filter: brightness(80%);
+  filter: brightness(50%);
 }
 
 .card-2 {
