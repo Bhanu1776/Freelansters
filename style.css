@@ -138,7 +138,7 @@ background-color: #fff;} */
   }
   #navbar button:hover{
     color: #fff;
-    border: 0px solid var(--accent-color);
+    border: 0px solid var(--accent-color) !important;
     transform: scale(1.05);
   }
   #navbar button:hover:after{
@@ -177,8 +177,9 @@ background-color: #fff;} */
 
   nav.sticky{
     padding: 5px 50px;
-    background-color: #000000;
-    height: 50px;
+    background-color:  #202124;
+    opacity: 0.95;
+    height: 60px !important;
   
   }
 
@@ -196,7 +197,7 @@ background-color: #fff;} */
 
   nav.sticky #navbar button:hover{
   color:#000000;
-  border: 5px solid #000000;
+  border: 5px solid black;
   } 
     
   
