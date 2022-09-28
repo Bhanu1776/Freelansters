@@ -132,12 +132,22 @@ html {
 }
 #navbar button:hover {
   color: #fff;
-  border: 0px solid var(--accent-color);
+  border: 0px solid var(--accent-color) !important;
   transform: scale(1.05);
 }
 #navbar button:hover:after {
   width: 100%;
 }
+
+#navbar button a{
+  text-decoration: none;
+  font-family: 'PT Serif', serif;
+font-size:14px;
+  font-weight: 500;
+cursor:pointer;
+  user-select: none;
+  color: white;
+  }
 
 nav.black{
   padding: 5px 50px;
@@ -160,6 +170,16 @@ nav.black #logo{
   color:#000000;
   border: 2px solid #000000;
   } 
+
+  nav.sticky #nav-btn-a{
+    text-decoration: none;
+    font-family: 'PT Serif', serif;
+	font-size:14px;
+    font-weight: 500;
+	cursor:pointer;
+    user-select: none;
+    color: #fff !important;
+    }
     
   
 
