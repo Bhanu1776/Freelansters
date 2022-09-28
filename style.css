@@ -144,6 +144,16 @@ background-color: #fff;} */
   #navbar button:hover:after{
     width: 100%;
   }
+
+  #navbar button a{
+    text-decoration: none;
+    font-family: 'PT Serif', serif;
+	font-size:14px;
+    font-weight: 500;
+	cursor:pointer;
+    user-select: none;
+    color: black;
+    }
   /* #navbar button::after {
     content: '';
     width: 30px; height: 30px;
@@ -200,6 +210,15 @@ background-color: #fff;} */
   border: 5px solid black;
   } 
     
+  nav.sticky #nav-btn-a{
+    text-decoration: none;
+    font-family: 'PT Serif', serif;
+	font-size:14px;
+    font-weight: 500;
+	cursor:pointer;
+    user-select: none;
+    color: #fff !important;
+    }
   
 
   nav.sticky #nav-a::after{
