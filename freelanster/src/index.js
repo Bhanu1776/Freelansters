@@ -2,16 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
+import FindJobs from './FindJobs';
+// import FindJobs from './FindJobs'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <Navbar />
-    <App />
-    <Footer />
+    {/* <Navbar /> */}
+    {/* <App /> */}
+    {/* <Footer /> */}
+
+    <FindJobs />
+
   </>
 
 );
