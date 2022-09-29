@@ -18,5 +18,6 @@ const Images = {
     bhanu: require('./bhanu.jpg'),
     harsh: require('./harsh.jpg'),
     osama: require('./osama.jpg'),
+    card1: require('./card-bg.jpg'),
 }
 export default Images;
