@@ -3,6 +3,13 @@ import './Navbar.css'
 import '../FindJobs'
 
 const Navbar = () => {
+
+
+    window.addEventListener('scroll', function () {
+        var navbar = document.querySelector('#navbar');
+        navbar.classList.toggle("sticky", window.scrollY > 0)
+    })
+
     return (
         <>
             {/* //? Navigation Bar */}
