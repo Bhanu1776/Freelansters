@@ -5,6 +5,7 @@ import App from './App';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import FindJobs from './FindJobs';
+import Login from './Login';
 // import FindJobs from './FindJobs'
 
 
@@ -15,7 +16,9 @@ root.render(
     {/* <App /> */}
     {/* <Footer /> */}
 
-    <FindJobs />
+    {/* <FindJobs /> */}
+
+    <Login />
 
   </>
 
