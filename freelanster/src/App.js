@@ -1,6 +1,8 @@
 import React from 'react'
 import './App.css'
 import Images from './Img/imgindex.js'
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 
 const svg1 = {
     position: "relative",
@@ -67,6 +69,8 @@ const App = () => {
 
     return (
         <>
+            <Navbar />
+
             {/* //? Carasol Section */}
 
             <div id="carasol">
@@ -326,6 +330,8 @@ const App = () => {
             </div>
 
             {/* //? ------------------------------------------------------------------------------ */}
+
+            <Footer />
 
         </>
     )
