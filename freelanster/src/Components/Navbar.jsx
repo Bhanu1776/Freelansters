@@ -1,6 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 import '../FindJobs'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
 
@@ -18,13 +19,14 @@ const Navbar = () => {
                     <span id="logo">Freelanster</span>
                 </div>
                 <ul>
-                    <li><a href="/" id="nav-a" className="active">Home</a></li>
-                    <li><a href="/" id="nav-a">Find Jobs</a></li>
-                    <li><a href="/" id="nav-a">Find Freelancers</a></li>
-                    <li><a href="/" id="nav-a">About US</a></li>
+                    <li><NavLink to="/Home" id="nav-a" >Home</NavLink></li>
+                    <li><NavLink to="/FindJobs" id="nav-a">Find Jobs</NavLink></li>
+                    <li><NavLink to="/FindFreelancers" id="nav-a">Find Freelancers</NavLink></li>
+                    {/* <li><NavLink to="/" id="nav-a">About US</NavLink></li> */}
+                    <li><a href="#img1" id="nav-a">About US</a></li>
                 </ul>
                 <div id="ndb">
-                    <button className="nbutton" id="nav-btn"><a href="login.html" id="nav-btn-a"> Login </a></button>
+                    <button className="nbutton" id="nav-btn"><NavLink to="Login" id="nav-btn-a"> Login </NavLink></button>
                 </div>
             </nav>
 
