@@ -100,6 +100,8 @@ h6 span {
   position: relative;
   width: 100%;
   display: block;
+  margin-bottom: 54px;
+
 }
 .full-height {
   min-height: 100vh;
@@ -299,6 +301,7 @@ h6 span {
 
 .btn {
   border-radius: 4px;
+  width: 110px;
   height: 44px;
   font-size: 13px;
   font-weight: 600;
@@ -336,6 +339,21 @@ h6 span {
   color: #ffeba7;
   box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
 }
+
+.btnLog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.btnSig{
+  margin-right: 129px;
+margin-bottom: 65px;}
+
+.forgot{
+  margin-top: auto;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -346,7 +364,7 @@ h6 span {
 
 .mb-4,
 .my-4 {
-  margin-bottom: -5px !important;
+  margin-bottom: 23px !important;
 }
 
 .pt-5,
@@ -355,8 +373,19 @@ h6 span {
 }
 .pb-5,
 .py-5 {
-  padding-bottom: 23px !important;
+  padding-bottom: 40px !important;
 }
+
+.mb-0,.my-0{
+ 
+    margin-bottom: 17px!important;
+
+}
+
+.pt-3, .py-3 {
+  padding-top: 0rem!important;
+}
+
 /* .py-5{
 padding-top: 1rem!important;} */
 
@@ -371,11 +400,12 @@ padding-top: 1rem!important;} */
   position: absolute;
   z-index: -1;
   height: auto;
-  animation: 3s linear 0s infinite normal none running moveLeftBounce;
+  animation:shape1 3s linear 0s infinite normal none running moveLeftBounce;
   /* width: 79%; */
   left: 2%;
   top: 102%;
 }
+
 
 .shape-img2 {
   position: absolute;
@@ -455,3 +485,5 @@ padding-top: 1rem!important;} */
   left: 32%;
   bottom: 134%;
 }
+
+
