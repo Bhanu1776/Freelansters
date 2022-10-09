@@ -10,6 +10,10 @@ require('./db/conn.js')
 
 // const User = require('./model/userSchema');
 
+app.use(express.json());                        // To convert the json files into objects, just to understand the javascript
+
+app.use(require('./router/auth'));
+
 const middleware = (req, res, next) => {
     console.log('Hello Im a middleware');
     next();
