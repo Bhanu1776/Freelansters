@@ -9,7 +9,9 @@ router.get('/', (req, res) => {
     res.send('Hello world from the router js');
 })
 
-router.post('/Login', async (req, res) => {
+// Singup Route
+
+router.post('/Signup', async (req, res) => {
 
     const { FullName, email, phone, password, cpassword } = req.body;
 
@@ -18,7 +20,7 @@ router.post('/Login', async (req, res) => {
     }
 
     try {
-        const userExist = await User.findOne({ email: email });
+        const userExist = await User.findOne({ email: email });                 // left one is database email and right one is input email!!
 
         if (userExist) {
             return res.status(422).json({ error: "Email already Exist" });
@@ -32,8 +34,34 @@ router.post('/Login', async (req, res) => {
     catch (err) {
         console.log(err);
     }
-
 })
+
+// Login Route
+
+router.post('/Login', async (req, res) => {
+
+    try {
+        const { email, password } = req.body;
+
+        if (!email || !password) {                                          // If both fields are empty
+            return res.status(400).json({ error: "Please Fill the Data!!" });
+        }
+
+        const userLogin = await User.findOne({ email: email });
+
+        console.log(userLogin);
+
+        if (!userLogin) {
+            res.status(400).json({ error: "User Error!" });
+        } else {
+            res.json({ message: "User SignIn Successfully " })
+        }
+    }
+    catch (err) {
+        console.log(err);
+    }
+})
+
 module.exports = router;
 
 
