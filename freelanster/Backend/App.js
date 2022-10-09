@@ -25,6 +25,9 @@ app.get('/', (req, res) => {
 app.get('/Login', (req, res) => {
     res.send('Hello world from the Login server');
 })
+app.get('/Signup', (req, res) => {
+    res.send('Hello world from the Login server');
+})
 app.get('/FindJobs', middleware, (req, res) => {
     res.send('Hello world from the FJ server');
 })
