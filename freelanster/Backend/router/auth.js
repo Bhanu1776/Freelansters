@@ -1,3 +1,4 @@
+const jwt = require('jsonwebtoken');
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
@@ -54,9 +55,17 @@ router.post('/Login', async (req, res) => {
 
         const userLogin = await User.findOne({ email: email });
 
-        const isMatch = await bcrypt.compare(password, userLogin.password);
-
         if (userLogin) {                // This condition is to check email
+
+            const isMatch = await bcrypt.compare(password, userLogin.password);
+            const token = await userLogin.generateAuthToken();
+            console.log(token);
+
+            res.cookie("jwtoken", token, {
+                expires: new Date(Date.now() + 25892000000),
+                httpOnly: true
+            })
+
             if (!isMatch) {             // And this to check password
                 res.status(400).json({ error: "Invalid Credentials" });
             } else {
