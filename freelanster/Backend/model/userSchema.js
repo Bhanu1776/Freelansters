@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+
 
 const userSchema = new mongoose.Schema({
     FullName: {
@@ -22,6 +24,14 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    tokens: [
+        {                                       // There are going to be many tokens right thats why taking an array.
+            token: {
+                type: String,
+                required: true
+            }
+        }
+    ]
 })
 
 
@@ -33,6 +43,19 @@ userSchema.pre('save', async function (next) {       // Bcoz of 'pre' method, 'n
         this.cpassword = await bcrypt.hash(this.cpassword, 12);
     }
 });
+
+//* For generating token
+userSchema.methods.generateAuthToken = async function () {
+    try {
+        let token = jwt.sign({ _id: this._id }, process.env.SECRET_KEY)
+        this.tokens = this.tokens.concat({ token: token });
+        await this.save();
+        return token;
+    }
+    catch (err) {
+        console.log(err);
+    }
+}
 
 //* Collection Creation
 const User = mongoose.model('Users', userSchema)
