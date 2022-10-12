@@ -1,4 +1,4 @@
-const jwt = require('jsonwebtoken');
+// const jwt = require('jsonwebtoken');
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
@@ -15,9 +15,9 @@ router.get('/', (req, res) => {
 
 router.post('/Signup', async (req, res) => {
 
-    const { FullName, email, phone, password, cpassword } = req.body;
+    const { name, email, phone, password, cpassword } = req.body;
 
-    if (!FullName || !email || !phone || !password || !cpassword) {             // If user doesn't fill any of the values then it will simply return error
+    if (!name || !email || !phone || !password || !cpassword) {             // If user doesn't fill any of the values then it will simply return error
         return res.status(422).json({ error: "Pls fill all the values properly!" });
     }
 
@@ -27,11 +27,12 @@ router.post('/Signup', async (req, res) => {
         if (userExist) {
             return res.status(422).json({ error: "Email already Exist" });
         }
+        // eslint-disable-next-line eqeqeq
         else if (password != cpassword) {
             return res.status(422).json({ error: "Password didn't match" });
         }
         else {
-            const user = new User({ FullName, email, phone, password, cpassword });
+            const user = new User({ name, email, phone, password, cpassword });
             // Hashing the password will occur here!
             await user.save();
             res.status(201).json({ message: "User registered successfully" })
