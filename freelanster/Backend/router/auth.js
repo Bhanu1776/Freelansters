@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 
 // SingUp Route
 
-router.post('/Signup', async (req, res) => {
+router.post('/register', async (req, res) => {
 
     const { name, email, phone, password, cpassword } = req.body;
 
