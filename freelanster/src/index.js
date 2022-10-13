@@ -5,6 +5,7 @@ import App from './App';
 import About from './Components/About';
 import Login from './Login';
 import FindJobs from './FindJobs';
+import Profile from './Components/Profile';
 // import Error from './Components/Error';
 
 
@@ -19,6 +20,7 @@ root.render(
         <Route path='/FindJobs' element={<FindJobs />}></Route>
         {/* <Route path='*' element={<Error />}></Route> */}
         <Route path='/About' element={<About />}></Route>
+        <Route path='/Profile' element={<Profile />}></Route>
       </Routes>
     </BrowserRouter>
 
