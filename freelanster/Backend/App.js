@@ -1,7 +1,7 @@
 const dotenv = require('dotenv');
-const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
+
 
 dotenv.config({ path: './config.env' });
 
@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 app.get('/Login', (req, res) => {
     res.send('Hello world from the Login server');
 })
-app.get('/Signup', (req, res) => {
+app.get('/register', (req, res) => {
     res.send('Hello world from the Login server');
 })
 app.get('/FindJobs', middleware, (req, res) => {
