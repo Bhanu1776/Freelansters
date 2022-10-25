@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import Images from './Img/imgindex.js'
 import './Login.css'
 
 
 const Login = () => {
+
+    const navigate = useNavigate();
 
     const [user, setUser] = useState({
         name: "", email: "", phone: "", password: "", cpassword: ""
@@ -70,6 +73,7 @@ const Login = () => {
             window.alert("Invalid Credentials");
         } else {
             window.alert("Login Successful");
+            navigate('/FindJobs')
         }
     }
 
