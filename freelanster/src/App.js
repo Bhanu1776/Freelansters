@@ -3,6 +3,14 @@ import './App.css'
 import Images from './Img/imgindex.js'
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
+//swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+// import required modules
+import { Pagination, Navigation } from "swiper";
 
 const svg1 = {
     position: "relative",
@@ -73,34 +81,43 @@ const App = () => {
 
             {/* //? Carasol Section */}
 
-            <div id="carasol">
-                <div className="slider">
+            <Swiper id="carasol"
+            slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper">
+                {/* <div className="slider"> */}
                     {/*  slide 1 */}
-                    <div className="slide">
+                    <SwiperSlide className="slide">
                         <img
                             src={Images.slider1} alt="Top Jobs" />
-                    </div>
+                    </SwiperSlide>
 
                     {/* slide 2 */}
-                    <div className="slide">
+                    <SwiperSlide className="slide">
                         <img src={Images.slider2} alt="Top Freelancers" />
-                    </div>
+                    </SwiperSlide>
 
                     {/* slide 3 */}
-                    <div className="slide">
+                    <SwiperSlide className="slide">
                         <img src={Images.slider3} alt="Hire Now!" />
-                    </div>
+                    </SwiperSlide>
 
                     {/* slide 4 */}
-                    <div className="slide">
-                        <img src="https://source.unsplash.com/random?landscape,city" alt="" />
-                    </div>
+                    <SwiperSlide className="slide">
+                        <img src={Images.slider1} alt="" />
+                    </SwiperSlide>
 
                     {/* Control buttons */}
-                    <button className="btn btn-next">&gt;</button>
-                    <button className="btn btn-prev">&lt;</button>
-                </div>
-            </div>
+                    {/* <button className="btn btn-next">&gt;</button>
+                    <button className="btn btn-prev">&lt;</button> */}
+                </Swiper>
+            {/* </div> */}
 
             {/* //? ------------------------------------------------------------------------------ */}
 
