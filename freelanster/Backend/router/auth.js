@@ -1,5 +1,8 @@
+// const jwt = require('jsonwebtoken');
 const express = require('express');
 const router = express.Router();
+const bcrypt = require('bcryptjs');
+const authenticate = require('../middleware/authenticate');
 
 require('../db/conn');
 const User = require('../model/userSchema');
@@ -9,13 +12,13 @@ router.get('/', (req, res) => {
     res.send('Hello world from the router js');
 })
 
-// Singup Route
+// SingUp Route
 
-router.post('/Signup', async (req, res) => {
+router.post('/register', async (req, res) => {
 
-    const { FullName, email, phone, password, cpassword } = req.body;
+    const { name, email, phone, password, cpassword } = req.body;
 
-    if (!FullName || !email || !phone || !password || !cpassword) {             // If user doesn't fill any of the values then it will simply return error
+    if (!name || !email || !phone || !password || !cpassword) {             // If user doesn't fill any of the values then it will simply return error
         return res.status(422).json({ error: "Pls fill all the values properly!" });
     }
 
@@ -25,11 +28,16 @@ router.post('/Signup', async (req, res) => {
         if (userExist) {
             return res.status(422).json({ error: "Email already Exist" });
         }
-
-        const user = new User({ FullName, email, phone, password, cpassword });
-
-        await user.save();
-        res.status(201).json({ message: "User registered successfully" })
+        // eslint-disable-next-line eqeqeq
+        else if (password != cpassword) {
+            return res.status(422).json({ error: "Password didn't match" });
+        }
+        else {
+            const user = new User({ name, email, phone, password, cpassword });
+            // Hashing the password will occur here!
+            await user.save();
+            res.status(201).json({ message: "User registered successfully" })
+        }
     }
     catch (err) {
         console.log(err);
@@ -49,17 +57,39 @@ router.post('/Login', async (req, res) => {
 
         const userLogin = await User.findOne({ email: email });
 
-        console.log(userLogin);
+        if (userLogin) {                // This condition is to check email
 
-        if (!userLogin) {
-            res.status(400).json({ error: "User Error!" });
-        } else {
-            res.json({ message: "User SignIn Successfully " })
+            const isMatch = await bcrypt.compare(password, userLogin.password);
+            const token = await userLogin.generateAuthToken();
+            console.log(token);
+
+            res.cookie("jwtoken", token, {
+                expires: new Date(Date.now() + 25892000000),
+                httpOnly: true
+            })
+
+            if (!isMatch) {             // And this to check password
+                res.status(400).json({ error: "Invalid Credentials" });
+            } else {
+                res.json({ message: "User SignIn Successfully " })
+            }
         }
+        else {
+            res.status(400).json({ error: "Invalid Credentials" });
+        }
+
+
     }
     catch (err) {
         console.log(err);
     }
+});
+
+
+//* AboutUs Page
+router.get('/About', authenticate, (req, res) => {
+    console.log("Hello Im About");
+    res.send(req.rootUser);
 })
 
 module.exports = router;

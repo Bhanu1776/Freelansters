@@ -1,7 +1,7 @@
 const dotenv = require('dotenv');
-const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
+
 
 dotenv.config({ path: './config.env' });
 
@@ -14,10 +14,7 @@ app.use(express.json());                        // To convert the json files int
 
 app.use(require('./router/auth'));
 
-const middleware = (req, res, next) => {
-    console.log('Hello Im a middleware');
-    next();
-}
+
 
 app.get('/', (req, res) => {
     res.send('Hello world from the server');
@@ -25,15 +22,19 @@ app.get('/', (req, res) => {
 app.get('/Login', (req, res) => {
     res.send('Hello world from the Login server');
 })
-app.get('/Signup', (req, res) => {
+app.get('/register', (req, res) => {
     res.send('Hello world from the Login server');
 })
-app.get('/FindJobs', middleware, (req, res) => {
+app.get('/FindJobs', (req, res) => {
     res.send('Hello world from the FJ server');
 })
 app.get('/FindFreelancer', (req, res) => {
     res.send('Hello world from the FF server');
 })
+// app.get('/About', (req, res) => {
+//     console.log("Hello Im About");
+//     res.send('Hello About world from the server')
+// })
 
 
 app.listen(PORT, () => {
