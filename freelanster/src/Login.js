@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Images from './Img/imgindex.js'
 import './Login.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
@@ -70,9 +72,15 @@ const Login = () => {
         const data = res.json();
 
         if (res.status === 400 || !data) {
-            window.alert("Invalid Credentials");
+            toast.error("Invalid Credentials",{
+                position: "bottom-left",
+                theme: "colored"
+            });
         } else {
-            window.alert("Login Successful");
+            toast.success("Login Successful",{
+                position: "bottom-left",
+                theme: "colored"
+            });
             navigate('/FindJobs')
         }
     }
@@ -174,6 +182,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </>
     )
 }
