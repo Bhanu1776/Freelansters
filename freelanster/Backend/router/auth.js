@@ -63,7 +63,7 @@ router.post('/Login', async (req, res) => {
             const token = await userLogin.generateAuthToken();
             console.log(token);
 
-            res.cookie("jwtoken", token, {
+            res.cookie("jwtoken1", token, {
                 expires: new Date(Date.now() + 25892000000),
                 httpOnly: true
             })
@@ -89,6 +89,12 @@ router.post('/Login', async (req, res) => {
 //* AboutUs Page
 router.get('/About', authenticate, (req, res) => {
     console.log("Hello Im About");
+    res.send(req.rootUser);
+})
+
+//* FindJobs Page
+router.get('/Findjobs', authenticate, (req, res) => {
+    console.log("Hello Im FJ");
     res.send(req.rootUser);
 })
 
