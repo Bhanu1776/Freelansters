@@ -1,19 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Navbar.css'
 import '../FindJobs'
 import { NavLink } from 'react-router-dom'
 
+
 const Navbar = () => {
 
+    const [scrollTop, setScrollTop] = useState(0);
+
+    const onScroll = () => {
+        const winScroll = document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 99.9;
+        setScrollTop(scrolled)}
+        useEffect(() => {
+            window.addEventListener("scroll", onScroll)
+            return() => window.removeEventListener("scroll",onScroll)
+        }, []);
+    
 
     window.addEventListener('scroll', function () {
         var navbar = document.querySelector('#navbar');
         navbar.classList.toggle("sticky", window.scrollY > 0)
-    })
+    });
 
     return (
         <>
             {/* //? Navigation Bar */}
+            <div className='progressbar'>
+                <div className='progressbarIn' style={{width: `${scrollTop}%`}}></div>
+            </div>
             <nav id="navbar">
                 <div className="d-logo">
                     <span id="logo">Freelanster</span>
