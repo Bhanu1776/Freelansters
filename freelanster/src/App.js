@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import './App.css'
 import Images from './Img/imgindex.js'
 import Navbar from './Components/Navbar';
@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 // import required modules
-import { Pagination, Navigation } from "swiper";
+import { Parallax, Autoplay, Pagination, Navigation } from "swiper";
 
 const svg1 = {
     position: "relative",
@@ -80,43 +80,86 @@ const App = () => {
             <Navbar />
 
             {/* //? Carasol Section */}
-
-            <Swiper id="carasol"
-            slidesPerView={1}
-        spaceBetween={30}
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper">
-                {/* <div className="slider"> */}
+            <div className='Carcontainer'>
+                <Swiper spaceBetween={30}
+                    centeredSlides={true}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    parallax={true}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Parallax, Autoplay, Pagination, Navigation]}
+                    className="mySwiper">
+                    {/* <div className="slider"> */}
                     {/*  slide 1 */}
                     <SwiperSlide className="slide">
-                        <img
-                            src={Images.slider1} alt="Top Jobs" />
+
+                        <div
+                            slot="container-start"
+                            className="parallax-bg"
+
+                            data-swiper-parallax="-23%"
+                        > <img
+                                src={Images.slider1} alt="Top Jobs" /></div>
+                        <div className="title" data-swiper-parallax="-300">
+                            Slide 1
+                        </div>
                     </SwiperSlide>
 
                     {/* slide 2 */}
                     <SwiperSlide className="slide">
-                        <img src={Images.slider2} alt="Top Freelancers" />
+                        {/* <img src={Images.slider2} alt="Top Freelancers" /> */}
+                        <div
+                            slot="container-start"
+                            className="parallax-bg"
+
+                            data-swiper-parallax="-23%"
+                        > <img
+                                src={Images.slider2} alt="Top Jobs" /></div>
+                        <div className="title" data-swiper-parallax="-300">
+                            Slide 2
+                        </div>
                     </SwiperSlide>
 
                     {/* slide 3 */}
                     <SwiperSlide className="slide">
-                        <img src={Images.slider3} alt="Hire Now!" />
+                        {/* <img src={Images.slider3} alt="Hire Now!" /> */}
+                        <div
+                            slot="container-start"
+                            className="parallax-bg"
+
+                            data-swiper-parallax="-23%"
+                        > <img
+                                src={Images.slider3} alt="Top Jobs" /></div>
+                        <div className="title" data-swiper-parallax="-300">
+                            Slide 3
+                        </div>
                     </SwiperSlide>
 
                     {/* slide 4 */}
                     <SwiperSlide className="slide">
-                        <img src={Images.slider1} alt="" />
+                        {/* <img src={Images.slider1} alt="" /> */}
+                        <div
+                            slot="container-start"
+                            className="parallax-bg"
+
+                            data-swiper-parallax="-23%"
+                        > <img
+                                src={Images.slider1} alt="Top Jobs" /></div>
+                        <div className="title" data-swiper-parallax="-300">
+                            Slide 4
+                        </div>
                     </SwiperSlide>
 
                     {/* Control buttons */}
                     {/* <button className="btn btn-next">&gt;</button>
                     <button className="btn btn-prev">&lt;</button> */}
                 </Swiper>
+            </div>
             {/* </div> */}
 
             {/* //? ------------------------------------------------------------------------------ */}
