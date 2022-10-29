@@ -17,9 +17,18 @@
   line-height: 1.7;
   color: var(--primary-color);
   background-color: rgba(0, 0, 0,.9);
-position: relative;
-z-index: 0;
-  /* overflow-x: hidden; */
+  position: relative;
+  z-index: 0;
+    /* overflow-x: hidden; */
+}
+
+#l:hover {
+  cursor: pointer;
+  color: rgb(232, 236, 235);
+}
+#r:hover {
+  cursor: pointer;
+  color: rgb(232, 236, 235);
 }
 
 .Glass {
@@ -106,7 +115,6 @@ h6 span {
   width: 100%;
   display: block;
   margin-bottom: 54px;
-
 }
 .full-height {
   min-height: 100vh;
@@ -352,11 +360,12 @@ h6 span {
   margin-top: 40px;
 }
 
-.btnSig{
+.btnSig {
   margin-right: 129px;
-margin-bottom: 65px;}
+  margin-bottom: 65px;
+}
 
-.forgot{
+.forgot {
   margin-top: auto;
 }
 .row {
@@ -381,14 +390,14 @@ margin-bottom: 65px;}
   padding-bottom: 40px !important;
 }
 
-.mb-0,.my-0{
- 
-    margin-bottom: 17px!important;
-
+.mb-0,
+.my-0 {
+  margin-bottom: 17px !important;
 }
 
-.pt-3, .py-3 {
-  padding-top: 0rem!important;
+.pt-3,
+.py-3 {
+  padding-top: 0rem !important;
 }
 
 /* .py-5{
@@ -405,12 +414,11 @@ padding-top: 1rem!important;} */
   position: absolute;
   z-index: -1;
   height: auto;
-  animation:shape1 3s linear 0s infinite normal none running moveLeftBounce;
+  animation: shape1 3s linear 0s infinite normal none running moveLeftBounce;
   /* width: 79%; */
   left: 2%;
   top: 60%;
 }
-
 
 .shape-img2 {
   position: absolute;
@@ -498,15 +506,4 @@ padding-top: 1rem!important;} */
   animation: moveLeftBounce 3s linear infinite;
   left: 16%;
   bottom: 50%;
-}
-
-
-.section1::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.section1 {
--ms-overflow-style: none;  /* IE and Edge */
-scrollbar-width: none;  /* Firefox */
 }

@@ -1,11 +1,16 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import Images from './Img/imgindex.js'
 import './Login.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import styled from 'styled-components';
 
 
 
 const Login = () => {
+
+    const navigate = useNavigate();
 
     const [user, setUser] = useState({
         name: "", email: "", phone: "", password: "", cpassword: ""
@@ -69,9 +74,30 @@ const Login = () => {
         const data = res.json();
 
         if (res.status === 400 || !data) {
-            window.alert("Invalid Credentials");
+            toast.error("Invalid Credentials", {
+                position: "bottom-left",
+                theme: "colored"
+            });
         } else {
-            window.alert("Login Successful");
+            toast.success("Login Successful", {
+                position: "bottom-left",
+                theme: "colored"
+            });
+            navigate('/FindJobs')
+        }
+    }
+
+    const rotateL = () => {
+        var checkBox = document.getElementById("reg-log");
+        if (checkBox.checked === true) {
+            document.getElementById("reg-log").checked = false;
+        }
+    }
+
+    const rotateR = () => {
+        var checkBox = document.getElementById("reg-log");
+        if (checkBox.checked === false) {
+            document.getElementById("reg-log").checked = true;
         }
     }
 
@@ -103,7 +129,7 @@ const Login = () => {
                         <div className="col-12 text-center align-self-center py-5">
                             <div className="section pb-5 pt-5 pt-sm-2 text-center">
                                 <div className="section pb-5 pt-5 text-center">
-                                    <h6 className="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+                                    <h6 className="mb-0 pb-3"><span id='l' onClick={rotateL}>Log In </span><span id='r' onClick={rotateR}>Sign Up</span></h6>
                                     <input className="checkbox" type="checkbox" id="reg-log" name="reg-log" />
                                     <label htmlFor="reg-log"></label>
 
@@ -165,8 +191,10 @@ const Login = () => {
                                                                 <input type="password" name="cpassword" className="form-style"
                                                                     placeholder="Confirm Password" id="logpass" autoComplete="off" value={user.cpassword} onChange={handleInputs} />
                                                                 <i className="input-icon uil uil-lock-access"></i>
+                                                                <div className='btnSig'>
+                                                                    <input type="submit" value='Submit' className="btn mt-4" onClick={PostData} id="sbtn"></input>
+                                                                </div>
                                                             </div>
-                                                            <div className='btnSig'><a href="/" className="btn mt-4" id="sbtn" onClick={PostData}>submit</a></div>
                                                         </form>
                                                     </div>
                                                 </div>
@@ -179,6 +207,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer />
             </Body>
             </>
         
