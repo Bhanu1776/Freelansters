@@ -3,13 +3,13 @@ import './App.css'
 import Images from './Img/imgindex.js'
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
+import About from './Components/About';
+import styled,{ThemeProvider} from "styled-components";
 //swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-// import required modules
 import { Parallax, Autoplay, Pagination, Navigation } from "swiper";
 
 const svg1 = {
@@ -26,52 +26,12 @@ const App = () => {
 
     //* Logic for implementing the navbar
 
-    window.addEventListener('scroll', function () {
-        var navbar = document.querySelector('#navbar');
-        navbar.classList.toggle("sticky", window.scrollY > 0)
-    })
+    // window.addEventListener('scroll', function () {
+    //     var navbar = document.querySelector('#navbar');
+    //     navbar.classList.toggle("sticky", window.scrollY > 0)
+    // })
 
-    // //* Logic for implementing carasol
-    // const slides = document.querySelectorAll(".slide");
-
-    // slides.forEach((slide, indx) => {
-    //     slide.style.transform = `translateX(${indx * 100}%)`;
-    // });
-
-
-    // const nextSlide = document.querySelector(".btn-next");
-
-    // let curSlide = 0;
-    // let maxSlide = slides.length - 1;
-
-    // nextSlide.addEventListener("click", function () {
-
-    //     if (curSlide === maxSlide) {
-    //         curSlide = 0;
-    //     } else {
-    //         curSlide++;
-    //     }
-
-    //     slides.forEach((slide, indx) => {
-    //         slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-    //     });
-    // });
-
-    // const prevSlide = document.querySelector(".btn-prev");
-
-    // prevSlide.addEventListener("click", function () {
-
-    //     if (curSlide === 0) {
-    //         curSlide = maxSlide;
-    //     } else {
-    //         curSlide--;
-    //     }
-
-    //     slides.forEach((slide, indx) => {
-    //         slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-    //     });
-    // });
-
+    
     //* ------------------------------------------------------------------------------
 
 
@@ -97,11 +57,9 @@ const App = () => {
                     {/* <div className="slider"> */}
                     {/*  slide 1 */}
                     <SwiperSlide className="slide">
-
                         <div
                             slot="container-start"
                             className="parallax-bg"
-
                             data-swiper-parallax="-23%"
                         > <img
                                 src={Images.slider1} alt="Top Jobs" /></div>
@@ -112,11 +70,9 @@ const App = () => {
 
                     {/* slide 2 */}
                     <SwiperSlide className="slide">
-                        {/* <img src={Images.slider2} alt="Top Freelancers" /> */}
                         <div
                             slot="container-start"
                             className="parallax-bg"
-
                             data-swiper-parallax="-23%"
                         > <img
                                 src={Images.slider2} alt="Top Jobs" /></div>
@@ -127,11 +83,9 @@ const App = () => {
 
                     {/* slide 3 */}
                     <SwiperSlide className="slide">
-                        {/* <img src={Images.slider3} alt="Hire Now!" /> */}
                         <div
                             slot="container-start"
                             className="parallax-bg"
-
                             data-swiper-parallax="-23%"
                         > <img
                                 src={Images.slider3} alt="Top Jobs" /></div>
@@ -142,11 +96,9 @@ const App = () => {
 
                     {/* slide 4 */}
                     <SwiperSlide className="slide">
-                        {/* <img src={Images.slider1} alt="" /> */}
                         <div
                             slot="container-start"
                             className="parallax-bg"
-
                             data-swiper-parallax="-23%"
                         > <img
                                 src={Images.slider1} alt="Top Jobs" /></div>
@@ -154,10 +106,6 @@ const App = () => {
                             Slide 4
                         </div>
                     </SwiperSlide>
-
-                    {/* Control buttons */}
-                    {/* <button className="btn btn-next">&gt;</button>
-                    <button className="btn btn-prev">&lt;</button> */}
                 </Swiper>
             </div>
             {/* </div> */}
@@ -330,65 +278,9 @@ const App = () => {
 
             {/* //? ------------------------------------------------------------------------------ */}
 
-
             {/* //? About Us */}
-
-            <div className="Features">
-                <p id="s-specialty"> Our Team </p>
-            </div>
-
-            <div id="divider3"></div>
-            <div className="container">
-                <div className="about-card">
-                    <div className="img">
-                        <img src={Images.harsh} alt="" />
-                    </div>
-                    <div className="info">
-                        <h3>Harsh Dalvi</h3>
-                        <span>Piroo Developur</span>
-                    </div>
-                    <ul className="social">
-                        <li><a href="/" className="fab fa-facebook"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-twitter"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-instagram"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-linkedin"><span></span></a> </li>
-                    </ul>
-                </div>
-
-
-                <div className="about-card">
-                    <div className="img">
-                        <img src={Images.bhanu} alt="" />
-                    </div>
-                    <div className="info">
-                        <h3>Bhanu Sunka</h3>
-                        <span>SaxX Developur</span>
-                    </div>
-                    <ul className="social">
-                        <li><a href="/" className="fab fa-facebook"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-twitter"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-instagram"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-linkedin"><span></span></a> </li>
-                    </ul>
-                </div>
-
-                <div className="about-card">
-                    <div className="img">
-                        <img src={Images.osama} alt="" />
-                    </div>
-                    <div className="info">
-                        <h3>Osama Shaikh</h3>
-                        <span>Developur Ssrly??</span>
-                    </div>
-                    <ul className="social">
-                        <li><a href="/" className="fab fa-facebook"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-twitter"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-instagram"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-linkedin"><span></span></a> </li>
-                    </ul>
-                </div>
-            </div>
-
+            <About/>
+        
             {/* //? ------------------------------------------------------------------------------ */}
 
             <Footer />
