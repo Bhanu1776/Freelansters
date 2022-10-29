@@ -6,17 +6,20 @@
   --main-color: #102770;
 }
 
-body {
-  /* background-image: url('bg.svg'); */
-  /* background-repeat:no-repeat ; */
+.section1{
+ 
+  height: inherit;
+  width: inherit;
+  overflow-y: hidden;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 1.7;
   color: var(--primary-color);
-  background-color: rgb(26, 26, 26);
-
-  overflow-x: hidden;
+  background-color: rgba(0, 0, 0,.9);
+position: relative;
+z-index: 0;
+  /* overflow-x: hidden; */
 }
 
 .Glass {
@@ -64,9 +67,11 @@ body {
 }
 
 .right {
+
   /* border: 2px solid blue; */
   width: 380px;
   margin: 50px auto;
+  /* z-index: 4; */
   /* height:800px; */
 }
 
@@ -403,7 +408,7 @@ padding-top: 1rem!important;} */
   animation:shape1 3s linear 0s infinite normal none running moveLeftBounce;
   /* width: 79%; */
   left: 2%;
-  top: 102%;
+  top: 60%;
 }
 
 
@@ -424,7 +429,7 @@ padding-top: 1rem!important;} */
   -webkit-animation: rotate3d 4s linear infinite;
   animation: rotate3d 4s linear infinite;
   left: 26%;
-  bottom: 107%;
+  bottom: 95%;
 }
 .shape-img4 {
   position: absolute;
@@ -437,8 +442,8 @@ padding-top: 1rem!important;} */
   z-index: -1;
   -webkit-animation: moveLeftBounce 3s linear infinite;
   animation: moveLeftBounce 3s linear infinite;
-  left: 28%;
-  bottom: -16%;
+  left: 85%;
+  top: 67%;
 }
 .shape-img6 {
   position: absolute;
@@ -447,9 +452,9 @@ padding-top: 1rem!important;} */
   z-index: -1;
   -webkit-animation: rotate3d 4s linear infinite;
   animation: rotate3d 4s linear infinite;
-  left: 0;
-  right: 0;
-  top: 111%;
+  left: 80%;
+  /* right: 10%; */
+  top: 35%;
 }
 .shape-img7 {
   position: absolute;
@@ -457,7 +462,7 @@ padding-top: 1rem!important;} */
   -webkit-animation: moveBounce 5s linear infinite;
   animation: moveBounce 5s linear infinite;
   left: 40%;
-  bottom: 28%;
+  bottom: 33%;
 }
 .shape-img8 {
   position: absolute;
@@ -466,7 +471,7 @@ padding-top: 1rem!important;} */
   z-index: -1;
   -webkit-animation: moveLeftBounce 3s linear infinite;
   animation: moveLeftBounce 3s linear infinite;
-  bottom: 12%;
+  bottom: 75%;
   right: 25%;
 }
 .shape-img9 {
@@ -483,7 +488,25 @@ padding-top: 1rem!important;} */
   -webkit-animation: moveLeftBounce 3s linear infinite;
   animation: moveLeftBounce 3s linear infinite;
   left: 32%;
-  bottom: 134%;
+  bottom: 35%;
+}
+
+.shape-img11{
+  position: absolute;
+  z-index: -1;
+  -webkit-animation: moveLeftBounce 3s linear infinite;
+  animation: moveLeftBounce 3s linear infinite;
+  left: 16%;
+  bottom: 50%;
 }
 
 
+.section1::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.section1 {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
