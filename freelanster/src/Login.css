@@ -20,9 +20,11 @@ body {
 }
 
 #l:hover {
+  cursor: pointer;
   color: rgb(232, 236, 235);
 }
 #r:hover {
+  cursor: pointer;
   color: rgb(232, 236, 235);
 }
 
