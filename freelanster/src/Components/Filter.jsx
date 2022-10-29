@@ -51,7 +51,7 @@ const range = document.querySelector('#num');
   return (
     <>
       <article>
-        <div className="findjobs">
+              <div className="findjobs">
             <div className="filter">
                 <h1 id="filer-title"> Filter by: </h1> <br />
                 <div id="divider-h"></div>
