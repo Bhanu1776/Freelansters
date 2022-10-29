@@ -19,6 +19,13 @@ body {
   overflow-x: hidden;
 }
 
+#l:hover {
+  color: rgb(232, 236, 235);
+}
+#r:hover {
+  color: rgb(232, 236, 235);
+}
+
 .Glass {
   display: flex;
   justify-content: center;
@@ -101,7 +108,6 @@ h6 span {
   width: 100%;
   display: block;
   margin-bottom: 54px;
-
 }
 .full-height {
   min-height: 100vh;
@@ -347,11 +353,12 @@ h6 span {
   margin-top: 40px;
 }
 
-.btnSig{
+.btnSig {
   margin-right: 129px;
-margin-bottom: 65px;}
+  margin-bottom: 65px;
+}
 
-.forgot{
+.forgot {
   margin-top: auto;
 }
 .row {
@@ -376,14 +383,14 @@ margin-bottom: 65px;}
   padding-bottom: 40px !important;
 }
 
-.mb-0,.my-0{
- 
-    margin-bottom: 17px!important;
-
+.mb-0,
+.my-0 {
+  margin-bottom: 17px !important;
 }
 
-.pt-3, .py-3 {
-  padding-top: 0rem!important;
+.pt-3,
+.py-3 {
+  padding-top: 0rem !important;
 }
 
 /* .py-5{
@@ -400,12 +407,11 @@ padding-top: 1rem!important;} */
   position: absolute;
   z-index: -1;
   height: auto;
-  animation:shape1 3s linear 0s infinite normal none running moveLeftBounce;
+  animation: shape1 3s linear 0s infinite normal none running moveLeftBounce;
   /* width: 79%; */
   left: 2%;
   top: 102%;
 }
-
 
 .shape-img2 {
   position: absolute;
@@ -485,5 +491,3 @@ padding-top: 1rem!important;} */
   left: 32%;
   bottom: 134%;
 }
-
-
