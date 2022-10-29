@@ -85,6 +85,20 @@ const Login = () => {
         }
     }
 
+    const rotateL = () => {
+        var checkBox = document.getElementById("reg-log");
+        if (checkBox.checked === true) {
+            document.getElementById("reg-log").checked = false;
+        }
+    }
+
+    const rotateR = () => {
+        var checkBox = document.getElementById("reg-log");
+        if (checkBox.checked === false) {
+            document.getElementById("reg-log").checked = true;
+        }
+    }
+
     return (
         <>
             <div className="section">
@@ -106,7 +120,7 @@ const Login = () => {
                         <div className="col-12 text-center align-self-center py-5">
                             <div className="section pb-5 pt-5 pt-sm-2 text-center">
                                 <div className="section pb-5 pt-5 text-center">
-                                    <h6 className="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+                                    <h6 className="mb-0 pb-3"><span id='l' onClick={rotateL}>Log In </span><span id='r' onClick={rotateR}>Sign Up</span></h6>
                                     <input className="checkbox" type="checkbox" id="reg-log" name="reg-log" />
                                     <label htmlFor="reg-log"></label>
 
