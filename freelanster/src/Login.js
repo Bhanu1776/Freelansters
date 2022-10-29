@@ -4,17 +4,9 @@ import Images from './Img/imgindex.js'
 import './Login.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useFormik } from "formik";
-import { signUpSchema } from './schemas/index.jsx';
 
-const initialValues = {
-    name: "", email: "", phone: "", password: "", cpassword: ""
-}
 
 const Login = () => {
-
-
-    //* Signup Form Validation
 
     const navigate = useNavigate();
 
@@ -25,25 +17,12 @@ const Login = () => {
     let name, value;
 
     const handleInputs = (e) => {
+        console.log(e);
         name = e.target.name;
         value = e.target.value;
 
         setUser({ ...user, [name]: value });
     }
-
-    const { values, errors, handleBlur, handleChange, handleSubmit } = useFormik({
-        initialValues: initialValues,
-        validationSchema: signUpSchema,
-        onSubmit: (values, e) => {
-            e.preventDefault();
-            console.log("🚀 ~ file: Login.js ~ line 32 ~ Login ~ values", values);
-
-        }
-    })
-    console.log("🚀 ~ file: Login.js ~ line 43 ~ Login ~ errors", errors)
-
-
-    //* Signup Authentication
 
     const PostData = async (e) => {
         e.preventDefault();
@@ -71,9 +50,6 @@ const Login = () => {
             console.log('Registration successful');
         }
     }
-
-
-    //* Login Authentication
 
     const [logemail, setlogEmail] = useState('');
     const [logpass, setlogPass] = useState('');
@@ -167,34 +143,34 @@ const Login = () => {
                                                 <div className="center-wrap">
                                                     <div className="section text-center">
                                                         <h4 className="mb-3 pb-6" id="signup">Sign Up</h4>
-                                                        <form method='POST' onSubmit={handleSubmit}>
+                                                        <form method='POST'>
                                                             <div className="form-group my-2">
                                                                 <input type="text" name="name" className="form-style"
-                                                                    placeholder="Your Full Name" id="logname" autoComplete="off" value={values.name} onChange={handleChange} onBlur={handleBlur} />
+                                                                    placeholder="Your Full Name" id="logname" autoComplete="off" value={user.name} onChange={handleInputs} />
                                                                 <i className="input-icon uil uil-user"></i>
                                                             </div>
                                                             <div className="form-group mt-2">
                                                                 <input type="email" name="email" className="form-style"
-                                                                    placeholder="Your Email" id="logemail" autoComplete="off" value={values.email} onChange={handleChange} onBlur={handleBlur} />
+                                                                    placeholder="Your Email" id="logemail" autoComplete="off" value={user.email} onChange={handleInputs} />
                                                                 <i className="input-icon uil uil-at"></i>
                                                             </div>
                                                             <div className="form-group mt-2">
                                                                 <input type="number" name="phone" className="form-style"
-                                                                    placeholder="Your Number" id="lognumber" autoComplete="off" value={values.phone} onChange={handleChange} onBlur={handleBlur} />
+                                                                    placeholder="Your Number" id="lognumber" autoComplete="off" value={user.phone} onChange={handleInputs} />
                                                                 <i className="input-icon uil uil-phone"></i>
                                                             </div>
                                                             <div className="form-group mt-2">
                                                                 <input type="password" name="password" className="form-style"
-                                                                    placeholder="Your Password" id="logpass" autoComplete="off" value={values.password} onChange={handleChange} onBlur={handleBlur} />
+                                                                    placeholder="Your Password" id="logpass" autoComplete="off" value={user.password} onChange={handleInputs} />
                                                                 <i className="input-icon uil uil-lock-alt"></i>
                                                             </div>
                                                             <div className="form-group mt-2">
                                                                 <input type="password" name="cpassword" className="form-style"
-                                                                    placeholder="Confirm Password" id="logpass" autoComplete="off" value={values.cpassword} onChange={handleChange} onBlur={handleBlur} />
+                                                                    placeholder="Confirm Password" id="logpass" autoComplete="off" value={user.cpassword} onChange={handleInputs} />
                                                                 <i className="input-icon uil uil-lock-access"></i>
-                                                            </div>
-                                                            <div className='btnSig'>
-                                                                <input type="submit" value='Submit' className="btn mt-4" onClick={PostData} id="sbtn"></input>
+                                                                <div className='btnSig'>
+                                                                    <input type="submit" value='Submit' className="btn mt-4" onClick={PostData} id="sbtn"></input>
+                                                                </div>
                                                             </div>
                                                         </form>
                                                     </div>
