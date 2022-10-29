@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation } from "swiper";
+import GoToTop from './Components/GoToTop';
 
 const svg1 = {
     position: "relative",
@@ -82,41 +83,41 @@ const App = () => {
             {/* //? Carasol Section */}
 
             <Swiper id="carasol"
-            slidesPerView={1}
-        spaceBetween={30}
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper">
+                slidesPerView={1}
+                spaceBetween={30}
+                loop={true}
+                pagination={{
+                    clickable: true,
+                }}
+                navigation={true}
+                modules={[Pagination, Navigation]}
+                className="mySwiper">
                 {/* <div className="slider"> */}
-                    {/*  slide 1 */}
-                    <SwiperSlide className="slide">
-                        <img
-                            src={Images.slider1} alt="Top Jobs" />
-                    </SwiperSlide>
+                {/*  slide 1 */}
+                <SwiperSlide className="slide">
+                    <img
+                        src={Images.slider1} alt="Top Jobs" />
+                </SwiperSlide>
 
-                    {/* slide 2 */}
-                    <SwiperSlide className="slide">
-                        <img src={Images.slider2} alt="Top Freelancers" />
-                    </SwiperSlide>
+                {/* slide 2 */}
+                <SwiperSlide className="slide">
+                    <img src={Images.slider2} alt="Top Freelancers" />
+                </SwiperSlide>
 
-                    {/* slide 3 */}
-                    <SwiperSlide className="slide">
-                        <img src={Images.slider3} alt="Hire Now!" />
-                    </SwiperSlide>
+                {/* slide 3 */}
+                <SwiperSlide className="slide">
+                    <img src={Images.slider3} alt="Hire Now!" />
+                </SwiperSlide>
 
-                    {/* slide 4 */}
-                    <SwiperSlide className="slide">
-                        <img src={Images.slider1} alt="" />
-                    </SwiperSlide>
+                {/* slide 4 */}
+                <SwiperSlide className="slide">
+                    <img src={Images.slider1} alt="" />
+                </SwiperSlide>
 
-                    {/* Control buttons */}
-                    {/* <button className="btn btn-next">&gt;</button>
+                {/* Control buttons */}
+                {/* <button className="btn btn-next">&gt;</button>
                     <button className="btn btn-prev">&lt;</button> */}
-                </Swiper>
+            </Swiper>
             {/* </div> */}
 
             {/* //? ------------------------------------------------------------------------------ */}
@@ -348,6 +349,7 @@ const App = () => {
 
             {/* //? ------------------------------------------------------------------------------ */}
 
+            < GoToTop />
             <Footer />
 
         </>
