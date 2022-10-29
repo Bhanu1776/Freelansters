@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './Navbar.css'
+import styled from 'styled-components';
 import '../FindJobs'
 import { NavLink } from 'react-router-dom'
 
@@ -27,6 +27,7 @@ const Navbar = () => {
     return (
         <>
             {/* //? Navigation Bar */}
+           {/* <Wrapper> */}
             <div className='progressbar'>
                 <div className='progressbarIn' style={{width: `${scrollTop}%`}}></div>
             </div>
@@ -45,7 +46,7 @@ const Navbar = () => {
                     <button className="nbutton" id="nav-btn"><NavLink to="Login" id="nav-btn-a"> Login </NavLink></button>
                 </div>
             </nav>
-
+            {/* </Wrapper> */}
             {/* //? ------------------------------------------------------------------------------ */}
 
         </>
