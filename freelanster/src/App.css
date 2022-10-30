@@ -24,7 +24,9 @@ html {
 }
 
 /* swiper */
-#app { height: 100% }
+#app {
+  height: 100%;
+}
 /* html,
 body {
   position: relative;
@@ -40,7 +42,7 @@ body {
   margin: 0;
   padding: 0;
 } */
-.Carcontainer{
+.Carcontainer {
   position: relative;
   width: 98.9vw;
   height: 100vh;
@@ -48,6 +50,7 @@ body {
   justify-content: center;
   align-items: center;
   top: 0;
+  color: rgba(255, 255, 255, 0.398);
   /* z-index: -1; */
 }
 .swiper {
@@ -109,8 +112,6 @@ body {
   font-size: 41px;
   font-weight: bolder;
 }
-
-
 
 /** ------------------------------------------------------------------------------ */
 
