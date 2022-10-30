@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+import styled, {ThemeProvider} from "styled-components";
 import { FaArrowUp } from "react-icons/fa";
 
 const GoToTop = () => {
@@ -25,8 +25,18 @@ const GoToTop = () => {
     window.addEventListener("scroll", listenToScroll);
     return () => window.removeEventListener("scroll", listenToScroll);
   }, []);
-
+  const theme = {
+    colors:{
+      btn: "#00c8aa",
+      shadow: "2.9px 3.4px 3.6px rgba(0, 0, 0, 0.045),7.9px 9.3px 10px rgba(0, 0, 0, 0.065),19px 22.3px 24.1px rgba(0, 0, 0, 0.085), 63px 74px 80px rgba(0, 0, 0, 0.13);",
+    },
+    media:{
+      mobile:"768px", tab:"998px",
+    }
+  };
   return (
+    <ThemeProvider theme = {theme}>
+    <>
     <Wrapper>
        {isVisible && (
         <div className="top-btn" onClick={goToBtn}>
@@ -34,6 +44,8 @@ const GoToTop = () => {
         </div>
        )}
     </Wrapper>
+    </>
+    </ThemeProvider>
   );
 };
 
@@ -45,15 +57,15 @@ const Wrapper = styled.section`
 
   .top-btn {
     font-size: 2.4rem;
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
     color: #fff;
     background-color: ${({ theme }) => theme.colors.btn};
     box-shadow: ${({ theme }) => theme.colors.shadow};
     border-radius: 50%;
     position: fixed;
-    bottom: 5rem;
-    right: 5rem;
+    bottom: 4rem;
+    right: 4rem;
     z-index: 999;
     display: flex;
     justify-content: center;
