@@ -28,7 +28,7 @@ const GoToTop = () => {
   const theme = {
     colors:{
       btn: "#00c8aa",
-      shadow: "2.9px 3.4px 3.6px rgba(0, 0, 0, 0.045),7.9px 9.3px 10px rgba(0, 0, 0, 0.065),19px 22.3px 24.1px rgba(0, 0, 0, 0.085), 63px 74px 80px rgba(0, 0, 0, 0.13);",
+      shadow: "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;",
     },
     media:{
       mobile:"768px", tab:"998px",
@@ -57,20 +57,25 @@ const Wrapper = styled.section`
 
   .top-btn {
     font-size: 2.4rem;
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
     color: #fff;
     background-color: ${({ theme }) => theme.colors.btn};
     box-shadow: ${({ theme }) => theme.colors.shadow};
     border-radius: 50%;
     position: fixed;
-    bottom: 4rem;
-    right: 4rem;
+    bottom: 3rem;
+    right: 3rem;
     z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    .top-btn--icon{
+      height: 25px;
+   
+    }
 
     &--icon {
       animation: gototop 1.2s linear infinite alternate-reverse;
@@ -81,7 +86,7 @@ const Wrapper = styled.section`
         transform: translateY(-0.5rem);
       }
       100% {
-        transform: translateY(1rem);
+        transform: translateY(0.5rem);
       }
     }
   }
