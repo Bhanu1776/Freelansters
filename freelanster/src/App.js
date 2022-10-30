@@ -2,7 +2,9 @@ import React from 'react'
 import './App.css'
 import Images from './Img/imgindex.js'
 import Navbar from './Components/Navbar';
+import CateCards from './Components/CateCards';
 import Footer from './Components/Footer';
+
 //swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -11,6 +13,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation } from "swiper";
+
 
 const svg1 = {
     position: "relative",
@@ -72,8 +75,7 @@ const App = () => {
     //     });
     // });
 
-    //* ------------------------------------------------------------------------------
-
+    // * ------------------------------------------------------------------------------
 
     return (
         <>
@@ -150,7 +152,7 @@ const App = () => {
 
 
             {/* //? Categories */}
-            <div className="Features">
+            {/* <div className="Features">
                 <p id="s-specialty"> Job Categories </p>
             </div>
 
@@ -236,7 +238,15 @@ const App = () => {
                         </div>
                     </label>
                 </div>
-            </div>
+            </div> */}
+
+
+{/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */}
+
+
+            <div id="divider2"></div>
+
+            <CateCards/>
             {/* <!-- Temp Div --> */}
             <div style={{ height: "100px" }}> </div>
 

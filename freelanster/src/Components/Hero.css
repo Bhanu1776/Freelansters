@@ -9,6 +9,7 @@ section.static {
   align-items: center;
   top: 0;
 }
+
 section.static::before {
   content: " ";
   position: absolute;
@@ -21,12 +22,14 @@ section.static::before {
   z-index: -1;
   filter: brightness(50%);
 }
+
 section.static h1 {
   font-family: "Noto Serif Georgian", serif;
   font-size: 4rem;
   text-align: center;
   color: var(--shady-white-color);
 }
+
 .static p {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.4em;
@@ -34,6 +37,7 @@ section.static h1 {
   text-align: center;
   color: var(--shady-white-color);
 }
+
 .textArea {
   position: absolute;
   width: 60vw;
