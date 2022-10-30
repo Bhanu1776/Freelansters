@@ -8,8 +8,8 @@
 
 .section1{
  
-  height: inherit;
-  width: inherit;
+  /* height: inherit;
+  width: inherit; */
   overflow-y: hidden;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -19,7 +19,7 @@
   background-color: rgba(0, 0, 0,.9);
   position: relative;
   z-index: 0;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 #l:hover {
@@ -36,10 +36,8 @@
   justify-content: center;
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  /* background-color: #041139; */
-  height: 575px;
-  /* margin: 70px 350px; */
-  width: 395px;
+  height: 572px;
+  width: 401px;
   background: rgba(255, 255, 255, -0.75);
   box-shadow: 0 8px 32px 0 rgb(3 38 135 / 37%);
   backdrop-filter: blur(3.5px);
@@ -213,7 +211,7 @@ h6 span {
   position: absolute;
   width: 100%;
   padding: 0 35px;
-  top: 50%;
+  top: 58%;
   left: 0;
   transform: translate3d(0, -50%, 35px) perspective(100px);
   z-index: 20;
@@ -357,7 +355,7 @@ h6 span {
 }
 
 .btnSig {
-  margin-right: 129px;
+  margin-right: 3px;
   margin-bottom: 65px;
 }
 
@@ -369,7 +367,8 @@ h6 span {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
-  margin-top: -77px;
+  margin-top: -84px;
+  margin-bottom: -25px;
 }
 
 .mb-4,
@@ -379,11 +378,11 @@ h6 span {
 
 .pt-5,
 .py-5 {
-  padding-top: 21px !important;
+  padding-top: 30px !important;
 }
 .pb-5,
 .py-5 {
-  padding-bottom: 40px !important;
+  padding-bottom: 1px !important;
 }
 
 .mb-0,
@@ -416,6 +415,18 @@ padding-top: 1rem!important;} */
   top: 60%;
 }
 
+@keyframes shape1{
+  0%{
+    transform:translateX(0px) ;
+  }
+  50%{
+    transform: translateX(60px);
+  }
+  100%{
+    transform:translateX(0px) ;
+  }
+}
+
 .shape-img2 {
   position: absolute;
   -webkit-transform: translateY(-20%) translateX(-15%);
@@ -423,24 +434,36 @@ padding-top: 1rem!important;} */
   z-index: -1;
   -webkit-animation: animationFramesOne 20s infinite linear;
   animation: animationFramesOne 20s infinite linear;
-  left: 40%;
-  top: 17%;
+  left: 95%;
+  top: 9%;
 }
 
-.shape-img3 {
+@keyframes shape1{
+  0%{
+    transform:rotate(0deg) ;
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform:rotate(0deg) ;
+  }
+}
+
+/* .shape-img3 {
   position: absolute;
   z-index: -1;
   -webkit-animation: rotate3d 4s linear infinite;
   animation: rotate3d 4s linear infinite;
   left: 26%;
   bottom: 95%;
-}
-.shape-img4 {
+} */
+/* .shape-img4 {
   position: absolute;
   z-index: -1;
   bottom: 72%;
   left: -3%;
-}
+} */
 .shape-img5 {
   position: absolute;
   z-index: -1;
@@ -449,7 +472,7 @@ padding-top: 1rem!important;} */
   left: 85%;
   top: 67%;
 }
-.shape-img6 {
+/* .shape-img6 {
   position: absolute;
   text-align: center;
   margin: 0 auto;
@@ -457,16 +480,15 @@ padding-top: 1rem!important;} */
   -webkit-animation: rotate3d 4s linear infinite;
   animation: rotate3d 4s linear infinite;
   left: 80%;
-  /* right: 10%; */
   top: 35%;
-}
+} */
 .shape-img7 {
   position: absolute;
   z-index: -1;
   -webkit-animation: moveBounce 5s linear infinite;
   animation: moveBounce 5s linear infinite;
-  left: 40%;
-  bottom: 33%;
+  left: 10%;
+  top: 10%;
 }
 .shape-img8 {
   position: absolute;
@@ -486,14 +508,14 @@ padding-top: 1rem!important;} */
   right: 10%;
   bottom: 113%;
 }
-.shape-img10 {
+/* .shape-img10 {
   position: absolute;
   z-index: -1;
   -webkit-animation: moveLeftBounce 3s linear infinite;
   animation: moveLeftBounce 3s linear infinite;
   left: 32%;
   bottom: 35%;
-}
+} */
 
 .shape-img11{
   position: absolute;
@@ -502,4 +524,21 @@ padding-top: 1rem!important;} */
   animation: moveLeftBounce 3s linear infinite;
   left: 16%;
   bottom: 50%;
+}
+
+.shape-img12 {
+  position: absolute;
+  z-index: -1;
+  -webkit-animation: moveBounce 5s linear infinite;
+  animation: moveBounce 5s linear infinite;
+  left: 90%;
+  top: 90%;
+}
+.shape-img13 {
+  position: absolute;
+  z-index: -1;
+  -webkit-animation: moveBounce 5s linear infinite;
+  animation: moveBounce 5s linear infinite;
+  left: 30%;
+  top: 10%;
 }
