@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import '../FindJobs'
 import { NavLink } from 'react-router-dom'
 

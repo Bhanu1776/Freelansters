@@ -7,7 +7,7 @@ import App from './App';
 // import About from './Components/About';
 import Login from './Login';
 import FindJobs from './FindJobs';
-import Profile from './Components/Profile';
+// import Profile from './Components/Profile';
 import Logout from './Components/Logout';
 // import Error from './Components/Error';
 
@@ -15,7 +15,7 @@ import Logout from './Components/Logout';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-  <GlobalStyle/>
+    <GlobalStyle />
     <BrowserRouter>
       <Routes>
         <Route exact path='/' element={<App />}></Route>
