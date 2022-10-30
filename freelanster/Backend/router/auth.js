@@ -98,6 +98,13 @@ router.get('/Findjobs', authenticate, (req, res) => {
     res.send(req.rootUser);
 })
 
+//* LogOut Page
+router.get('/Logout', (req, res) => {
+    console.log("Byee Loging Out");
+    res.clearCookie('jwtoken1', { path: '/' })
+    res.status(200).send('User Logout');
+});
+
 module.exports = router;
 
 
