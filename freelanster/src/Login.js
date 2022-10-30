@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import Images from './Img/imgindex.js'
+// import Images from './Img/imgindex.js'
 import './Login.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 
 
@@ -209,7 +209,7 @@ const Login = () => {
             </div>
             <ToastContainer />
             
-            </>
+        </>
         
     )
 }

@@ -1,10 +1,10 @@
-import React, { useRef, useState } from 'react'
+// import React, { useRef, useState } from 'react'
 import './App.css'
 import Images from './Img/imgindex.js'
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import About from './Components/About';
-import styled,{ThemeProvider} from "styled-components";
+// import styled,{ThemeProvider} from "styled-components";
 //swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -280,7 +280,7 @@ const App = () => {
             {/* //? ------------------------------------------------------------------------------ */}
 
             {/* //? About Us */}
-            <About/>
+            <About />
         
             {/* //? ------------------------------------------------------------------------------ */}
 
