@@ -4,6 +4,8 @@ import Images from './Img/imgindex.js'
 import './Login.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import styled from 'styled-components';
+
 
 
 const Login = () => {
@@ -99,20 +101,27 @@ const Login = () => {
         }
     }
 
+    /*----------------------------------------------------CSS-------------------------------------------------------- */
+    // const Body = styled.body`
+    //     overflow: hidden;
+        
+    // `
+
     return (
         <>
-            <div className="section">
-                <div className="shape-img1"><img src={Images.shape1} alt="s" /></div>
+        
+            <div className="section1">
+                {/* <div className="shape-img1"><img src={Images.shape1} alt="s" /></div>
                 <div className="shape-img2"><img src={Images.shape2} alt="s" /></div>
-                <div className="shape-img3"><img src={Images.shape3} alt="s" /></div>
-                <div className="shape-img4"><img src={Images.shape4} alt="s" /></div>
-                <div className="shape-img5"><img src={Images.shape5} alt="s" /></div>
-                <div className="shape-img6"><img src={Images.shape6} alt="s" /></div>
-                <div className="shape-img7"><img src={Images.shape7} alt="s" /></div>
-                <div className="shape-img8"><img src={Images.shape8} alt="s" /></div>
-                <div className="shape-img9"><img src={Images.shape9} alt="s" /></div>
-                <div className="shape-img10"><img src={Images.shape10} alt="s" /></div>
-                <div className="shape-img11"><img src={Images.shape11} alt="s" /></div>
+                {/* <div className="shape-img3"><img src={Images.shape3} alt="s" /></div> */}
+                {/* <div className="shape-img4"><img src={Images.shape4} alt="s" /></div>
+                <div className="shape-img5"><img src={Images.shape5} alt="s" /></div> */}
+                {/* <div className="shape-img6"><img src={Images.shape6} alt="s" /></div> */}
+                {/* <div className="shape-img7"><img src={Images.shape7} alt="s" /></div> */}
+                {/* <div className="shape-img8"><img src={Images.shape8} alt="s" /></div> */}
+                {/* <div className="shape-img9"><img src={Images.shape9} alt="s" /></div> */}
+                {/* <div className="shape-img10"><img src={Images.shape10} alt="s" /></div> */}
+                {/* <div className="shape-img11"><img src={Images.shape11} alt="s" /></div> */} 
                 <div className="Glass"></div>
 
                 <div className="right">
@@ -199,7 +208,9 @@ const Login = () => {
                 </div>
             </div>
             <ToastContainer />
-        </>
+            
+            </>
+        
     )
 }
 

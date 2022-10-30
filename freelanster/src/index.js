@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "swiper/css/bundle";
+import { GlobalStyle } from './Styles/GlobalStyle';
 import App from './App';
 // import About from './Components/About';
 import Login from './Login';
@@ -14,6 +15,7 @@ import Logout from './Components/Logout';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
+  <GlobalStyle/>
     <BrowserRouter>
       <Routes>
         <Route exact path='/' element={<App />}></Route>
@@ -22,7 +24,7 @@ root.render(
         <Route path='/FindJobs' element={<FindJobs />}></Route>
         {/* <Route path='*' element={<Error />}></Route> */}
         {/* <Route path='/About' element={<About />}></Route> */}
-        <Route path='/Profile' element={<Profile />}></Route>
+        {/* <Route path='/Profile' element={<Profile />}></Route> */}
         <Route path='/Logout' element={<Logout />}></Route>
       </Routes>
     </BrowserRouter>

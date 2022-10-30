@@ -1,5 +1,5 @@
 /** CSS Reset */
-* {
+/* * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -9,7 +9,7 @@ body {
 }
 html {
   scroll-behavior: smooth;
-}
+} */
 
 /** Css Variables */
 :root {
@@ -23,13 +23,13 @@ html {
   --padding: 1.5rem;
 }
 
-/** ------------------------------------------------------------------------------ */
 /* swiper */
 #app { height: 100% }
-html,
+/* html,
 body {
   position: relative;
   height: 100%;
+  
 }
 
 body {
@@ -39,14 +39,29 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
+} */
+.Carcontainer{
+  position: relative;
+  width: 98.9vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  /* z-index: -1; */
 }
-
 .swiper {
+  /* position: absolute;
+  z-index: -1; */
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
 }
 
 .swiper-slide {
+  position: absolute;
+  z-index: -1;
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -78,75 +93,24 @@ body {
   margin-right: auto;
 }
 
-/** -------------------------------------------------------------------------------*/
-/* #carasol {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  background-color: #333333d4;
-  border-radius: 23px;
-  box-shadow: 0px 0px 2.5px -5px rgba(0, 0, 0, 0.019),
-    0px 0px 5.7px -5px rgba(0, 0, 0, 0.032),
-    0px 0px 10.2px -5px rgba(0, 0, 0, 0.044),
-    0px 0px 17.3px -5px rgba(0, 0, 0, 0.058),
-    0px 0px 30.5px -5px rgba(0, 0, 0, 0.075),
-    0px 0px 83px -5px rgba(0, 0, 0, 0.11);
-  height: 583px;
-  margin: 17px 45px;
-}
-
-.slider {
-  position: relative;
-  overflow: hidden;
-  border-radius: 23px;
-  height: 100%;
-  max-width: 100%;
-  width: 100%;
-}
-
-.slide {
+.parallax-bg {
   position: absolute;
-  transition: all 0;
-  overflow: hidden;
-  max-width: 100%;
+  left: 0;
+  top: 0;
+  width: 130%;
   height: 100%;
-  width: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
 }
 
-.slide img {
-  object-fit: cover;
-  opacity: 0.7;
-  width: 100%;
-  height: 100%;
+.swiper-slide .title {
+  margin-right: 70%;
+  font-size: 41px;
+  font-weight: bolder;
 }
 
-.btn {
-  position: absolute;
-  background-color: #fff;
-  border: none;
-  border-radius: 50%;
-  z-index: 10px;
-  cursor: pointer;
-  font-size: 18px;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-}
 
-.btn:active {
-  transform: scale(1.1);
-}
-
-.btn-prev {
-  top: 45%;
-  left: 2%;
-}
-
-.btn-next {
-  top: 45%;
-  right: 2%;
-} */
 
 /** ------------------------------------------------------------------------------ */
 
@@ -718,160 +682,6 @@ input[type="radio"] {
   animation: moveLeftBounce 3s linear infinite;
   bottom: 94%;
   right: 41%;
-}
-
-/** ------------------------------------------------------------------------------ */
-
-/** About Us */
-#divider3 {
-  position: absolute;
-  background: #1cd6ce;
-  border-radius: 50px;
-  height: 4px;
-  width: 116px;
-  margin-left: 692px;
-  margin-top: -19px;
-}
-
-h1 {
-  text-align: center;
-  color: var(--accent-color);
-  font-size: 45px;
-  font-weight: bold;
-  font-family: "Andada Pro", serif;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  margin-top: 1.5em;
-}
-
-.about-card {
-  background-color: var(--shady-white-color);
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-  border-radius: 5px;
-  /* box-shadow: 5px 5px 15px black; */
-  box-shadow: 2.9px 3.4px 3.6px rgba(0, 0, 0, 0.045),
-    7.9px 9.3px 10px rgba(0, 0, 0, 0.065),
-    19px 22.3px 24.1px rgba(0, 0, 0, 0.085), 63px 74px 80px rgba(0, 0, 0, 0.13);
-  margin: 0px 25px;
-  padding: 45px 70px;
-}
-
-.img {
-  display: inline-block;
-  z-index: 1;
-  position: relative;
-  cursor: pointer;
-  margin-bottom: 0px;
-  width: 130px;
-  height: 130px;
-}
-
-.img::before {
-  content: "";
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  position: absolute;
-  opacity: 0.2;
-  transform: scale(3);
-  transition: all 0.3s linear 0s;
-  cursor: pointer;
-  bottom: 135%;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-}
-
-.about-card:hover .img::before {
-  height: 100%;
-}
-
-.img:after {
-  content: "";
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.img img {
-  border-radius: 50%;
-  transform: scale(1);
-  transition: all 0.8s ease 0s;
-  width: 100%;
-  height: auto;
-  cursor: pointer;
-}
-
-.about-card:hover .img img {
-  box-shadow: 0 0 0 14px white;
-  transform: scale(0.7);
-  cursor: pointer;
-}
-
-.info {
-  margin-bottom: 30px;
-}
-
-.info h3 {
-  font-family: "Andada Pro", serif;
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 5px;
-}
-
-.info span {
-  font-family: "Andada Pro", serif;
-  display: block;
-  font-size: 15px;
-  color: #4e5052;
-}
-
-.social {
-  background: var(--accent-color);
-  position: absolute;
-  bottom: -100px;
-  left: 0;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  transition: all 0.5s ease 0s;
-}
-
-.about-card:hover .social {
-  bottom: 0;
-}
-
-.social li {
-  display: inline-block;
-}
-
-.social li a {
-  text-decoration: none;
-  display: block;
-  font-size: 17px;
-  color: #fff;
-  cursor: pointer;
-  padding: 10px;
-  transition: all 0.3 ease 0s;
-}
-
-.social li a:hover {
-  color: var(--accent-color);
-  background: var(--shady-white-color);
 }
 
 /** ------------------------------------------------------------------------------ */

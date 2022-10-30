@@ -1,20 +1,60 @@
-/** ------------------------------------------------------------------------------ */
+import {createGlobalStyle} from "styled-components";
 
-/** Navigation bar */
+export const GlobalStyle = createGlobalStyle`
 
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--shady-white-color);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --shady-white-color: #f5f5f5; /* #fafffe*/
+  --accent-color: #1cd6ce; /*#00c8aa*/
+  --section-font: "Acme", sans-serif;
+  --primary-font: "PT Serif", serif;
+  --clr-neutral-900: hsl(207, 19%, 9%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-accent-400: hsl(142, 90%, 61%);
+  --padding: 1.5rem;
+}
+
+/*--------------------------------------------CSS FOR NAVBAR-------------------------------------------------------------------- */
+.progressbar{
+  background: #000;
+  height:5px;
+  position: sticky;
+  top:0;
+  left:0;
+  z-index: 4;
+  width: 100%;
+}
+
+.progressbarIn{
+ height:5px;
+ background: #00c8aa;
+ /* width: 15%; */
+}
 #navbar {
   display: flex;
   align-items: center;
-  position: sticky;
+  position: fixed;
   z-index: 2;
   transition: 0.6s;
   height: 54px;
+  width: 100%;
   top: 0px;
 }
 
 #logo {
-  /* font-family: "cursive", "Caveat"; */
   font-family: "PT Serif", "Caveat";
+  /* position:relative; */
   display: inline-block;
   font-size: 1.5rem;
   margin-left: 50px;
@@ -179,4 +219,7 @@ nav.sticky #nav-a:hover::after {
   transform-origin: left;
 }
 
-/** ------------------------------------------------------------------------------ */
+
+
+
+`
