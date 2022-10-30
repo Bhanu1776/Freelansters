@@ -1,7 +1,9 @@
 import './App.css'
 import Images from './Img/imgindex.js'
 import Navbar from './Components/Navbar';
+import CateCards from './Components/CateCards';
 import Footer from './Components/Footer';
+
 import About from './Components/About';
 // import styled,{ThemeProvider} from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,6 +13,7 @@ import "swiper/css/navigation";
 import { Parallax, Autoplay, Pagination, Navigation } from "swiper";
 import GoToTop from './Components/GoToTop';
 import { useState, useEffect } from 'react';
+
 
 const svg1 = {
     position: "relative",
@@ -167,7 +170,7 @@ const App = () => {
 
 
             {/* //? Categories */}
-            <div className="Features">
+            {/* <div className="Features">
                 <p id="s-specialty"> Job Categories </p>
             </div>
 
@@ -253,7 +256,15 @@ const App = () => {
                         </div>
                     </label>
                 </div>
-            </div>
+            </div> */}
+
+
+{/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */}
+
+
+            <div id="divider2"></div>
+
+            <CateCards/>
             {/* <!-- Temp Div --> */}
             <div style={{ height: "100px" }}> </div>
 
