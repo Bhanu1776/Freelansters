@@ -1,17 +1,16 @@
-// import React, { useRef, useState } from 'react'
 import './App.css'
 import Images from './Img/imgindex.js'
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import About from './Components/About';
 // import styled,{ThemeProvider} from "styled-components";
-//swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Parallax, Autoplay, Pagination, Navigation } from "swiper";
 import GoToTop from './Components/GoToTop';
+import { useState, useEffect } from 'react';
 
 const svg1 = {
     position: "relative",
@@ -35,7 +34,31 @@ const App = () => {
 
     //* ------------------------------------------------------------------------------
 
+    const [username, setUsername] = useState('');
+    const [show, setShow] = useState(false);
 
+
+    const userHomePage = async () => {
+        try {
+            const res = await fetch('/getdata', {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+            });
+
+            const data = await res.json();
+            console.log(data);
+            setUsername(data.name);
+            setShow(true);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    useEffect(() => {
+        userHomePage();
+    }, []);
     return (
         <>
             <Navbar />
@@ -65,7 +88,9 @@ const App = () => {
                         > <img
                                 src={Images.slider1} alt="Top Jobs" /></div>
                         <div className="title" data-swiper-parallax="-300">
-                            Slide 1
+                            <h2>Welcome,</h2>
+                            <h1>{username}</h1>
+                            <h1>{show ? 'Happy, To see you back' : 'The place to get your work done'}</h1>
                         </div>
                     </SwiperSlide>
 
@@ -78,7 +103,7 @@ const App = () => {
                         > <img
                                 src={Images.slider2} alt="Top Jobs" /></div>
                         <div className="title" data-swiper-parallax="-300">
-                            Slide 2
+                            <h1>Osama</h1>
                         </div>
                     </SwiperSlide>
 
@@ -91,7 +116,7 @@ const App = () => {
                         > <img
                                 src={Images.slider3} alt="Top Jobs" /></div>
                         <div className="title" data-swiper-parallax="-300">
-                            Slide 3
+                            <h1>Harsh</h1>
                         </div>
                     </SwiperSlide>
 
@@ -104,7 +129,7 @@ const App = () => {
                         > <img
                                 src={Images.slider1} alt="Top Jobs" /></div>
                         <div className="title" data-swiper-parallax="-300">
-                            Slide 4
+                            <h1>Bhanu</h1>
                         </div>
                     </SwiperSlide>
                 </Swiper>
