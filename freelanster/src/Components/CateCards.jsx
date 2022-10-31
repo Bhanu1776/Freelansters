@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import './CateCards.css'
 // import '../CateCards.js'
 
