@@ -105,6 +105,12 @@ router.get('/Logout', (req, res) => {
     res.status(200).send('User Logout');
 });
 
+//* Get user data for Home page
+router.get('/getdata', authenticate, (req, res) => {
+    // console.log('Fetching user Info');
+    res.send(req.rootUser);
+})
+
 module.exports = router;
 
 

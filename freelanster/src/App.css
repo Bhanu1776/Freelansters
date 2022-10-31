@@ -24,7 +24,9 @@ html {
 }
 
 /* swiper */
-#app { height: 100% }
+#app {
+  height: 100%;
+}
 /* html,
 body {
   position: relative;
@@ -40,7 +42,7 @@ body {
   margin: 0;
   padding: 0;
 } */
-.Carcontainer{
+.Carcontainer {
   position: relative;
   width: 98.9vw;
   height: 100vh;
@@ -48,6 +50,7 @@ body {
   justify-content: center;
   align-items: center;
   top: 0;
+  color: rgba(255, 255, 255, 0.398);
   /* z-index: -1; */
 }
 .swiper {
@@ -109,8 +112,6 @@ body {
   font-size: 41px;
   font-weight: bolder;
 }
-
-
 
 /** ------------------------------------------------------------------------------ */
 
@@ -253,7 +254,7 @@ body {
 /** Categories */
 /* Cards for Landing page */
 
-#divider2 {
+/* #divider2 {
   position: absolute;
   background: #1cd6ce;
   border-radius: 50px;
@@ -261,10 +262,10 @@ body {
   width: 205px;
   margin-left: 656px;
   margin-top: -19px;
-}
+} */
 
 /* The design of the card */
-.card {
+/* .card {
   display: inline-block;
   background-size: cover;
   color: var(--clr-neutral-100);
@@ -302,33 +303,33 @@ body {
 
 .card-7 {
   background-image: url(Img/logistics.jpg);
-}
+} */
 
 /* When the card is hovered */
-.card:hover {
+/* .card:hover {
   transition: transform 500ms ease;
   transform: scale(1.05);
-}
+} */
 
 /* The content inside the card */
-.card-content {
+/* .card-content {
   background-color: linear-gradient(
     hsl(0 0% 0% / 0),
     hsl(20 0% 0% / 0.3) 20%,
     hsl(0 0% 0% / 1)
   );
   padding: var(--padding);
-}
+} */
 
-@media (hover) {
+/* @media (hover) { */
   /* content is hidden below the card */
-  .card-content {
+  /* .card-content {
     transform: translateY(65%);
     transition: transform 500ms ease;
-  }
+  } */
 
   /* When the card is hovered then the content is displayed */
-  .card:hover .card-content,
+  /* .card:hover .card-content,
   .card:focus-within .card-content {
     transform: translateY(0);
     transition-delay: 500ms;
@@ -336,31 +337,31 @@ body {
 
   .card:focus-within .card-content {
     transition-duration: 0ms;
-  }
+  } */
 
   /*Displays the content after some delay */
-  .card-content > *:not(.card-title) {
+  /* .card-content > *:not(.card-title) {
     transition: opacity 500ms linear;
     opacity: 0;
-  }
+  } */
 
   /*Displays the content after some delay and hold the same state*/
-  .card:hover .card-content > *:not(.card-title),
+  /* .card:hover .card-content > *:not(.card-title),
   .card:focus-within .card-content > *:not(.card-title) {
     transition-delay: 1000ms;
     opacity: 1;
   }
-}
+} */
 
 /* Card title  */
-.card-title {
+/* .card-title {
   position: relative;
   width: max-content;
   color: #000000;
-}
+} */
 
 /* Card title Line */
-.card-title::after {
+/* .card-title::after {
   content: "";
   position: absolute;
   left: 0px;
@@ -371,8 +372,8 @@ body {
   transform-origin: left;
   width: calc(100% + var(--padding));
   height: 4px;
-}
-
+} */
+/* 
 .card:hover .card-title::after {
   transform: scaleX(1);
 }
@@ -531,7 +532,7 @@ input[type="radio"] {
   transition: all 900ms ease-in-out;
   opacity: 0.2;
   z-index: -1;
-}
+} */
 
 /** ------------------------------------------------------------------------------ */
 

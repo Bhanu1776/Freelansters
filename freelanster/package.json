@@ -23,7 +23,9 @@
     "styled-components": "^5.3.6",
     "swiper": "^8.4.4",
     "web-vitals": "^2.1.4",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "swiper": "^8.4.4",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
