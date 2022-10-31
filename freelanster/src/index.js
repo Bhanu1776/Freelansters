@@ -10,6 +10,8 @@ import FindJobs from './FindJobs';
 // import Profile from './Components/Profile';
 import Logout from './Components/Logout';
 
+import FindFreelancer from './FindFreelancer';
+// import Error from './Components/Error';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -25,6 +27,7 @@ root.render(
         {/* <Route path='/About' element={<About />}></Route> */}
         {/* <Route path='/Profile' element={<Profile />}></Route> */}
         <Route path='/Logout' element={<Logout />}></Route>
+        <Route path='/FindFreelancer' element={<FindFreelancer />}></Route>
       </Routes>
     </BrowserRouter>
 

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import Images from './Img/imgindex.js'
+// import Images from './Img/imgindex.js'
 import './Login.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import styled from 'styled-components';
+// // import styled from 'styled-components';
 
 
 
@@ -104,12 +104,12 @@ const Login = () => {
     /*----------------------------------------------------CSS-------------------------------------------------------- */
     // const Body = styled.body`
     //     overflow: hidden;
-        
+
     // `
 
     return (
         <>
-        
+
             <div className="section1">
                 <div className="shape-img1"><img src={Images.shape1} alt="s" /></div>
                 <div className="shape-img2"><img src={Images.shape2} alt="s" /></div>
@@ -123,7 +123,7 @@ const Login = () => {
                 {/* <div className="shape-img10"><img src={Images.shape10} alt="s" /></div> */}
                 <div className="shape-img11"><img src={Images.shape11} alt="s" /></div>  
                 <div className="shape-img12"><img src={Images.shape14} alt="s" /></div> 
-                <div className="shape-img13"><img src={Images.shape15} alt="s" /></div> 
+                <div className="shape-img13"><img src={Images.shape15} alt="s" /></div>
                 <div className="Glass"></div>
 
                 <div className="right">

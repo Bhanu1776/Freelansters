@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -27,7 +27,7 @@ html {
 
 /*--------------------------------------------CSS FOR NAVBAR-------------------------------------------------------------------- */
 .progressbar{
-  background: #000;
+  background-color: rgba(255, 255, 255, 0);
   height:5px;
   position: sticky;
   top:0;
