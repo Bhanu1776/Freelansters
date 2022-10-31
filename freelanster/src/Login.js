@@ -131,7 +131,7 @@ const Login = () => {
                         <div className="col-12 text-center align-self-center py-5">
                             <div className="section pb-5 pt-5 pt-sm-2 text-center">
                                 <div className="section pb-5 pt-5 text-center">
-                                    <h6 className="mb-0 pb-3"><span id='l' onClick={rotateL}>Log In </span><span id='r' onClick={rotateR}>Sign Up</span></h6>
+                                    <h6 id="H6" className="mb-0 pb-3"><span id='l' onClick={rotateL}>Log In </span><span id='r' onClick={rotateR}>Sign Up</span></h6>
                                     <input className="checkbox" type="checkbox" id="reg-log" name="reg-log" />
                                     <label htmlFor="reg-log"></label>
 
@@ -141,7 +141,7 @@ const Login = () => {
                                             <div className="card-front">
                                                 <div className="center-wrap">
                                                     <div className="section text-center">
-                                                        <h4 className="mb-4 pb-3">Log In</h4>
+                                                        <h4 id="H4" className="mb-4 pb-3">Log In</h4>
                                                         <form method='POST'>
                                                             <div className="form-group">
                                                                 <input type="email" name="logemail" className="form-style"
@@ -160,14 +160,14 @@ const Login = () => {
                                                     </div>
 
                                                     <span className='forgot'>
-                                                        <p className="mb-0 mt-4 py-3 text-center"><a href="/" className="link">Forgot your
+                                                        <p id="Para" className="mb-0 mt-4 py-3 text-center"><a href="/" className="link">Forgot your
                                                             password?</a></p></span>
                                                 </div>
                                             </div>
                                             <div className="card-back">
                                                 <div className="center-wrap">
                                                     <div className="section text-center">
-                                                        <h4 className="mb-3 pb-6" id="signup">Sign Up</h4>
+                                                        <h4 id="H4" className="mb-3 pb-6" >Sign Up</h4>
                                                         <form method='POST'>
                                                             <div className="form-group my-2">
                                                                 <input type="text" name="name" className="form-style"
