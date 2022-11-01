@@ -1,12 +1,34 @@
-import React, { useEffect, useState } from 'react'
-// import styled from 'styled-components';
-import '../FindJobs'
-import './FFlancer'
+import React, { useEffect, useState, useContext } from 'react'
 import { NavLink } from 'react-router-dom'
+import { UserContext } from '../Routing';
+// import styled from 'styled-components';
+/* eslint-disable no-unused-vars */
 
 
 const Navbar = () => {
 
+    const { state, dispatch } = useContext(UserContext);
+
+    //* Login/Logout Functionality
+    const RenderMenu = () => {
+        if (state) {
+            return (
+                <div id="ndb">
+                    <button className="nbutton" id="nav-btn"><NavLink to="./Logout" id="nav-btn-a"> Logout </NavLink></button>
+                </div>
+            );
+        }
+        else {
+            return (
+                <div id="ndb">
+                    <button className="nbutton" id="nav-btn"><NavLink to="./Login" id="nav-btn-a"> Login </NavLink></button>
+                </div>
+            );
+        }
+    }
+
+
+    //* Progress bar in navbar on scroll
     const [scrollTop, setScrollTop] = useState(0);
 
     const onScroll = () => {
@@ -20,6 +42,7 @@ const Navbar = () => {
         }, []);
     
 
+    //* Navbar sticky on scroll
     window.addEventListener('scroll', function () {
         var navbar = document.querySelector('#navbar');
         navbar.classList.toggle("sticky", window.scrollY > 0)
@@ -27,7 +50,6 @@ const Navbar = () => {
 
     return (
         <>
-            {/* //? Navigation Bar */}
            {/* <Wrapper> */}
             <div className='progressbar'>
                 <div className='progressbarIn' style={{width: `${scrollTop}%`}}></div>
@@ -42,15 +64,10 @@ const Navbar = () => {
                     <li><NavLink to="/FindFreelancer" id="nav-a">Find Freelancers</NavLink></li>
                     {/* <li><NavLink to="/" id="nav-a">About US</NavLink></li> */}
                     <li><a href="#img1" id="nav-a">Contact Us</a></li>
-                    <li><NavLink to="/Logout" id="nav-a">Logout</NavLink></li>
                 </ul>
-                <div id="ndb">
-                    <button className="nbutton" id="nav-btn"><NavLink to="Login" id="nav-btn-a"> Login </NavLink></button>
-                </div>
+                <RenderMenu/>
             </nav>
             {/* </Wrapper> */}
-            {/* //? ------------------------------------------------------------------------------ */}
-
         </>
     )
 }

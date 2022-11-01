@@ -25,6 +25,17 @@ html {
   --padding: 1.5rem;
 }
 
+::-webkit-scrollbar {
+  width: 11px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #09a991);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #1cd6ce);
+}
+
 /*--------------------------------------------CSS FOR NAVBAR-------------------------------------------------------------------- */
 .progressbar{
   background-color: rgba(255, 255, 255, 0);

@@ -69,10 +69,10 @@ const App = () => {
 
             {/* //? Carasol Section */}
             <div className='Carcontainer'>
-                <Swiper spaceBetween={30}
+                <Swiper spaceBetween={10}
                     centeredSlides={true}
                     autoplay={{
-                        delay: 2500,
+                        delay: 5000,
                         disableOnInteraction: false,
                     }}
                     parallax={true}
@@ -265,7 +265,7 @@ const App = () => {
 
             {/* <div id="divider2"></div> */}
 
-            {/* <CateCards/> */}
+            {/* <CateCards /> */}
             {/* <!-- Temp Div --> */}
             {/* <div style={{ height: "100px" }}> </div> */}
 
