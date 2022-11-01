@@ -42,24 +42,49 @@ body {
   margin: 0;
   padding: 0;
 } */
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: "prev";
+  color: #19bdb5;
+  margin-left: 50px;
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: "next";
+  margin-right: 50px;
+  color: #12bfb6;
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
+  width: 12px;
+  height: 12px;
+}
+
 .Carcontainer {
   position: relative;
   width: 98.9vw;
-  height: 100vh;
+  height: 84vh;
   display: flex;
   justify-content: center;
   align-items: center;
   top: 0;
+  margin-left: 0.5%;
+  margin-bottom: 5%;
   color: rgba(255, 255, 255, 0.398);
   /* z-index: -1; */
 }
 .swiper {
   /* position: absolute;
   z-index: -1; */
-  margin: 0;
+  top: 3.4rem;
   padding: 0;
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  margin-left: 30%;
+  border-radius: 23px;
+  height: 97%;
 }
 
 .swiper-slide {
@@ -89,6 +114,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 23px;
 }
 
 .swiper {
@@ -322,14 +348,14 @@ body {
 } */
 
 /* @media (hover) { */
-  /* content is hidden below the card */
-  /* .card-content {
+/* content is hidden below the card */
+/* .card-content {
     transform: translateY(65%);
     transition: transform 500ms ease;
   } */
 
-  /* When the card is hovered then the content is displayed */
-  /* .card:hover .card-content,
+/* When the card is hovered then the content is displayed */
+/* .card:hover .card-content,
   .card:focus-within .card-content {
     transform: translateY(0);
     transition-delay: 500ms;
@@ -339,14 +365,14 @@ body {
     transition-duration: 0ms;
   } */
 
-  /*Displays the content after some delay */
-  /* .card-content > *:not(.card-title) {
+/*Displays the content after some delay */
+/* .card-content > *:not(.card-title) {
     transition: opacity 500ms linear;
     opacity: 0;
   } */
 
-  /*Displays the content after some delay and hold the same state*/
-  /* .card:hover .card-content > *:not(.card-title),
+/*Displays the content after some delay and hold the same state*/
+/* .card:hover .card-content > *:not(.card-title),
   .card:focus-within .card-content > *:not(.card-title) {
     transition-delay: 1000ms;
     opacity: 1;
