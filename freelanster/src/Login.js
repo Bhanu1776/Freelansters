@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-// import Images from './Img/imgindex.js'
-import './Login.css'
+import { UserContext } from './Routing';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import styled from 'styled-components';
-
+import './Login.css'
+/* eslint-disable no-unused-vars */
 
 
 const Login = () => {
+
+    const { state, dispatch } = useContext(UserContext);
 
     const navigate = useNavigate();
 
@@ -25,6 +27,9 @@ const Login = () => {
 
         setUser({ ...user, [name]: value });
     }
+
+
+    //* Signup Auth
 
     const PostData = async (e) => {
         e.preventDefault();
@@ -53,6 +58,9 @@ const Login = () => {
         }
     }
 
+
+    //* Login Auth
+
     const [logemail, setlogEmail] = useState('');
     const [logpass, setlogPass] = useState('');
 
@@ -79,6 +87,7 @@ const Login = () => {
                 theme: "colored"
             });
         } else {
+            dispatch({ type: "USER", payload: true })
             toast.success("Login Successful", {
                 position: "bottom-left",
                 theme: "colored"
@@ -86,6 +95,9 @@ const Login = () => {
             navigate('/FindJobs')
         }
     }
+
+
+    //* Tackling GUI of Login/Signup Page 
 
     const rotateL = () => {
         var checkBox = document.getElementById("reg-log");
