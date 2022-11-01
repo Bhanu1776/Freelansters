@@ -59,7 +59,7 @@ const Navbar = () => {
                     <span id="logo">Freelanster</span>
                 </div>
                 <ul>
-                    <li><NavLink to="/" id="nav-a" >Home</NavLink></li>
+                    <li><NavLink to="/Home" id="nav-a" >Home</NavLink></li>
                     <li><NavLink to="/FindJobs" id="nav-a">Find Jobs</NavLink></li>
                     <li><NavLink to="/FindFreelancer" id="nav-a">Find Freelancers</NavLink></li>
                     {/* <li><NavLink to="/" id="nav-a">About US</NavLink></li> */}
