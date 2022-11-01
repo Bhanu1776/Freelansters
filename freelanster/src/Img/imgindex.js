@@ -21,5 +21,6 @@ const Images = {
     harsh: require('./harsh.jpg'),
     osama: require('./osama.jpg'),
     card1: require('./card-bg.jpg'),
+    FFhero: require('./FFHero.jpg'),
 }
 export default Images;
