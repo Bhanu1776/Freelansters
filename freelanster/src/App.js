@@ -1,12 +1,11 @@
-import React, { useRef, useState } from 'react'
+// import React, { useRef, useState } from 'react'
+// import styled,{ThemeProvider} from "styled-components";
+// import CateCards from './Components/CateCards';
 import './App.css'
 import Images from './Img/imgindex.js'
 import Navbar from './Components/Navbar';
-import CateCards from './Components/CateCards';
 import Footer from './Components/Footer';
-
 import About from './Components/About';
-import styled,{ThemeProvider} from "styled-components";
 //swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -158,9 +157,9 @@ const App = () => {
 
                 <div className="glass">
 
-                    <h1>Why to choose Freelanster ?</h1>
+                    <h1 id="feat-h1">Why to choose Freelanster ?</h1>
                     <div className="divider-h"></div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repudiandae voluptatum aperiam fugit fugiat deserunt accusantium, aut, officia neque assumenda odio quisquam sequi atque iste. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, enim.</p>
+                    <p id="feat-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repudiandae voluptatum aperiam fugit fugiat deserunt accusantium, aut, officia neque assumenda odio quisquam sequi atque iste. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, enim.</p>
                     <div className="g-button-div">
                         <button className="g-button">See More</button>
                     </div>
@@ -172,7 +171,7 @@ const App = () => {
 
 
             {/* //? Categories */}
-            {/* <div className="Features">
+            <div className="Features">
                 <p id="s-specialty"> Job Categories </p>
             </div>
 
@@ -258,17 +257,17 @@ const App = () => {
                         </div>
                     </label>
                 </div>
-            </div> */}
+            </div>
 
 
-{/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */}
+            {/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */}
 
 
-            <div id="divider2"></div>
+            {/* <div id="divider2"></div> */}
 
-            <CateCards/>
+            {/* <CateCards/> */}
             {/* <!-- Temp Div --> */}
-            <div style={{ height: "100px" }}> </div>
+            {/* <div style={{ height: "100px" }}> </div> */}
 
             {/* //? ------------------------------------------------------------------------------ */}
 
@@ -318,7 +317,7 @@ const App = () => {
             {/* //? ------------------------------------------------------------------------------ */}
 
             {/* //? About Us */}
-            <About  />
+            <About />
 
             {/* //? ------------------------------------------------------------------------------ */}
 
