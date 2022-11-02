@@ -2,22 +2,16 @@ import React from 'react'
 import ProfileCards from './ProfileCards'
 import ProfileData from './ProfileData'
 import styled from 'styled-components'
+import Hero from './Hero'
+
+const FFHeroImg = 'url("https://images.unsplash.com/photo-1487528278747-ba99ed528ebc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")';
 
 const FFlancer = () => {
 
     return (
         <>
-            {/* Heroku Section */}
-            <Section>
-                <FFtextArea>
-                    <H1>Find FreeLancer</H1>
-                    <br />
-                    <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati qui ducimus aliquid? Iste, impedit
-                        nemo.
-                    </P>
-                </FFtextArea>
-            </Section>
-            {/* Filter Section */}
+
+            <Hero title="Find Freelancer" desc="This desc coming from props for Find Freelancer. consectetur adipisicing elit. Obcaecati qui ducimus aliquid? Iste, impedit" img={FFHeroImg} />
 
             {/* Cards Display Section */}
 
@@ -40,52 +34,52 @@ const FFlancer = () => {
     )
 }
 
-const Section = styled.section`
- position: relative;
-    width: 98.9vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
+// const Section = styled.section`
+//  position: relative;
+//     width: 98.9vw;
+//     height: 100vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     top: 0;
 
-    &::before{
-    content: " ";
-    position: absolute;
-    background-image: url('https://images.unsplash.com/photo-1487528278747-ba99ed528ebc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    z-index: -2;
-    filter: brightness(50%);
-}
-`;
-const H1 = styled.h1`
+//     &::before{
+//     content: " ";
+//     position: absolute;
+//     background-image: url('https://images.unsplash.com/photo-1487528278747-ba99ed528ebc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: cover;
+//     height: 100%;
+//     width: 100%;
+//     z-index: -2;
+//     filter: brightness(50%);
+// }
+// `;
+// const H1 = styled.h1`
 
-    font-family: "Noto Serif Georgian", serif;
-    font-size: 4rem;
-    text-align: center;
-    color: var(--shady-white-color);
+//     font-family: "Noto Serif Georgian", serif;
+//     font-size: 4rem;
+//     text-align: center;
+//     color: var(--shady-white-color);
 
-`;
-const P = styled.p`
+// `;
+// const P = styled.p`
 
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1.4em;
+//     font-family: "Cormorant Garamond", serif;
+//     font-size: 1.4em;
 
-    text-align: center;
-    color: var(--shady-white-color);
+//     text-align: center;
+//     color: var(--shady-white-color);
 
-`
+// `
 
-const FFtextArea = styled.div`
+// const FFtextArea = styled.div`
 
-    position: absolute;
-    width: 60vw;
+//     position: absolute;
+//     width: 60vw;
 
-`
+// `
 
 const CardsHolder = styled.div`
 display: flex;
