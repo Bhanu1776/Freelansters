@@ -616,7 +616,7 @@ input[type="radio"] {
 #Features-arc {
   position: relative;
   background-color: #f1eff8;
-  z-index: -2;
+  z-index: 2;
   padding-top: 2px;
   height: 710px;
 }
@@ -653,7 +653,7 @@ input[type="radio"] {
 }
 
 .circle svg {
-  margin-bottom: 80px;
+  margin-bottom: 82px;
   width: 22px;
 }
 
