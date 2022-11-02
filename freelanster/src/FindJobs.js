@@ -64,7 +64,7 @@ const FindJobs = () => {
 
                 <Navbar />
                 <Hero title="Find Jobs" desc="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati qui ducimus aliquid? Iste, impedit
-              nemo." img={FJHeroImg} />
+              nemo." img={FJHeroImg} placeholder="Find Jobs" />
                 <Filter />
                 <Footer />
             </>
