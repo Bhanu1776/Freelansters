@@ -21,7 +21,7 @@ const App = () => {
         setTimeout(() => {
             preloader.style.display = 'none';
             setLoading(false);
-        }, 1500);
+        }, 500);
     }
 
     //* ------------------------------------------------------------------------------
