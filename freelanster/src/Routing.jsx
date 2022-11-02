@@ -6,6 +6,7 @@ import Login from './Login';
 import FindJobs from './FindJobs';
 import Logout from './Components/Logout';
 import FindFreelancer from './FindFreelancer';
+import Error from './Components/Error';
 // import Profile from './Components/Profile';
 
 
@@ -28,7 +29,7 @@ const Paths = () => {
       <Route path='/FindFreelancer/Logout' element={<Logout />}></Route>
       {/* <Route path='/Profile' element={<Profile />}></Route> */}
       <Route path='/Logout' element={<Logout />}></Route>
-      {/* <Route path='*' element={<Error />}></Route> */}
+      <Route path='*' element={<Error />}></Route>
     </Routes>
   )
 }
