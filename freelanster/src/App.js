@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Parallax, Autoplay, Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Helmet } from "react-helmet";
 import Images from './Img/imgindex.js'
 import Navbar from './Components/Navbar';
 import About from './Components/About';
@@ -57,6 +58,12 @@ const App = () => {
 
         !loading && (
             <>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Freelanster</title>
+                    <meta name="description" content="The place to get your work done" />
+                </Helmet>
+
                 <Navbar />
 
                 {/* //? Carasol Section */}

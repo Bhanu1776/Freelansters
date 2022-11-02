@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
 import Filter from './Components/Filter';
@@ -43,6 +44,12 @@ const FindJobs = () => {
 
     return (
         <>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Find Jobs</title>
+                <meta name="description" content="The place to get your work done" />
+            </Helmet>
+
             <Navbar />
             <Hero />
             <Filter />
