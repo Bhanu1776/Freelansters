@@ -1,40 +1,18 @@
-// import React, { useRef, useState } from 'react'
-// import styled,{ThemeProvider} from "styled-components";
-// import CateCards from './Components/CateCards';
-import './App.css'
+import { useState, useEffect } from 'react';
+import { Parallax, Autoplay, Pagination, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Images from './Img/imgindex.js'
 import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
 import About from './Components/About';
-//swiper
-import { Swiper, SwiperSlide } from "swiper/react";
+import GoToTop from './Components/GoToTop';
+import Footer from './Components/Footer';
+import './App.css'
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Parallax, Autoplay, Pagination, Navigation } from "swiper";
-import GoToTop from './Components/GoToTop';
-import { useState, useEffect } from 'react';
-
-
-const svg1 = {
-    position: "relative",
-    marginTop: "128px",
-    marginLeft: "50px",
-    marginRight: "50px"
-}
 
 
 const App = () => {
-
-    //* ------------------------------------------------------------------------------
-
-    //* Logic for implementing the navbar
-
-    // window.addEventListener('scroll', function () {
-    //     var navbar = document.querySelector('#navbar');
-    //     navbar.classList.toggle("sticky", window.scrollY > 0)
-    // })
-
 
     //* ------------------------------------------------------------------------------
 
@@ -138,7 +116,17 @@ const App = () => {
                     </SwiperSlide>
                 </Swiper>
             </div>
-            {/* </div> */}
+
+
+            {/* //?Scroll Down Animation */}
+            <div className="box-div">
+                <div class="box">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
 
             {/* //? ------------------------------------------------------------------------------ */}
 
@@ -147,7 +135,12 @@ const App = () => {
 
             <section id="Website-des">
 
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style={svg1}><path fill="#1cd6ce" fill-opacity="0.8" d="M0,256L60,224C120,192,240,128,360,128C480,128,600,192,720,192C840,192,960,128,1080,112C1200,96,1320,128,1380,144L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style={{
+                    position: "relative",
+                    marginTop: "128px",
+                    marginLeft: "50px",
+                    marginRight: "50px"
+                }}><path fill="#1cd6ce" fill-opacity="0.8" d="M0,256L60,224C120,192,240,128,360,128C480,128,600,192,720,192C840,192,960,128,1080,112C1200,96,1320,128,1380,144L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style={{
                     position: "relative",
                     marginTop: "-5px",
