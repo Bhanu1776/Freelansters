@@ -58,16 +58,17 @@ section.static h1 {
 }
 
 .searchBar {
-  width: 100%;
+  width: 110%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-left: -20px;
 }
 
 #searchQueryInput {
   width: 100%;
-  height: 2.8rem;
-  background: #f5f5f5;
+  height: 3.1rem;
+  background: #edf0f0;
   outline: none;
   border: none;
   border-radius: 1.625rem;
@@ -76,13 +77,16 @@ section.static h1 {
 }
 
 #searchQuerySubmit {
-  width: 5rem;
-  height: 2.6rem;
-  margin-left: -5.2rem;
+  width: 5.4rem;
+  height: 2.7rem;
+  margin-left: -5.6rem;
   border-radius: 1.625rem;
   background: #00c8aa;
   outline: none;
   border: none;
+  font-family: var(--primary-font);
+  font-weight: bold;
+  color: #272727;
 }
 
 #searchQuerySubmit:hover {
@@ -100,7 +104,7 @@ section.static h1 {
             <p>{props.desc}</p>
             <div class="wrapper">
               <div class="searchBar">
-                <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Find Jobs" />
+                <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder={ props.placeholder } />
                 <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit">Search
                 </button>
               </div>
