@@ -122,14 +122,14 @@ const CateCards = () => {
 
                     </div>
 
-                    <div class="catecards-slider-control">
-                        <div class="swiper-button-prev slider-arrow">
+                    <div className="catecards-slider-control">
+                        <div className="swiper-button-prev slider-arrow">
                             <ion-icon name="arrow-back-outline"></ion-icon>
                         </div>
-                        <div class="swiper-button-next slider-arrow">
+                        <div className="swiper-button-next slider-arrow">
                             <ion-icon name="arrow-forward-outline"></ion-icon>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div className="swiper-pagination"></div>
                     </div>
 
                 </div>

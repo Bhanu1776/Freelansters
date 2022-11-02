@@ -102,8 +102,8 @@ section.static h1 {
             <h1>{ props.title}</h1>
             <br />
             <p>{props.desc}</p>
-            <div class="wrapper">
-              <div class="searchBar">
+            <div className="wrapper">
+              <div className="searchBar">
                 <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder={ props.placeholder } />
                 <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit">Search
                 </button>

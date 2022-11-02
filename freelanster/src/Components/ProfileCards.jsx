@@ -144,34 +144,34 @@ const ProfileCards = (props) => {
     return (
         <>
         <Wrapper>
-                <div class="profile-cards">
-                    <div class="profile-content">
+                <div className="profile-cards">
+                    <div className="profile-content">
 
-                        <div class="profile-speciality">{props.proSpecial}</div>
+                        <div className="profile-speciality">{props.proSpecial}</div>
                         
-                        <div class="time-price">
-                            <div class="profile-time">{props.proTime}</div>
-                            <div class="profile-price">{props.proPrice}</div>
+                        <div className="time-price">
+                            <div className="profile-time">{props.proTime}</div>
+                            <div className="profile-price">{props.proPrice}</div>
                         </div>
 
-                        <div class="profile-img-name">
-                            <div class="profile-img"><img src={props.proImg} alt="" /></div>
+                        <div className="profile-img-name">
+                            <div className="profile-img"><img src={props.proImg} alt="" /></div>
                             <div>
 
-                                <div class="profile-name-stars">
-                                    <div class="profile-name">{props.proName}</div>
-                                    <div class="profile-stars">{props.proStars}</div>
+                                <div className="profile-name-stars">
+                                    <div className="profile-name">{props.proName}</div>
+                                    <div className="profile-stars">{props.proStars}</div>
                                 </div>
 
-                                <div class="profile-connection">
+                                <div className="profile-connection">
                                     &nbsp;<button>See Profile</button>
                                     <button>Message Icon</button>&nbsp;
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card-break"></div>
-                        <button class="profile-book">BOOK NOW</button>
+                        <div className="card-break"></div>
+                        <button className="profile-book">BOOK NOW</button>
                     </div>
                 </div>
             </Wrapper>

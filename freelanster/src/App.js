@@ -141,8 +141,7 @@ const App = () => {
 
                 {/* //?Scroll Down Animation */}
                 <div className="box-div">
-                    <div class="box">
-                        <span></span>
+                    <div className="box">
                         <span></span>
                         <span></span>
                     </div>
