@@ -60,9 +60,8 @@ body {
   color: #12bfb6;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets
-  .swiper-pagination-bullet {
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
   width: 12px;
   height: 12px;
@@ -151,6 +150,7 @@ body {
 .box-div {
   margin-top: -2%;
 }
+
 .box span {
   width: 30px;
   height: 30px;
@@ -176,14 +176,17 @@ body {
   0% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
     transform: rotate(45deg) translate(10px, 10px);
   }
+
   100% {
     opacity: 0;
   }
 }
+
 /** ------------------------------------------------------------------------------ */
 
 /** Glass section  */
@@ -258,11 +261,9 @@ body {
   outline: none;
   color: #313133;
   background: #4fd1c5;
-  background: linear-gradient(
-    90deg,
-    rgba(129, 230, 217, 1) 0%,
-    rgba(79, 209, 197, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(129, 230, 217, 1) 0%,
+      rgba(79, 209, 197, 1) 100%);
   border-radius: 1000px;
   box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
   transition: all 0.3s ease-in-out 0s;
@@ -388,11 +389,9 @@ body {
 
 /* The content inside the card */
 .card-content {
-  background-color: linear-gradient(
-    hsl(0 0% 0% / 0),
-    hsl(20 0% 0% / 0.3) 20%,
-    hsl(0 0% 0% / 1)
-  );
+  background-color: linear-gradient(hsl(0 0% 0% / 0),
+      hsl(20 0% 0% / 0.3) 20%,
+      hsl(0 0% 0% / 1));
   padding: var(--padding);
 }
 
@@ -518,91 +517,91 @@ input[type="radio"] {
   height: 80vh;
 }
 
-#item-1:checked ~ .cards-carousel #cate-5,
-#item-2:checked ~ .cards-carousel #cate-6,
-#item-3:checked ~ .cards-carousel #cate-7,
-#item-4:checked ~ .cards-carousel #cate-1,
-#item-5:checked ~ .cards-carousel #cate-2,
-#item-6:checked ~ .cards-carousel #cate-3,
-#item-7:checked ~ .cards-carousel #cate-4 {
+#item-1:checked~.cards-carousel #cate-5,
+#item-2:checked~.cards-carousel #cate-6,
+#item-3:checked~.cards-carousel #cate-7,
+#item-4:checked~.cards-carousel #cate-1,
+#item-5:checked~.cards-carousel #cate-2,
+#item-6:checked~.cards-carousel #cate-3,
+#item-7:checked~.cards-carousel #cate-4 {
   transform: translateX(-80%) scale(0.4);
   transition: all 900ms ease-in-out;
   opacity: 0.2;
   z-index: -1;
 }
 
-#item-1:checked ~ .cards-carousel #cate-6,
-#item-2:checked ~ .cards-carousel #cate-7,
-#item-3:checked ~ .cards-carousel #cate-1,
-#item-4:checked ~ .cards-carousel #cate-2,
-#item-5:checked ~ .cards-carousel #cate-3,
-#item-6:checked ~ .cards-carousel #cate-4,
-#item-7:checked ~ .cards-carousel #cate-5 {
+#item-1:checked~.cards-carousel #cate-6,
+#item-2:checked~.cards-carousel #cate-7,
+#item-3:checked~.cards-carousel #cate-1,
+#item-4:checked~.cards-carousel #cate-2,
+#item-5:checked~.cards-carousel #cate-3,
+#item-6:checked~.cards-carousel #cate-4,
+#item-7:checked~.cards-carousel #cate-5 {
   transform: translatex(-60%) scale(0.6);
   transition: all 900ms ease-in-out;
   opacity: 0.4;
   z-index: 0;
 }
 
-#item-1:checked ~ .cards-carousel #cate-7,
-#item-2:checked ~ .cards-carousel #cate-1,
-#item-3:checked ~ .cards-carousel #cate-2,
-#item-4:checked ~ .cards-carousel #cate-3,
-#item-5:checked ~ .cards-carousel #cate-4,
-#item-6:checked ~ .cards-carousel #cate-5,
-#item-7:checked ~ .cards-carousel #cate-6 {
+#item-1:checked~.cards-carousel #cate-7,
+#item-2:checked~.cards-carousel #cate-1,
+#item-3:checked~.cards-carousel #cate-2,
+#item-4:checked~.cards-carousel #cate-3,
+#item-5:checked~.cards-carousel #cate-4,
+#item-6:checked~.cards-carousel #cate-5,
+#item-7:checked~.cards-carousel #cate-6 {
   transform: translatex(-40%) scale(0.8);
   transition: all 900ms ease-in-out;
   opacity: 0.6;
   z-index: 1;
 }
 
-#item-1:checked ~ .cards-carousel #cate-1,
-#item-2:checked ~ .cards-carousel #cate-2,
-#item-3:checked ~ .cards-carousel #cate-3,
-#item-4:checked ~ .cards-carousel #cate-4,
-#item-5:checked ~ .cards-carousel #cate-5,
-#item-6:checked ~ .cards-carousel #cate-6,
-#item-7:checked ~ .cards-carousel #cate-7 {
+#item-1:checked~.cards-carousel #cate-1,
+#item-2:checked~.cards-carousel #cate-2,
+#item-3:checked~.cards-carousel #cate-3,
+#item-4:checked~.cards-carousel #cate-4,
+#item-5:checked~.cards-carousel #cate-5,
+#item-6:checked~.cards-carousel #cate-6,
+#item-7:checked~.cards-carousel #cate-7 {
   transform: translatex(0) scale(1);
   transition: all 900ms ease-in-out;
   opacity: 1;
   z-index: 2;
 }
 
-#item-1:checked ~ .cards-carousel #cate-2,
-#item-2:checked ~ .cards-carousel #cate-3,
-#item-3:checked ~ .cards-carousel #cate-4,
-#item-4:checked ~ .cards-carousel #cate-5,
-#item-5:checked ~ .cards-carousel #cate-6,
-#item-6:checked ~ .cards-carousel #cate-7,
-#item-7:checked ~ .cards-carousel #cate-1 {
+#item-1:checked~.cards-carousel #cate-2,
+#item-2:checked~.cards-carousel #cate-3,
+#item-3:checked~.cards-carousel #cate-4,
+#item-4:checked~.cards-carousel #cate-5,
+#item-5:checked~.cards-carousel #cate-6,
+#item-6:checked~.cards-carousel #cate-7,
+#item-7:checked~.cards-carousel #cate-1 {
   transform: translatex(40%) scale(0.8);
   transition: all 900ms ease-in-out;
   opacity: 0.6;
   z-index: 1;
 }
 
-#item-1:checked ~ .cards-carousel #cate-3,
-#item-2:checked ~ .cards-carousel #cate-4,
-#item-3:checked ~ .cards-carousel #cate-5,
-#item-4:checked ~ .cards-carousel #cate-6,
-#item-5:checked ~ .cards-carousel #cate-7,
-#item-6:checked ~ .cards-carousel #cate-1,
-#item-7:checked ~ .cards-carousel #cate-2 {
+#item-1:checked~.cards-carousel #cate-3,
+#item-2:checked~.cards-carousel #cate-4,
+#item-3:checked~.cards-carousel #cate-5,
+#item-4:checked~.cards-carousel #cate-6,
+#item-5:checked~.cards-carousel #cate-7,
+#item-6:checked~.cards-carousel #cate-1,
+#item-7:checked~.cards-carousel #cate-2 {
   transform: translatex(60%) scale(0.6);
   transition: all 900ms ease-in-out;
   opacity: 0.4;
   z-index: 0;
 }
 
-#item-1:checked ~ .cards-carousel #cate-4,
-#item-2:checked ~ .cards-carousel #cate-5,
-#item-3:checked ~ .cards-carousel #cate-6,
-#item-4:checked ~ .cards-carousel #cate-7,
-#item-5:checked ~ .cards-carousel #cate-1,
-#item-6:checked ~ .cards-carousel #cate-2,
-#item-7:checked ~ .cards-carousel #cate-3 {
+#item-1:checked~.cards-carousel #cate-4,
+#item-2:checked~.cards-carousel #cate-5,
+#item-3:checked~.cards-carousel #cate-6,
+#item-4:checked~.cards-carousel #cate-7,
+#item-5:checked~.cards-carousel #cate-1,
+#item-6:checked~.cards-carousel #cate-2,
+#item-7:checked~.cards-carousel #cate-3 {
   transform: translatex(80%) scale(0.4);
   transition: all 900ms ease-in-out;
   opacity: 0.2;
@@ -616,7 +615,7 @@ input[type="radio"] {
 #Features-arc {
   position: relative;
   background-color: #f1eff8;
-  z-index: 2;
+  z-index: 1;
   padding-top: 2px;
   height: 710px;
 }
