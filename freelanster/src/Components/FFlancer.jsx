@@ -11,7 +11,7 @@ const FFlancer = () => {
     return (
         <>
 
-            <Hero title="Find Freelancer" desc="This desc coming from props for Find Freelancer. consectetur adipisicing elit. Obcaecati qui ducimus aliquid? Iste, impedit" img={FFHeroImg} placeholder="Find FindFreelancer"/>
+            <Hero title="Find Freelancer" desc="This desc coming from props for Find Freelancer. consectetur adipisicing elit. Obcaecati qui ducimus aliquid? Iste, impedit" img={FFHeroImg} placeholder="Find FindFreelancer" />
 
             {/* Cards Display Section */}
 
@@ -83,7 +83,7 @@ const FFlancer = () => {
 
 const CardsHolder = styled.div`
 display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
     row-gap: 20px;
