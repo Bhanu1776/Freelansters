@@ -84,7 +84,7 @@ const FFlancer = () => {
 
 const CardsHolder = styled.div`
 display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
     row-gap: 20px;
