@@ -26,7 +26,7 @@ const FindFreelancer = () => {
                     <meta name="description" content="The place to get your work done" />
                 </Helmet>
 
-                <Navbar />
+                <Navbar color="white" />
                 <FindFreelan />
                 <Footer />
             </>

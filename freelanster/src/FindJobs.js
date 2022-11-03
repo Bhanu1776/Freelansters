@@ -62,7 +62,7 @@ const FindJobs = () => {
                     <meta name="description" content="The place to get your work done" />
                 </Helmet>
 
-                <Navbar />
+                <Navbar color="black" />
                 <Hero title="Find Jobs" desc="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati qui ducimus aliquid? Iste, impedit
               nemo." img={FJHeroImg} placeholder="Find Jobs" />
                 <Filter />
