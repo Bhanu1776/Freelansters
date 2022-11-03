@@ -36,9 +36,15 @@ const ProfileCards = (props) => {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: #93e2bb;
+  background-color: #FFFAFA;
   padding: 5px;
   border-radius: 20px 20px;
+}
+
+.profile-cards:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    /* transform: scale(1.1); */
+    transition-timing-function: ease-in-out;
 }
 
 .profile-speciality {
@@ -94,7 +100,13 @@ const ProfileCards = (props) => {
 .profile-time,
 .profile-price,
 .profile-name {
-  font-family: "Roboto", "Sans Serif";
+  font-family: 'Roboto', 'Sans Serif';
+  font-size: 16px;
+}
+
+.profile-time .icon {
+    width: 2em;
+    height: 1.5em;
 }
 
 .profile-price {
@@ -103,7 +115,7 @@ const ProfileCards = (props) => {
 
 .profile-connection {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-content: space-between;
   flex-direction: row;
 }
@@ -113,10 +125,16 @@ const ProfileCards = (props) => {
 }
 
 .profile-connection button {
-  padding: 2px 5px;
-  background-color: transparent;
-  border-radius: 20px;
-  font-family: "Roboto", "Sans Serif";
+    margin-left: 1em;
+    padding: 2px 5px;
+    background-color: transparent;
+    border-radius: 20px;
+    font-family: 'Roboto', 'Sans Serif';
+}
+
+.profile-connection .icon {
+    width: 3em;
+    height: 1.6em;
 }
 
 .card-break {
@@ -125,6 +143,12 @@ const ProfileCards = (props) => {
   background-color: grey;
   margin-top: 15px;
   margin-bottom: 30px;
+}
+
+.profile-reviews {
+    margin: 5px;
+    padding-left: 10px;
+    margin-bottom: 20px;
 }
 
 .profile-book {
@@ -140,6 +164,10 @@ const ProfileCards = (props) => {
   color: white;
   background-color: green;
   font-family: "Roboto", "Sans Serif";
+}
+
+.icon {
+    size: 10%;
 }
 
     `
