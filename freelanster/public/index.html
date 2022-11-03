@@ -49,9 +49,40 @@
 
 </head>
 
+<style>
+  #preloader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+    border-left: 10px solid rgb(0, 0, 0);
+    display: inline-block;
+    background: transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
+
+  <div id='preloader'></div>
+  <div id="root">
+
+  </div>
 
 </body>
 

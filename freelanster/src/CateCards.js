@@ -2,7 +2,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 // import required modules
-import { Pagination, Navigation } from "swiper";
+// import { Pagination, Navigation } from "swiper";
 var CateCardsSlider = new Swiper('.catecards-slider', {
     effect: 'coverflow',
     grabCursor: true,
@@ -16,7 +16,7 @@ var CateCardsSlider = new Swiper('.catecards-slider', {
         modifier: 2.5,
     },
     pagination: {
-        
+
     },
     navigation: {
         nextEl: '.swiper-button-next',

@@ -1,46 +1,120 @@
-import React from 'react'
-import './Error.css'
+import React, { useState } from 'react'
+// import './Error.css'
+import styled from 'styled-components';
 
 const Error = () => {
-  return (
-      <>
-       <header className="top-header">
-    </header>
+    const Wrapper = styled.section`
+    @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 
-    <div>
-        <div className="starsec"></div>
-        <div className="starthird"></div>
-        <div className="starfourth"></div>
-        <div className="starfifth"></div>
-    </div>
-
-
-    <div className="lamp__wrap">
-        <div className="lamp">
-            <div className="cable"></div>
-            <div className="cover"></div>
-            <div className="in-cover">
-                <div className="bulb"></div>
-            </div>
-            <div className="light"></div>
-        </div>
-    </div>
-    <section className="error">
-        <div className="error__content">
-            <div className="error__message message">
-                <h1 className="message__title">Page Not Found</h1>
-                <p className="message__text">We're sorry, the page you were looking for isn't found here. The link you
-                    followed may either be broken or no longer exists. Please try again, or take a look at our.</p>
-            </div>
-            <div className="error__nav e-nav">
-                <a href="/" target="_blank" className="e-nav__link"><span></span></a>
-            </div>
-        </div>
-
-    </section>
-
-      </>
-  )
+.Main-div {
+  width: 100vw;
+  height: 100vh;
+  background-color: #313942;
 }
+.Main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+}
+
+.Main-h1 {
+  color: #e7ebf2;
+  font-size: 12.5rem;
+  letter-spacing: 0.1em;
+  margin: 0.025em 0;
+  text-shadow: 0.05em 0.05em 0 rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+
+  /* @media (max-width: 30rem) {
+    font-size: 8.5rem;
+  } */
+}
+.Main-span {
+  animation: spooky 2s alternate infinite linear;
+  color: #528cce;
+  display: inline-block;
+}
+
+.Main-h2 {
+  color: #e7ebf2;
+  margin-bottom: 0.4em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+}
+
+.Main-p {
+  color: #ccc;
+  margin-top: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+@keyframes spooky {
+  from {
+    transform: translatey(0.15em) scaley(0.95);
+  }
+
+  to {
+    transform: translatey(-0.15em);
+  }
+}
+.myButton {
+  box-shadow: 0px 10px 14px -7px #276873;
+  background: linear-gradient(to bottom, #6bb3ff 5%, #528cce 100%);
+  background-color: #6bb3ff;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 7px 56px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #3d768a;
+  margin-top: 8px;
+}
+.myButton:hover {
+  background: linear-gradient(to bottom, #528cce 5%, #6bb3ff 100%);
+  background-color: #70a7e7;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+    `;
+
+    const [loading, setLoading] = useState(true);
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        setTimeout(() => {
+            preloader.style.display = 'none';
+            setLoading(false);
+        }, 0);
+    }
+
+    return (
+        !loading && (
+            <>
+                <Wrapper>
+                    <div className="Main-div">
+                        <main className='Main'>
+                            <h1 className='Main-h1'>4<span className='Main-span'><i class="fas fa-ghost"></i></span>4</h1>
+                            <h2 className='Main-h2'>Error: 404 page not found</h2>
+                            <p className='Main-p'>Sorry, the page you're looking for cannot be accessed</p>
+                            <a href="/" class="myButton">Home</a>
+                        </main>
+                    </div>
+                </Wrapper>
+            </>
+        )
+    );
+
+}
+
 
 export default Error
