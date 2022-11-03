@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const About = () => {
 
-    const Wrapper = styled.section`
+  const Wrapper = styled.section`
     #divider3 {
       position: absolute;
       background: #1cd6ce;
@@ -158,68 +158,68 @@ const About = () => {
     
     `
   return (
-      <>
-   {/* //? About Us */}
-            <Wrapper>
-            <div className="Features">
-                <p id="s-specialty"> Our Team </p>
+    <>
+      {/* //? About Us */}
+      <Wrapper>
+        <div className="Features">
+          <p id="s-specialty"> Our Team </p>
+        </div>
+
+        <div id="divider3"></div>
+        <div className="container">
+
+          <div className="about-card">
+            <div className="img">
+              <img src={Images.osama} alt="" />
             </div>
-
-            <div id="divider3"></div>
-            <div className="container">
-
-                <div className="about-card">
-                    <div className="img">
-                        <img src={Images.harsh} alt="" />
-                    </div>
-                    <div className="info">
-                        <h3>Harsh Dalvi</h3>
-                        <span>Piroo Developur</span>
-                    </div>
-                    <ul className="social">
-                        <li><a href="/" className="fab fa-facebook"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-twitter"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-instagram"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-linkedin"><span></span></a> </li>
-                    </ul>
-                </div>
-
-                <div className="about-card">
-                    <div className="img">
-                        <img src={Images.bhanu} alt="" />
-                    </div>
-                    <div className="info">
-                        <h3>Bhanu Sunka</h3>
-                        <span>SaxX Developur</span>
-                    </div>
-                    <ul className="social">
-                        <li><a href="/" className="fab fa-facebook"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-twitter"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-instagram"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-linkedin"><span></span></a> </li>
-                    </ul>
-                </div>
-
-                <div className="about-card">
-                    <div className="img">
-                        <img src={Images.osama} alt="" />
-                    </div>
-                    <div className="info">
-                        <h3>Osama Shaikh</h3>
-                        <span>Developur Ssrly??</span>
-                    </div>
-                    <ul className="social">
-                        <li><a href="/" className="fab fa-facebook"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-twitter"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-instagram"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-linkedin"><span></span></a> </li>
-                    </ul>
-                </div>
+            <div className="info">
+              <h3>Osama Shaikh</h3>
+              <span>Frontend Devoloper</span>
             </div>
-            </Wrapper>
-            {/* //? ------------------------------------------------------------------------------ */}
-   
-      </>
+            <ul className="social">
+              <li><a href="/" className="fab fa-facebook"><span></span></a> </li>
+              <li><a href="/" className="fab fa-twitter"><span></span></a> </li>
+              <li><a href="/" className="fab fa-instagram"><span></span></a> </li>
+              <li><a href="/" className="fab fa-linkedin"><span></span></a> </li>
+            </ul>
+          </div>
+
+          <div className="about-card">
+            <div className="img">
+              <img src={Images.bhanu} alt="" />
+            </div>
+            <div className="info">
+              <h3>Bhanu Sunka</h3>
+              <span>Full Stack Devoloper</span>
+            </div>
+            <ul className="social">
+              <li><a href="/" className="fab fa-facebook"><span></span></a> </li>
+              <li><a href="/" className="fab fa-twitter"><span></span></a> </li>
+              <li><a href="/" className="fab fa-instagram"><span></span></a> </li>
+              <li><a href="/" className="fab fa-linkedin"><span></span></a> </li>
+            </ul>
+          </div>
+
+          <div className="about-card">
+            <div className="img">
+              <img src={Images.harsh} alt="" />
+            </div>
+            <div className="info">
+              <h3>Harsh Dalvi</h3>
+              <span>Backend Devoloper</span>
+            </div>
+            <ul className="social">
+              <li><a href="/" className="fab fa-facebook"><span></span></a> </li>
+              <li><a href="/" className="fab fa-twitter"><span></span></a> </li>
+              <li><a href="/" className="fab fa-instagram"><span></span></a> </li>
+              <li><a href="/" className="fab fa-linkedin"><span></span></a> </li>
+            </ul>
+          </div>
+        </div>
+      </Wrapper>
+      {/* //? ------------------------------------------------------------------------------ */}
+
+    </>
   )
 }
 
