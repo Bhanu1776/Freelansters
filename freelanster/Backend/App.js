@@ -9,6 +9,7 @@ dotenv.config({ path: './config.env' });
 const PORT = process.env.PORT;
 require('./db/conn.js')
 
+const FJSchema = require('./model/FJSchema');
 // const User = require('./model/userSchema');
 
 app.use(express.json());                        // To convert the json files into objects, just to understand the javascript
@@ -37,6 +38,14 @@ app.get('/FindFreelancer', (req, res) => {
 //     res.send('Hello About world from the server')
 // })
 
+
+app.post('/Jobs', (req, res) => {
+    console.log(req.body);
+    const Jobs = FJSchema(req.body);
+    Jobs.save();
+    res.send(req.body);
+
+})
 
 app.listen(PORT, () => {
     console.log(`Server is running at port no ${PORT}`);
