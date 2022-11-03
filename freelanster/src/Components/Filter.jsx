@@ -3,11 +3,16 @@ import React from 'react'
 import './Filter.css'
 import Cards from './Cards';
 import Cdata from './Cdata.jsx'
+// import {useFilterContext} from "../context/jobscontext";
 
 
-
+// import {useProductContext} from "../context/jobscontext"
 
 const Filter = () => {
+    // const { isLoading, featureProducts } = useProductContext();
+    // if (isLoading){
+    //     return <div>....NOT FOUND</div>;
+    // }
 
 const cateP = document.querySelectorAll(".cate-jobs-p input");
 
@@ -47,7 +52,7 @@ const range = document.querySelector('#num');
 //     }
 // })
 
-
+const{sorting_bytime,} = useFilterContext();
   return (
     <>
       <article>
@@ -78,7 +83,7 @@ const range = document.querySelector('#num');
                 <hr />
                 <div className="cate-budget">
                     <p><b>Budget:</b></p>
-                    <select name="posted-time" id="cate-post">
+                          <select name="posted-time" id="cate-post-time" className="sort-by-time" onClick={sorting_bytime}>
                         <option value="All Durations">All Durations</option>
                         <option value="hourly">Hourly</option>
                         <option value="Less than a week">Less than a week</option>
