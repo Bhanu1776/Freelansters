@@ -5,6 +5,7 @@ import Cards from './Cards';
 import Cdata from './Cdata.jsx'
 
 
+
 const Filter = () => {
 
 const cateP = document.querySelectorAll(".cate-jobs-p input");
@@ -204,6 +205,9 @@ hr {
   padding: 30px 0px 30px 30px;
   row-gap: 20px;
   column-gap: 20px;
+   width:80vw;
+   height:150vh;
+   overflow-y: scroll;
 }
 
 .inside-jobs li {
@@ -225,7 +229,8 @@ hr {
 }
 
 .images-jobs {
-  width: inherit;
+  width: 20%;
+  height: 45%;
   overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -322,7 +327,7 @@ hr {
 } */
 
 `
-
+// const{sorting_bytime,} = useFilterContext();
   return (
     <>
     <Wrapper>
@@ -354,7 +359,7 @@ hr {
                 <hr />
                 <div className="cate-budget">
                     <p><b>Budget:</b></p>
-                    <select name="posted-time" id="cate-post">
+                          <select name="posted-time" id="cate-post-time" className="sort-by-time">
                         <option value="All Durations">All Durations</option>
                         <option value="hourly">Hourly</option>
                         <option value="Less than a week">Less than a week</option>

@@ -18,16 +18,17 @@ const FFlancer = () => {
             <CardsHolder>
                 {ProfileData.map((val) => {
                     return (
-                        <ProfileCards
-                            key={val.id}
-                            proSpecial={val.proSpecial}
-                            proTime={val.proTime}
-                            proPrice={val.proPrice}
-                            proImg={val.proImg}
-                            proName={val.proName}
-                            proStars={val.proStars}
-                        />
-                    )
+            <ProfileCards
+                key = {val.id}  
+                proSpecial = {val.proSpecial}   
+                proTime = {val.proTime}
+                proPrice = {val.proPrice}
+                proImg = {val.proImg}
+                proName = {val.proName}
+                proStars = {val.proStars}
+                proReviews={val.proReviews}
+                 />
+            )
                 })}
             </CardsHolder>
         </>
@@ -83,7 +84,7 @@ const FFlancer = () => {
 
 const CardsHolder = styled.div`
 display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
     row-gap: 20px;
