@@ -1,6 +1,8 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"); */
-
-*,
+@import "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js";
+@import "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js";
+@import "https://unpkg.com/swiper@8/swiper-bundle.min.js";
+/* *,
 *::before,
 *::after {
     margin: 0;
@@ -8,7 +10,7 @@
     box-sizing: border-box;
     list-style-type: none;
     text-decoration: none;
-}
+} */
 
 /* Root variable */
 :root {
@@ -82,7 +84,7 @@
 } */
 
 #container-carousel {
-    padding: 4rem 0;
+    padding: 4rem 0rem;
 }
 
 /* @media (max-width:1440px) {
@@ -92,7 +94,7 @@
 } */
 
 #container-carousel .catecards-slider {
-    height: 55rem;
+    height: 10rem;
     padding: 2rem 0;
     position: relative;
 }
@@ -104,8 +106,9 @@
 } */
 
 .catecards-slide {
-    width: 35rem;
+    width: 20rem;
     height: 42rem;
+    padding: 20rem 0rem;
     position: relative;
 }
 
@@ -252,9 +255,10 @@
     overflow: hidden;
     font-weight: bold;
     /* max-width: 35ch; */
-    padding: 10rem 0 0;
-    width: 35rem;
-    height: 42rem;
+    margin:2rem;
+    /* padding: 3rem 0; */
+    width: 20rem;
+    height: 25rem;
     border-radius: 2rem;
     object-fit: cover;
 }
