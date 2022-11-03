@@ -16,3 +16,8 @@ const FJSchema = new mongoose.Schema({
     },
 
 })
+
+//* Collection Creation
+const Jobs = mongoose.model('Jobs', FJSchema)
+
+module.exports = Jobs;
