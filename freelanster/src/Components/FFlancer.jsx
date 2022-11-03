@@ -31,6 +31,7 @@ const FFlancer = () => {
                 proImg = {val.proImg}
                 proName = {val.proName}
                 proStars = {val.proStars}
+                proReviews={val.proReviews}
                  />
             )
                 })}
