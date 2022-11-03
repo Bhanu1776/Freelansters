@@ -5,7 +5,7 @@ import styled from 'styled-components';
 /* eslint-disable no-unused-vars */
 
 
-const Navbar = () => {
+const Navbar = (props) => {
 
     const { state, dispatch } = useContext(UserContext);
 
@@ -55,7 +55,7 @@ const Navbar = () => {
             <div className='progressbar'>
                 <div className='progressbarIn' style={{ width: `${scrollTop}%` }}></div>
             </div>
-            <Wrapper>
+        <Wrapper navColor={props.color}>
                 <nav id="navbar">
                     <div className="d-logo">
                         <span id="logo">Freelanster</span>
@@ -93,6 +93,7 @@ const Wrapper = styled.section`
   font-size: 1.5rem;
   margin-left: 50px;
   transition: 0.6s;
+  color: ${(props) => props.navColor};
 }
 
 #logo:hover {
@@ -118,7 +119,7 @@ const Wrapper = styled.section`
   position: relative;
   text-decoration: none;
   font-family: "PT Serif", serif;
-  color: black;
+  color: ${(props) => props.navColor};
   transition: 0.6s;
 }
 
@@ -129,7 +130,7 @@ const Wrapper = styled.section`
 #navbar ul li a::after {
   content: "";
   position: absolute;
-  background-color: black;
+  background-color: ${(props) => props.navColor};
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.5s;
