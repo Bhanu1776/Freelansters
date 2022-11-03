@@ -3,16 +3,10 @@ import React from 'react'
 import styled from 'styled-components';
 import Cards from './Cards';
 import Cdata from './Cdata.jsx'
-// import {useFilterContext} from "../context/jobscontext";
 
 
-// import {useProductContext} from "../context/jobscontext"
 
 const Filter = () => {
-    // const { isLoading, featureProducts } = useProductContext();
-    // if (isLoading){
-    //     return <div>....NOT FOUND</div>;
-    // }
 
 const cateP = document.querySelectorAll(".cate-jobs-p input");
 const cateT = document.querySelectorAll('.cate-time input');
@@ -211,6 +205,9 @@ hr {
   padding: 30px 0px 30px 30px;
   row-gap: 20px;
   column-gap: 20px;
+   width:80vw;
+   height:150vh;
+   overflow-y: scroll;
 }
 
 .inside-jobs li {
@@ -232,7 +229,8 @@ hr {
 }
 
 .images-jobs {
-  width: inherit;
+  width: 20%;
+  height: 45%;
   overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -329,7 +327,7 @@ hr {
 } */
 
 `
-const{sorting_bytime,} = useFilterContext();
+// const{sorting_bytime,} = useFilterContext();
   return (
     <>
     <Wrapper>
@@ -361,7 +359,7 @@ const{sorting_bytime,} = useFilterContext();
                 <hr />
                 <div className="cate-budget">
                     <p><b>Budget:</b></p>
-                          <select name="posted-time" id="cate-post-time" className="sort-by-time" onClick={sorting_bytime}>
+                          <select name="posted-time" id="cate-post-time" className="sort-by-time">
                         <option value="All Durations">All Durations</option>
                         <option value="hourly">Hourly</option>
                         <option value="Less than a week">Less than a week</option>
