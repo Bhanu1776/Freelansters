@@ -94,6 +94,7 @@
 } */
 
 #container-carousel .catecards-slider {
+    margin-top: -124px;
     height: 10rem;
     padding: 2rem 0;
     position: relative;
@@ -255,7 +256,7 @@
     overflow: hidden;
     font-weight: bold;
     /* max-width: 35ch; */
-    margin:2rem;
+    margin: 2rem;
     /* padding: 3rem 0; */
     width: 20rem;
     height: 25rem;
