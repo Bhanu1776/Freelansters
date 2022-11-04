@@ -12,17 +12,16 @@ import "swiper/css/effect-coverflow"
 // import required modules
 import { Pagination, Navigation, EffectCoverflow } from "swiper";
 
-
-import "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-import "https://unpkg.com/swiper@8/swiper-bundle.min.js"
-import "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+import {FaChevronCircleLeft, FaChevronCircleRight} from 'react-icons/fa' 
+// Framer-motion Library
+// import {motion} from 'framer-motion'
 
 
 
 const CateCards = () => {
+    
     return (  
         <>
-            
             <Swiper id='container-cards-carousel'
                 effect={'coverflow'}
                 grabCursor={true}
@@ -45,34 +44,35 @@ const CateCards = () => {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 }}
+
+                style={{ }}
+
                 modules={[Pagination, Navigation, EffectCoverflow]}
-                className="container-carousel">
+                className="catecards-slider">
                 
             <section className="container-carousel">
                 <div className="swiper catecards-slider">
                    
                         {/* <!-- Slide-start --> */}
                         <div className="swiper catecards-slide">
-                            <SwiperSlide className='card' style={{ maxWidth: "fit-content", maxHeight: "fit-content", padding:"0px",margin:"0px"}}>
+                            <SwiperSlide style={{ maxWidth: "max-content", maxHeight: "max-content",padding:"1rem",background:"transparent",borderRadius:"2rem"}}>
                             <div className="card-1 card">
                                 <div className="card-content">
-                                    {/* <!-- <img src="C:\Users\ASUS\Desktop\images\tranding-food-1.png" alt="Tranding"> --> */}
                                     <h2 className="card-title">Graphic Design</h2>
                                     <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                         Inventore,
                                         praesentium.</p>
                                     <a href="/" className="button">Learn More</a>
                                 </div>
-                            </div>
+                                </div>
                             </SwiperSlide>
                         </div>
                         {/* <!-- Slide-end --> */}
 
                         {/* <!-- Slide-start --> */}
                         <div className="swiper-slide catecards-slide">
-                            <SwiperSlide className='card' style={{ maxWidth: "fit-content", maxHeight:"fit-content" }}> 
+                            <SwiperSlide style={{ maxWidth: "max-content", maxHeight: "max-content", padding: "1rem", background: "transparent", borderRadius: "2rem" }}> 
                             <div className="card-2 card">
-                                {/* <!-- <img src="C:\Users\ASUS\Desktop\images\tranding-food-2.png" alt="Tranding"> --> */}
                                 <div className="card-content">
                                     <h2 className="card-title">Article Writing</h2>
                                     <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -80,16 +80,16 @@ const CateCards = () => {
                                         praesentium.</p>
                                     <a href="/" className="button">Learn More</a>
                                 </div>
-                            </div>
+                        </div>
+                            {/* </motion.div> */}
                             </SwiperSlide>
                         </div>
                         {/* <!-- Slide-end --> */}
 
                         {/* <!-- Slide-start --> */}
                         <div className="swiper-slide catecards-slide">
-                            <SwiperSlide className='card' style={{ maxWidth: "fit-content", maxHeight: "fit-content" }}>
-                            <div className="card-3 card">
-                                {/* <!-- <img src="C:\Users\ASUS\Desktop\images\tranding-food-3.png" alt="Tranding"> --> */}
+                            <SwiperSlide style={{ maxWidth: "max-content", maxHeight: "max-content", padding: "1rem", background: "transparent", borderRadius: "2rem" }}>
+                                <div className="card-3 card">
                                 <div className="card-content">
                                     <h2 className="card-title">Video Editing</h2>
                                     <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -97,16 +97,15 @@ const CateCards = () => {
                                         praesentium.</p>
                                     <a href="/" className="button">Learn More</a>
                                 </div>
-                            </div>
+                                </div>
                             </SwiperSlide>
                         </div>
                         {/* <!-- Slide-end --> */}
 
                         {/* <!-- Slide-start --> */}
                         <div className="swiper-slide catecards-slide">
-                            <SwiperSlide className='card' style={{ maxWidth: "fit-content", maxHeight: "fit-content" }}>
-                            <div className="catecards-slide-img card-4 card">
-                                {/* <!-- <img src="C:\Users\ASUS\Desktop\images\tranding-food-4.png" alt="Tranding"> --> */}
+                            <SwiperSlide style={{ maxWidth: "max-content", maxHeight: "max-content", padding: "1rem", background: "transparent", borderRadius: "2rem" }}>
+                            <div className="card-4 card">
                                 <div className="card-content">
                                     <h2 className="card-title">Accountant</h2>
                                     <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -114,16 +113,15 @@ const CateCards = () => {
                                         praesentium.</p>
                                     <a href="/" className="button">Learn More</a>
                                 </div>
-                            </div>
+                                </div>
                             </SwiperSlide>
                         </div>
                         {/* <!-- Slide-end --> */}
 
                         {/* <!-- Slide-start --> */}
                         <div className="swiper-slide catecards-slide">
-                            <SwiperSlide className='card' style={{ maxWidth: "fit-content", maxHeight: "fit-content" }}>
-                            <div className="catecards-slide-img card-5 card">
-                                {/* <!-- <img src="C:\Users\ASUS\Desktop\images\tranding-food-5.png" alt="Tranding"> --> */}
+                            <SwiperSlide style={{ maxWidth: "max-content", maxHeight: "max-content", padding: "1rem", background: "transparent", borderRadius: "2rem" }}>
+                           <div className="card-5 card">
                                 <div className="card-content">
                                     <h2 className="card-title">Android Developer</h2>
                                     <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -131,16 +129,15 @@ const CateCards = () => {
                                         praesentium.</p>
                                     <a href="/" className="button">Learn More</a>
                                 </div>
-                            </div>
+                                </div>
                         </SwiperSlide>
                         </div>
                         {/* <!-- Slide-end --> */}
 
                         {/* <!-- Slide-start --> */}
                         <div className="swiper-slide catecards-slide">
-                            <SwiperSlide className='card' style={{ maxWidth: "fit-content", maxHeight:"fit-content" }}>
-                            <div className="catecards-slide-img card-6 card">
-                                {/* <!-- <img src="C:\Users\ASUS\Desktop\images\tranding-food-6.png" alt="Tranding"> --> */}
+                            <SwiperSlide style={{ maxWidth: "max-content", maxHeight: "max-content", padding: "1rem", background: "transparent", borderRadius: "2rem" }}>
+                            <div className="card-6 card">
                                 <div className="card-content">
                                     <h2 className="card-title">Data Entry</h2>
                                     <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -148,16 +145,16 @@ const CateCards = () => {
                                         praesentium.</p>
                                     <a href="/" className="button">Learn More</a>
                                 </div>
-                            </div>
+                                </div>
+                            {/* </motion.div> */}
                             </SwiperSlide>
                         </div>
                         {/* <!-- Slide-end --> */}
 
                         {/* <!-- Slide-start --> */}
                         <div className="swiper-slide catecards-slide">
-                            <SwiperSlide className='card' style={{ maxWidth: "fit-content", maxHeight: "fit-content" }}>
-                            <div className="catecards-slide-img card-7 card">
-                                {/* <!-- <img src="C:\Users\ASUS\Desktop\images\tranding-food-7.png" alt="Tranding"> --> */}
+                            <SwiperSlide style={{ maxWidth: "max-content", maxHeight: "max-content", padding: "1rem", background: "transparent", borderRadius: "2rem" }}>
+                            <div className="card-7 card">
                                 <div className="card-content">
                                     <h2 className="card-title">Logistics</h2>
                                     <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -165,25 +162,20 @@ const CateCards = () => {
                                         praesentium.</p>
                                     <a href="/" className="button">Learn More</a>
                                 </div>
-                            </div>
+                                </div>
                         </SwiperSlide>
                         </div>
                         {/* <!-- Slide-end --> */}
-                 
-                
-                    
-                    
-                    
-
                 </div>
             </section>
+                
         </Swiper>
             <div class="catecards-slider-control">
                 <div class="swiper-button-prev slider-arrow">
-                    <ion-icon name="arrow-back-outline"></ion-icon>
+                    <FaChevronCircleLeft className='ion-icon'/>
                 </div>
                 <div class="swiper-button-next slider-arrow">
-                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                    <FaChevronCircleRight className='ion-icon' />
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
