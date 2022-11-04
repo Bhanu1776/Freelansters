@@ -333,7 +333,11 @@ hr {
     <Wrapper>
       <article>
               <div className="findjobs">
-            <div className="filter">
+            <div 
+              data-aos="fade-right"
+              data-duration='3000'
+              data-aos-offset='300'
+            className="filter">
                 <h1 id="filer-title"> Filter by: </h1> <br />
                 <div id="divider-h"></div>
 
@@ -376,8 +380,17 @@ hr {
                 </div>
             </div>
 
-            <div className="jobs">
-                <ul className="inside-jobs">
+            <div 
+              data-aos="fade-left"
+              data-duration='3000'
+              data-aos-offset='300'
+            className="jobs">
+              <ul
+                data-aos="fade-up"
+                data-duration='3000'
+                data-aos-offset='300' 
+                data-aos-anchor-placement="top-bottom"
+                className="inside-jobs">
                     
                     {
                 Cdata.map((val) => {

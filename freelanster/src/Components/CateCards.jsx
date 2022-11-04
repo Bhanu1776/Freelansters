@@ -56,7 +56,12 @@ const CateCards = () => {
                         {/* <!-- Slide-start --> */}
                         <div className="swiper catecards-slide">
                             <SwiperSlide style={{ maxWidth: "max-content", maxHeight: "max-content",padding:"1rem",background:"transparent",borderRadius:"2rem"}}>
-                            <div className="card-1 card">
+                            <div 
+                                    data-aos="zoom-out-down"
+                                    data-aos-offset="350"
+                                    data-aos-duration="500" 
+                                    data-aos-easing="ease-in-out"
+                                    className="card-1 card">
                                 <div className="card-content">
                                     <h2 className="card-title">Graphic Design</h2>
                                     <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -72,7 +77,12 @@ const CateCards = () => {
                         {/* <!-- Slide-start --> */}
                         <div className="swiper-slide catecards-slide">
                             <SwiperSlide style={{ maxWidth: "max-content", maxHeight: "max-content", padding: "1rem", background: "transparent", borderRadius: "2rem" }}> 
-                            <div className="card-2 card">
+                            <div 
+                                    data-aos="fade-right"
+                                    data-aos-offset="350"
+                                    data-aos-duration="500"
+                                    data-aos-easing="ease-in-out"
+                            className="card-2 card">
                                 <div className="card-content">
                                     <h2 className="card-title">Article Writing</h2>
                                     <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -89,7 +99,12 @@ const CateCards = () => {
                         {/* <!-- Slide-start --> */}
                         <div className="swiper-slide catecards-slide">
                             <SwiperSlide style={{ maxWidth: "max-content", maxHeight: "max-content", padding: "1rem", background: "transparent", borderRadius: "2rem" }}>
-                                <div className="card-3 card">
+                                <div 
+                                    data-aos="fade-right"
+                                    data-aos-offset="350"
+                                    data-aos-duration="500"
+                                    data-aos-easing="ease-in-out"
+                                className="card-3 card">
                                 <div className="card-content">
                                     <h2 className="card-title">Video Editing</h2>
                                     <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -105,7 +120,12 @@ const CateCards = () => {
                         {/* <!-- Slide-start --> */}
                         <div className="swiper-slide catecards-slide">
                             <SwiperSlide style={{ maxWidth: "max-content", maxHeight: "max-content", padding: "1rem", background: "transparent", borderRadius: "2rem" }}>
-                            <div className="card-4 card">
+                            <div 
+                                    data-aos="fade-right"
+                                    data-aos-offset="350"
+                                    data-aos-duration="500"
+                                    data-aos-easing="ease-in-out"
+                            className="card-4 card">
                                 <div className="card-content">
                                     <h2 className="card-title">Accountant</h2>
                                     <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -121,7 +141,12 @@ const CateCards = () => {
                         {/* <!-- Slide-start --> */}
                         <div className="swiper-slide catecards-slide">
                             <SwiperSlide style={{ maxWidth: "max-content", maxHeight: "max-content", padding: "1rem", background: "transparent", borderRadius: "2rem" }}>
-                           <div className="card-5 card">
+                           <div 
+                                    data-aos="fade-left"
+                                    data-aos-offset="350"
+                                    data-aos-duration="500"
+                                    data-aos-easing="ease-in-out"
+                           className="card-5 card">
                                 <div className="card-content">
                                     <h2 className="card-title">Android Developer</h2>
                                     <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -137,7 +162,12 @@ const CateCards = () => {
                         {/* <!-- Slide-start --> */}
                         <div className="swiper-slide catecards-slide">
                             <SwiperSlide style={{ maxWidth: "max-content", maxHeight: "max-content", padding: "1rem", background: "transparent", borderRadius: "2rem" }}>
-                            <div className="card-6 card">
+                            <div 
+                                    data-aos="fade-left"
+                                    data-aos-offset="350"
+                                    data-aos-duration="500"
+                                    data-aos-easing="ease-in-out"
+                            className="card-6 card">
                                 <div className="card-content">
                                     <h2 className="card-title">Data Entry</h2>
                                     <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -154,7 +184,12 @@ const CateCards = () => {
                         {/* <!-- Slide-start --> */}
                         <div className="swiper-slide catecards-slide">
                             <SwiperSlide style={{ maxWidth: "max-content", maxHeight: "max-content", padding: "1rem", background: "transparent", borderRadius: "2rem" }}>
-                            <div className="card-7 card">
+                            <div 
+                                    data-aos="fade-left"
+                                    data-aos-offset="350"
+                                    data-aos-duration="500"
+                                    data-aos-easing="ease-in-out"
+                            className="card-7 card">
                                 <div className="card-content">
                                     <h2 className="card-title">Logistics</h2>
                                     <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
