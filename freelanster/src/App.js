@@ -154,13 +154,13 @@ const App = () => {
                 {/* //? Website Features */}
 
                 <section id="Website-des">
-
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style={{
                         position: "relative",
                         marginTop: "128px",
                         marginLeft: "50px",
                         marginRight: "50px"
                     }}><path fill="#1cd6ce" fill-opacity="0.8" d="M0,256L60,224C120,192,240,128,360,128C480,128,600,192,720,192C840,192,960,128,1080,112C1200,96,1320,128,1380,144L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+              
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style={{
                         position: "relative",
                         marginTop: "-5px",
@@ -170,13 +170,38 @@ const App = () => {
 
                     <div className="glass">
 
-                        <h1 id="feat-h1">Why to choose Freelanster ?</h1>
-                        <div className="divider-h"></div>
+                        <h1 
+                            data-aos="fade-right"
+                            data-aos-offset="350"
+                            data-aos-duration="4000"
+                            data-aos-easing="ease-out"
+                        id="feat-h1">Why to choose Freelanster ?</h1>
+                        <div 
+                            data-aos="fade-right"
+                            data-aos-offset="300"
+                            data-aos-duration="4000"
+                        className="divider-h"></div>
+                        <div 
+                            data-aos="fade-right"
+                            data-aos-offset="400"
+                            data-aos-duration="4000"
+                            data-aos-easing="ease-out">
                         <p id="feat-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repudiandae voluptatum aperiam fugit fugiat deserunt accusantium, aut, officia neque assumenda odio quisquam sequi atque iste. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, enim.</p>
-                        <div className="g-button-div">
-                            <button className="g-button">See More</button>
                         </div>
-                        <img id="g-img" src={Images.glass} alt="Freelanster" />
+                        <div className="g-button-div">
+                            <button 
+                            data-aos='zoom-in'
+                            data-aos-offset="100"
+                                data-aos-duration="4000"
+                                data-aos-easing="ease-out"
+                            className="g-button">See More</button>
+                        </div>
+                        <img 
+                            data-aos="fade-down-left"
+                            data-aos-offset="400" 
+                            data-aos-duration="4000"
+                            data-aos-easing="ease-out"
+                        id="g-img" src={Images.glass} alt="Freelanster" />
                     </div>
                 </section>
 
@@ -184,19 +209,24 @@ const App = () => {
 
 
                 {/* //? Categories */}
-                <div className="Features">
+                <div
+                data-aos='fade-right'
+                data-aos-offset='200'
+                data-aos-easing="ease-out"
+                data-aos-duration="4000"
+
+                className="Features">
                     <p id="s-specialty"> Job Categories </p>
                 </div>
 
-                <div id="divider2"></div>
+                <div 
+                    data-aos='fade-right'
+                    data-aos-offset='150'
+                    data-aos-easing="ease-out"
+                    data-aos-duration="4000"
+                id="divider2"></div>
 
               
-
-
-
-
-                <div id="divider2"></div>
-
                 <CateCards />
                 {/* <!-- Temp Div --> */}
                 <div style={{ height: "100px" }}> </div>
@@ -207,14 +237,29 @@ const App = () => {
                 {/* //? Features Section */}
 
                 <article id="Features-arc">
-                    <div className="Features">
+                    <div 
+                        data-aos='fade-left'
+                        data-aos-offset='200'
+                        data-aos-easing="ease-out"
+                        data-aos-duration="4000"
+                    className="Features">
                         <p id="s-specialty"> Freelansters Specialty </p>
                     </div>
 
-                    <div id="divider"></div>
+                    <div 
+                        data-aos='fade-left'
+                        data-aos-offset='150'
+                        data-aos-easing="ease-out"
+                        data-aos-duration="4000"
+                    id="divider"></div>
 
-                    <div id="Features-div" style={{ position: "relative", marginTop: "50px" }}>
-                        <h3>Post a Job</h3>
+                    <div 
+                        data-aos='fade-right'
+                        data-aos-offset='150'
+                        data-aos-easing="ease-out"
+                        data-aos-duration="4000" 
+                        id="Features-div" style={{ position: "relative", marginTop: "50px" }}>
+                        <div><h3>Post a Job</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aperiam adipisci voluptates alias, sit asperiores odio ad cum quo, sapiente at maiores, illo inventore laboriosam.</p>
                         <h3>Choose Freelancers</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aperiam adipisci voluptates alias, sit asperiores odio ad cum quo, sapiente at maiores, illo inventore laboriosam.</p>
@@ -222,26 +267,95 @@ const App = () => {
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aperiam adipisci voluptates alias, sit asperiores odio ad cum quo, sapiente at maiores, illo inventore laboriosam.</p>
                         <h3>We're here to help</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aperiam adipisci voluptates alias, sit asperiores odio ad cum quo, sapiente at maiores, illo inventore laboriosam.</p>
+                        </div>
+                        <img 
+                            data-aos='flip-right'
+                            data-aos-offset='400'
+                            data-aos-easing="ease-out"
+                            data-aos-duration="4000"
+                        src={Images.Features} alt="" className="f-img" />
 
-                        <img src={Images.Features} alt="" className="f-img" />
-
-                        <span className="circle">
+                        <span
+                            data-aos='flip-right'
+                            data-aos-offset='400'
+                            data-aos-easing="ease-out"
+                            data-aos-duration="4000" 
+                        className="circle">
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
                         </span>
 
-                        <div className="shape-img1" id='img1'><img src={Images.shape1} alt="s" /></div>
-                        <div className="shape-img2"><img src={Images.shape2} alt="s" /></div>
-                        <div className="shape-img3"><img src={Images.shape3} alt="s" /></div>
-                        <div className="shape-img4"><img src={Images.shape4} alt="s" /></div>
-                        <div className="shape-img5"><img src={Images.shape5} alt="s" /></div>
-                        <div className="shape-img6"><img src={Images.shape6} alt="s" /></div>
-                        <div className="shape-img7"><img src={Images.shape7} alt="s" /></div>
-                        <div className="shape-img8"><img src={Images.shape8} alt="s" /></div>
-                        <div className="shape-img9"><img src={Images.shape9} alt="s" /></div>
-                        <div className="shape-img10"><img src={Images.shape10} alt="s" /></div>
+                        <div
+                            data-aos='fade-right'
+                            data-aos-offset='150'
+                            data-aos-easing="ease-out"
+                            data-aos-duration="4000"
+                         className="shape-img1" id='img1'><img src={Images.shape1} alt="s" /></div>
+
+                        <div 
+                            data-aos='fade-left'
+                            data-aos-offset='150'
+                            data-aos-easing="ease-out"
+                            data-aos-duration="4000"
+                        className="shape-img2"><img src={Images.shape2} alt="s" /></div>
+
+                        <div 
+                            data-aos='fade-right'
+                            data-aos-offset='200'
+                            data-aos-easing="ease-out"
+                            data-aos-duration="4000"
+                        className="shape-img3"><img src={Images.shape3} alt="s" /></div>
+
+                        <div 
+                            data-aos='zoom-in'
+                            data-aos-offset='200'
+                            data-aos-easing="ease-out"
+                            data-aos-duration="4000"
+                        className="shape-img4"><img src={Images.shape4} alt="s" /></div>
+
+                        <div 
+                            data-aos='fade-left'
+                            data-aos-offset='200'
+                            data-aos-easing="ease-out"
+                            data-aos-duration="4000"
+                        className="shape-img5"><img src={Images.shape5} alt="s" /></div>
+
+                        <div 
+                            data-aos='fade-down'
+                            data-aos-offset='200'
+                            data-aos-easing="ease-out"
+                            data-aos-duration="4000"
+                        className="shape-img6"><img src={Images.shape6} alt="s" /></div>
+
+                        <div 
+                            data-aos='fade-left'
+                            data-aos-offset='50'
+                            data-aos-easing="ease-out"
+                            data-aos-duration="4000"
+                        className="shape-img7"><img src={Images.shape7} alt="s" /></div>
+
+                        <div 
+                            ata-aos='fade-down'
+                            data-aos-offset='20'
+                            data-aos-easing="ease-out"
+                            data-aos-duration="4000"
+                        className="shape-img8"><img src={Images.shape8} alt="s" /></div>
+
+                        <div 
+                            ata-aos='fade-down'
+                            data-aos-offset='200'
+                            data-aos-easing="ease-out"
+                            data-aos-duration="4000"
+                        className="shape-img9"><img src={Images.shape9} alt="s" /></div>
+
+                        <div 
+                            ata-aos='fade-down'
+                            data-aos-offset='200'
+                            data-aos-easing="ease-out"
+                            data-aos-duration="4000"
+                        className="shape-img10"><img src={Images.shape10} alt="s" /></div>
                         <div className="shape-img11"><img src={Images.shape11} alt="s" /></div>
                     </div>
                 </article>
