@@ -1,7 +1,7 @@
 const Images = {
-    slider1: require('./slider1.jpg'),
-    slider2: require('./slider2.jpg'),
-    slider3: require('./slider3.jpg'),
+    // slider1: require('./slider1.jpg'),
+    // slider2: require('./slider2.jpg'),
+    // slider3: require('./slider3.jpg'),
     glass: require('./glass-right.png'),
     shape1: require('./1.png'),
     shape2: require('./2.png'),
@@ -22,5 +22,10 @@ const Images = {
     osama: require('./osama.jpg'),
     card1: require('./card-bg.jpg'),
     FFhero: require('./FFHero.jpg'),
+    PJImg: require('./PJImg.jpg'),
+    s1: require('./s1.jpg'),
+    s2: require('./s2.jpg'),
+    s3: require('./s3.jpg'),
+    s4: require('./s4.jpg'),
 }
 export default Images;
