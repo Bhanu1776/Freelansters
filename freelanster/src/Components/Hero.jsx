@@ -97,12 +97,25 @@ const Hero = (props) => {
     <>
       <Wrapper>
         <section className="static">
-          <div className="textArea">
-            <h1>{props.title}</h1>
+          <div 
+            
+          className="textArea">
+            <h1
+              data-aos='fade-down'
+              data-duration='2000'
+              data-aos-delay='400'
+              data-aos-easing='ease-in-out'>{props.title}</h1>
             <br />
-            <p>{props.desc}</p>
+            <p data-aos="fade-up"
+              data-duration='2000'
+              data-aos-delay='400'
+              data-aos-easing='ease-in-out'>{props.desc}</p>
             <div className="wrapper">
-              <div className="searchBar">
+              <div data-aos='zoom-in'
+                data-duration='2000'
+                data-aos-delay='400'
+                data-aos-easing='ease-in-out' 
+                className="searchBar">
                 <input
                   id="searchQueryInput"
                   type="text"
