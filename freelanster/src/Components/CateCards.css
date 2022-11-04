@@ -90,8 +90,9 @@
 } */
 
 #container-carousel .catecards-slider {
-    height: 20rem;
-    padding: 20rem 0rem;
+    margin-top: -124px;
+    height: 10rem;
+    padding: 2rem 0;
     position: relative;
 }
 
