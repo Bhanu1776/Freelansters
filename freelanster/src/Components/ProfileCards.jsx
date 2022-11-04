@@ -178,7 +178,13 @@ const ProfileCards = (props) => {
   return (
     <>
       <Wrapper>
-        <div className="jobs">
+        <div 
+          data-aos="fade-up"
+          data-duration='2000'
+          data-aos-offset='150'
+          data-aos-anchor-placement="top-bottom"
+          data-aos-easing='ease-in-out'
+        className="jobs">
           <div className="profile-cards">
             <div className="profile-content">
               <div className="profile-speciality">{props.proSpecial}</div>
