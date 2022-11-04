@@ -11,7 +11,7 @@ import './App.css'
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
+import CateCards from './Components/CateCards.jsx';
 
 const App = () => {
 
@@ -190,97 +190,16 @@ const App = () => {
 
                 <div id="divider2"></div>
 
-                <div className="container-carousel">
-                    <input type="radio" name="slider" id="item-1" checked />
-                    <input type="radio" name="slider" id="item-2" />
-                    <input type="radio" name="slider" id="item-3" />
-                    <input type="radio" name="slider" id="item-4" />
-                    <input type="radio" name="slider" id="item-5" />
-                    <input type="radio" name="slider" id="item-6" />
-                    <input type="radio" name="slider" id="item-7" />
-                    <div className="cards-carousel">
-                        <label className="card-display" for="item-1" id="cate-1">
-                            <div className="card card-1">
-                                <div className="card-content">
-                                    <h2 className="card-title">Graphic Design</h2>
-                                    <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore,
-                                        praesentium.</p>
-                                    <a href="/" className="button">Learn More</a>
-                                </div>
-                            </div>
-                        </label>
-                        <label className="card-display" for="item-2" id="cate-2">
-                            <div className="card card-2">
-                                <div className="card-content">
-                                    <h2 className="card-title">Article Writing</h2>
-                                    <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore,
-                                        praesentium.</p>
-                                    <a href="/" className="button">Learn More</a>
-                                </div>
-                            </div>
-                        </label>
-                        <label className="card-display" for="item-3" id="cate-3">
-                            <div className="card card-3">
-                                <div className="card-content">
-                                    <h2 className="card-title">Video Editing</h2>
-                                    <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore,
-                                        praesentium.</p>
-                                    <a href="/" className="button">Learn More</a>
-                                </div>
-                            </div>
-                        </label>
-                        <label className="card-display" for="item-4" id="cate-4">
-                            <div className="card card-4">
-                                <div className="card-content">
-                                    <h2 className="card-title">Accountant</h2>
-                                    <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore,
-                                        praesentium.</p>
-                                    <a href="/" className="button">Learn More</a>
-                                </div>
-                            </div>
-                        </label>
-                        <label className="card-display" for="item-5" id="cate-5">
-                            <div className="card card-5">
-                                <div className="card-content">
-                                    <h2 className="card-title">Android Developer</h2>
-                                    <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore,
-                                        praesentium.</p>
-                                    <a href="/" className="button">Learn More</a>
-                                </div>
-                            </div>
-                        </label>
-                        <label className="card-display" for="item-6" id="cate-6">
-                            <div className="card card-6">
-                                <div className="card-content">
-                                    <h2 className="card-title">Data Entry</h2>
-                                    <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore,
-                                        praesentium.</p>
-                                    <a href="/" className="button">Learn More</a>
-                                </div>
-                            </div>
-                        </label>
-                        <label className="card-display" for="item-7" id="cate-7">
-                            <div className="card card-7">
-                                <div className="card-content">
-                                    <h2 className="card-title">Logistics</h2>
-                                    <p className="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore,
-                                        praesentium.</p>
-                                    <a href="/" className="button">Learn More</a>
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                </div>
+              
 
 
-                {/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */}
 
 
-                {/* <div id="divider2"></div> */}
+                <div id="divider2"></div>
 
-                {/* <CateCards /> */}
+                <CateCards />
                 {/* <!-- Temp Div --> */}
-                {/* <div style={{ height: "100px" }}> </div> */}
+                <div style={{ height: "100px" }}> </div>
 
                 {/* //? ------------------------------------------------------------------------------ */}
 

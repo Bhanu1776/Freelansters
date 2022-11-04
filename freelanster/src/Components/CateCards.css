@@ -1,7 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"); */
-@import "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js";
-@import "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js";
-@import "https://unpkg.com/swiper@8/swiper-bundle.min.js";
 /* *,
 *::before,
 *::after {
@@ -84,7 +80,7 @@
 } */
 
 #container-carousel {
-    padding: 4rem 0rem;
+    padding: 4rem 4rem;
 }
 
 /* @media (max-width:1440px) {
@@ -94,6 +90,7 @@
 } */
 
 #container-carousel .catecards-slider {
+    margin-top: -124px;
     height: 10rem;
     padding: 2rem 0;
     position: relative;
@@ -108,8 +105,9 @@
 .catecards-slide {
     width: 20rem;
     height: 42rem;
-    padding: 20rem 0rem;
+    padding:  0rem;
     position: relative;
+    background-color: transparent;
 }
 
 /* @media (max-width:500px) {
@@ -141,10 +139,11 @@
 /* Buttons to control the slide */
 .catecards-slider-control {
     position: relative;
-    bottom: 2rem;
+    top: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 0;
 }
 
 .catecards-slider-control .swiper-button-next {
@@ -190,9 +189,11 @@
     filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
 }
 
-.catecards-slider-control .slider-arrow ion-icon {
-    font-size: 2rem;
-    color: #222224;
+.catecards-slider-control .slider-arrow .ion-icon {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #180117;
 }
 
 .catecards-slider-control .slider-arrow::after {
@@ -251,11 +252,10 @@
     display: inline-block;
     background-size: cover;
     color: var(--clr-neutral-100);
-    border-radius: 1rem;
     overflow: hidden;
     font-weight: bold;
     /* max-width: 35ch; */
-    margin:2rem;
+    /* margin:2rem; */
     /* padding: 3rem 0; */
     width: 20rem;
     height: 25rem;
