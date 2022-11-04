@@ -168,68 +168,71 @@ const About = () => {
         <div id="divider3"></div>
         <div className="container">
 
-                <div data-aos="fade-right" 
+          <div data-aos="fade-right"
             data-aos-offset="300"
             data-aos-easing="ease-in-out"
-                className="about-card">
-                    <div className="img">
-                        <img src={Images.harsh} alt="" />
-                    </div>
-                    <div className="info">
-                        <h3>Harsh Dalvi</h3>
-                        <span>Piroo Developur</span>
-                    </div>
-                    <ul className="social">
-                        <li><a href="/" className="fab fa-facebook"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-twitter"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-instagram"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-linkedin"><span></span></a> </li>
-                    </ul>
-                </div>
-
-          <div data-aos="fade-down" 
-            data-aos-offset="300"
-            data-aos-easing="ease-in-out"
-          className="about-card">
-                    <div className="img">
-                        <img src={Images.bhanu} alt="" />
-                    </div>
-                    <div className="info">
-                        <h3>Bhanu Sunka</h3>
-                        <span>SaxX Developur</span>
-                    </div>
-                    <ul className="social">
-                        <li><a href="/" className="fab fa-facebook"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-twitter"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-instagram"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-linkedin"><span></span></a> </li>
-                    </ul>
-                </div>
-
-          <div data-aos="fade-left" 
-            data-aos-offset="300"
-            data-aos-easing="ease-in-out"
-          className="about-card">
-                    <div className="img">
-                        <img src={Images.osama} alt="" />
-                    </div>
-                    <div className="info">
-                        <h3>Osama Shaikh</h3>
-                        <span>Developur Ssrly??</span>
-                    </div>
-                    <ul className="social">
-                        <li><a href="/" className="fab fa-facebook"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-twitter"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-instagram"><span></span></a> </li>
-                        <li><a href="/" className="fab fa-linkedin"><span></span></a> </li>
-                    </ul>
-                </div>
+            className="about-card">
+            <div className="img">
+              <img src={Images.osama} alt="" />
             </div>
-            </Wrapper>
-            {/* //? ------------------------------------------------------------------------------ */}
-   
-      </>
+            <div className="info">
+              <h3>Osama Shaikh</h3>
+              <span>Frontend Developer</span>
+            </div>
+            <ul className="social">
+              <li><a href="/" className="fab fa-facebook"><span></span></a> </li>
+              <li><a href="/" className="fab fa-twitter"><span></span></a> </li>
+              <li><a href="/" className="fab fa-instagram"><span></span></a> </li>
+              <li><a href="/" className="fab fa-linkedin"><span></span></a> </li>
+            </ul>
+          </div>
+
+          <div data-aos="fade-down"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-out"
+            className="about-card">
+            <div className="img">
+              <img src={Images.bhanu} alt="" />
+            </div>
+            <div className="info">
+              <h3>Bhanu Sunka</h3>
+              <span>Full Stack Developer</span>
+            </div>
+            <ul className="social">
+              <li><a href="/" className="fab fa-facebook"><span></span></a> </li>
+              <li><a href="/" className="fab fa-twitter"><span></span></a> </li>
+              <li><a href="/" className="fab fa-instagram"><span></span></a> </li>
+              <li><a href="/" className="fab fa-linkedin"><span></span></a> </li>
+            </ul>
+          </div>
+
+          <div data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-out"
+            className="about-card">
+            <div className="img">
+              <img src={Images.harsh} alt="" />
+            </div>
+            <div className="info">
+              <h3>Harsh Dalvi</h3>
+              <span>Backend Developer</span>
+            </div>
+            <ul className="social">
+              <li><a href="/" className="fab fa-facebook"><span></span></a> </li>
+              <li><a href="/" className="fab fa-twitter"><span></span></a> </li>
+              <li><a href="/" className="fab fa-instagram"><span></span></a> </li>
+              <li><a href="/" className="fab fa-linkedin"><span></span></a> </li>
+            </ul>
+          </div>
+        </div>
+      </Wrapper>
+      {/* //? ------------------------------------------------------------------------------ */}
+
+    </>
   )
 }
 
 export default About
+
+
+
