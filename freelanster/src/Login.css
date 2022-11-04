@@ -98,17 +98,17 @@ a:hover {
   color: var(--secondary-color);
 }
 
-p {
+#Para {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.7;
 }
 
-h4 {
+#H4 {
   font-weight: 600;
 }
 
-h6 span {
+#H6 span {
   padding: 0 20px;
   text-transform: uppercase;
   font-weight: 700;
