@@ -340,7 +340,7 @@ body {
 }
 
 /* The design of the card */
-.card {
+/* .card {
   display: inline-block;
   background-size: cover;
   color: var(--clr-neutral-100);
@@ -378,23 +378,23 @@ body {
 
 .card-7 {
   background-image: url(Img/logistics.jpg);
-}
+} */
 
 /* When the card is hovered */
-.card:hover {
+/* .card:hover {
   transition: transform 500ms ease;
   transform: scale(1.05);
-}
+} */
 
 /* The content inside the card */
-.card-content {
+/* .card-content {
   background-color: linear-gradient(
     hsl(0 0% 0% / 0),
     hsl(20 0% 0% / 0.3) 20%,
     hsl(0 0% 0% / 1)
   );
   padding: var(--padding);
-}
+} */
 
 /* @media (hover) { */
 /* content is hidden below the card */
@@ -429,14 +429,14 @@ body {
 }
 
 /* Card title  */
-.card-title {
+/* .card-title {
   position: relative;
   width: max-content;
   color: #000000;
-}
+} */
 
 /* Card title Line */
-.card-title::after {
+/* .card-title::after {
   content: "";
   position: absolute;
   left: 0px;
@@ -447,8 +447,8 @@ body {
   transform-origin: left;
   width: calc(100% + var(--padding));
   height: 4px;
-}
-
+} */
+/* 
 .card:hover .card-title::after {
   transform: scaleX(1);
 }
@@ -607,7 +607,7 @@ input[type="radio"] {
   transition: all 900ms ease-in-out;
   opacity: 0.2;
   z-index: -1;
-}
+} */
 
 /** ------------------------------------------------------------------------------ */
 
