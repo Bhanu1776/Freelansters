@@ -27,7 +27,7 @@ app.get('/Login', (req, res) => {
 app.get('/register', (req, res) => {
     res.send('Hello world from the Login server');
 })
-// app.get('/FindJobs', (req, res) => {
+// app.get('/FindJobs', (req, res) => {jobs
 //     res.send('Hello world from the FJ server');
 // })
 app.get('/FindFreelancer', (req, res) => {
@@ -46,6 +46,12 @@ app.post('/Jobs', (req, res) => {
     res.send(req.body);
 
 })
+// app.get('/JobsFetch', async (req, res) => {
+//     const jobsFetch = await FJSchema.find({});
+//     res.json({
+//         data: jobsFetch
+//     })
+// })
 
 app.listen(PORT, () => {
     console.log(`Server is running at port no ${PORT}`);
