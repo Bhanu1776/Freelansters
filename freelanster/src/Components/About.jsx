@@ -168,7 +168,10 @@ const About = () => {
             <div id="divider3"></div>
             <div className="container">
 
-                <div className="about-card">
+                <div data-aos="fade-right" 
+            data-aos-offset="300"
+            data-aos-easing="ease-in-out"
+                className="about-card">
                     <div className="img">
                         <img src={Images.harsh} alt="" />
                     </div>
@@ -184,7 +187,10 @@ const About = () => {
                     </ul>
                 </div>
 
-                <div className="about-card">
+          <div data-aos="fade-down" 
+            data-aos-offset="300"
+            data-aos-easing="ease-in-out"
+          className="about-card">
                     <div className="img">
                         <img src={Images.bhanu} alt="" />
                     </div>
@@ -200,7 +206,10 @@ const About = () => {
                     </ul>
                 </div>
 
-                <div className="about-card">
+          <div data-aos="fade-left" 
+            data-aos-offset="300"
+            data-aos-easing="ease-in-out"
+          className="about-card">
                     <div className="img">
                         <img src={Images.osama} alt="" />
                     </div>
