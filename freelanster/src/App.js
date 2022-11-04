@@ -64,14 +64,14 @@ const App = () => {
                     <meta name="description" content="The place to get your work done" />
                 </Helmet>
 
-                <Navbar color="black" />
+                <Navbar color="black" change="Contact Us" link="/" />
 
                 {/* //? Carasol Section */}
                 <div className='Carcontainer'>
                     <Swiper spaceBetween={10}
                         centeredSlides={true}
                         autoplay={{
-                            delay: 5000,
+                            delay: 3000,
                             disableOnInteraction: false,
                         }}
                         parallax={true}
@@ -89,7 +89,7 @@ const App = () => {
                                 className="parallax-bg"
                                 data-swiper-parallax="-23%"
                             > <img
-                                    src={Images.slider1} alt="Top Jobs" /></div>
+                                    src={Images.s3} alt="Top Jobs" /></div>
                             <div className="title" data-swiper-parallax="-300">
                                 <h2>Welcome,</h2>
                                 <h1>{username}</h1>
@@ -104,7 +104,7 @@ const App = () => {
                                 className="parallax-bg"
                                 data-swiper-parallax="-23%"
                             > <img
-                                    src={Images.slider2} alt="Top Jobs" /></div>
+                                    src={Images.s1} alt="Top Jobs" /></div>
                             <div className="title" data-swiper-parallax="-300">
                                 <h1>Osama</h1>
                             </div>
@@ -117,7 +117,7 @@ const App = () => {
                                 className="parallax-bg"
                                 data-swiper-parallax="-23%"
                             > <img
-                                    src={Images.slider3} alt="Top Jobs" /></div>
+                                    src={Images.s2} alt="Top Jobs" /></div>
                             <div className="title" data-swiper-parallax="-300">
                                 <h1>Harsh</h1>
                             </div>
@@ -130,7 +130,7 @@ const App = () => {
                                 className="parallax-bg"
                                 data-swiper-parallax="-23%"
                             > <img
-                                    src={Images.slider1} alt="Top Jobs" /></div>
+                                    src={Images.s4} alt="Top Jobs" /></div>
                             <div className="title" data-swiper-parallax="-300">
                                 <h1>Bhanu</h1>
                             </div>
