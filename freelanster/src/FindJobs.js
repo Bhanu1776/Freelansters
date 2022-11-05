@@ -10,6 +10,8 @@ const FJHeroImg = 'url("https://images.unsplash.com/photo-1498354178607-a79df291
 
 const FindJobs = () => {
 
+    const navigate = useNavigate();
+
     const [loading, setLoading] = useState(true);
     const preloader = document.getElementById('preloader');
     if (preloader) {
@@ -19,7 +21,6 @@ const FindJobs = () => {
         }, 0);
     }
 
-    const navigate = useNavigate();
 
     const callFJ = async () => {
 
@@ -34,7 +35,7 @@ const FindJobs = () => {
             });
 
             const data = await res.json();
-            console.log(data);
+            // console.log(data);
 
             if (!res.status === 200) {
                 const error = new Error(res.error);
@@ -51,42 +52,6 @@ const FindJobs = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-
-    //* Fetching Jobs Data
-
-    const [title, setTitle] = useState('');
-    const [date, setDate] = useState('');
-    const [description, setDescription] = useState('');
-
-
-    const JobsFetch = async (e) => {
-        e.preventDefault();
-
-        const res = await fetch('/Jobs', {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                title,
-                date,
-                description,
-            })
-        });
-
-        const data1 = res.json();
-
-        if (res.status === 400 || !data1) {
-            window.alert('Error 400')
-        } else {
-            window.alert('Done')
-            console.log(data1);
-        }
-    }
-    useEffect(() => {
-        JobsFetch();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
 
     return (
         !loading && (
