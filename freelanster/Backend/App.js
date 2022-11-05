@@ -46,12 +46,12 @@ app.post('/Jobs', (req, res) => {
     res.send(req.body);
 
 })
-// app.get('/JobsFetch', async (req, res) => {
-//     const jobsFetch = await FJSchema.find({});
-//     res.json({
-//         data: jobsFetch
-//     })
-// })
+app.get('/JobsFetch', async (req, res) => {
+    const JobsFetch = await FJSchema.find({});
+    res.json({
+        data: JobsFetch
+    })
+})
 
 app.listen(PORT, () => {
     console.log(`Server is running at port no ${PORT}`);
