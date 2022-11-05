@@ -11,24 +11,24 @@ const FFlancer = () => {
     return (
         <>
 
-            <Hero title="Find Freelancer" desc="This desc coming from props for Find Freelancer. consectetur adipisicing elit. Obcaecati qui ducimus aliquid? Iste, impedit" img={FFHeroImg} placeholder="Find FindFreelancer" />
+            <Hero title="Find Freelancer" desc="Want Your work done, We got your back!!" img={FFHeroImg} placeholder="Find FindFreelancer" />
 
             {/* Cards Display Section */}
 
             <CardsHolder>
                 {ProfileData.map((val) => {
                     return (
-            <ProfileCards
-                key = {val.id}  
-                proSpecial = {val.proSpecial}   
-                proTime = {val.proTime}
-                proPrice = {val.proPrice}
-                proImg = {val.proImg}
-                proName = {val.proName}
-                proStars = {val.proStars}
-                proReviews={val.proReviews}
-                 />
-            )
+                        <ProfileCards
+                            key={val.id}
+                            proSpecial={val.proSpecial}
+                            proTime={val.proTime}
+                            proPrice={val.proPrice}
+                            proImg={val.proImg}
+                            proName={val.proName}
+                            proStars={val.proStars}
+                            proReviews={val.proReviews}
+                        />
+                    )
                 })}
             </CardsHolder>
         </>
