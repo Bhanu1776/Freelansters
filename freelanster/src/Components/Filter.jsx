@@ -48,6 +48,7 @@ const Wrapper = styled.section`
 .findjobs {
   position: sticky;
   display: flex;
+  overflow-x: hidden
 }
 
 #filer-title {
