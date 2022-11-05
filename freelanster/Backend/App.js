@@ -39,13 +39,13 @@ app.get('/FindFreelancer', (req, res) => {
 // })
 
 
-app.post('/Jobs', (req, res) => {
-    console.log(req.body);
-    const Jobs = FJSchema(req.body);
-    Jobs.save();
-    res.send(req.body);
+// app.post('/Jobs', (req, res) => {
+//     console.log(req.body);
+//     const Jobs = FJSchema(req.body);
+//     Jobs.save();
+//     res.send(req.body);
 
-})
+// })
 // app.get('/JobsFetch', async (req, res) => {
 //     const jobsFetch = await FJSchema.find({});
 //     res.json({

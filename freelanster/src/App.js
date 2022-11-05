@@ -91,9 +91,7 @@ const App = () => {
                             > <img
                                     src={Images.s3} alt="Top Jobs" /></div>
                             <div className="title" data-swiper-parallax="-300">
-                                <h2>Welcome,</h2>
-                                <h1>{username}</h1>
-                                <h1>{show ? 'Happy, To see you back' : 'The place to get your work done'}</h1>
+
                             </div>
                         </SwiperSlide>
 
@@ -106,7 +104,9 @@ const App = () => {
                             > <img
                                     src={Images.s1} alt="Top Jobs" /></div>
                             <div className="title" data-swiper-parallax="-300">
-                                <h1>Osama</h1>
+                                <h2 className="swiper-h" >Welcome,</h2>
+                                <h1 className="swiper-h" >{username}</h1>
+                                <h2 className="swiper-h" >{show ? 'Happy, To see you back' : 'The place to get your work done'}</h2>
                             </div>
                         </SwiperSlide>
 
@@ -119,7 +119,7 @@ const App = () => {
                             > <img
                                     src={Images.s2} alt="Top Jobs" /></div>
                             <div className="title" data-swiper-parallax="-300">
-                                <h1>Harsh</h1>
+                                <h1 className="swiper-h" >Find Your Desired Jobs Here</h1>
                             </div>
                         </SwiperSlide>
 
@@ -132,7 +132,7 @@ const App = () => {
                             > <img
                                     src={Images.s4} alt="Top Jobs" /></div>
                             <div className="title" data-swiper-parallax="-300">
-                                <h1>Bhanu</h1>
+                                <h1 className="swiper-h" >Choose a perfect Freelancer Here </h1>
                             </div>
                         </SwiperSlide>
                     </Swiper>
@@ -160,7 +160,7 @@ const App = () => {
                         marginLeft: "50px",
                         marginRight: "50px"
                     }}><path fill="#1cd6ce" fill-opacity="0.8" d="M0,256L60,224C120,192,240,128,360,128C480,128,600,192,720,192C840,192,960,128,1080,112C1200,96,1320,128,1380,144L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-              
+
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style={{
                         position: "relative",
                         marginTop: "-5px",
@@ -170,38 +170,38 @@ const App = () => {
 
                     <div className="glass">
 
-                        <h1 
+                        <h1
                             data-aos="fade-right"
                             data-aos-offset="350"
                             data-aos-duration="4000"
                             data-aos-easing="ease-out"
-                        id="feat-h1">Why to choose Freelanster ?</h1>
-                        <div 
+                            id="feat-h1">Why to choose Freelanster ?</h1>
+                        <div
                             data-aos="fade-right"
                             data-aos-offset="300"
                             data-aos-duration="4000"
-                        className="divider-h"></div>
-                        <div 
+                            className="divider-h"></div>
+                        <div
                             data-aos="fade-right"
                             data-aos-offset="400"
                             data-aos-duration="4000"
                             data-aos-easing="ease-out">
-                        <p id="feat-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repudiandae voluptatum aperiam fugit fugiat deserunt accusantium, aut, officia neque assumenda odio quisquam sequi atque iste. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, enim.</p>
+                            <p id="feat-p">Working for yourself has several advantages, whether you do it by founding your own company or by accepting numerous assignments as a freelancer. Flexibility, freedom of choice in projects and clients, and financial potential are all benefits of working as freelancer. Many people in a variety of professions like to be their own boss, and freelancing is the simplest way to do so.</p>
                         </div>
                         <div className="g-button-div">
-                            <button 
-                            data-aos='zoom-in'
-                            data-aos-offset="100"
+                            <button
+                                data-aos='zoom-in'
+                                data-aos-offset="100"
                                 data-aos-duration="4000"
                                 data-aos-easing="ease-out"
-                            className="g-button">See More</button>
+                                className="g-button">See More</button>
                         </div>
-                        <img 
+                        <img
                             data-aos="fade-down-left"
-                            data-aos-offset="400" 
+                            data-aos-offset="400"
                             data-aos-duration="4000"
                             data-aos-easing="ease-out"
-                        id="g-img" src={Images.glass} alt="Freelanster" />
+                            id="g-img" src={Images.glass} alt="Freelanster" />
                     </div>
                 </section>
 
@@ -210,23 +210,23 @@ const App = () => {
 
                 {/* //? Categories */}
                 <div
-                data-aos='fade-right'
-                data-aos-offset='200'
-                data-aos-easing="ease-out"
-                data-aos-duration="4000"
+                    data-aos='fade-right'
+                    data-aos-offset='200'
+                    data-aos-easing="ease-out"
+                    data-aos-duration="4000"
 
-                className="Features">
+                    className="Features">
                     <p id="s-specialty"> Job Categories </p>
                 </div>
 
-                <div 
+                <div
                     data-aos='fade-right'
                     data-aos-offset='150'
                     data-aos-easing="ease-out"
                     data-aos-duration="4000"
-                id="divider2"></div>
+                    id="divider2"></div>
 
-              
+
                 <CateCards />
                 {/* <!-- Temp Div --> */}
                 <div style={{ height: "100px" }}> </div>
@@ -237,50 +237,50 @@ const App = () => {
                 {/* //? Features Section */}
 
                 <article id="Features-arc">
-                    <div 
+                    <div
                         data-aos='fade-left'
                         data-aos-offset='200'
                         data-aos-easing="ease-out"
                         data-aos-duration="4000"
-                    className="Features">
+                        className="Features">
                         <p id="s-specialty"> Freelansters Specialty </p>
                     </div>
 
-                    <div 
+                    <div
                         data-aos='fade-left'
                         data-aos-offset='150'
                         data-aos-easing="ease-out"
                         data-aos-duration="4000"
-                    id="divider"></div>
+                        id="divider"></div>
 
-                    <div 
+                    <div
                         data-aos='fade-right'
                         data-aos-offset='150'
                         data-aos-easing="ease-out"
-                        data-aos-duration="4000" 
+                        data-aos-duration="4000"
                         id="Features-div" style={{ position: "relative", marginTop: "50px" }}>
                         <div><h3>Post a Job</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aperiam adipisci voluptates alias, sit asperiores odio ad cum quo, sapiente at maiores, illo inventore laboriosam.</p>
-                        <h3>Choose Freelancers</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aperiam adipisci voluptates alias, sit asperiores odio ad cum quo, sapiente at maiores, illo inventore laboriosam.</p>
-                        <h3>Pay Securely</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aperiam adipisci voluptates alias, sit asperiores odio ad cum quo, sapiente at maiores, illo inventore laboriosam.</p>
-                        <h3>We're here to help</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aperiam adipisci voluptates alias, sit asperiores odio ad cum quo, sapiente at maiores, illo inventore laboriosam.</p>
+                            <p>A job posting is defined as an official advertisement created by the employer, human resources, or a recruiter to alert existing employees or job seekers regarding a job opening within the company. </p>
+                            <h3>Choose Freelancers</h3>
+                            <p>No job is too big or too small. We've got freelancers for job of any size or budget with extra-ordinary skill. <br /> <b> No job is complex. We can get it done!</b></p>
+                            <h3>Pay Securely</h3>
+                            <p>One pay for work when it has been completed and you're 100% statisfied with the quality using our milestone payment system.</p>
+                            <h3>We're here to help</h3>
+                            <p>Our talented team of recruiter can help you find the best freelancer for the job and our technical co-pilots can even manage the project for you.</p>
                         </div>
-                        <img 
+                        <img
                             data-aos='flip-right'
                             data-aos-offset='400'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                        src={Images.Features} alt="" className="f-img" />
+                            src={Images.Features} alt="" className="f-img" />
 
                         <span
                             data-aos='flip-right'
                             data-aos-offset='400'
                             data-aos-easing="ease-out"
-                            data-aos-duration="4000" 
-                        className="circle">
+                            data-aos-duration="4000"
+                            className="circle">
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
@@ -292,70 +292,70 @@ const App = () => {
                             data-aos-offset='150'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                         className="shape-img1" id='img1'><img src={Images.shape1} alt="s" /></div>
+                            className="shape-img1" id='img1'><img src={Images.shape1} alt="s" /></div>
 
-                        <div 
+                        <div
                             data-aos='fade-left'
                             data-aos-offset='150'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                        className="shape-img2"><img src={Images.shape2} alt="s" /></div>
+                            className="shape-img2"><img src={Images.shape2} alt="s" /></div>
 
-                        <div 
+                        <div
                             data-aos='fade-right'
                             data-aos-offset='200'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                        className="shape-img3"><img src={Images.shape3} alt="s" /></div>
+                            className="shape-img3"><img src={Images.shape3} alt="s" /></div>
 
-                        <div 
+                        <div
                             data-aos='zoom-in'
                             data-aos-offset='200'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                        className="shape-img4"><img src={Images.shape4} alt="s" /></div>
+                            className="shape-img4"><img src={Images.shape4} alt="s" /></div>
 
-                        <div 
+                        <div
                             data-aos='fade-left'
                             data-aos-offset='200'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                        className="shape-img5"><img src={Images.shape5} alt="s" /></div>
+                            className="shape-img5"><img src={Images.shape5} alt="s" /></div>
 
-                        <div 
+                        <div
                             data-aos='fade-down'
                             data-aos-offset='200'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                        className="shape-img6"><img src={Images.shape6} alt="s" /></div>
+                            className="shape-img6"><img src={Images.shape6} alt="s" /></div>
 
-                        <div 
+                        <div
                             data-aos='fade-left'
                             data-aos-offset='50'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                        className="shape-img7"><img src={Images.shape7} alt="s" /></div>
+                            className="shape-img7"><img src={Images.shape7} alt="s" /></div>
 
-                        <div 
+                        <div
                             ata-aos='fade-down'
                             data-aos-offset='20'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                        className="shape-img8"><img src={Images.shape8} alt="s" /></div>
+                            className="shape-img8"><img src={Images.shape8} alt="s" /></div>
 
-                        <div 
+                        <div
                             ata-aos='fade-down'
                             data-aos-offset='200'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                        className="shape-img9"><img src={Images.shape9} alt="s" /></div>
+                            className="shape-img9"><img src={Images.shape9} alt="s" /></div>
 
-                        <div 
+                        <div
                             ata-aos='fade-down'
                             data-aos-offset='200'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                        className="shape-img10"><img src={Images.shape10} alt="s" /></div>
+                            className="shape-img10"><img src={Images.shape10} alt="s" /></div>
                         <div className="shape-img11"><img src={Images.shape11} alt="s" /></div>
                     </div>
                 </article>

@@ -21,6 +21,7 @@ const PostJobs = () => {
 
   const handleInputs = (e) => {
     // console.log(e);
+
     name = e.target.name;
     value = e.target.value;
 
@@ -190,7 +191,7 @@ const PostJobs = () => {
                       placeholder="Job Title"
                       required="required"
                       tabindex="1"
-                      //   autofocus="autofocus"
+                    //   autofocus="autofocus"
                     />
                   </label>
                 </div>
