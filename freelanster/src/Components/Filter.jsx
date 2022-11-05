@@ -60,7 +60,7 @@ const Wrapper = styled.section`
   border-radius: 50px;
   height: 3.5px;
   width: 123px;
-  margin-top: -14px;
+  margin-top: -14px;           
   margin-bottom: 20px;
 }
 .cate-jobs {
@@ -84,6 +84,16 @@ const Wrapper = styled.section`
   font-size: 0.9rem;
   margin-top: 0.15rem;
   user-select: none;
+}
+
+[type="checkbox"]:not(:checked) {
+    position: relative;
+    left: 0px;
+}
+
+[type="checkbox"] {
+    position: relative;
+    left: 0px;
 }
 
 .filter {
