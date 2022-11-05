@@ -44,8 +44,8 @@ app.post('/Jobs', (req, res) => {
     const Jobs = FJSchema(req.body);
     Jobs.save();
     res.send(req.body);
-
 })
+
 app.get('/JobsFetch', async (req, res) => {
     const JobsFetch = await FJSchema.find({});
     res.json({

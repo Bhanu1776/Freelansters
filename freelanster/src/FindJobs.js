@@ -64,8 +64,7 @@ const FindJobs = () => {
                 </Helmet>
 
                 <Navbar color="white" change="Post Job" link="/FindJobs/PostJobs" />
-                <Hero title="Find Jobs" desc="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati qui ducimus aliquid? Iste, impedit
-              nemo." img={FJHeroImg} placeholder="Find Jobs" />
+                <Hero title="Find Jobs" desc=" The Best Place where you can find jobs" img={FJHeroImg} placeholder="Find Jobs" />
                 <Filter />
                 <Footer />
             </>
