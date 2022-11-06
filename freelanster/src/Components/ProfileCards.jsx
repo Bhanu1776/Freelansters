@@ -1,190 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-// import Images from '../Img/imgindex'
-import ProStars from "./ProStars";
-import "./ProfileCards.css";
 import { AiFillMessage, AiOutlineClockCircle } from "react-icons/ai";
+import ProStars from "./ProStars";
 import FormatPrice from "../Helpers/FormatPrice";
+
 const ProfileCards = (props) => {
-  const Wrapper = styled.section`
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      /* font-family: "Courier New"; */
-    }
-
-    /* body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(45deg, #fbda61, #ff5acd)
-} */
-
-    /* .cards-holder {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin: 20px;
-} */
-
-    .profile-cards {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row;
-      background-color: #fffafa;
-      padding: 5px;
-      border-radius: 20px 20px;
-      box-shadow: 0px 0px 3.6px rgba(0, 0, 0, 0.017),
-        0px 0px 10px rgba(0, 0, 0, 0.025), 0px 0px 24.1px rgba(0, 0, 0, 0.033),
-        0px 0px 80px rgba(0, 0, 0, 0.05);
-    }
-
-    .profile-cards:hover {
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      /* transform: scale(1.1); */
-      transition-timing-function: ease-in-out;
-    }
-
-    .profile-speciality {
-      margin: 20px 0px;
-      padding: 0px 27px;
-      font-family: "Roboto", "Sans Serif";
-      font-weight: bold;
-    }
-
-    .time-price {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      flex-direction: row;
-      flex-flow: row;
-      padding: 0px 10px;
-      margin: 18px 0px;
-    }
-
-    .profile-time {
-      color: #5e5d5d;
-      padding: 0px 10px;
-    }
-
-    .profile-img-name {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      flex-direction: row;
-    }
-
-    .profile-img img {
-      width: 70px;
-      height: 70px;
-      border: 1px solid black;
-      border-radius: 100%;
-      object-fit: fill;
-      margin-left: 10px;
-    }
-
-    .profile-name-stars {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row;
-      flex-flow: row;
-      margin-bottom: 10px;
-    }
-
-    .profile-name {
-      margin: 0px 15px;
-      font-weight: bold;
-    }
-
-    .profile-time,
-    .profile-price,
-    .profile-name {
-      font-family: "Roboto", "Sans Serif";
-      font-size: 16px;
-    }
-
-    .profile-time .icon {
-      width: 2em;
-      height: 1.5em;
-    }
-
-    .profile-price {
-      /* font-weight: lighter; */
-      color: #5e5d5d;
-    }
-
-    .profile-connection {
-      display: flex;
-      justify-content: flex-start;
-      align-content: space-between;
-      flex-direction: row;
-    }
-
-    .profile-connection {
-      margin-top: 10px;
-    }
-
-    .profile-connection button {
-      margin-left: 1em;
-      padding: 2px 5px;
-      background-color: transparent;
-      border-radius: 20px;
-      font-family: "Roboto", "Sans Serif";
-    }
-
-    .profile-connection .icon {
-      width: 3em;
-      height: 1.6em;
-    }
-
-    .card-break {
-      width: inherit;
-      height: 1px;
-      background-color: grey;
-      margin-top: 15px;
-      margin-bottom: 30px;
-    }
-
-    .profile-reviews {
-      margin: 5px;
-      padding-left: 10px;
-      margin-bottom: 20px;
-    }
-
-    .profile-book {
-      width: inherit;
-      height: 30px;
-      display: flex;
-      justify-items: center;
-      align-items: center;
-      border: 1px solid black;
-      padding: 1px 160px;
-      margin: 10px;
-      border-radius: 20px 20px;
-      color: white;
-      background-color: green;
-      font-family: "Roboto", "Sans Serif";
-    }
-
-    .icon {
-      size: 10%;
-    }
-  `;
   return (
     <>
       <Wrapper>
-        <div 
+        <div
           data-aos="fade-up"
-          data-duration='2000'
-          data-aos-offset='150'
+          data-duration="2000"
+          data-aos-offset="150"
           data-aos-anchor-placement="top-bottom"
-          data-aos-easing='ease-in-out'
-        className="jobs">
+          data-aos-easing="ease-in-out"
+          className="jobs"
+        >
           <div className="profile-cards">
             <div className="profile-content">
               <div className="profile-speciality">{props.proSpecial}</div>
@@ -232,5 +63,156 @@ const ProfileCards = (props) => {
     </>
   );
 };
+
+const Wrapper = styled.section`
+  .profile-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #fffafa;
+    padding: 5px 20px;
+    margin: 10px 0px;
+    border-radius: 20px 20px;
+    box-shadow: 0px 0px 3.6px rgba(0, 0, 0, 0.017),
+      0px 0px 10px rgba(0, 0, 0, 0.025), 0px 0px 24.1px rgba(0, 0, 0, 0.033),
+      0px 0px 80px rgba(0, 0, 0, 0.05);
+    transition: 150ms;
+  }
+
+  .profile-cards:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(1.02);
+    transition-timing-function: ease-in-out;
+  }
+
+  .profile-speciality {
+    margin: 20px -10px;
+    padding: 0px 27px;
+    font-family: "Roboto", "Sans Serif";
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .profile-time {
+    color: #5e5d5d;
+    padding: 0px 4px;
+    font-family: "Roboto", "Sans Serif";
+    font-size: 15px;
+  }
+  .profile-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5e5d5d;
+    padding-right: 16px;
+  }
+  .profile-time .icon {
+    width: 2em;
+    height: 1.5em;
+  }
+
+  .time-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+    flex-flow: row;
+    padding: 0px 10px;
+    margin: 18px 0px;
+  }
+
+  .profile-img img {
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    border-radius: 100%;
+    object-fit: fill;
+    margin-left: 17px;
+  }
+
+  .profile-img-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .profile-name {
+    margin: 0px 15px;
+    font-weight: bold;
+    color: #3f3d3d;
+    font-size: 1.1rem;
+  }
+
+  .profile-name-stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-flow: row;
+    margin-bottom: 10px;
+  }
+
+  .profile-connection {
+    display: flex;
+    justify-content: flex-start;
+    align-content: space-between;
+    flex-direction: row;
+    margin-top: 10px;
+  }
+
+  .profile-connection {
+  }
+
+  .profile-connection button {
+    margin-left: 12px;
+    padding: 2px 11px;
+    background-color: transparent;
+    border-radius: 20px;
+    font-family: "Roboto", "Sans Serif";
+    font-size: 0.9rem;
+  }
+
+  .profile-connection .icon {
+    width: 3em;
+    height: 1.6em;
+  }
+
+  .card-break {
+    width: inherit;
+    height: 1px;
+    background-color: grey;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  .profile-reviews {
+    margin: -18px 13px 22px 10px;
+    padding-left: 10px;
+  }
+
+  .profile-book {
+    width: inherit;
+    height: 30px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 1px 160px;
+    margin: 10px;
+    border-radius: 20px 20px;
+    border: none;
+    color: white;
+    background-color: #019a50;
+    font-family: "Roboto", "Sans Serif";
+    font-size: 0.9rem;
+    margin-bottom: 17px;
+    box-shadow: 5px 11px 30px #70cda0;
+    height: 34px;
+  }
+
+  .icon {
+    size: 10%;
+  }
+`;
 
 export default ProfileCards;
