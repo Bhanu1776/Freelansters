@@ -168,7 +168,7 @@ const Filter = () => {
                 data-aos-anchor-placement="top-bottom"
                 className="inside-jobs"
               >
-                {Cdata.map((val) => {
+                {/* {Cdata.map((val) => {
                   return (
                     <Cards
                       key={val.id}
@@ -178,7 +178,7 @@ const Filter = () => {
                       content={val.content}
                     />
                   );
-                })}
+                })} */}
 
                 {/* //* Uncomment this when an app starts */}
                 {jobs.map((curElem) => {
