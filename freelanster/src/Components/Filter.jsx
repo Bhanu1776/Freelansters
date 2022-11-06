@@ -374,10 +374,13 @@ const Wrapper = styled.section`
     box-shadow: 0px 0px 3.6px rgba(0, 0, 0, 0.017),
       0px 0px 10px rgba(0, 0, 0, 0.025), 0px 0px 24.1px rgba(0, 0, 0, 0.033),
       0px 0px 80px rgba(0, 0, 0, 0.05);
+    transition: 100ms;
   }
 
   .inside-jobs li:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(1.02);
+    transition-timing-function: ease-in-out;
   }
 
   .images-jobs {
