@@ -41,7 +41,7 @@ const App = () => {
             });
 
             const data = await res.json();
-            console.log(data);
+            // console.log(data);
             setUsername(data.name);
             setShow(true);
         } catch (err) {
