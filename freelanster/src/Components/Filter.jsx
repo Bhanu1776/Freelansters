@@ -1,34 +1,39 @@
-import React, { useState, useEffect } from "react";
-// import Images from '../Img/imgindex'
 import styled from "styled-components";
 import Cards from "./Cards";
-import Cdata from "./Cdata.jsx";
+// import Cdata from "./Cdata.jsx";
+import { useJobContext } from "../context/jobcontext";
+
 
 const Filter = () => {
-  const [CardsData, setCardsData] = useState("");
+  // const [CardsData, setCardsData] = useState("");
+  
+  // const FetchJobs = async () => {
+  //   try {
+  //     const res = await fetch("/JobsFetch", {
+  //       method: "GET",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //     });
 
-  const FetchJobs = async () => {
-    try {
-      const res = await fetch("/JobsFetch", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+  //     const data = await res.json();
+  //     // console.log(data.data);
+  //     setCardsData(data.data);
+  //     console.log(CardsData);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+  // useEffect(() => {
+    //   FetchJobs();
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
-      const data = await res.json();
-      // console.log(data.data);
-      setCardsData(data.data);
-      console.log(CardsData);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-  useEffect(() => {
-    FetchJobs();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
+  const {isLoading, jobs } = useJobContext();
+  if(isLoading){
+    return <div>..........LOADING</div>
+  }
+  
   const cateP = document.querySelectorAll(".cate-jobs-p input");
   const cateT = document.querySelectorAll(".cate-time input");
   const catePost = document.querySelectorAll("[name=posted-time]");
@@ -176,16 +181,9 @@ const Filter = () => {
                 })}
 
                 {/* //* Uncomment this when an app starts */}
-                {/* {CardsData.map((val) => {
-                  return (
-                    <Cards
-                      key={val._id}
-                      title={val.title}
-                      date={val.date}
-                      content={val.description}
-                    />
-                  );
-                })} */}
+                {jobs.map((curElem) => {
+                  return <Cards key={curElem._id}{...curElem}/>;
+                })}
               </ul>
             </div>
           </div>
@@ -200,6 +198,7 @@ const Wrapper = styled.section`
   .findjobs {
     position: sticky;
     display: flex;
+    overflow-x:hidden;
   }
 
   #filer-title {
