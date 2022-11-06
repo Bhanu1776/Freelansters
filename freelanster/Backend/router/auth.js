@@ -61,7 +61,7 @@ router.post('/Login', async (req, res) => {
 
             const isMatch = await bcrypt.compare(password, userLogin.password);
             const token = await userLogin.generateAuthToken();
-            console.log(token);
+            // console.log(token);
 
             res.cookie("jwtoken1", token, {
                 expires: new Date(Date.now() + 25892000000),
@@ -88,19 +88,19 @@ router.post('/Login', async (req, res) => {
 
 //* AboutUs Page
 router.get('/About', authenticate, (req, res) => {
-    console.log("Hello Im About");
+    // console.log("Hello Im About");
     res.send(req.rootUser);
 })
 
 //* FindJobs Page
 router.get('/Findjobs', authenticate, (req, res) => {
-    console.log("Hello Im FJ");
+    // console.log("Hello Im FJ");
     res.send(req.rootUser);
 })
 
 //* LogOut Page
 router.get('/Logout', (req, res) => {
-    console.log("Byee Loging Out");
+    // console.log("Byee Loging Out");
     res.clearCookie('jwtoken1', { path: '/' })
     res.status(200).send('User Logout');
 });
