@@ -40,7 +40,7 @@ app.get('/FindFreelancer', (req, res) => {
 
 
 app.post('/Jobs', (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     const Jobs = FJSchema(req.body);
     Jobs.save();
     res.send(req.body);

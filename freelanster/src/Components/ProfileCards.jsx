@@ -20,12 +20,12 @@ const ProfileCards = (props) => {
             <div className="profile-content">
               <div className="profile-speciality">{props.proSpecial}</div>
 
-              <div class="time-price">
-                <div class="profile-time">
+              <div className="time-price">
+                <div className="profile-time">
                   <AiOutlineClockCircle className="icon" />
                   {props.proTime}
                 </div>
-                <div class="profile-price">
+                <div className="profile-price">
                   <FormatPrice price={parseInt(props.proPrice)} />
                 </div>
               </div>
@@ -35,14 +35,14 @@ const ProfileCards = (props) => {
                   <img src={props.proImg} alt="" />
                 </div>
                 <div>
-                  <div class="profile-name-stars">
-                    <div class="profile-name">{props.proName}</div>
-                    <div class="profile-stars">
+                  <div className="profile-name-stars">
+                    <div className="profile-name">{props.proName}</div>
+                    <div className="profile-stars">
                       <ProStars stars={props.proStars} />
                     </div>
                   </div>
 
-                  <div class="profile-connection">
+                  <div className="profile-connection">
                     <button>See Profile</button>
                     <button>
                       <AiFillMessage className="icon" />
@@ -51,11 +51,11 @@ const ProfileCards = (props) => {
                 </div>
               </div>
 
-              <div class="card-break"></div>
-              <div class="profile-reviews">
+              <div className="card-break"></div>
+              <div className="profile-reviews">
                 {props.proReviews} Customer Reviews
               </div>
-              <button class="profile-book">BOOK NOW</button>
+              <button className="profile-book">BOOK NOW</button>
             </div>
           </div>
         </div>

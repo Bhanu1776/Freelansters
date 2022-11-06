@@ -222,11 +222,11 @@ export default Me
     //     </Card>
     //                         </Grid >
 
-    // < div class="container" >
-    //     <div class="row py-3 mt-4">
-    //         <div class="col-8 mx-auto">
-    //             <div class="progress mb-3">
-    //                 <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    // < div className="container" >
+    //     <div className="row py-3 mt-4">
+    //         <div className="col-8 mx-auto">
+    //             <div className="progress mb-3">
+    //                 <div className="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
     //             </div>
     //         </div>
     //     </div>
