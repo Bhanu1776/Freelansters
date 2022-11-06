@@ -23,6 +23,7 @@ html {
   --clr-neutral-100: hsl(0, 0%, 100%);
   --clr-accent-400: hsl(142, 90%, 61%);
   --padding: 1.5rem;
+  --cate-text: #31f7f0;
 }
 
 /* swiper */

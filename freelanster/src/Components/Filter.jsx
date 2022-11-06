@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 // import Images from '../Img/imgindex'
 import styled from "styled-components";
 import Cards from "./Cards";
-// import Cdata from "./Cdata.jsx";
+import Cdata from "./Cdata.jsx";
 
 const Filter = () => {
   const [CardsData, setCardsData] = useState("");
@@ -72,32 +72,32 @@ const Filter = () => {
                 </p>
                 <label className="cate-jobs-p">
                   {" "}
-                  <input type="checkbox" /> Writing & Translation{" "}
+                  <input className="filter-check" type="checkbox" /> Writing & Translation{" "}
                 </label>
                 <label className="cate-jobs-p">
                   {" "}
-                  <input type="checkbox" /> Programming &
+                  <input type="checkbox" className="filter-check" /> Programming &
                   &nbsp;&nbsp;&nbsp;&nbsp;Development
                 </label>
                 <label className="cate-jobs-p">
                   {" "}
-                  <input type="checkbox" /> Administrative & Secretarial
+                  <input type="checkbox" className="filter-check" /> Administrative & Secretarial
                 </label>
                 <label className="cate-jobs-p">
                   {" "}
-                  <input type="checkbox" /> Design & Art{" "}
+                  <input type="checkbox" className="filter-check" /> Design & Art{" "}
                 </label>
                 <label className="cate-jobs-p">
                   {" "}
-                  <input type="checkbox" /> Business & Finance{" "}
+                  <input type="checkbox" className="filter-check" /> Business & Finance{" "}
                 </label>
                 <label className="cate-jobs-p">
                   {" "}
-                  <input type="checkbox" /> Sales & Marketing{" "}
+                  <input type="checkbox" className="filter-check" /> Sales & Marketing{" "}
                 </label>
                 <label className="cate-jobs-p">
                   {" "}
-                  <input type="checkbox" /> Others{" "}
+                  <input type="checkbox" className="filter-check" /> Others{" "}
                 </label>
               </div>
               <hr />
@@ -163,7 +163,7 @@ const Filter = () => {
                 data-aos-anchor-placement="top-bottom"
                 className="inside-jobs"
               >
-                {/* {Cdata.map((val) => {
+                {Cdata.map((val) => {
                   return (
                     <Cards
                       key={val.id}
@@ -173,7 +173,7 @@ const Filter = () => {
                       content={val.content}
                     />
                   );
-                })} */}
+                })}
 
                 {/* //* Uncomment this when an app starts */}
                 {/* {CardsData.map((val) => {
@@ -204,7 +204,7 @@ const Wrapper = styled.section`
 
   #filer-title {
     color: black;
-    font-family: var(--section-font);
+    /* font-family: var(--section-font); */
     padding-top: 1em;
   }
   #divider-h {
@@ -212,7 +212,7 @@ const Wrapper = styled.section`
     border-radius: 50px;
     height: 3.5px;
     width: 123px;
-    margin-top: -14px;
+    margin-top: -33px;
     margin-bottom: 20px;
   }
   .cate-jobs {
@@ -297,6 +297,12 @@ const Wrapper = styled.section`
     font-size: 1.5rem;
     margin-left: -8px;
   }
+
+.filter-check{
+  position: inherit;
+  left: 57px;
+}
+
   .cbutton {
     display: inline-block;
     position: relative;
@@ -394,7 +400,7 @@ const Wrapper = styled.section`
   .images-jobs img {
     width: 100%;
   }
-  .cate-content .cate-title {
+.cate-title {
     display: flex;
     padding: 2px;
     color: rgb(0, 0, 0);
@@ -402,7 +408,7 @@ const Wrapper = styled.section`
     border: 1px var(--cate-text) solid;
     box-shadow: inset 0 0 0 0 var(--cate-text);
     border-radius: 10px;
-    transition: ease-out 0.3s;
+    /* transition: ease-out 0.3s; */
     outline: none;
     margin: 5px 10px;
     /* justify-content: center; */
@@ -411,10 +417,12 @@ const Wrapper = styled.section`
   .cate-title {
     text-align: center;
   }
-  .cate-content .cate-title:hover {
+  .cate-title:hover {
     color: rgb(0, 0, 0);
     border-color: #c3f8ff;
     box-shadow: inset 300px 0 0 0 var(--cate-text);
+    transition: ease-out 0.3s;
+    cursor: pointer;
   }
 
   .cate-foot {

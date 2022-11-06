@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components';
 
 const Cards = (props) => {
-const Wrapper = styled.section`
+  const Wrapper = styled.section`
   /* DISPLAYED JOBS CARDS ON THE RIGHT OF THE PAGE  */
 .jobs {
   display: flex;
@@ -52,7 +52,7 @@ const Wrapper = styled.section`
 .images-jobs img {
   width: 100%;
 }
-.cate-content .cate-title {
+/* .cate-content .cate-title {
   display: flex;
   padding: 2px;
   color: rgb(0, 0, 0);
@@ -63,7 +63,7 @@ const Wrapper = styled.section`
   transition: ease-out 0.3s;
   outline: none;
   margin: 5px 10px;
-  /* justify-content: center; */
+  justify-content: center;
   padding-left: 1rem;
 }
 .cate-title {
@@ -73,7 +73,7 @@ const Wrapper = styled.section`
   color: rgb(0, 0, 0);
   border-color: #c3f8ff;
   box-shadow: inset 300px 0 0 0 var(--cate-text);
-}
+} */
 
 .cate-foot {
   color: var(--cate-foot-text);
@@ -97,17 +97,17 @@ const Wrapper = styled.section`
 `
   return (
     <>
-    <Wrapper>
-      <li className='inside-jobs-li'>
-        <div className="images-jobs">
-          <img src={props.imgScr} alt="Video" />
-        </div>
-        <div className="cate-content">
-          <div className="cate-title">{props.title}</div>
-          <div className="cate-foot">Posted on: {props.date}</div>
-          <div className="cate-body"> {props.content}</div>
-        </div>
-      </li>
+      <Wrapper>
+        <li className='inside-jobs-li'>
+          <div className="images-jobs">
+            <img src={props.imgScr} alt="Video" />
+          </div>
+          <div className="cate-content">
+            <div className="cate-title">{props.title}</div>
+            <div className="cate-foot">Posted on: {props.date}</div>
+            <div className="cate-body"> {props.content}</div>
+          </div>
+        </li>
       </Wrapper>
     </>
   )
