@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 
 router.post('/register', async (req, res) => {
 
-    const { name, email, phone, password, cpassword } = req.body;
+    const { name, email, phone, password, cpassword, special, time, price, description, img, reviews, stars } = req.body;
 
     //* Better way of implementation ... trim() method usually removes all the empty spaces from start and end of the string.
     // name = name.trim(); email = email.trim(); phone = phone.trim(); password = password.trim(); cpassword = cpassword.trim();
@@ -36,7 +36,7 @@ router.post('/register', async (req, res) => {
             return res.status(422).json({ error: "Password didn't match" });
         }
         else {
-            const user = new User({ name, email, phone, password, cpassword });
+            const user = new User({ name, email, phone, password, cpassword, special, time, price, description, img, reviews, stars });
             // Hashing the password will occur here!
             await user.save();
             res.status(201).json({ message: "User registered successfully" })
