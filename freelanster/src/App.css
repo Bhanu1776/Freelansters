@@ -228,6 +228,7 @@ body {
   position: absolute;
   top: 107px;
   left: 50px;
+  font-weight: bold;
 }
 
 .divider-h {
@@ -236,7 +237,7 @@ body {
   border-radius: 50px;
   height: 4px;
   width: 274px;
-  top: 163px;
+  top: 160px;
   left: 50px;
 }
 
@@ -249,6 +250,7 @@ body {
   top: 200px;
   left: 50px;
   line-height: normal;
+  text-align: justify;
 }
 
 .g-button-div {
@@ -282,6 +284,7 @@ body {
   min-width: 148px;
   min-height: 43px;
   padding: 10px;
+  margin-top: 35px;
 }
 
 .g-button::before {
@@ -303,11 +306,13 @@ body {
 .g-button:focus {
   color: #313133;
   transform: translateY(-6px);
+  box-sizing: none;
 }
 
 .g-button:hover::before,
 .g-button:focus::before {
   opacity: 1 !important;
+
 }
 
 #g-img {
