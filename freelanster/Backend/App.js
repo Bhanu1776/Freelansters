@@ -11,6 +11,7 @@ require('./db/conn.js')
 
 const FJSchema = require('./model/FJSchema');
 const FFSchema = require('./model/FFSchema');
+const tempSchema = require('./model/tempSchema');
 // const User = require('./model/userSchema');
 
 app.use(express.json());                        // To convert the json files into objects, just to understand the javascript
@@ -31,9 +32,9 @@ app.get('/register', (req, res) => {
 // app.get('/FindJobs', (req, res) => {jobs
 //     res.send('Hello world from the FJ server');
 // })
-app.get('/FindFreelancer', (req, res) => {
-    res.send('Hello world from the FF server');
-})
+// app.get('/FindFreelancer', (req, res) => {
+//     res.send('Hello world from the FF server');
+// })
 // app.get('/About', (req, res) => {
 //     console.log("Hello Im About");
 //     res.send('Hello About world from the server')
@@ -58,6 +59,13 @@ app.post('/Freelancers', (req, res) => {
     // console.log(req.body);
     const Freelancers = FFSchema(req.body);
     Freelancers.save();
+    res.send(req.body);
+})
+
+app.post('/tempSchema', (req, res) => {
+    // console.log(req.body);
+    const temp = tempSchema(req.body);
+    temp.save();
     res.send(req.body);
 })
 

@@ -14,8 +14,7 @@ const Navbar = (props) => {
         <div id="ndb">
           <button className="nbutton" id="nav-btn">
             <NavLink to="./Logout" id="nav-btn-a">
-              {" "}
-              Logout{" "}
+              Logout
             </NavLink>
           </button>
         </div>
@@ -25,8 +24,7 @@ const Navbar = (props) => {
         <div id="ndb">
           <button className="nbutton" id="nav-btn">
             <NavLink to="./Login" id="nav-btn-a">
-              {" "}
-              Login{" "}
+              Login
             </NavLink>
           </button>
         </div>
@@ -84,7 +82,7 @@ const Navbar = (props) => {
             </li>
             {/* <li><NavLink to="/" id="nav-a">About US</NavLink></li> */}
             <li>
-              <a href={props.link} id="nav-a">
+              <a href={props.link} id="nav-a" onClick={props.onclick}>
                 {props.change}
               </a>
             </li>

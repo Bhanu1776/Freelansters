@@ -18,15 +18,16 @@ const Paths = () => {
   return (
     <Routes>
       <Route exact path="/" element={<App />}></Route>
+      <Route exact path="/Logout" element={<Logout />}></Route>
       <Route path="/Home" element={<App />}></Route>
       <Route path="/Home/Login" element={<Login />}></Route>
+      <Route path="/Home/Logout" element={<Logout />}></Route>
       <Route path="Login" element={<Login />}></Route>
       <Route path="/FindJobs" element={<FindJobs />}></Route>
       <Route path="/FindJobs/:id" element={<SingleJob />}></Route>
       <Route path="/FindJobs/Logout" element={<Logout />}></Route>
       <Route path="/FindJobs/Home" element={<App />}></Route>
       <Route path="/FindJobs/PostJobs" element={<PostJobs />}></Route>
-      <Route path="/PostJobs" element={<PostJobs />}></Route>
       <Route path="/FindFreelancer" element={<FindFreelancer />}></Route>
       <Route path="/FindFreelancer/Login" element={<Login />}></Route>
       <Route path="/FindFreelancer/Home" element={<App />}></Route>

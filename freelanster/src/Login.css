@@ -20,6 +20,7 @@
   position: relative;
   z-index: 0;
   overflow-x: hidden;
+  height: 100vh;
 }
 
 #l:hover {
@@ -44,7 +45,7 @@
   backdrop-filter: blur(3.5px);
   border-radius: 10px;
   position: absolute;
-  margin: 50px 37%;
+  margin: 100px 37%;
 }
 
 .left {
@@ -430,6 +431,11 @@ a:hover {
   padding-top: 0rem !important;
 }
 
+.col-12 {
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
 /* .py-5{
 padding-top: 1rem!important;} */
 
@@ -443,50 +449,68 @@ padding-top: 1rem!important;} */
 
 .shape-img1 {
   position: absolute;
-  z-index: -1;
   height: auto;
-  animation: shape1 3s linear 0s infinite normal none running moveLeftBounce;
+  animation: moveLeftBounce 3s linear infinite;
   /* width: 79%; */
   left: 2%;
   top: 60%;
+  z-index: -1;
 }
 
-@keyframes shape1 {
+@keyframes moveLeftBounce {
   0% {
-    transform: translateX(0px);
+    opacity: 0.2;
   }
 
   50% {
-    transform: translateX(60px);
+    opacity: 1;
+    transform: translate(10px, 10px);
   }
 
   100% {
-    transform: translateX(0px);
+    opacity: 0.5;
   }
 }
+
 
 .shape-img2 {
   position: absolute;
   -webkit-transform: translateY(-20%) translateX(-15%);
   transform: translateY(-20%) translateX(-15%);
   z-index: -1;
-  -webkit-animation: animationFramesOne 20s infinite linear;
-  animation: animationFramesOne 20s infinite linear;
+  -webkit-animation: animationFramesOne 5s infinite linear;
+  animation: animationFramesOne 5s infinite linear;
   left: 95%;
   top: 9%;
+  z-index: -1;
 }
 
-@keyframes shape1 {
+@keyframes animationFramesOne {
   0% {
-    transform: rotate(0deg);
+    top: 5%;
+    left: 95%;
+
+  }
+
+  25% {
+    top: 20%;
+    left: 95%;
+
   }
 
   50% {
-    transform: rotate(180deg);
+    top: 20%;
+    left: 85%;
+  }
+
+  75% {
+    top: 5%;
+    left: 85%;
   }
 
   100% {
-    transform: rotate(0deg);
+    top: 5%;
+    left: 95%
   }
 }
 
@@ -506,11 +530,26 @@ padding-top: 1rem!important;} */
 } */
 .shape-img5 {
   position: absolute;
-  z-index: -1;
-  -webkit-animation: moveLeftBounce 3s linear infinite;
-  animation: moveLeftBounce 3s linear infinite;
+  -webkit-animation: shape5 5s linear infinite;
+  animation: shape5 5s linear infinite;
+  top: 40%;
   left: 85%;
-  top: 67%;
+
+  z-index: -1;
+}
+
+@keyframes shape5 {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* .shape-img6 {
@@ -530,6 +569,21 @@ padding-top: 1rem!important;} */
   animation: moveBounce 5s linear infinite;
   left: 10%;
   top: 10%;
+  z-index: -1;
+}
+
+@keyframes moveBounce {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
 }
 
 .shape-img8 {
@@ -537,10 +591,33 @@ padding-top: 1rem!important;} */
   margin: 0 auto;
   text-align: center;
   z-index: -1;
-  -webkit-animation: moveLeftBounce 3s linear infinite;
-  animation: moveLeftBounce 3s linear infinite;
-  bottom: 75%;
-  right: 25%;
+  -webkit-animation: shape8 3s linear infinite;
+  animation: shape8 3s linear infinite;
+  left: -11%;
+  bottom: 10%;
+  z-index: -1;
+}
+
+@keyframes shape8 {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  33% {
+    /* -webkit-transform: translate(-75%, -150%); */
+    transform: translate(-6%, -100%);
+  }
+
+  66% {
+    /* -webkit-transform: translate(75%, -150%); */
+    transform: translate(5%, -100%);
+  }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
 }
 
 .shape-img9 {
@@ -550,6 +627,7 @@ padding-top: 1rem!important;} */
   animation: moveScale 3s linear infinite;
   right: 10%;
   bottom: 113%;
+  z-index: -1;
 }
 
 /* .shape-img10 {
@@ -564,10 +642,25 @@ padding-top: 1rem!important;} */
 .shape-img11 {
   position: absolute;
   z-index: -1;
-  -webkit-animation: moveLeftBounce 3s linear infinite;
-  animation: moveLeftBounce 3s linear infinite;
+  -webkit-animation: shape11 7s linear infinite;
+  animation: shape11 7s linear infinite;
   left: 16%;
   bottom: 50%;
+  z-index: -1;
+}
+
+@keyframes shape11 {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(30px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .shape-img12 {
@@ -575,8 +668,9 @@ padding-top: 1rem!important;} */
   z-index: -1;
   -webkit-animation: moveBounce 5s linear infinite;
   animation: moveBounce 5s linear infinite;
-  left: 90%;
+  left: 70%;
   top: 90%;
+  z-index: -1;
 }
 
 .shape-img13 {
@@ -584,6 +678,34 @@ padding-top: 1rem!important;} */
   z-index: -1;
   -webkit-animation: moveBounce 5s linear infinite;
   animation: moveBounce 5s linear infinite;
-  left: 30%;
-  top: 10%;
+  right: 25%;
+  bottom: 75%;
+  z-index: -1;
+}
+
+.shape-img14 {
+  position: absolute;
+  z-index: -1;
+  -webkit-animation: shape14 2s linear infinite;
+  animation: shape14 2s linear infinite;
+  left: 85%;
+  top: 67%;
+
+}
+
+@keyframes shape14 {
+  0% {
+    opacity: 0;
+    /* transform: scale(1); */
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+
+  100% {
+    opacity: 0;
+    /* transform: scale(1); */
+  }
 }
