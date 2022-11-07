@@ -15,6 +15,8 @@ const FJSchema = new mongoose.Schema({
         required: true
     },
 
+}, {
+    timestamps: true
 })
 
 //* Collection Creation
