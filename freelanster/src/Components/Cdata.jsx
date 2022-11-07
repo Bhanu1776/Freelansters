@@ -111,6 +111,13 @@ const Cdata = [
         date: "18/10/2022",
         content: "Design and manage customer online portfolios and website. Create and/or edit graphics for website and/or Facebook page.",
     },
+    {
+        id: "5",
+        imgScr: "https://picsum.photos/200/130",
+        title: "Editing",
+        date: "06/09/2006",
+        content: "Sax asperiores numquam deleniti ducimus alias quasi esse voluptas sed necessitatibus animi nesciunt, maxime perferendis dolorem. Aliquam!",
+    },
 
 ]
 
