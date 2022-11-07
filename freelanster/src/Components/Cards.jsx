@@ -1,9 +1,10 @@
 import React from 'react'
 // import Images from '../Img/imgindex'
 import styled from 'styled-components';
-
+import {NavLink} from 'react-router-dom'
 const Cards = (curElem) => {
-  const { id, title, date, description } = curElem;
+  const { _id, title, date, description } = curElem;
+  
 const Wrapper = styled.section`
   /* DISPLAYED JOBS CARDS ON THE RIGHT OF THE PAGE  */
 .jobs {
@@ -99,6 +100,7 @@ const Wrapper = styled.section`
   return (
     <>
     <Wrapper>
+        <NavLink to={`/FindJobs/${_id}`}>
       <li className='inside-jobs-li'>
         <div className="images-jobs">
             <img src={""} alt="Video" />
@@ -109,6 +111,7 @@ const Wrapper = styled.section`
             <div className="cate-body"> {description}</div>
         </div>
       </li>
+    </NavLink>
       </Wrapper>
     </>
   )

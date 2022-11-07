@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import Navbar from './Components/Navbar';
 import FindFreelan from './Components/FFlancer';
 import Footer from './Components/Footer';
+import { FilterFreelancer } from './context/freelancercontext';
 
 
 const FindFreelancer = () => {
@@ -20,6 +21,7 @@ const FindFreelancer = () => {
         !loading && (
 
             <>
+            <FilterFreelancer>
                 <Helmet>
                     <meta charSet="utf-8" />
                     <title>Find Freelancer</title>
@@ -29,6 +31,7 @@ const FindFreelancer = () => {
                 <Navbar color="white" change="Get Hired" />
                 <FindFreelan />
                 <Footer />
+            </FilterFreelancer>
             </>
         )
     );

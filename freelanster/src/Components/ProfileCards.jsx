@@ -4,7 +4,9 @@ import { AiFillMessage, AiOutlineClockCircle } from "react-icons/ai";
 import ProStars from "./ProStars";
 import FormatPrice from "../Helpers/FormatPrice";
 
-const ProfileCards = (props) => {
+
+const ProfileCards = (curElem) => {
+  const { id, title, hours,price,name } = curElem;
   return (
     <>
       <Wrapper>
@@ -18,27 +20,27 @@ const ProfileCards = (props) => {
         >
           <div className="profile-cards">
             <div className="profile-content">
-              <div className="profile-speciality">{props.proSpecial}</div>
+              <div className="profile-speciality">{title}</div>
 
               <div className="time-price">
                 <div className="profile-time">
                   <AiOutlineClockCircle className="icon" />
-                  {props.proTime}
+                  {hours}hrs
                 </div>
                 <div className="profile-price">
-                  <FormatPrice price={parseInt(props.proPrice)} />
+                  <FormatPrice price={parseInt(price)} />
                 </div>
               </div>
 
               <div className="profile-img-name">
                 <div className="profile-img">
-                  <img src={props.proImg} alt="" />
+                  <img src={""} alt="" />
                 </div>
                 <div>
                   <div className="profile-name-stars">
-                    <div className="profile-name">{props.proName}</div>
+                    <div className="profile-name">{name}</div>
                     <div className="profile-stars">
-                      <ProStars stars={props.proStars} />
+                      <ProStars stars={""} />
                     </div>
                   </div>
 
@@ -53,7 +55,7 @@ const ProfileCards = (props) => {
 
               <div className="card-break"></div>
               <div className="profile-reviews">
-                {props.proReviews} Customer Reviews
+                {""} Customer Reviews
               </div>
               <button className="profile-book">BOOK NOW</button>
             </div>

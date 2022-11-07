@@ -33,7 +33,6 @@ const FilterJobs = ({ children }) => {
         isLoading: false,
         isError: false,
         jobs: [],
-        featureJobs: [],
         isSingleLoading: false,
         singleJob: {},
     };

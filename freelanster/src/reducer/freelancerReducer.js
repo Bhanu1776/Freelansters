@@ -1,4 +1,4 @@
-const JobReducer = (state, action) => {
+const FreelancerReducer = (state, action) => {
     switch (action.type) {
         case "SET_LOADING":
             return {
@@ -14,7 +14,7 @@ const JobReducer = (state, action) => {
             return {
                 ...state,
                 isLoading: false,
-                jobs: action.payload,
+                freelancer: action.payload,
                 // featureJobs: featureData,
             }
 
@@ -25,29 +25,9 @@ const JobReducer = (state, action) => {
                 isError: true,
             };
 
-        case "SET_SINGLE_LOADING":
-            return {
-                ...state,
-                isSingleLoading: true,
-            };
-
-        case "SET_SINGLE_JOB":
-            return {
-                ...state,
-                isSingleLoading: false,
-                singleJob: action.payload,
-            };
-
-        case "SET_SINGLE_ERROR":
-            return {
-                ...state,
-                isSingleLoading: false,
-                isError: true,
-            };
-
         default:
             return state;
     }
 }
 
-export default JobReducer;
+export default FreelancerReducer;

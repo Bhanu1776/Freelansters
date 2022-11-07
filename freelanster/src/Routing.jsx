@@ -8,6 +8,7 @@ import Logout from "./Components/Logout";
 import FindFreelancer from "./FindFreelancer";
 import Error from "./Components/Error";
 import PostJobs from "./Components/PostJobs";
+import SingleJob from "./Components/SingleJob";
 // import Profile from './Components/Profile';
 
 // Context API
@@ -21,6 +22,7 @@ const Paths = () => {
       <Route path="/Home/Login" element={<Login />}></Route>
       <Route path="Login" element={<Login />}></Route>
       <Route path="/FindJobs" element={<FindJobs />}></Route>
+      <Route path="/FindJobs/:id" element={<SingleJob />}></Route>
       <Route path="/FindJobs/Logout" element={<Logout />}></Route>
       <Route path="/FindJobs/Home" element={<App />}></Route>
       <Route path="/FindJobs/PostJobs" element={<PostJobs />}></Route>
