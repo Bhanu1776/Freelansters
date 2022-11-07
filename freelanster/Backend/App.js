@@ -31,9 +31,9 @@ app.get('/register', (req, res) => {
 // app.get('/FindJobs', (req, res) => {jobs
 //     res.send('Hello world from the FJ server');
 // })
-app.get('/FindFreelancer', (req, res) => {
-    res.send('Hello world from the FF server');
-})
+// app.get('/FindFreelancer', (req, res) => {
+//     res.send('Hello world from the FF server');
+// })
 // app.get('/About', (req, res) => {
 //     console.log("Hello Im About");
 //     res.send('Hello About world from the server')

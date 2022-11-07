@@ -101,6 +101,12 @@ router.get('/Findjobs', authenticate, (req, res) => {
     res.send(req.rootUser);
 })
 
+//* FindFreelancers Page
+router.get('/FindFreelancer', authenticate, (req, res) => {
+    // console.log("Hello Im FF");
+    res.send(req.rootUser);
+})
+
 //* LogOut Page
 router.get('/Logout', (req, res) => {
     // console.log("Byee Loging Out");
