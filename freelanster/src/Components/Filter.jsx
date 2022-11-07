@@ -43,7 +43,7 @@ const Filter = () => {
   function reset() {
     let checkbox,
       radio,
-      budget = " ";
+      duration = " ";
 
     for (checkbox of cateP) {
       checkbox.checked = false;
@@ -51,9 +51,9 @@ const Filter = () => {
     for (radio of cateT) {
       radio.checked = false;
     }
-    for (budget of catePost) {
-      // console.log(budget.value);
-      budget.value = budget[0];
+    for (duration of catePost) {
+      // console.log(duration.value);
+      duration.value = duration[0];
     }
     range.textContent = 0;
   }
@@ -120,9 +120,9 @@ const Filter = () => {
                 </label>
               </div>
               <hr />
-              <div className="cate-budget">
+              <div className="cate-duration">
                 <p>
-                  <b>Budget:</b>
+                  <b>Job Duration:</b>
                 </p>
                 <select
                   name="posted-time"
@@ -138,6 +138,7 @@ const Filter = () => {
                   <option value="Over 6 months">Over 6 months</option>
                   <option value="Unspecified">Unspecified</option>
                 </select>
+                <hr />
                 <p style={{ marginTop: "2rem" }}>
                   <b>Specify the Range:</b>
                   <input
@@ -205,13 +206,14 @@ const Wrapper = styled.section`
     color: black;
     /* font-family: var(--section-font); */
     padding-top: 1em;
+    font-size: 2rem;
   }
   #divider-h {
     background: #1cd6ce;
     border-radius: 50px;
     height: 3.5px;
-    width: 123px;
-    margin-top: -33px;
+    width: 100px;
+    margin-top: -34px;
     margin-bottom: 20px;
   }
   .cate-jobs {
@@ -272,13 +274,13 @@ const Wrapper = styled.section`
     margin-bottom: 2em;
   }
 
-  .cate-budget p {
+  .cate-duration p {
     font-family: "Poppins", sans-serif;
     margin-top: 1em;
     font-size: 1.1rem;
   }
 
-  .cate-budget select {
+  .cate-duration select {
     font-family: "Poppins", sans-serif;
     background-color: rgba(188, 253, 254, 0.124);
     border-radius: 0.4em;
@@ -286,11 +288,11 @@ const Wrapper = styled.section`
     font-size: 1rem;
   }
 
-  .cate-budget input {
+  .cate-duration input {
     font-size: 1.1rem;
     size: 10px;
   }
-  .cate-budget b::before {
+  .cate-duration b::before {
     content: "| ";
     color: red;
     font-size: 1.5rem;
