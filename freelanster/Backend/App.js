@@ -10,6 +10,7 @@ const PORT = process.env.PORT;
 require('./db/conn.js')
 
 const FJSchema = require('./model/FJSchema');
+const FFSchema = require('./model/FFSchema');
 // const User = require('./model/userSchema');
 
 app.use(express.json());                        // To convert the json files into objects, just to understand the javascript
@@ -50,6 +51,20 @@ app.get('/JobsFetch', async (req, res) => {
     const JobsFetch = await FJSchema.find({});
     res.json({
         data: JobsFetch
+    })
+})
+
+app.post('/Freelancers', (req, res) => {
+    // console.log(req.body);
+    const Freelancers = FFSchema(req.body);
+    Freelancers.save();
+    res.send(req.body);
+})
+
+app.get('/FreelancersFetch', async (req, res) => {
+    const FreelancersFetch = await FFSchema.find({});
+    res.json({
+        data: FreelancersFetch
     })
 })
 
