@@ -414,10 +414,25 @@ body {
   position: absolute;
   z-index: -1;
   height: auto;
-  animation: 3s linear 0s infinite normal none running moveLeftBounce;
+  animation: moveLeftBounce 3s linear infinite;
   /* width: 79%; */
   left: 2%;
   top: 102%;
+}
+
+@keyframes moveLeftBounce {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(10px, 10px);
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .shape-img2 {
@@ -450,8 +465,8 @@ body {
 .shape-img5 {
   position: absolute;
   z-index: -1;
-  -webkit-animation: moveLeftBounce 3s linear infinite;
-  animation: moveLeftBounce 3s linear infinite;
+  -webkit-animation: shape5 3s linear infinite;
+  animation: shape5 3s linear infinite;
   left: 28%;
   bottom: -16%;
 }
@@ -509,8 +524,8 @@ body {
 .shape-img11 {
   position: absolute;
   z-index: -1;
-  -webkit-animation: moveLeftBounce 3s linear infinite;
-  animation: moveLeftBounce 3s linear infinite;
+  -webkit-animation: shape11 7s linear infinite;
+  animation: shape11 7s linear infinite;
   right: 5%;
   bottom: 5%;
 }
@@ -525,5 +540,7 @@ body {
   bottom: 94%;
   right: 41%;
 }
+
+
 
 /** ------------------------------------------------------------------------------ */

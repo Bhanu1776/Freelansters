@@ -117,7 +117,7 @@ const Filter = () => {
               <hr />
               <div className="cate-duration">
                 <p>
-                  <b>Duration:</b>
+                  <b>Job Duration:</b>
                 </p>
                 <select
                   name="posted-time"
