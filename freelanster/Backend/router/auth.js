@@ -18,6 +18,9 @@ router.post('/register', async (req, res) => {
 
     const { name, email, phone, password, cpassword } = req.body;
 
+    //* Better way of implementation ... trim() method usually removes all the empty spaces from start and end of the string.
+    // name = name.trim(); email = email.trim(); phone = phone.trim(); password = password.trim(); cpassword = cpassword.trim();
+
     if (!name || !email || !phone || !password || !cpassword) {             // If user doesn't fill any of the values then it will simply return error
         return res.status(422).json({ error: "Pls fill all the values properly!" });
     }
