@@ -105,7 +105,7 @@
 .catecards-slide {
     width: 20rem;
     height: 42rem;
-    padding:  0rem;
+    padding: 0rem;
     position: relative;
     background-color: transparent;
 }
@@ -254,9 +254,6 @@
     color: var(--clr-neutral-100);
     overflow: hidden;
     font-weight: bold;
-    /* max-width: 35ch; */
-    /* margin:2rem; */
-    /* padding: 3rem 0; */
     width: 20rem;
     height: 25rem;
     border-radius: 2rem;
@@ -357,7 +354,7 @@
     text-decoration: none;
     border-radius: 0.25em;
     padding: 0.5em 1.25em;
-    margin-left: 0px;
+    margin-left: -105px;
 }
 
 .button:hover,
