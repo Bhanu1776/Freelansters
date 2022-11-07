@@ -58,19 +58,19 @@ const FindJobs = () => {
         !loading && (
 
             <>
-            <FilterJobs>
+                <FilterJobs>
 
-                <Helmet>
-                    <meta charSet="utf-8" />
-                    <title>Find Jobs</title>
-                    <meta name="description" content="The place to get your work done" />
-                </Helmet>
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>Find Jobs</title>
+                        <meta name="description" content="The place to get your work done" />
+                    </Helmet>
 
-                <Navbar color="white" change="Post Job" link="/FindJobs/PostJobs" />
-                <Hero title="Find Jobs" desc=" The Best Place where you can find jobs" img={FJHeroImg} placeholder="Find Jobs" />
-                <Filter />
-                <Footer />
-            </FilterJobs>
+                    <Navbar color="white" change="Post Job" link="/FindJobs/PostJobs" />
+                    <Hero title="Find Jobs" desc=" The Best Place where you can find jobs" img={FJHeroImg} placeholder="Find Jobs" />
+                    <Filter />
+                    <Footer />
+                </FilterJobs>
             </>
         )
     );
