@@ -1,15 +1,17 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from './Routing';
+import { ToastContainer, toast } from 'react-toastify';
 import Images from './Img/imgindex.js'
 import './Login.css'
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import CustomizedBreadcrumbs from './Components/Breadcrumb.jsx';
-// import styled from 'styled-components';
-
+/* eslint-disable no-unused-vars */
 
 
 const Login = () => {
+    const { state, dispatch } = useContext(UserContext);
+
     const navigate = useNavigate();
     const [user, setUser] = useState({
         name: "", email: "", phone: "", password: "", cpassword: ""
@@ -21,6 +23,9 @@ const Login = () => {
         value = e.target.value;
         setUser({ ...user, [name]: value });
     }
+
+
+    //* Signup Auth
     const PostData = async (e) => {
         e.preventDefault();
         const { name, email, phone, password, cpassword } = user;
@@ -39,10 +44,19 @@ const Login = () => {
             console.log('Invalid Registration');
         }
         else {
-            window.alert('Registration Successful');
+            toast.success("Registration Successful", {
+                position: "bottom-right",
+                theme: "colored"
+            });
             console.log('Registration successful');
+            setTimeout(() => {
+                window.location.reload();
+            }, 2500);
         }
     }
+
+
+    //* Login Auth
     const [logemail, setlogEmail] = useState('');
     const [logpass, setlogPass] = useState('');
     const loginUser = async (e) => {
@@ -64,13 +78,19 @@ const Login = () => {
                 theme: "colored"
             });
         } else {
+            dispatch({ type: "USER", payload: true })
             toast.success("Login Successful", {
                 position: "bottom-right",
                 theme: "colored"
             });
-            navigate('/FindJobs')
+            setTimeout(() => {
+                navigate('/FindJobs')
+            }, 2000);
         }
     }
+
+
+    //* Tackling GUI of Login/Signup Page 
     const rotateL = () => {
         var checkBox = document.getElementById("reg-log");
         if (checkBox.checked === true) {
@@ -83,11 +103,6 @@ const Login = () => {
             document.getElementById("reg-log").checked = true;
         }
     }
-
-    /*----------------------------------------------------CSS-------------------------------------------------------- */
-    // const Body = styled.body`
-    //     overflow: hidden;
-    // `
 
     return (
         <>
@@ -194,7 +209,6 @@ const Login = () => {
 
             </div>
             <ToastContainer />
-
         </>
 
     )
