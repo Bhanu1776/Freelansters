@@ -60,7 +60,6 @@ const App = () => {
         ref.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
-    console.log(ref);
     return (
 
         !loading && (
