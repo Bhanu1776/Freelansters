@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Parallax, Autoplay, Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Helmet } from "react-helmet";
+import { useRef } from 'react';
 import Images from './Img/imgindex.js'
 import Navbar from './Components/Navbar';
 import About from './Components/About';
@@ -53,7 +54,13 @@ const App = () => {
         userHomePage();
     }, []);
 
+    const ref = useRef(null);
 
+    const handleClick = () => {
+        ref.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    console.log(ref);
     return (
 
         !loading && (
@@ -64,7 +71,7 @@ const App = () => {
                     <meta name="description" content="The place to get your work done" />
                 </Helmet>
 
-                <Navbar color="black" change="Contact Us" link="/" />
+                <Navbar color="black" change="About Us" onclick={handleClick} />
 
                 {/* //? Carasol Section */}
                 <div className='Carcontainer'>
@@ -323,7 +330,7 @@ const App = () => {
                             data-aos-offset='200'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                            className="shape-img6"><img src={Images.shape6} alt="s" /></div>
+                            className="shape-img6"><img src={Images.shape6} alt="s" id='redirect' ref={ref} /></div>
 
                         <div
                             data-aos='fade-left'

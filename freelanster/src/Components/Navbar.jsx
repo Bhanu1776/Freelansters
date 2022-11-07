@@ -84,7 +84,7 @@ const Navbar = (props) => {
             </li>
             {/* <li><NavLink to="/" id="nav-a">About US</NavLink></li> */}
             <li>
-              <a href={props.link} id="nav-a">
+              <a href={props.link} id="nav-a" onClick={props.onclick}>
                 {props.change}
               </a>
             </li>
