@@ -71,7 +71,7 @@ const App = () => {
                     <Swiper spaceBetween={10}
                         centeredSlides={true}
                         autoplay={{
-                            delay: 3000,
+                            delay: 7000,
                             disableOnInteraction: false,
                         }}
                         parallax={true}
@@ -90,9 +90,6 @@ const App = () => {
                                 data-swiper-parallax="-23%"
                             > <img
                                     src={Images.s3} alt="Top Jobs" /></div>
-                            <div className="title" data-swiper-parallax="-300">
-
-                            </div>
                         </SwiperSlide>
 
                         {/* slide 2 */}
@@ -103,10 +100,9 @@ const App = () => {
                                 data-swiper-parallax="-23%"
                             > <img
                                     src={Images.s1} alt="Top Jobs" /></div>
-                            <div className="title" data-swiper-parallax="-300">
-                                <h2 className="swiper-h" >Welcome,</h2>
-                                <h1 className="swiper-h" >{username}</h1>
-                                <h2 className="swiper-h" >{show ? 'Happy, To see you back' : 'The place to get your work done'}</h2>
+                            <div className="title1" data-swiper-parallax="-300">
+                                <h1 className="swiper-h1" >Welcome, {username}  </h1> <br />
+                                <h2 className="swiper-h2" >{show ? 'Happy to see you back' : 'The place to get your work done'}</h2>
                             </div>
                         </SwiperSlide>
 
@@ -118,8 +114,8 @@ const App = () => {
                                 data-swiper-parallax="-23%"
                             > <img
                                     src={Images.s2} alt="Top Jobs" /></div>
-                            <div className="title" data-swiper-parallax="-300">
-                                <h1 className="swiper-h" >Find Your Desired Jobs Here</h1>
+                            <div className="title2" data-swiper-parallax="-300">
+                                <h1 className="swiper-h3" >Find Your Desired <br /> Jobs Here</h1>
                             </div>
                         </SwiperSlide>
 
@@ -131,8 +127,8 @@ const App = () => {
                                 data-swiper-parallax="-23%"
                             > <img
                                     src={Images.s4} alt="Top Jobs" /></div>
-                            <div className="title" data-swiper-parallax="-300">
-                                <h1 className="swiper-h" >Choose a perfect Freelancer Here </h1>
+                            <div className="title4" data-swiper-parallax="-300">
+                                <h1 className="swiper-h4" >Choose a perfect <br /> Freelancer Here </h1>
                             </div>
                         </SwiperSlide>
                     </Swiper>

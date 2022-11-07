@@ -1,15 +1,6 @@
-/** CSS Reset */
-/* * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-body {
-  background-color: var(--shady-white-color);
-}
-html {
-  scroll-behavior: smooth;
-} */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap");
 
 /** Css Variables */
 :root {
@@ -30,32 +21,84 @@ html {
   height: 100%;
 }
 
-/* html,
-body {
-  position: relative;
-  height: 100%;
-  
-}
-
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-} */
-
-.swiper-h {
-  color: rgb(78, 77, 77);
-  margin-left: 25%;
+/** Carousel Text */
+.title1 {
+  margin-right: 55%;
 }
 
 .swiper-h1 {
-  color: rgb(78, 77, 77);
-  margin-left: 150%;
-  margin-top: -10%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  color: #006b65;
+  font-size: 3rem;
+  text-shadow: 2px 2px 6px #09c3ba;
 }
+.swiper-h2 {
+  animation: text1;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  animation-duration: 20s;
+  animation-timing-function: steps(25, end);
+  animation-iteration-count: infinite;
+  font-family: "Merriweather", serif;
+  color: #095f59;
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px #5deee7;
+}
+
+.swiper-h2::after {
+  content: "|";
+  position: absolute;
+  right: 50;
+  color: red;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
+}
+
+@keyframes text1 {
+  0%,
+  50%,
+  100% {
+    width: 0;
+  }
+  10%,
+  40% {
+    width: 17em;
+  }
+}
+@keyframes caret {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.swiper-h3 {
+  font-family: "Secular One", sans-serif;
+  font-size: 3.7rem;
+  color: #a9612b;
+  text-shadow: 2px 2px 6px #df9359;
+}
+.title4 {
+  margin-right: -55%;
+  margin-top: 7%;
+}
+.swiper-h4 {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 3.2rem;
+  color: #e19b64;
+  text-shadow: 1px 1px 4px #d07631;
+}
+/** ---------------------------------------------------------  */
 
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
@@ -71,8 +114,9 @@ body {
   color: #12bfb6;
 }
 
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
   margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
   width: 12px;
   height: 12px;
@@ -272,9 +316,11 @@ body {
   outline: none;
   color: #313133;
   background: #4fd1c5;
-  background: linear-gradient(90deg,
-      rgba(129, 230, 217, 1) 0%,
-      rgba(79, 209, 197, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(129, 230, 217, 1) 0%,
+    rgba(79, 209, 197, 1) 100%
+  );
   border-radius: 1000px;
   box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
   transition: all 0.3s ease-in-out 0s;
