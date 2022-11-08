@@ -1,15 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import Navbar from './Components/Navbar';
 import FindFreelan from './Components/FFlancer';
 import GoToTop from './Components/GoToTop';
 import Footer from './Components/Footer';
+import { UserContext } from "./Routing";
 
 
 const FindFreelancer = () => {
 
     const navigate = useNavigate();
+    // eslint-disable-next-line no-unused-vars
+    const { state, dispatch } = useContext(UserContext);
 
     const [loading, setLoading] = useState(true);
     const preloader = document.getElementById('preloader');
@@ -31,6 +34,7 @@ const FindFreelancer = () => {
                 },
                 credentials: "include"
             });
+            dispatch({ type: "USER", payload: true });
 
             const data = await res.json();
             console.log(data);
@@ -60,7 +64,7 @@ const FindFreelancer = () => {
                     <meta name="description" content="The place to get your work done" />
                 </Helmet>
 
-                <Navbar color="white" change="Get Hired" />
+                <Navbar color="white" change="Profile" link="/Profile" />
                 <FindFreelan />
                 <GoToTop />
                 <Footer />
