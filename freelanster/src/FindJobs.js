@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
 import Filter from './Components/Filter';
+import GoToTop from './Components/GoToTop';
 import Footer from './Components/Footer';
 import { FilterJobs } from './context/jobcontext';
 
@@ -58,19 +59,20 @@ const FindJobs = () => {
         !loading && (
 
             <>
-            <FilterJobs>
+                <FilterJobs>
 
-                <Helmet>
-                    <meta charSet="utf-8" />
-                    <title>Find Jobs</title>
-                    <meta name="description" content="The place to get your work done" />
-                </Helmet>
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>Find Jobs</title>
+                        <meta name="description" content="The place to get your work done" />
+                    </Helmet>
 
-                <Navbar color="white" change="Post Job" link="/FindJobs/PostJobs" />
-                <Hero title="Find Jobs" desc=" The Best Place where you can find jobs" img={FJHeroImg} placeholder="Find Jobs" />
-                <Filter />
-                <Footer />
-            </FilterJobs>
+                    <Navbar color="white" change="Post Job" link="/FindJobs/PostJobs" />
+                    <Hero title="Find Jobs" desc=" The Best Place where you can find jobs" img={FJHeroImg} placeholder="Find Jobs" />
+                    <Filter />
+                    <GoToTop />
+                    <Footer />
+                </FilterJobs>
             </>
         )
     );
