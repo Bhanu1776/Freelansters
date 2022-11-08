@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
 import Filter from './Components/Filter';
+import GoToTop from './Components/GoToTop';
 import Footer from './Components/Footer';
 import { FilterJobs } from './context/jobcontext';
 import { FilterContextProvider } from './context/filtercontext';
@@ -70,7 +71,8 @@ const FindJobs = () => {
                         <Navbar color="white" change="Post Job" link="/FindJobs/PostJobs" />
                         <Hero title="Find Jobs" desc=" The Best Place where you can find jobs" img={FJHeroImg} placeholder="Find Jobs" />
                         <Filter />
-                        <Footer />
+                        <GoToTop />
+                    <Footer />
                     </FilterContextProvider>
                 </FilterJobs>
             </>

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import Navbar from './Components/Navbar';
 import FindFreelan from './Components/FFlancer';
+import GoToTop from './Components/GoToTop';
 import Footer from './Components/Footer';
 import { FilterFreelancer } from './context/freelancercontext';
 
@@ -63,6 +64,7 @@ const FindFreelancer = () => {
 
                 <Navbar color="white" change="Get Hired" />
                 <FindFreelan />
+                <GoToTop />
                 <Footer />
             </FilterFreelancer>
             </>

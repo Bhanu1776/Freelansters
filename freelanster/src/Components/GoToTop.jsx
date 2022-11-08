@@ -28,7 +28,7 @@ const GoToTop = () => {
   const theme = {
     colors: {
       btn: "#00c8aa",
-      shadow:  "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;",
+      shadow: "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;",
     },
     media: {
       mobile: "768px", tab: "998px",
@@ -57,15 +57,15 @@ const Wrapper = styled.section`
 
   .top-btn {
     font-size: 2.4rem;
-    width: 3rem;
-    height: 3rem;
+    width: 3.75rem;
+    height: 3.75rem;
     color: #fff;
     background-color: ${({ theme }) => theme.colors.btn};
     box-shadow: ${({ theme }) => theme.colors.shadow};
     border-radius: 50%;
     position: fixed;
-    bottom: 3rem;
-    right: 3rem;
+    bottom: 1.5rem;
+    right: 2rem;
     z-index: 999;
     display: flex;
     justify-content: center;
