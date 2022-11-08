@@ -8,7 +8,8 @@ import Logout from "./Components/Logout";
 import FindFreelancer from "./FindFreelancer";
 import Error from "./Components/Error";
 import PostJobs from "./Components/PostJobs";
-// import Profile from './Components/Profile';
+import Profile from "./Components/Profile";
+import GetHired from "./Components/GetHired";
 
 // Context API
 export const UserContext = createContext();
@@ -23,14 +24,19 @@ const Paths = () => {
       <Route path="/Home/Logout" element={<Logout />}></Route>
       <Route path="Login" element={<Login />}></Route>
       <Route path="/FindJobs" element={<FindJobs />}></Route>
+      <Route path="/FindJobs/Profile" element={<Profile />}></Route>
+      <Route path="/FindJobs/Profile/Home" element={<App />}></Route>
       <Route path="/FindJobs/Logout" element={<Logout />}></Route>
       <Route path="/FindJobs/Home" element={<App />}></Route>
       <Route path="/FindJobs/PostJobs" element={<PostJobs />}></Route>
       <Route path="/FindFreelancer" element={<FindFreelancer />}></Route>
       <Route path="/FindFreelancer/Login" element={<Login />}></Route>
       <Route path="/FindFreelancer/Home" element={<App />}></Route>
+      <Route path="/FindFreelancer/GetHired" element={<GetHired />}></Route>
+      <Route path="/FindFreelancer/Profile" element={<Profile />}></Route>
+      <Route path="/FindFreelancer/Profile/Home" element={<App />}></Route>
       <Route path="/FindFreelancer/Logout" element={<Logout />}></Route>
-      {/* <Route path='/Profile' element={<Profile />}></Route> */}
+
       <Route path="/Logout" element={<Logout />}></Route>
       <Route path="*" element={<Error />}></Route>
     </Routes>
