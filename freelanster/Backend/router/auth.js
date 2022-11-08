@@ -89,8 +89,8 @@ router.post('/Login', async (req, res) => {
 });
 
 
-//* AboutUs Page
-router.get('/About', authenticate, (req, res) => {
+//* Profile Page
+router.get('/profile', authenticate, (req, res) => {
     // console.log("Hello Im About");
     res.send(req.rootUser);
 })

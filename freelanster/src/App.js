@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { Parallax, Autoplay, Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Helmet } from "react-helmet";
@@ -13,8 +13,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import CateCards from './Components/CateCards.jsx';
+import { UserContext } from "./Routing";
+
 
 const App = () => {
+
+    // eslint-disable-next-line no-unused-vars
+    const { state, dispatch } = useContext(UserContext);
 
     const [loading, setLoading] = useState(true);
     const preloader = document.getElementById('preloader');
@@ -45,6 +50,7 @@ const App = () => {
             // console.log(data);
             setUsername(data.name);
             setShow(true);
+            dispatch({ type: "USER", payload: true });
         } catch (err) {
             console.log(err);
         }
@@ -52,6 +58,7 @@ const App = () => {
 
     useEffect(() => {
         userHomePage();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const ref = useRef(null);
@@ -77,7 +84,7 @@ const App = () => {
                     <Swiper spaceBetween={10}
                         centeredSlides={true}
                         autoplay={{
-                            delay: 7000,
+                            delay: 6500,
                             disableOnInteraction: false,
                         }}
                         parallax={true}

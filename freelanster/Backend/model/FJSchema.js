@@ -16,7 +16,7 @@ const FJSchema = new mongoose.Schema({
     },
     duration: {
         type: String,
-        required: true
+        // required: true
     },
     description: {
         type: String,
@@ -24,7 +24,7 @@ const FJSchema = new mongoose.Schema({
     },
     price: {
         type: String,
-        required: true
+        // required: true
     },
     image: {
         type: String,

@@ -45,7 +45,7 @@
   white-space: nowrap;
   display: inline-block;
   position: relative;
-  animation-duration: 7.5s;
+  animation-duration: 8s;
   animation-timing-function: steps(25, end);
   animation-iteration-count: infinite;
   font-family: "Merriweather", serif;

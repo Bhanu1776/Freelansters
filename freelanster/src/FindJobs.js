@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import Navbar from './Components/Navbar';
@@ -8,12 +8,16 @@ import GoToTop from './Components/GoToTop';
 import Footer from './Components/Footer';
 import { FilterJobs } from './context/jobcontext';
 import { FilterContextProvider } from './context/filtercontext';
+import { UserContext } from "./Routing";
+
 
 const FJHeroImg = 'url("https://images.unsplash.com/photo-1498354178607-a79df2916198?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1888&q=80")';
 
 const FindJobs = () => {
 
     const navigate = useNavigate();
+    // eslint-disable-next-line no-unused-vars
+    const { state, dispatch } = useContext(UserContext);
 
     const [loading, setLoading] = useState(true);
     const preloader = document.getElementById('preloader');
@@ -36,6 +40,7 @@ const FindJobs = () => {
                 },
                 credentials: "include"
             });
+            dispatch({ type: "USER", payload: true });
 
             const data = await res.json();
             console.log(data);
@@ -68,7 +73,7 @@ const FindJobs = () => {
                             <meta name="description" content="The place to get your work done" />
                         </Helmet>
 
-                        <Navbar color="white" change="Post Job" link="/FindJobs/PostJobs" />
+                        <Navbar color="white" change="Profile" link="/FindJobs/Profile" />
                         <Hero title="Find Jobs" desc=" The Best Place where you can find jobs" img={FJHeroImg} placeholder="Find Jobs" />
                         <Filter />
                         <GoToTop />
