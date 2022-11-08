@@ -5,26 +5,27 @@ import Chip from "@mui/material/Chip";
 import HomeIcon from "@mui/icons-material/Home";
 import styles from "styled-components";
 import { useNavigate } from "react-router-dom";
+import { keyframes } from 'styled-components'
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const StyledBreadcrumb = styled(Chip)(({ theme }) => {
-  const backgroundColor =
-    theme.palette.mode === "light"
-      ? theme.palette.grey[100]
-      : theme.palette.grey[800];
-  return {
-    backgroundColor,
-    height: theme.spacing(3),
-    color: theme.palette.text.primary,
-    fontWeight: theme.typography.fontWeightRegular,
-    "&:hover, &:focus": {
-      backgroundColor: emphasize(backgroundColor, -0.06),
-    },
-    "&:active": {
-      boxShadow: theme.shadows[1],
-      backgroundColor: emphasize(backgroundColor, 0.12),
-    },
-  };
+    const backgroundColor =
+        theme.palette.mode === "light"
+            ? theme.palette.grey[100]
+            : theme.palette.grey[800];
+    return {
+        backgroundColor,
+        height: theme.spacing(3),
+        color: theme.palette.text.primary,
+        fontWeight: theme.typography.fontWeightRegular,
+        "&:hover, &:focus": {
+            backgroundColor: emphasize(backgroundColor, -0.06),
+        },
+        "&:active": {
+            boxShadow: theme.shadows[1],
+            backgroundColor: emphasize(backgroundColor, 0.12),
+        },
+    };
 });
 
 const Wrapper = styles.section`
@@ -42,8 +43,37 @@ const Wrapper = styles.section`
    box-shadow: 
       12px 12px 16px 0 rgba(0, 0, 0, 0.7),
     -8px -8px 16px 0 rgba(255, 255, 255, 0.3);
+     animation: vibrate-1 0.3s linear infinite both;
 
 }
+
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
 
 
 .css-6od3lo-MuiChip-label {
@@ -63,27 +93,27 @@ const Wrapper = styles.section`
 `;
 
 export default function CustomizedBreadcrumbs() {
-  const navigate = useNavigate();
-  function handleClick(event) {
-    event.preventDefault();
-    navigate("/Home");
-  }
+    const navigate = useNavigate();
+    function handleClick(event) {
+        event.preventDefault();
+        navigate("/Home");
+    }
 
-  return (
-    <>
-      <Wrapper>
-        <div role="presentation" onClick={handleClick}>
-          <Breadcrumbs aria-label="breadcrumb">
-            <StyledBreadcrumb
-              className="backbtn"
-              component="a"
-              href="/"
-              label="Home"
-              icon={<HomeIcon fontSize="small" />}
-            />
-          </Breadcrumbs>
-        </div>
-      </Wrapper>
-    </>
-  );
+    return (
+        <>
+            <Wrapper>
+                <div role="presentation" onClick={handleClick}>
+                    <Breadcrumbs aria-label="breadcrumb">
+                        <StyledBreadcrumb
+                            className="backbtn"
+                            component="a"
+                            href="/"
+                            label="Home"
+                            icon={<HomeIcon fontSize="small" />}
+                        />
+                    </Breadcrumbs>
+                </div>
+            </Wrapper>
+        </>
+    );
 }
