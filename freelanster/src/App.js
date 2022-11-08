@@ -77,7 +77,7 @@ const App = () => {
                     <Swiper spaceBetween={10}
                         centeredSlides={true}
                         autoplay={{
-                            delay: 7000,
+                            delay: 6500,
                             disableOnInteraction: false,
                         }}
                         parallax={true}
