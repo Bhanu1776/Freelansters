@@ -6,62 +6,9 @@ const filterReducer = (state,action) =>{
                 ...state,
                 filter_jobs:[...action.payload],
                 all_jobs:[...action.payload],
+                lol_jobs:[],
+                title_jobs:[]
             };
-
-        // case "GET_SORTBY_JOB_DURATION":
-        //     let usersortjobdur = document.getElementById("cate-post-time");
-        //     let sort_jobdur_value = usersortjobdur.option[usersortjobdur.selectedIndex].value;
-        //     console.log(sort_jobdur_value)
-        //     return{
-        //         ...state,
-        //         sorting_jobdur: sort_jobdur_value,
-        //     }
-
-
-        // case "SORTING_JOBS_DURATION":
-        //     let newSortJobDur;
-        //     let tempSortJobDur =[...action.payload];
-
-        //     if (state.sorting_jobdur ==="All Durations")
-        //     {
-        //         newSortJobDur = tempSortJobDur.sort((a,b)=>
-        //             a.date.localCompare(b.date));
-        //     }
-
-        //     if (state.sorting_jobdur === "hourly") {
-        //         newSortJobDur = tempSortJobDur.sort((a, b) =>
-        //             a.date.localCompare(b.date));
-        //     }
-
-        //     if (state.sorting_jobdur === "Less than a week") {
-        //         newSortJobDur = tempSortJobDur.sort((a, b) =>
-        //             a.date.localCompare(b.date));
-        //     }
-
-        //     if (state.ssorting_jobdur ==="1 to 4 weeks") {
-        //         newSortJobDur = tempSortJobDur.sort((a, b) =>
-        //             a.date.localCompare(b.date));
-        //     }
-
-        //     if (state.sorting_jobdur === "1 to 3 months") {
-        //         newSortJobDur = tempSortJobDur.sort((a, b) =>
-        //             a.date.localCompare(b.date));
-        //     }
-            
-        //     if (state.sorting_jobdur === "3 to 6 months") {
-        //         newSortJobDur = tempSortJobDur.sort((a, b) =>
-        //             a.date.localCompare(b.date));
-        //     }
-
-        //     if (state.sorting_jobdur === "Over 6 months") {
-        //         newSortJobDur = tempSortJobDur.sort((a, b) =>
-        //             a.date.localCompare(b.date));
-        //     }
-
-        //     return {
-        //         ...state,
-        //         fiter_jobs:newSortJobDur,
-        //     }
 
         case "UPDATE_FILTER_VALUE":
             const {name,value}=action.payload;
@@ -77,7 +24,9 @@ const filterReducer = (state,action) =>{
         case "FILTER_JOBS":
             let {all_jobs} = state;
             let tempFilterJobs = [...all_jobs];
-            const { searchQueryInput, title, category } = state.filters;
+            let titleFilterJobs =[...all_jobs];
+            const { title, category } = state.filters;
+           
 
             // if (searchQueryInput){
             //     tempFilterJobs = tempFilterJobs.filter((curElem)=>{
@@ -92,13 +41,19 @@ const filterReducer = (state,action) =>{
             // }
             
             if(title){
-                console.log(`IN UPDATE FILTER: ${title}`)
                 tempFilterJobs = tempFilterJobs.filter((curElem) => curElem.title === title);
+                console.log("AFTER JOBS:", lol_jobs);
             }
 
+            // if (category) {
+            // const lol_jobs = tempFilterJobs.filter((curElem) => curElem.category === category);
+            //     console.log("AFTER JOBS:", lol_jobs);
+            // }
             return{
                 ...state,
-                all_jobs:tempFilterJobs,
+                lol_jobs: tempFilterJobs,
+                // lol_jobs: tempFilterJobs,
+                title_jobs: titleFilterJobs
             }
         default:
             return state;
