@@ -104,6 +104,56 @@ const Login = () => {
         }
     }
 
+    // Validation Form
+    function ValidateForm() {
+        var signname = document.forms.SignUpForm.SignName.value;
+        var signemail = document.forms.SignUpForm.Signemail.value;
+        var signpassword = document.forms.SignUpForm.Signpassword.value;
+        var signphone = document.forms.SignUpForm.SIgnphone.value;
+        var signcpassword = document.forms.SignUpForm.Signcpassword.value;
+        // var signpassword = document.forms.SignUpForm.Password.value;
+        // var signcpassword = document.forms.SignUpForm.Password.value;
+        var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+        var regPhone = /^\d{10}$/;
+        if (signname === null || signname === "") {
+            window.alert("Please enter your first name.");
+            signname.focus();
+            return false;
+        }
+        if (signemail === "" || !regEmail.test(signemail)) {
+            window.alert("Please enter a valid e-mail address.");
+            signemail.focus();
+            return false;
+        }
+        if (signphone === "" || !regPhone.test(signphone)) {
+            alert("Please enter valid phone number.");
+            signphone.focus();
+            return false;
+
+        }
+        if (signpassword === "") {
+            alert("Please enter your password");
+            signpassword.focus();
+            return false;
+        }
+        if (signpassword.length < 8) {
+            alert("Password should be atleast 8 character long");
+            signpassword.focus();
+            return false;
+        }
+        if (signcpassword === "") {
+            alert("Please enter your password");
+            signcpassword.focus();
+            return false;
+        }
+        if (signcpassword.length < 8) {
+            alert("Password should be atleast 8 character long");
+            signcpassword.focus();
+            return false;
+        }
+
+    }
+
     return (
         <>
             <div className="section1">
@@ -165,29 +215,29 @@ const Login = () => {
                                                     <div className="center-wrap">
                                                         <div className="section text-center">
                                                             <h4 id="H4" className="mb-3 pb-6" >Sign Up</h4>
-                                                            <form method='POST'>
+                                                            <form name="SignUpForm" onsubmit="return ValidateForm()" method='POST'>
                                                                 <div className="form-group my-2">
-                                                                    <input type="text" name="name" className="form-style"
+                                                                    <input type="text" name="Signname" className="form-style"
                                                                         placeholder="Your Full Name" id="logname" autoComplete="off" value={user.name} onChange={handleInputs} />
                                                                     <i className="input-icon uil uil-user"></i>
                                                                 </div>
                                                                 <div className="form-group mt-2">
-                                                                    <input type="email" name="email" className="form-style"
+                                                                    <input type="email" name="Signemail" className="form-style"
                                                                         placeholder="Your Email" id="logemail" autoComplete="off" value={user.email} onChange={handleInputs} />
                                                                     <i className="input-icon uil uil-at"></i>
                                                                 </div>
                                                                 <div className="form-group mt-2">
-                                                                    <input type="number" name="phone" className="form-style"
+                                                                    <input type="number" name="Signphone" className="form-style"
                                                                         placeholder="Your Number" id="lognumber" autoComplete="off" value={user.phone} onChange={handleInputs} />
                                                                     <i className="input-icon uil uil-phone"></i>
                                                                 </div>
                                                                 <div className="form-group mt-2">
-                                                                    <input type="password" name="password" className="form-style"
+                                                                    <input type="password" name="Signpassword" className="form-style"
                                                                         placeholder="Your Password" id="logpass" autoComplete="off" value={user.password} onChange={handleInputs} />
                                                                     <i className="input-icon uil uil-lock-alt"></i>
                                                                 </div>
                                                                 <div className="form-group mt-2">
-                                                                    <input type="password" name="cpassword" className="form-style"
+                                                                    <input type="password" name="Signcpassword" className="form-style"
                                                                         placeholder="Confirm Password" id="logpass" autoComplete="off" value={user.cpassword} onChange={handleInputs} />
                                                                     <i className="input-icon uil uil-lock-access"></i>
                                                                     <div className='btnSig'>
