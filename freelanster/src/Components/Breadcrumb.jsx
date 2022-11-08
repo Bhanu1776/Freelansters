@@ -4,6 +4,7 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Chip from '@mui/material/Chip';
 import HomeIcon from '@mui/icons-material/Home';
 import styles from 'styled-components';
+import { keyframes } from 'styled-components'
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const StyledBreadcrumb = styled(Chip)(({ theme }) => {
@@ -46,8 +47,37 @@ const Wrapper = styles.section`
    box-shadow: 
       12px 12px 16px 0 rgba(0, 0, 0, 0.7),
     -8px -8px 16px 0 rgba(255, 255, 255, 0.3);
+     animation: vibrate-1 0.3s linear infinite both;
 
 }
+
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
 
 
 .css-6od3lo-MuiChip-label {
