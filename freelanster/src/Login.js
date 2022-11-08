@@ -121,6 +121,59 @@ const Login = () => {
         }
     }
 
+    // Validation Form
+    function ValidateForm() {
+        var signname = document.forms.SignUpForm.name.value;
+        var signemail = document.forms.SignUpForm.email.value;
+        var signpassword = document.forms.SignUpForm.password.value;
+        var signphone = document.forms.SignUpForm.phone.value;
+        var signcpassword = document.forms.SignUpForm.cpassword.value;
+        var regemail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+        var regphone = /^\d{10}$/;
+        if (signname == null || signname === "") {
+            window.alert("Please enter your first name.");
+            signname.focus();
+            return false;
+        }
+        if (signemail === "" || !regemail.test(signemail)) {
+            window.alert("Please enter a valid e-mail address.");
+            signemail.focus();
+            return false;
+        }
+        if (signphone === "" || !regphone.test(signphone)) {
+            alert("Please enter valid phone number.");
+            signphone.focus();
+            return false;
+
+        }
+        if (signpassword === "") {
+            alert("Please enter your password");
+            signpassword.focus();
+            return false;
+        }
+        if (signpassword.length < 8) {
+            alert("Password should be atleast 8 character long");
+            signpassword.focus();
+            return false;
+        }
+        if (signcpassword === "") {
+            alert("Please enter your password");
+            signcpassword.focus();
+            return false;
+        }
+        if (signcpassword.length < 8) {
+            alert("Password should be atleast 8 character long");
+            signcpassword.focus();
+            return false;
+        }
+        return true;
+    }
+
+    // useEffect(() => {
+    //     ValidateForm();
+
+    // }, [])
+
     return (
         <>
             <div className="section1">
@@ -182,7 +235,7 @@ const Login = () => {
                                                     <div className="center-wrap">
                                                         <div className="section text-center">
                                                             <h4 id="H4" className="mb-3 pb-6" >Sign Up</h4>
-                                                            <form method='POST'>
+                                                            <form name="SignUpForm" method='POST'>
                                                                 <div className="form-group my-2">
                                                                     <input type="text" name="name" className="form-style"
                                                                         placeholder="Your Full Name" id="logname" autoComplete="off" value={user.name} onChange={handleInputs} />
