@@ -33,7 +33,6 @@ const FilterJobs = ({ children }) => {
         isLoading: false,
         isError: false,
         jobs: [],
-        featureJobs: [],
         isSingleLoading: false,
         singleJob: {},
     };
@@ -55,8 +54,8 @@ const FilterJobs = ({ children }) => {
             });
 
             const CardsData = await res.json();
-            const jobs = CardsData.data            
-            dispatch({ type: "SET_API_DATA", payload: jobs});
+            const jobs = CardsData.data
+            dispatch({ type: "SET_API_DATA", payload: jobs });
             // console.log(jobs);
             // console.log(data.data);
             // setCardsData(data.data);
@@ -101,4 +100,4 @@ const useJobContext = () => {
     return useContext(JobContext);
 };
 
-export { JobContext, FilterJobs , useJobContext }
+export { JobContext, FilterJobs, useJobContext }

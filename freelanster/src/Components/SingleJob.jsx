@@ -16,8 +16,10 @@ import Images from '../Img/imgindex';
 import styles from 'styled-components';
 import { teal } from '@material-ui/core/colors';
 import SendIcon from '@mui/icons-material/Send';
+import { useParams } from 'react-router-dom';
 
 const SingleJob = () => {
+    const { _id } = useParams();
 
     const [loading, setLoading] = useState(true);
     const preloader = document.getElementById('preloader');
