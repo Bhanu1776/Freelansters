@@ -289,7 +289,7 @@ const Login = () => {
                         </div>
 
                         <br />
-                        <div class="container">
+                        <div class="container1">
                             <div class="container__item">
                                 <form class="form" method='POST'>
                                     <input

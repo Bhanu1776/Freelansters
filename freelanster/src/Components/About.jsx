@@ -27,6 +27,7 @@ const About = () => {
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: row;
       margin: auto;
       margin-top: 1.5em;
     }
