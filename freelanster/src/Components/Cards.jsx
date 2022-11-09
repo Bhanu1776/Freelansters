@@ -1,59 +1,61 @@
-import React from 'react'
+/* eslint-disable no-unused-vars */
+import React from "react";
 // import Images from '../Img/imgindex'
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Cards = (curElem) => {
   const { id, title, date, description } = curElem;
-const Wrapper = styled.section`
-  /* DISPLAYED JOBS CARDS ON THE RIGHT OF THE PAGE  */
-.jobs {
-  display: flex;
-  border-top: 1px grey solid;
-  border-bottom: 1px grey solid;
-  border-right: 1px grey solid;
-  margin: 4rem -2rem;
-  width: 78vw;
-}
+  console.log("🚀 ~ file: Cards.jsx ~ line 8 ~ Cards ~ title", title);
+  const Wrapper = styled.section`
+    /* DISPLAYED JOBS CARDS ON THE RIGHT OF THE PAGE  */
+    .jobs {
+      display: flex;
+      border-top: 1px grey solid;
+      border-bottom: 1px grey solid;
+      border-right: 1px grey solid;
+      margin: 4rem -2rem;
+      width: 78vw;
+    }
 
-.inside-jobs {
-  display: flex;
-  flex-wrap: wrap;
-  /* justify-content: center;
+    .inside-jobs {
+      display: flex;
+      flex-wrap: wrap;
+      /* justify-content: center;
     align-items: center; */
-  padding: 30px 0px 30px 30px;
-  row-gap: 20px;
-  column-gap: 20px;
-}
+      padding: 30px 0px 30px 30px;
+      row-gap: 20px;
+      column-gap: 20px;
+    }
 
-.inside-jobs-li {
-  position: relative;
-  list-style-type: none;
-  height: 400px;
-  width: 260px;
-  background-color: rgba(188, 254, 241, 0.124);
-  text-align: center;
-  margin: 10px 3px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 3.6px rgba(0, 0, 0, 0.017),
-    0px 0px 10px rgba(0, 0, 0, 0.025), 0px 0px 24.1px rgba(0, 0, 0, 0.033),
-    0px 0px 80px rgba(0, 0, 0, 0.05);
-}
+    .inside-jobs-li {
+      position: relative;
+      list-style-type: none;
+      height: 400px;
+      width: 260px;
+      background-color: rgba(188, 254, 241, 0.124);
+      text-align: center;
+      margin: 10px 3px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 3.6px rgba(0, 0, 0, 0.017),
+        0px 0px 10px rgba(0, 0, 0, 0.025), 0px 0px 24.1px rgba(0, 0, 0, 0.033),
+        0px 0px 80px rgba(0, 0, 0, 0.05);
+    }
 
-.inside-jobs-li:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
+    .inside-jobs-li:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
 
-.images-jobs {
-  width: inherit;
-  overflow: hidden;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
+    .images-jobs {
+      width: inherit;
+      overflow: hidden;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
 
-.images-jobs img {
-  width: 100%;
-}
-/* .cate-content .cate-title {
+    .images-jobs img {
+      width: 100%;
+    }
+    /* .cate-content .cate-title {
   display: flex;
   padding: 2px;
   color: rgb(0, 0, 0);
@@ -76,43 +78,57 @@ const Wrapper = styled.section`
   box-shadow: inset 300px 0 0 0 var(--cate-text);
 } */
 
-.cate-foot {
-  color: var(--cate-foot-text);
-  font-weight: bold;
-  margin-top: 0.9rem;
-  margin-right: 16px;
-  text-align: end;
-  margin-bottom: 0.81rem;
-  font-size: 0.9rem;
-}
-.cate-body {
-  position: inherit;
-  margin: 0px 20px 20px 20px;
-  text-align: start;
-  overflow: auto;
-}
-.cate-content {
-  min-height: 14rem;
-  position: relative;
-}
-`
+    .cate-foot {
+      color: var(--cate-foot-text);
+      font-weight: bold;
+      margin-top: 0.9rem;
+      margin-right: 16px;
+      text-align: end;
+      margin-bottom: 0.81rem;
+      font-size: 0.9rem;
+    }
+    .cate-body {
+      position: inherit;
+      margin: 0px 20px 20px 20px;
+      text-align: start;
+      overflow: auto;
+    }
+    .cate-content {
+      min-height: 14rem;
+      position: relative;
+    }
+  `;
+
+  // const imagesData = curElem.images;
+
+  // const img = imagesData.map((imagesData) => {
+  //   return imagesData.title;
+  // });
+
+  // let images = null;
+  // let element = null;
+  // for (element of img) {
+  //   // console.log(element);
+  // }
+
+  const images = `https://source.unsplash.com/1600x900/?${title}`;
+
   return (
     <>
-    <Wrapper>
-      <li className='inside-jobs-li'>
-        <div className="images-jobs">
-            <img src={""} alt="Video" />
-        </div>
-        <div className="cate-content">
-          <div className="cate-title">{title}</div>
-          <div className="cate-foot">Posted on: {date}</div>
+      <Wrapper>
+        <li className="inside-jobs-li">
+          <div className="images-jobs">
+            <img src={images} alt="Video" />
+          </div>
+          <div className="cate-content">
+            <div className="cate-title">{title}</div>
+            <div className="cate-foot">Posted on: {date}</div>
             <div className="cate-body"> {description}</div>
-        </div>
-      </li>
+          </div>
+        </li>
       </Wrapper>
     </>
-  )
-}
+  );
+};
 
-
-export default Cards
+export default Cards;

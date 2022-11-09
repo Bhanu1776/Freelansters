@@ -22,7 +22,7 @@ const Hero = (props) => {
       background-attachment: fixed;
       height: 100%;
       width: 100%;
-      z-index: -1;
+      /* z-index: -1; */
       filter: brightness(50%);
     }
     section.static h1 {
@@ -97,9 +97,9 @@ const Hero = (props) => {
     <>
       <Wrapper>
         <section className="static">
-          <div 
-            
-          className="textArea">
+          <div
+
+            className="textArea">
             <h1
               data-aos='fade-down'
               data-duration='2000'
@@ -114,7 +114,7 @@ const Hero = (props) => {
               <div data-aos='zoom-in'
                 data-duration='2000'
                 data-aos-delay='400'
-                data-aos-easing='ease-in-out' 
+                data-aos-easing='ease-in-out'
                 className="searchBar">
                 <input
                   id="searchQueryInput"

@@ -64,7 +64,7 @@ const FindFreelancer = () => {
                     <meta name="description" content="The place to get your work done" />
                 </Helmet>
 
-                <Navbar color="white" change="Profile" link="/Profile" />
+                <Navbar color="white" change="Profile" link="/FindFreelancer/Profile" />
                 <FindFreelan />
                 <GoToTop />
                 <Footer />
