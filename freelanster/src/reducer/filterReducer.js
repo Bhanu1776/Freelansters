@@ -6,7 +6,7 @@ const filterReducer = (state,action) =>{
                 ...state,
                 filter_jobs:[...action.payload],
                 all_jobs:[...action.payload],
-                lol_jobs:[],
+                // lol_jobs:[],
                 title_jobs:[]
             };
 
@@ -42,7 +42,7 @@ const filterReducer = (state,action) =>{
             
             if(title){
                 tempFilterJobs = tempFilterJobs.filter((curElem) => curElem.title === title);
-                console.log("AFTER JOBS:", lol_jobs);
+                // console.log("AFTER JOBS:", lol_jobs);
             }
 
             // if (category) {
@@ -51,7 +51,7 @@ const filterReducer = (state,action) =>{
             // }
             return{
                 ...state,
-                lol_jobs: tempFilterJobs,
+                // lol_jobs: tempFilterJobs,
                 // lol_jobs: tempFilterJobs,
                 title_jobs: titleFilterJobs
             }
