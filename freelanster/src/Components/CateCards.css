@@ -15,8 +15,9 @@
     --bg: #f5f5f5;
     --shady-white-color: #f5f5f5;
     /* #fafffe*/
-    --accent-color: #1cd6ce;
+    --accent-color: #00c8aa;
     /*#00c8aa*/
+    /* #1cd6ce */
     --section-font: "Acme", sans-serif;
     --primary-font: "PT Serif", serif;
     --clr-neutral-900: hsl(207, 19%, 9%);
@@ -327,7 +328,7 @@
     position: absolute;
     left: 0px;
     bottom: -2px;
-    background: var(--clr-accent-400);
+    background: var(--accent-color);
     transition: transform 500ms ease-in-out;
     transform: scaleX(0);
     transform-origin: left;
@@ -349,7 +350,7 @@
 .button {
     display: inline-block;
     color: var(--clr-neutral-900);
-    background-color: var(--clr-accent-400);
+    background-color: var(--accent-color);
     cursor: pointer;
     text-decoration: none;
     border-radius: 0.25em;
@@ -360,5 +361,5 @@
 .button:hover,
 .button:focus {
     background-color: var(--clr-neutral-100);
-    transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-out;
 }
