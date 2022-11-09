@@ -7,8 +7,6 @@ const FilterContext = createContext();
 const initialState = {
     filter_jobs:[],
     all_jobs:[],
-    lol_jobs: [],
-    title_jobs:[],
     filters:{
         searchQueryInput:"",
         title: "all",
@@ -21,16 +19,17 @@ export const FilterContextProvider=({children})=>{
 
     const [state,dispatch] = useReducer(reducer,initialState);
     
+    useEffect(()=>{
+            dispatch({ type: "LOAD_FILTER_JOBS", payload: jobs });
+    }, [jobs, ]);
+
     useEffect(() => {
-        // dispatch({ type: "LOAD_FILTER_JOBS", payload: jobs });
+        dispatch({ type: "LOAD_FILTER_JOBS", payload: jobs });
         dispatch({ type: "FILTER_JOBS"})      
-    }, [jobs,state.filters])    
+    }, [state.filters])    
     
+
  
-        useEffect(()=>{
-                dispatch({ type: "LOAD_FILTER_JOBS", payload: jobs });
-        }, [jobs]);
-    
 
 
     // SEARCHING JOBS

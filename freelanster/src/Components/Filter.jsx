@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Cards from "./Cards";
 import { useJobContext } from "../context/jobcontext";
 import { useFilterContext } from "../context/filtercontext";
-
+import SingleJob from "./SingleJob";
 
 const Filter = () => {
   
@@ -12,6 +12,7 @@ const Filter = () => {
   if(isLoading){
     return <div>..........LOADING</div>
   }
+  
 
 
   const getUniqueData = (data,property)=>{
@@ -56,6 +57,7 @@ const Filter = () => {
   return (
     <>
       <Wrapper>
+        
         <article>
           <div className="findjobs">
             <div
@@ -79,14 +81,14 @@ const Filter = () => {
               <div id="divider-h"></div>
               <form>
 
-              <div className="cate-jobs">
+                <div className="cate-jobs" name="category">
                 <p>
                   <b>Category:</b>
                 </p>
 
                 <label className="cate-jobs-p">
                   {" "}
-                    <input className="filter-check" type="checkbox" name="category" value={"Writing & Translation"} /> Writing & Translation{" "}
+                    <input className="filter-check" type="checkbox" name="category" value={"Writing & Translation"} onClick={updateFilterValue}/> Writing & Translation{" "}
                 </label>
 
                 <label className="cate-jobs-p">
@@ -208,17 +210,12 @@ const Filter = () => {
               >
               {/* //* Uncomment this when an app starts */}
                   {
-                  title_jobs.map((curElem) => {
-                  console.log('FINAL:', lol_jobs)
+                  all_jobs.map((curElem) => {
+                  console.log('FINAL:', all_jobs)
                   return <Cards key={curElem._id}{...curElem} />;
-                })&&
-                  
-                  lol_jobs.map((curElem) => {
-                  console.log('FINAL:',lol_jobs)
-                  return <Cards key={curElem._id}{...curElem}/>; 
-                  }
-                )
-                  }
+                  })
+                }
+                
               </ul>
             </div>
           </div>

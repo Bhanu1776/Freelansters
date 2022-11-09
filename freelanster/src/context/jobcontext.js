@@ -69,7 +69,7 @@ const FilterJobs = ({ children }) => {
 
 
     // SINGLE JOB 
-    const getSingleJob = async () => {
+    const getSingleJob = async (_id) => {
         dispatch({ type: "SET_SINGLE_LOADING" });
         try {
             const res = await fetch("/JobsFetch", {

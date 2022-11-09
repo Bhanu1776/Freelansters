@@ -1,3 +1,5 @@
+import { checkboxClasses } from "@mui/material";
+
 const filterReducer = (state,action) =>{
 
     switch(action.type){
@@ -40,20 +42,23 @@ const filterReducer = (state,action) =>{
             //     });
             // }
             
+
             if(title){
                 tempFilterJobs = tempFilterJobs.filter((curElem) => curElem.title === title);
                 // console.log("AFTER JOBS:", lol_jobs);
             }
 
+        
+
             // if (category) {
-            // const lol_jobs = tempFilterJobs.filter((curElem) => curElem.category === category);
-            //     console.log("AFTER JOBS:", lol_jobs);
+                
+            //         const lol_jobs = tempFilterJobs.filter((curElem) => curElem.category === category);
+            //          console.log("AFTER JOBS:", lol_jobs);
             // }
+
             return{
                 ...state,
-                // lol_jobs: tempFilterJobs,
-                // lol_jobs: tempFilterJobs,
-                title_jobs: titleFilterJobs
+                all_jobs: tempFilterJobs
             }
         default:
             return state;
