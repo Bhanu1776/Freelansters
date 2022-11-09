@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from './Routing';
 import { ToastContainer, toast } from 'react-toastify';
@@ -6,6 +6,7 @@ import Images from './Img/imgindex.js'
 import './Login.css'
 import 'react-toastify/dist/ReactToastify.css';
 import CustomizedBreadcrumbs from './Components/Breadcrumb.jsx';
+import './Styles/Modal.scss'
 /* eslint-disable no-unused-vars */
 
 
@@ -23,6 +24,22 @@ const Login = () => {
         value = e.target.value;
         setUser({ ...user, [name]: value });
     }
+
+    const otp = async (e) => {
+        const res = await fetch("/otp", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+
+        });
+        console.log('otp wala call ho raha hai');
+    }
+
+    useEffect(() => {
+        otp();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
 
     //* Signup Auth
@@ -106,26 +123,24 @@ const Login = () => {
 
     // Validation Form
     function ValidateForm() {
-        var signname = document.forms.SignUpForm.SignName.value;
-        var signemail = document.forms.SignUpForm.Signemail.value;
-        var signpassword = document.forms.SignUpForm.Signpassword.value;
-        var signphone = document.forms.SignUpForm.SIgnphone.value;
-        var signcpassword = document.forms.SignUpForm.Signcpassword.value;
-        // var signpassword = document.forms.SignUpForm.Password.value;
-        // var signcpassword = document.forms.SignUpForm.Password.value;
-        var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
-        var regPhone = /^\d{10}$/;
-        if (signname === null || signname === "") {
+        var signname = document.forms.SignUpForm.name.value;
+        var signemail = document.forms.SignUpForm.email.value;
+        var signpassword = document.forms.SignUpForm.password.value;
+        var signphone = document.forms.SignUpForm.phone.value;
+        var signcpassword = document.forms.SignUpForm.cpassword.value;
+        var regemail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+        var regphone = /^\d{10}$/;
+        if (signname == null || signname === "") {
             window.alert("Please enter your first name.");
             signname.focus();
             return false;
         }
-        if (signemail === "" || !regEmail.test(signemail)) {
+        if (signemail === "" || !regemail.test(signemail)) {
             window.alert("Please enter a valid e-mail address.");
             signemail.focus();
             return false;
         }
-        if (signphone === "" || !regPhone.test(signphone)) {
+        if (signphone === "" || !regphone.test(signphone)) {
             alert("Please enter valid phone number.");
             signphone.focus();
             return false;
@@ -151,8 +166,13 @@ const Login = () => {
             signcpassword.focus();
             return false;
         }
-
+        return true;
     }
+
+    // useEffect(() => {
+    //     ValidateForm();
+
+    // }, [])
 
     return (
         <>
@@ -215,33 +235,33 @@ const Login = () => {
                                                     <div className="center-wrap">
                                                         <div className="section text-center">
                                                             <h4 id="H4" className="mb-3 pb-6" >Sign Up</h4>
-                                                            <form name="SignUpForm" onsubmit="return ValidateForm()" method='POST'>
+                                                            <form name="SignUpForm" method='POST'>
                                                                 <div className="form-group my-2">
-                                                                    <input type="text" name="Signname" className="form-style"
+                                                                    <input type="text" name="name" className="form-style"
                                                                         placeholder="Your Full Name" id="logname" autoComplete="off" value={user.name} onChange={handleInputs} />
                                                                     <i className="input-icon uil uil-user"></i>
                                                                 </div>
                                                                 <div className="form-group mt-2">
-                                                                    <input type="email" name="Signemail" className="form-style"
+                                                                    <input type="email" name="email" className="form-style"
                                                                         placeholder="Your Email" id="logemail" autoComplete="off" value={user.email} onChange={handleInputs} />
                                                                     <i className="input-icon uil uil-at"></i>
                                                                 </div>
                                                                 <div className="form-group mt-2">
-                                                                    <input type="number" name="Signphone" className="form-style"
+                                                                    <input type="number" name="phone" className="form-style"
                                                                         placeholder="Your Number" id="lognumber" autoComplete="off" value={user.phone} onChange={handleInputs} />
                                                                     <i className="input-icon uil uil-phone"></i>
                                                                 </div>
                                                                 <div className="form-group mt-2">
-                                                                    <input type="password" name="Signpassword" className="form-style"
+                                                                    <input type="password" name="password" className="form-style"
                                                                         placeholder="Your Password" id="logpass" autoComplete="off" value={user.password} onChange={handleInputs} />
                                                                     <i className="input-icon uil uil-lock-alt"></i>
                                                                 </div>
                                                                 <div className="form-group mt-2">
-                                                                    <input type="password" name="Signcpassword" className="form-style"
+                                                                    <input type="password" name="cpassword" className="form-style"
                                                                         placeholder="Confirm Password" id="logpass" autoComplete="off" value={user.cpassword} onChange={handleInputs} />
                                                                     <i className="input-icon uil uil-lock-access"></i>
                                                                     <div className='btnSig'>
-                                                                        <input type="submit" value='Submit' className="btn mt-4" onClick={PostData} id="sbtn"></input>
+                                                                        <a type="text" value='Submit' className="btn mt-4" href="#open-modal" id="sbtn">Submit</a>
                                                                     </div>
                                                                 </div>
                                                             </form>
@@ -256,8 +276,34 @@ const Login = () => {
                         </div>
                     </div>
                 </div>
+                {/* onClick={() => { PostData(); temp() }} */}
+                <div id="open-modal" class="modal-window">
+                    <div>
+                        <a href="/Login" title="Close" class="modal-close otp-a">
+                            Close
+                        </a>
+                        <h1 class="otp-h1">OTP Verification</h1>
+                        <div class="otp-desc">
+                            Enter the verification code we just sent you on your registered
+                            number
+                        </div>
 
-            </div>
+                        <br />
+                        <div class="container">
+                            <div class="container__item">
+                                <form class="form" method='POST'>
+                                    <input
+                                        type="email"
+                                        class="form__field"
+                                        placeholder="Enter OTP"
+                                    />
+                                    <input type="submit" value='Verify' className="otp-btn otp-btn--primary otp-btn--inside uppercase" onClick={PostData} ></input>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div >
             <ToastContainer />
         </>
 

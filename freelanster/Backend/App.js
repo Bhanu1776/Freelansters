@@ -37,6 +37,23 @@ app.get('/Login', (req, res) => {
 app.get('/register', (req, res) => {
     res.send('Hello world from the Login server');
 })
+app.get('/otp', (req, res) => {
+    res.send('Hello world from the Login server');
+
+    const twilio = require('twilio');
+    var otp = parseInt(Math.random() * 100000);
+    const accountSid = 'AC1a240acde71a76e682f8ec05da6c266d';
+    const authToken = 'dfc03a5b85c077c952a4b9b9014543d6';
+    const client = new twilio(accountSid, authToken);
+
+    client.messages
+        .create({
+            body: `Your OTP for signing into Freelanster account is ${otp}`,
+            to: '+919619349968', // Don't you dare to call me!!
+            from: '+18563862117', // From a valid Twilio number
+        })
+        .then((message) => console.log(message.sid));
+})
 // app.get('/FindJobs', (req, res) => {jobs
 //     res.send('Hello world from the FJ server');
 // })
