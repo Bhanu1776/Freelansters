@@ -7,7 +7,9 @@ import Filter from './Components/Filter';
 import GoToTop from './Components/GoToTop';
 import Footer from './Components/Footer';
 import { FilterJobs } from './context/jobcontext';
+import { FilterContextProvider } from './context/filtercontext';
 import { UserContext } from "./Routing";
+// import SingleJob from './Components/SingleJob';
 
 
 const FJHeroImg = 'url("https://images.unsplash.com/photo-1498354178607-a79df2916198?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1888&q=80")';
@@ -65,18 +67,19 @@ const FindJobs = () => {
 
             <>
                 <FilterJobs>
+                    <FilterContextProvider>
+                        <Helmet>
+                            <meta charSet="utf-8" />
+                            <title>Find Jobs</title>
+                            <meta name="description" content="The place to get your work done" />
+                        </Helmet>
 
-                    <Helmet>
-                        <meta charSet="utf-8" />
-                        <title>Find Jobs</title>
-                        <meta name="description" content="The place to get your work done" />
-                    </Helmet>
-
-                    <Navbar color="white" change="Profile" link="/FindJobs/Profile" />
-                    <Hero title="Find Jobs" desc=" The Best Place where you can find jobs" img={FJHeroImg} placeholder="Find Jobs" />
-                    <Filter />
-                    <GoToTop />
+                        <Navbar color="white" change="Profile" link="/FindJobs/Profile" />
+                        <Hero title="Find Jobs" desc=" The Best Place where you can find jobs" img={FJHeroImg} placeholder="Find Jobs" />
+                        <Filter />
+                        <GoToTop />
                     <Footer />
+                    </FilterContextProvider>
                 </FilterJobs>
             </>
         )

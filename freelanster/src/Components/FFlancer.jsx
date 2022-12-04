@@ -3,10 +3,15 @@ import ProfileCards from './ProfileCards'
 import ProfileData from './ProfileData'
 import styled from 'styled-components'
 import Hero from './Hero'
+import { useFreelancerContext } from '../context/freelancercontext'
 
 const FFHeroImg = 'url("https://images.unsplash.com/photo-1487528278747-ba99ed528ebc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")';
 
-const FFlancer = () => {
+const FFlancer = (curElem) => {
+    const { isLoading, freelancer } = useFreelancerContext();
+    if (isLoading) {
+        return <div>..........LOADING</div>
+    }
 
     return (
         <>
@@ -16,19 +21,8 @@ const FFlancer = () => {
             {/* Cards Display Section */}
 
             <CardsHolder>
-                {ProfileData.map((val) => {
-                    return (
-                        <ProfileCards
-                            key={val.id}
-                            proSpecial={val.proSpecial}
-                            proTime={val.proTime}
-                            proPrice={val.proPrice}
-                            proImg={val.proImg}
-                            proName={val.proName}
-                            proStars={val.proStars}
-                            proReviews={val.proReviews}
-                        />
-                    )
+                {freelancer.map((curElem) => {
+                    return <ProfileCards key={curElem._id}{...curElem}/>
                 })}
             </CardsHolder>
         </>

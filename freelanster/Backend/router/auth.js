@@ -116,7 +116,19 @@ router.get('/Logout', (req, res) => {
 
 //* Get user data for Home page
 router.get('/getdata', authenticate, (req, res) => {
-    // console.log('Fetching user Info');
+    // const twilio = require('twilio');
+    // const accountSid = 'AC1a240acde71a76e682f8ec05da6c266d';
+    // const authToken = 'dfc03a5b85c077c952a4b9b9014543d6';
+    // const client = new twilio(accountSid, authToken);
+
+    // client.messages
+    //     .create({
+    //         body: 'Your OTP is ',
+    //         to: '+919619349968', // Text this number
+    //         from: '+18563862117', // From a valid Twilio number
+    //     })
+    //     .then((message) => console.log(message.sid));
+    console.log('Fetching user Info');
     res.send(req.rootUser);
 })
 

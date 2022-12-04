@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+// import { useFilterContext } from "../context/filtercontext";
 
 const Hero = (props) => {
   const Wrapper = styled.section`
@@ -22,7 +23,7 @@ const Hero = (props) => {
       background-attachment: fixed;
       height: 100%;
       width: 100%;
-      z-index: -1;
+      /* z-index: -1; */
       filter: brightness(50%);
     }
     section.static h1 {
@@ -93,13 +94,14 @@ const Hero = (props) => {
       cursor: pointer;
     }
   `;
+  // const { filters: { searchQueryInput }, updateFilterValue }= useFilterContext();
   return (
     <>
       <Wrapper>
         <section className="static">
-          <div 
-            
-          className="textArea">
+          <div
+
+            className="textArea">
             <h1
               data-aos='fade-down'
               data-duration='2000'
@@ -114,14 +116,19 @@ const Hero = (props) => {
               <div data-aos='zoom-in'
                 data-duration='2000'
                 data-aos-delay='400'
-                data-aos-easing='ease-in-out' 
+                data-aos-easing='ease-in-out'
                 className="searchBar">
+                {/* <form onSubmit={(e)=>e.preventDefault()}> */}
+
                 <input
                   id="searchQueryInput"
                   type="text"
                   name="searchQueryInput"
+                  // value={searchQueryInput}
+                  // onChange={updateFilterValue}
                   placeholder={props.placeholder}
                 />
+                {/* </form> */}
                 <button
                   id="searchQuerySubmit"
                   type="submit"

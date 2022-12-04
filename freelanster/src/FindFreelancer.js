@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar';
 import FindFreelan from './Components/FFlancer';
 import GoToTop from './Components/GoToTop';
 import Footer from './Components/Footer';
+import { FilterFreelancer } from './context/freelancercontext';
 import { UserContext } from "./Routing";
 
 
@@ -58,6 +59,7 @@ const FindFreelancer = () => {
         !loading && (
 
             <>
+            <FilterFreelancer>
                 <Helmet>
                     <meta charSet="utf-8" />
                     <title>Find Freelancer</title>
@@ -68,6 +70,7 @@ const FindFreelancer = () => {
                 <FindFreelan />
                 <GoToTop />
                 <Footer />
+            </FilterFreelancer>
             </>
         )
     );

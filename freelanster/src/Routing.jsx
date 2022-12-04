@@ -8,6 +8,7 @@ import Logout from "./Components/Logout";
 import FindFreelancer from "./FindFreelancer";
 import Error from "./Components/Error";
 import PostJobs from "./Components/PostJobs";
+import SingleJob from "./Components/SingleJob";
 import Profile from "./Components/Profile";
 import GetHired from "./Components/GetHired";
 
@@ -24,6 +25,7 @@ const Paths = () => {
       <Route path="/Home/Logout" element={<Logout />}></Route>
       <Route path="Login" element={<Login />}></Route>
       <Route path="/FindJobs" element={<FindJobs />}></Route>
+      <Route path="/FindJobs/:id" element={<SingleJob />}></Route>
       <Route path="/FindJobs/Profile" element={<Profile />}></Route>
       <Route path="/FindJobs/Profile/Home" element={<App />}></Route>
       <Route path="/FindJobs/Logout" element={<Logout />}></Route>

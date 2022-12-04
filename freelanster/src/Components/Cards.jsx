@@ -2,10 +2,11 @@
 import React from "react";
 // import Images from '../Img/imgindex'
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 const Cards = (curElem) => {
-  const { id, title, date, description } = curElem;
-  console.log("🚀 ~ file: Cards.jsx ~ line 8 ~ Cards ~ title", title);
+  let { _id,category, title, date,duration, description,price,image} = curElem;
+  
+  // console.log("🚀 ~ file: Cards.jsx ~ line 8 ~ Cards ~ title", title);
   const Wrapper = styled.section`
     /* DISPLAYED JOBS CARDS ON THE RIGHT OF THE PAGE  */
     .jobs {
@@ -111,21 +112,23 @@ const Cards = (curElem) => {
   //   // console.log(element);
   // }
 
-  const images = `https://source.unsplash.com/1600x900/?${title}`;
+  // image = `https://source.unsplash.com/1600x900/?${title}`;
 
   return (
     <>
-      <Wrapper>
-        <li className="inside-jobs-li">
-          <div className="images-jobs">
-            <img src={images} alt="Video" />
-          </div>
-          <div className="cate-content">
-            <div className="cate-title">{title}</div>
-            <div className="cate-foot">Posted on: {date}</div>
+    <Wrapper>
+        <Link to={`/FindJobs/${_id}`}>
+      <li className='inside-jobs-li'>
+        <div className="images-jobs">
+              <img src={`https://source.unsplash.com/1600x900/?${title}`} alt="Video" />
+        </div>
+        <div className="cate-content">
+          <div className="cate-title">{title}</div>
+          <div className="cate-foot">Posted on: {date}</div>
             <div className="cate-body"> {description}</div>
-          </div>
-        </li>
+        </div>
+      </li>     
+    </Link>
       </Wrapper>
     </>
   );

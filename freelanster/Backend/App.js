@@ -4,6 +4,11 @@ const cookie_parser = require('cookie-parser')
 const app = express();
 
 
+
+
+
+
+
 dotenv.config({ path: './config.env' });
 
 const PORT = process.env.PORT;
@@ -21,6 +26,9 @@ app.use(require('./router/auth'));
 
 
 app.get('/', (req, res) => {
+
+   
+
     res.send('Hello world from the server');
 })
 app.get('/Login', (req, res) => {

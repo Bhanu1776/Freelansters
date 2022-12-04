@@ -1,39 +1,34 @@
 import styled from "styled-components";
 import Cards from "./Cards";
-// import Cdata from "./Cdata.jsx";
 import { useJobContext } from "../context/jobcontext";
-
+import { useFilterContext } from "../context/filtercontext";
+import SingleJob from "./SingleJob";
 
 const Filter = () => {
-  // const [CardsData, setCardsData] = useState("");
   
-  // const FetchJobs = async () => {
-  //   try {
-  //     const res = await fetch("/JobsFetch", {
-  //       method: "GET",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //     });
-
-  //     const data = await res.json();
-  //     // console.log(data.data);
-  //     setCardsData(data.data);
-  //     console.log(CardsData);
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-  // useEffect(() => {
-    //   FetchJobs();
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
-
-  const {isLoading, jobs } = useJobContext();
+  const { title_jobs,lol_jobs,all_jobs,filters: { searchQueryInput }, updateFilterValue } = useFilterContext();
+  const { isLoading} = useJobContext();
+   
   if(isLoading){
     return <div>..........LOADING</div>
   }
   
+
+
+  const getUniqueData = (data,property)=>{
+    let newVal = data.map((curElem)=>{
+      return curElem[property];
+    })
+    console.log(newVal);
+    return (newVal=["All", ...new Set(newVal)]);
+  };
+
+  const categoryData = getUniqueData(all_jobs,'title');
+  const JobDurData = getUniqueData(all_jobs, 'category');
+  
+  // console.log("INSIDE",categoryData)
+  // console.log("INSIDE2", JobDurData)
+
   const cateP = document.querySelectorAll(".cate-jobs-p input");
   const cateT = document.querySelectorAll(".cate-time input");
   const catePost = document.querySelectorAll("[name=posted-time]");
@@ -58,9 +53,11 @@ const Filter = () => {
     range.textContent = 0;
   }
 
+
   return (
     <>
       <Wrapper>
+        
         <article>
           <div className="findjobs">
             <div
@@ -69,43 +66,85 @@ const Filter = () => {
               data-aos-offset="300"
               className="filter"
             >
+              {/* <form onSubmit={(e) => e.preventDefault()}>
+
+                <input
+                  id="searchQueryInput"
+                  type="text"
+                  name="searchQueryInput"
+                  value={searchQueryInput}
+                  onChange={updateFilterValue}
+                  placeholder="LAMDE"
+                />
+              </form> */}
               <h1 id="filer-title"> Filter by: </h1> <br />
               <div id="divider-h"></div>
-              <div className="cate-jobs">
+              <form>
+
+                <div className="cate-jobs" name="category">
                 <p>
                   <b>Category:</b>
                 </p>
+
                 <label className="cate-jobs-p">
                   {" "}
-                  <input className="filter-check" type="checkbox" /> Writing & Translation{" "}
+                    <input className="filter-check" type="checkbox" name="category" value={"Writing & Translation"} onClick={updateFilterValue}/> Writing & Translation{" "}
                 </label>
+
                 <label className="cate-jobs-p">
                   {" "}
-                  <input type="checkbox" className="filter-check" /> Programming &
-                  &nbsp;&nbsp;&nbsp;&nbsp;Development
+                    <input type="checkbox" className="filter-check" name="category" value={"Programming & Development"}/> Programming &
+                  &nbsp;&nbsp;&nbsp;&nbsp; Development
                 </label>
+
                 <label className="cate-jobs-p">
                   {" "}
-                  <input type="checkbox" className="filter-check" /> Administrative & Secretarial
+                    <input type="checkbox" className="filter-check" name="category" value={"Administrative & Secretarial"}/> Administrative & Secretarial
                 </label>
+
                 <label className="cate-jobs-p">
                   {" "}
-                  <input type="checkbox" className="filter-check" /> Design & Art{" "}
+                    <input type="checkbox" className="filter-check" name="category" value={" Design & Art"} /> Design & Art{" "}
                 </label>
+
                 <label className="cate-jobs-p">
                   {" "}
-                  <input type="checkbox" className="filter-check" /> Business & Finance{" "}
+                    <input type="checkbox" className="filter-check" name="category" value={"Business & Finance"} /> Business & Finance{" "}
                 </label>
+
                 <label className="cate-jobs-p">
                   {" "}
-                  <input type="checkbox" className="filter-check" /> Sales & Marketing{" "}
+                    <input type="checkbox" className="filter-check" name="category" value={"Sales & Marketing"}/> Sales & Marketing{" "}
                 </label>
+
                 <label className="cate-jobs-p">
                   {" "}
-                  <input type="checkbox" className="filter-check" /> Others{" "}
+                    <input type="checkbox" className="filter-check" name="category" value={"Others"}/> Others{" "}
                 </label>
+
               </div>
+
+                <hr />
+
+                <div className="cate-duration filter-title">
+                  <p><b>Title</b></p>
+                  <div>
+                      <select id="cate-post-time" name='title' 
+                        className="sort-by-time" onClick={updateFilterValue}>
+                    {categoryData.map((curElem, index) => {
+                      return <option key={index}
+                        type="button"
+                        name='title'
+                        value={curElem}>
+                        {curElem}
+                      </option>
+                    })}
+                      </select>
+                  </div>
+                  </div>
+
               <hr />
+
               <div className="cate-time">
                 <p>
                   <b>Posted timeline:</b>
@@ -114,6 +153,7 @@ const Filter = () => {
                   <input type="radio" name="posted-time" id="cate-post-new" />{" "}
                   Newest First
                 </label>
+
                 <label>
                   <input type="radio" name="posted-time" id="cate-post-old" />{" "}
                   Oldest First
@@ -125,10 +165,10 @@ const Filter = () => {
                   <b>Job Duration:</b>
                 </p>
                 <select
-                  name="posted-time"
+                  name="title"
                   id="cate-post-time"
                   className="sort-by-time"
-                >
+                  >
                   <option value="All Durations">All Durations</option>
                   <option value="hourly">Hourly</option>
                   <option value="Less than a week">Less than a week</option>
@@ -136,7 +176,6 @@ const Filter = () => {
                   <option value="1 to 3 months">1 to 3 months</option>
                   <option value="3 to 6 months">3 to 6 months</option>
                   <option value="Over 6 months">Over 6 months</option>
-                  <option value="Unspecified">Unspecified</option>
                 </select>
                 <hr />
                 <p style={{ marginTop: "2rem" }}>
@@ -148,14 +187,14 @@ const Filter = () => {
                     min="1"
                     max="100"
                   />
-                  &nbsp;&nbsp;&nbsp;<output id="num">0</output>
+                  &nbsp;&nbsp;&nbsp;<output id="num">{oninput}</output>
                 </p>
                 <button className="cbutton" onclick={reset}>
                   Clear Filters
                 </button>
               </div>
+          </form>
             </div>
-
             <div
               data-aos="fade-left"
               data-duration="3000"
@@ -169,22 +208,14 @@ const Filter = () => {
                 data-aos-anchor-placement="top-bottom"
                 className="inside-jobs"
               >
-                {/* {Cdata.map((val) => {
-                  return (
-                    <Cards
-                      key={val.id}
-                      imgScr={val.imgScr}
-                      title={val.title}
-                      date={val.date}
-                      content={val.content}
-                    />
-                  );
-                })} */}
-
-                {/* //* Uncomment this when an app starts */}
-                {jobs.map((curElem) => {
-                  return <Cards key={curElem._id}{...curElem}/>;
-                })}
+              {/* //* Uncomment this when an app starts */}
+                  {
+                  all_jobs.map((curElem) => {
+                  console.log('FINAL:', all_jobs)
+                  return <Cards key={curElem._id}{...curElem} />;
+                  })
+                }
+                
               </ul>
             </div>
           </div>
