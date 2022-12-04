@@ -21,11 +21,8 @@
     "framer-motion": "^7.6.4",
     "http-proxy-middleware": "^2.0.6",
     "jsonwebtoken": "^8.5.1",
-<<<<<<< HEAD
     "rc-slider": "^10.1.0",
-=======
     "razorpay": "^2.8.3",
->>>>>>> bd6698db7c3bb5e3325a7c68f1bbbcc5e50612bf
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
@@ -34,12 +31,8 @@
     "react-modal": "^3.16.1",
     "react-router-dom": "^6.4.1",
     "react-scripts": "^5.0.1",
-<<<<<<< HEAD
     "react-tippy": "^1.4.0",
     "react-toastify": "^9.0.8",
-=======
-    "react-toastify": "^9.1.1",
->>>>>>> bd6698db7c3bb5e3325a7c68f1bbbcc5e50612bf
     "sass": "^1.56.0",
     "styled-components": "^5.3.6",
     "swiper": "^8.4.4",
