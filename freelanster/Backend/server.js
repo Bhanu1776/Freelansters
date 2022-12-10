@@ -27,7 +27,7 @@ app.use(require('./router/auth'));
 
 app.get('/', (req, res) => {
 
-   
+
 
     res.send('Hello world from the server');
 })
