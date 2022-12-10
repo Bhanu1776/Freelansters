@@ -71,91 +71,92 @@ const App = () => {
 
         !loading && (
             <>
-                <Helmet>
-                    <meta charSet="utf-8" />
-                    <title>Freelanster</title>
-                    <meta name="description" content="The place to get your work done" />
-                </Helmet>
+                <main>
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>Freelanster</title>
+                        <meta name="description" content="The place to get your work done" />
+                    </Helmet>
 
-                <Navbar color="black" change="About Us" onclick={handleClick} />
+                    <Navbar color="black" change="About Us" onclick={handleClick} />
 
-                {/* //? Carasol Section */}
-                <div className='Carcontainer'>
-                    <Swiper spaceBetween={10}
-                        centeredSlides={true}
-                        autoplay={{
-                            delay: 6500,
-                            disableOnInteraction: false,
-                        }}
-                        parallax={true}
-                        pagination={{
-                            clickable: true,
-                        }}
-                        navigation={true}
-                        modules={[Parallax, Autoplay, Pagination, Navigation]}
-                        className="mySwiper">
-                        {/* <div className="slider"> */}
-                        {/*  slide 1 */}
-                        <SwiperSlide className="slide">
-                            <div
-                                slot="container-start"
-                                className="parallax-bg"
-                                data-swiper-parallax="-23%"
-                            > <img
-                                    src={Images.s3} alt="Top Jobs" /></div>
-                        </SwiperSlide>
+                    {/* //? Carasol Section */}
+                    <div className='Carcontainer'>
+                        <Swiper spaceBetween={10}
+                            centeredSlides={true}
+                            autoplay={{
+                                delay: 6500,
+                                disableOnInteraction: false,
+                            }}
+                            parallax={true}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            navigation={true}
+                            modules={[Parallax, Autoplay, Pagination, Navigation]}
+                            className="mySwiper">
+                            {/* <div className="slider"> */}
+                            {/*  slide 1 */}
+                            <SwiperSlide className="slide">
+                                <div
+                                    slot="container-start"
+                                    className="parallax-bg"
+                                    data-swiper-parallax="-23%"
+                                > <img
+                                        src={Images.s3} alt="Top Jobs" /></div>
+                            </SwiperSlide>
 
-                        {/* slide 2 */}
-                        <SwiperSlide className="slide">
-                            <div
-                                slot="container-start"
-                                className="parallax-bg"
-                                data-swiper-parallax="-23%"
-                            > <img
-                                    src={Images.s1} alt="Top Jobs" /></div>
-                            <div className="title1" data-swiper-parallax="-300">
-                                <h1 className="swiper-h1" >Welcome, {username}  </h1> <br />
-                                <h2 className="swiper-h2" >{show ? 'Happy to see you back' : 'The place to get your work done'}</h2>
-                            </div>
-                        </SwiperSlide>
+                            {/* slide 2 */}
+                            <SwiperSlide className="slide">
+                                <div
+                                    slot="container-start"
+                                    className="parallax-bg"
+                                    data-swiper-parallax="-23%"
+                                > <img
+                                        src={Images.s1} alt="Top Jobs" /></div>
+                                <div className="title1" data-swiper-parallax="-300">
+                                    <h1 className="swiper-h1" >Welcome, {username}  </h1> <br />
+                                    <h2 className="swiper-h2" >{show ? 'Happy to see you back' : 'The place to get your work done'}</h2>
+                                </div>
+                            </SwiperSlide>
 
-                        {/* slide 3 */}
-                        <SwiperSlide className="slide">
-                            <div
-                                slot="container-start"
-                                className="parallax-bg"
-                                data-swiper-parallax="-23%"
-                            > <img
-                                    src={Images.s2} alt="Top Jobs" /></div>
-                            <div className="title2" data-swiper-parallax="-300">
-                                <h1 className="swiper-h3" >Find Your Desired <br /> Jobs Here</h1>
-                            </div>
-                        </SwiperSlide>
+                            {/* slide 3 */}
+                            <SwiperSlide className="slide">
+                                <div
+                                    slot="container-start"
+                                    className="parallax-bg"
+                                    data-swiper-parallax="-23%"
+                                > <img
+                                        src={Images.s2} alt="Top Jobs" /></div>
+                                <div className="title2" data-swiper-parallax="-300">
+                                    <h1 className="swiper-h3" >Find Your Desired <br /> Jobs Here</h1>
+                                </div>
+                            </SwiperSlide>
 
-                        {/* slide 4 */}
-                        <SwiperSlide className="slide">
-                            <div
-                                slot="container-start"
-                                className="parallax-bg"
-                                data-swiper-parallax="-23%"
-                            > <img
-                                    src={Images.s4} alt="Top Jobs" /></div>
-                            <div className="title4" data-swiper-parallax="-300">
-                                <h1 className="swiper-h4" >Choose a perfect <br /> Freelancer Here </h1>
-                            </div>
-                        </SwiperSlide>
-                    </Swiper>
-                </div>
-
-
-                {/* //?Scroll Down Animation */}
-                <div className="box-div">
-                    <div className="box">
-                        <span></span>
-                        <span></span>
+                            {/* slide 4 */}
+                            <SwiperSlide className="slide">
+                                <div
+                                    slot="container-start"
+                                    className="parallax-bg"
+                                    data-swiper-parallax="-23%"
+                                > <img
+                                        src={Images.s4} alt="Top Jobs" /></div>
+                                <div className="title4" data-swiper-parallax="-300">
+                                    <h1 className="swiper-h4" >Choose a perfect <br /> Freelancer Here </h1>
+                                </div>
+                            </SwiperSlide>
+                        </Swiper>
                     </div>
-                </div>
 
+
+                    {/* //?Scroll Down Animation */}
+                    <div className="box-div">
+                        <div className="box">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </main>
 
                 {/* //? ------------------------------------------------------------------------------ */}
 
@@ -216,30 +217,30 @@ const App = () => {
 
                 {/* //? ------------------------------------------------------------------------------ */}
 
+                <section>
+                    {/* //? Categories */}
+                    <div
+                        data-aos='fade-right'
+                        data-aos-offset='200'
+                        data-aos-easing="ease-out"
+                        data-aos-duration="4000"
 
-                {/* //? Categories */}
-                <div
-                    data-aos='fade-right'
-                    data-aos-offset='200'
-                    data-aos-easing="ease-out"
-                    data-aos-duration="4000"
+                        className="Features">
+                        <p id="s-specialty"> Job Categories </p>
+                    </div>
 
-                    className="Features">
-                    <p id="s-specialty"> Job Categories </p>
-                </div>
-
-                <div
-                    data-aos='fade-right'
-                    data-aos-offset='150'
-                    data-aos-easing="ease-out"
-                    data-aos-duration="4000"
-                    id="divider2"></div>
+                    <div
+                        data-aos='fade-right'
+                        data-aos-offset='150'
+                        data-aos-easing="ease-out"
+                        data-aos-duration="4000"
+                        id="divider2"></div>
 
 
-                <CateCards />
-                {/* <!-- Temp Div --> */}
-                <div style={{ height: "150px" }}> </div>
-
+                    <CateCards />
+                    {/* <!-- Temp Div --> */}
+                    <div style={{ height: "150px" }}> </div>
+                </section>
                 {/* //? ------------------------------------------------------------------------------ */}
 
 

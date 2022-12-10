@@ -191,7 +191,7 @@ const PostJobs = () => {
                       placeholder="Job Title"
                       required="required"
                       tabindex="1"
-                    //   autofocus="autofocus"
+                      //   autofocus="autofocus"
                     />
                   </label>
                 </div>

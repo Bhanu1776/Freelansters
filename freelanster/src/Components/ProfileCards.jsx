@@ -4,9 +4,8 @@ import { AiFillMessage, AiOutlineClockCircle } from "react-icons/ai";
 import ProStars from "./ProStars";
 import FormatPrice from "../Helpers/FormatPrice";
 
-
 const ProfileCards = (curElem) => {
-  const { id, title, hours,price,name } = curElem;
+  const { id, title, hours, price, name } = curElem;
   return (
     <>
       <Wrapper>
@@ -54,9 +53,7 @@ const ProfileCards = (curElem) => {
               </div>
 
               <div className="card-break"></div>
-              <div className="profile-reviews">
-                {""} Customer Reviews
-              </div>
+              <div className="profile-reviews">Customer Reviews</div>
               <button className="profile-book">BOOK NOW</button>
             </div>
           </div>
