@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from "react-helmet";
@@ -44,7 +45,7 @@ const FindJobs = () => {
             dispatch({ type: "USER", payload: true });
 
             const data = await res.json();
-            console.log(data);
+            // console.log(data);
 
             if (!res.status === 200) {
                 const error = new Error(res.error);
@@ -78,7 +79,7 @@ const FindJobs = () => {
                         <Hero title="Find Jobs" desc=" The Best Place where you can find jobs" img={FJHeroImg} placeholder="Find Jobs" />
                         <Filter />
                         <GoToTop />
-                    <Footer />
+                        <Footer />
                     </FilterContextProvider>
                 </FilterJobs>
             </>

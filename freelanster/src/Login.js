@@ -33,7 +33,7 @@ const Login = () => {
             }
 
         });
-        console.log('otp wala call ho raha hai');
+        // console.log('otp wala call ho raha hai');
     }
 
     useEffect(() => {
@@ -195,73 +195,73 @@ const Login = () => {
                 <div className="right">
                     <div className="row full-height justify-content-center">
                         <div className="Glass">
-                            <div className="col-12 text-center align-self-center py-5">
-                                <div className="section pb-5 pt-5 pt-sm-2 text-center">
-                                    <div className="section pb-5 pt-5 text-center">
-                                        <h6 id="H6" className="mb-0 pb-3"><span id='l' onClick={rotateL}>Log In </span><span id='r' onClick={rotateR}>Sign Up</span></h6>
+                            <div className="py-5 text-center col-12 align-self-center">
+                                <div className="pt-5 pb-5 text-center section pt-sm-2">
+                                    <div className="pt-5 pb-5 text-center section">
+                                        <h6 id="H6" className="pb-3 mb-0"><span id='l' onClick={rotateL}>Log In </span><span id='r' onClick={rotateR}>Sign Up</span></h6>
                                         <input className="checkbox" type="checkbox" id="reg-log" name="reg-log" />
                                         <label htmlFor="reg-log"></label>
 
 
-                                        <div className="card-3d-wrap mx-auto">
+                                        <div className="mx-auto card-3d-wrap">
                                             <div className="card-3d-wrapper" id="wrep">
                                                 <div className="card-front">
                                                     <div className="center-wrap">
-                                                        <div className="section text-center">
-                                                            <h4 id="H4" className="mb-4 pb-3">Log In</h4>
+                                                        <div className="text-center section">
+                                                            <h4 id="H4" className="pb-3 mb-4">Log In</h4>
                                                             <form method='POST'>
                                                                 <div className="form-group">
                                                                     <input type="email" name="logemail" className="form-style"
                                                                         placeholder="Your Email" id="logemail" value={logemail} onChange={(e) => { setlogEmail(e.target.value) }} autoComplete="off" />
                                                                     <i className="input-icon uil uil-at"></i>
                                                                 </div>
-                                                                <div className="form-group mt-2">
+                                                                <div className="mt-2 form-group">
                                                                     <input type="password" name="logpass" className="form-style"
                                                                         placeholder="Your Password" id="logpass" value={logpass} onChange={(e) => { setlogPass(e.target.value) }} autoComplete="off" />
                                                                     <i className="input-icon uil uil-lock-alt"></i>
                                                                 </div>
                                                                 <div className='btnLog'>
-                                                                    <a href="/" className="btn mt-4" onClick={loginUser}>submit</a>
+                                                                    <a href="/" className="mt-4 btn" onClick={loginUser}>submit</a>
                                                                 </div>
                                                             </form>
                                                         </div>
 
                                                         <span className='forgot'>
-                                                            <p id="Para" className="mb-0 mt-4 py-3 text-center"><a href="/" className="link">Forgot your
+                                                            <p id="Para" className="py-3 mt-4 mb-0 text-center"><a href="/" className="link">Forgot your
                                                                 password?</a></p></span>
                                                     </div>
                                                 </div>
                                                 <div className="card-back">
                                                     <div className="center-wrap">
-                                                        <div className="section text-center">
-                                                            <h4 id="H4" className="mb-3 pb-6" >Sign Up</h4>
+                                                        <div className="text-center section">
+                                                            <h4 id="H4" className="pb-6 mb-3" >Sign Up</h4>
                                                             <form name="SignUpForm" method='POST'>
-                                                                <div className="form-group my-2">
+                                                                <div className="my-2 form-group">
                                                                     <input type="text" name="name" className="form-style"
                                                                         placeholder="Your Full Name" id="logname" autoComplete="off" value={user.name} onChange={handleInputs} />
                                                                     <i className="input-icon uil uil-user"></i>
                                                                 </div>
-                                                                <div className="form-group mt-2">
+                                                                <div className="mt-2 form-group">
                                                                     <input type="email" name="email" className="form-style"
                                                                         placeholder="Your Email" id="logemail" autoComplete="off" value={user.email} onChange={handleInputs} />
                                                                     <i className="input-icon uil uil-at"></i>
                                                                 </div>
-                                                                <div className="form-group mt-2">
+                                                                <div className="mt-2 form-group">
                                                                     <input type="number" name="phone" className="form-style"
                                                                         placeholder="Your Number" id="lognumber" autoComplete="off" value={user.phone} onChange={handleInputs} />
                                                                     <i className="input-icon uil uil-phone"></i>
                                                                 </div>
-                                                                <div className="form-group mt-2">
+                                                                <div className="mt-2 form-group">
                                                                     <input type="password" name="password" className="form-style"
                                                                         placeholder="Your Password" id="logpass" autoComplete="off" value={user.password} onChange={handleInputs} />
                                                                     <i className="input-icon uil uil-lock-alt"></i>
                                                                 </div>
-                                                                <div className="form-group mt-2">
+                                                                <div className="mt-2 form-group">
                                                                     <input type="password" name="cpassword" className="form-style"
                                                                         placeholder="Confirm Password" id="logpass" autoComplete="off" value={user.cpassword} onChange={handleInputs} />
                                                                     <i className="input-icon uil uil-lock-access"></i>
                                                                     <div className='btnSig'>
-                                                                        <a type="text" value='Submit' className="btn mt-4" href="#open-modal" id="sbtn">Submit</a>
+                                                                        <a type="text" value='Submit' className="mt-4 btn" href="#open-modal" id="sbtn">Submit</a>
                                                                     </div>
                                                                 </div>
                                                             </form>
@@ -297,7 +297,7 @@ const Login = () => {
                                         class="form__field"
                                         placeholder="Enter OTP"
                                     />
-                                    <input type="submit" value='Verify' className="otp-btn otp-btn--primary otp-btn--inside uppercase" onClick={PostData} ></input>
+                                    <input type="submit" value='Verify' className="uppercase otp-btn otp-btn--primary otp-btn--inside" onClick={PostData} ></input>
                                 </form>
                             </div>
                         </div>
