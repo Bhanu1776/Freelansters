@@ -43,7 +43,7 @@ router.post('/register', async (req, res) => {
         }
     }
     catch (err) {
-        console.log(err);
+        console.log("🚀 ~ file: auth.js:47 ~ router.post ~ err", err)
     }
 })
 
@@ -84,7 +84,7 @@ router.post('/Login', async (req, res) => {
 
     }
     catch (err) {
-        console.log(err);
+        console.log("🚀 ~ file: auth.js:88 ~ router.post ~ err", err)
     }
 });
 
