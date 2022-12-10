@@ -4,8 +4,8 @@ import { AiFillMessage, AiOutlineClockCircle } from "react-icons/ai";
 import ProStars from "./ProStars";
 import FormatPrice from "../Helpers/FormatPrice";
 
-const ProfileCards = (curElem) => {
-  const { id, title, hours, price, name } = curElem;
+const ProfileCards = (props) => {
+  // const { id, title, hours,price,name } = curElem;
   return (
     <>
       <Wrapper>
@@ -19,27 +19,27 @@ const ProfileCards = (curElem) => {
         >
           <div className="profile-cards">
             <div className="profile-content">
-              <div className="profile-speciality">{title}</div>
+              <div className="profile-speciality">{props.proSpecial}</div>
 
               <div className="time-price">
                 <div className="profile-time">
                   <AiOutlineClockCircle className="icon" />
-                  {hours}hrs
+                  {props.proTime}
                 </div>
                 <div className="profile-price">
-                  <FormatPrice price={parseInt(price)} />
+                  <FormatPrice price={parseInt(props.proPrice)} />
                 </div>
               </div>
 
               <div className="profile-img-name">
                 <div className="profile-img">
-                  <img src={""} alt="" />
+                  <img src={props.proImg} alt="" />
                 </div>
                 <div>
                   <div className="profile-name-stars">
-                    <div className="profile-name">{name}</div>
+                    <div className="profile-name">{props.proName}</div>
                     <div className="profile-stars">
-                      <ProStars stars={""} />
+                      <ProStars stars={props.proStars} />
                     </div>
                   </div>
 
@@ -53,7 +53,9 @@ const ProfileCards = (curElem) => {
               </div>
 
               <div className="card-break"></div>
-              <div className="profile-reviews">Customer Reviews</div>
+              <div className="profile-reviews">
+                {props.proReviews} Customer Reviews
+              </div>
               <button className="profile-book">BOOK NOW</button>
             </div>
           </div>

@@ -21,8 +21,22 @@ const FFlancer = (curElem) => {
             {/* Cards Display Section */}
 
             <CardsHolder>
-                {freelancer.map((curElem) => {
+                {/* <ProfileData /> */}
+                {/* {freelancer.map((curElem) => {
                     return <ProfileCards key={curElem._id}{...curElem}/>
+                })} */}
+                {ProfileData.map((val) => {
+                    return (
+                        <ProfileCards
+                            key={val.id}
+                            proSpecial={val.proSpecial}
+                            proTime={val.proTime}
+                            proPrice={val.proPrice}
+                            proImg={val.proImg}
+                            proName={val.proName}
+                            proStars={val.proStars}
+                        />
+                    )
                 })}
             </CardsHolder>
         </>

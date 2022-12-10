@@ -19,7 +19,7 @@ import SendIcon from '@mui/icons-material/Send';
 import { useParams } from 'react-router-dom';
 
 const SingleJob = () => {
-    const {_id} = useParams();
+    const { _id } = useParams();
 
     const [loading, setLoading] = useState(true);
     const preloader = document.getElementById('preloader');
@@ -62,10 +62,10 @@ const SingleJob = () => {
                     {/* <Stack direction="row" spacing={2}> */}
                     <Grid container spacing={2}>
                         <Grid item xs={5}>
-                            <Image src={Images.bhanu} alt="" />
+                            <Image src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="" />
 
                             <CardActions>
-                                <ColorButton size="medium" variant='contained' sx={{ width: "400px", ml: -1, }} endIcon={<SendIcon />}>Send Proposal</ColorButton>
+                                <ColorButton size="medium" variant='contained' sx={{ width: "400px", ml: -1, }} endIcon={<SendIcon />}><a href="mailto:sunkabhanu281202@gmail.com">Send Proposal</a></ColorButton>
                             </CardActions>
                         </Grid>
                         <Grid item xs={7}>
@@ -82,7 +82,7 @@ const SingleJob = () => {
                                         </Typography>
 
                                         <Typography variant="body2">
-                                            Gayming
+                                            Android Development
                                         </Typography>
                                     </Box>
                                     <hr></hr>
@@ -97,7 +97,7 @@ const SingleJob = () => {
                                         </Typography>
 
                                         <Typography variant="body2">
-                                            28/11/2002
+                                            15/08/2022
                                         </Typography>
                                     </Box>
                                     <hr></hr>
@@ -112,7 +112,7 @@ const SingleJob = () => {
                                         </Typography>
 
                                         <Typography variant="body2">
-                                            20000
+                                            ₹20000
                                         </Typography>
                                     </Box>
                                     <hr></hr>
@@ -144,10 +144,7 @@ const SingleJob = () => {
                                             maxRows={8}
                                             aria-label="empty textarea"
                                             // placeholder="Empty"
-                                            defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-      ut labore et dolore magna aliqua. loremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-      ut labore et dolore magna aliqua. loremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-      ut labore et dolore magna aliqua. lorem"
+                                            defaultValue="Need a Freelancer to build an application for the grocery which can be efficient, fast and user-friendly."
                                             style={{ width: "100%" }}
                                         />
 
