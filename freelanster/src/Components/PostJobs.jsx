@@ -20,8 +20,6 @@ const PostJobs = () => {
   let name, value;
 
   const handleInputs = (e) => {
-    // console.log(e);
-
     name = e.target.name;
     value = e.target.value;
 
@@ -61,7 +59,6 @@ const PostJobs = () => {
 
   const Wrapper = styled.section`
     body {
-      /* background: url("https://i.imgur.com/Z3bMJXy.jpg"); */
       background: url("https://images.unsplash.com/photo-1545446968-9baea3c7a4db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
       background-size: cover;
       height: 100vh;
@@ -155,7 +152,6 @@ const PostJobs = () => {
       color: #e5e6e7;
     }
 
-    /* Make form look nice on smaller screens */
     @media only screen and (max-width: 580px) {
       #contact-form {
         left: 3%;
@@ -191,7 +187,6 @@ const PostJobs = () => {
                       placeholder="Job Title"
                       required="required"
                       tabindex="1"
-                      //   autofocus="autofocus"
                     />
                   </label>
                 </div>
@@ -233,7 +228,6 @@ const PostJobs = () => {
                       id="image"
                       type="file"
                       name="image"
-                      //   required="required"
                       autoComplete="off"
                       accept="image/*"
                     ></input>

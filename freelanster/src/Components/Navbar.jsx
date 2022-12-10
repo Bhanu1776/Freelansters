@@ -80,7 +80,6 @@ const Navbar = (props) => {
                 Find Freelancers
               </NavLink>
             </li>
-            {/* <li><NavLink to="/" id="nav-a">About US</NavLink></li> */}
             <li>
               <a href={props.link} id="nav-a" onClick={props.onclick}>
                 {props.change}
@@ -108,7 +107,6 @@ const Wrapper = styled.section`
 
   #logo {
     font-family: "PT Serif", "Caveat";
-    /* position:relative; */
     display: inline-block;
     font-size: 1.5rem;
     margin-left: 50px;
@@ -165,7 +163,6 @@ const Wrapper = styled.section`
     transform-origin: left;
   }
 
-  /** Navbar Login Button */
   #ndb {
     margin-right: 50px;
   }

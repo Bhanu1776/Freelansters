@@ -50,7 +50,6 @@ html {
 .progressbarIn{
  height:5px;
  background: #00c8aa;
- /* width: 15%; */
 }
 
 `

@@ -1,8 +1,8 @@
+/* eslint-disable no-unused-vars */
 import styled from "styled-components";
 import Cards from "./Cards";
 import { useJobContext } from "../context/jobcontext";
 import { useFilterContext } from "../context/filtercontext";
-import SingleJob from "./SingleJob";
 
 const Filter = () => {
   const {
@@ -22,16 +22,10 @@ const Filter = () => {
     let newVal = data.map((curElem) => {
       return curElem[property];
     });
-    // console.log(newVal);
     return (newVal = ["All", ...new Set(newVal)]);
   };
 
   const categoryData = getUniqueData(all_jobs, "title");
-  // const JobDurData = getUniqueData(all_jobs, 'category');
-
-  // console.log("INSIDE",categoryData)
-  // console.log("INSIDE2", JobDurData)
-
   const cateP = document.querySelectorAll(".cate-jobs-p input");
   const cateT = document.querySelectorAll(".cate-time input");
   const catePost = document.querySelectorAll("[name=posted-time]");
@@ -50,7 +44,6 @@ const Filter = () => {
       radio.checked = false;
     }
     for (duration of catePost) {
-      // console.log(duration.value);
       duration.value = duration[0];
     }
     range.textContent = 0;
@@ -67,17 +60,6 @@ const Filter = () => {
               data-aos-offset="300"
               className="filter"
             >
-              {/* <form onSubmit={(e) => e.preventDefault()}>
-
-                <input
-                  id="searchQueryInput"
-                  type="text"
-                  name="searchQueryInput"
-                  value={searchQueryInput}
-                  onChange={updateFilterValue}
-                  placeholder="LAMDE"
-                />
-              </form> */}
               <h1 id="filer-title"> Filter by: </h1> <br />
               <div id="divider-h"></div>
               <form>
@@ -85,83 +67,75 @@ const Filter = () => {
                   <p>
                     <b>Category:</b>
                   </p>
-
                   <label className="cate-jobs-p">
-                    {" "}
                     <input
                       className="filter-check"
                       type="checkbox"
                       name="category"
                       value={"Writing & Translation"}
                       onClick={updateFilterValue}
-                    />{" "}
-                    Writing & Translation{" "}
+                    />
+                    Writing & Translation
                   </label>
 
                   <label className="cate-jobs-p">
-                    {" "}
                     <input
                       type="checkbox"
                       className="filter-check"
                       name="category"
                       value={"Programming & Development"}
-                    />{" "}
+                    />
                     Programming & &nbsp;&nbsp;&nbsp;&nbsp; Development
                   </label>
 
                   <label className="cate-jobs-p">
-                    {" "}
                     <input
                       type="checkbox"
                       className="filter-check"
                       name="category"
                       value={"Administrative & Secretarial"}
-                    />{" "}
+                    />
                     Administrative & Secretarial
                   </label>
 
                   <label className="cate-jobs-p">
-                    {" "}
                     <input
                       type="checkbox"
                       className="filter-check"
                       name="category"
                       value={" Design & Art"}
-                    />{" "}
-                    Design & Art{" "}
+                    />
+                    Design & Art
                   </label>
 
                   <label className="cate-jobs-p">
-                    {" "}
                     <input
                       type="checkbox"
                       className="filter-check"
                       name="category"
                       value={"Business & Finance"}
-                    />{" "}
-                    Business & Finance{" "}
+                    />
+                    Business & Finance
                   </label>
 
                   <label className="cate-jobs-p">
-                    {" "}
                     <input
                       type="checkbox"
                       className="filter-check"
                       name="category"
                       value={"Sales & Marketing"}
-                    />{" "}
-                    Sales & Marketing{" "}
+                    />
+                    Sales & Marketing
                   </label>
 
                   <label className="cate-jobs-p">
-                    {" "}
                     <input
                       type="checkbox"
                       className="filter-check"
                       name="category"
                       value={"Others"}
-                    />{" "}
-                    Others{" "}
+                    />
+                    Others
                   </label>
                 </div>
 
@@ -261,7 +235,6 @@ const Filter = () => {
               >
                 {/* //* Uncomment this when an app starts */}
                 {all_jobs.map((curElem) => {
-                  // console.log("FINAL:", all_jobs);
                   return <Cards key={curElem._id} {...curElem} />;
                 })}
               </ul>
@@ -425,7 +398,6 @@ const Wrapper = styled.section`
     width: 13rem;
   }
 
-  /* DISPLAYED JOBS CARDS ON THE RIGHT OF THE PAGE  */
   .jobs {
     display: flex;
     border-top: 1px grey solid;
@@ -438,8 +410,6 @@ const Wrapper = styled.section`
   .inside-jobs {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center;
-    align-items: center; */
     padding: 30px 0px 30px 30px;
     row-gap: 20px;
     column-gap: 20px;
@@ -488,10 +458,8 @@ const Wrapper = styled.section`
     border: 1px var(--cate-text) solid;
     box-shadow: inset 0 0 0 0 var(--cate-text);
     border-radius: 10px;
-    /* transition: ease-out 0.3s; */
     outline: none;
     margin: 5px 10px;
-    /* justify-content: center; */
     padding-left: 1rem;
   }
   .cate-title {
@@ -506,19 +474,21 @@ const Wrapper = styled.section`
   }
 
   .cate-foot {
-    color: var(--cate-foot-text);
+    /* color: var(--cate-foot-text); */
     font-weight: bold;
     margin-top: 0.9rem;
     margin-right: 16px;
     text-align: end;
     margin-bottom: 0.81rem;
     font-size: 0.9rem;
+    color: #5b5a5a;
   }
   .cate-body {
     position: inherit;
     margin: 0px 20px 20px 20px;
     text-align: start;
     overflow: auto;
+    color: #5b5a5a;
   }
   .cate-content {
     min-height: 14rem;

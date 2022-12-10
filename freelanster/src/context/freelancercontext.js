@@ -3,25 +3,20 @@ import reducer from "../reducer/freelancerReducer";
 const FreelancerContext = createContext();
 
 const FilterFreelancer = ({ children }) => {
-  
+
     useEffect(() => {
-        // FetchJobs();
         getFreelancer();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-
 
     const initialState = {
         isLoading: false,
         isError: false,
         freelancer: [],
-        
+
     };
 
-    // const AppProvider = ({children}) => {
-
     const [state, dispatch] = useReducer(reducer, initialState);
-
 
     // ALL JOBS
     const getFreelancer = async () => {
@@ -42,9 +37,6 @@ const FilterFreelancer = ({ children }) => {
             dispatch({ type: "API_ERROR" });
         }
     };
-
-
-    
 
     return (<FreelancerContext.Provider value={{ ...state, getFreelancer }}>{children}</FreelancerContext.Provider>);
 };

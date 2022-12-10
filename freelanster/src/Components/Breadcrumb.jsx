@@ -5,27 +5,25 @@ import Chip from "@mui/material/Chip";
 import HomeIcon from "@mui/icons-material/Home";
 import styles from "styled-components";
 import { useNavigate } from "react-router-dom";
-import { keyframes } from 'styled-components'
-// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const StyledBreadcrumb = styled(Chip)(({ theme }) => {
-    const backgroundColor =
-        theme.palette.mode === "light"
-            ? theme.palette.grey[100]
-            : theme.palette.grey[800];
-    return {
-        backgroundColor,
-        height: theme.spacing(3),
-        color: theme.palette.text.primary,
-        fontWeight: theme.typography.fontWeightRegular,
-        "&:hover, &:focus": {
-            backgroundColor: emphasize(backgroundColor, -0.06),
-        },
-        "&:active": {
-            boxShadow: theme.shadows[1],
-            backgroundColor: emphasize(backgroundColor, 0.12),
-        },
-    };
+  const backgroundColor =
+    theme.palette.mode === "light"
+      ? theme.palette.grey[100]
+      : theme.palette.grey[800];
+  return {
+    backgroundColor,
+    height: theme.spacing(3),
+    color: theme.palette.text.primary,
+    fontWeight: theme.typography.fontWeightRegular,
+    "&:hover, &:focus": {
+      backgroundColor: emphasize(backgroundColor, -0.06),
+    },
+    "&:active": {
+      boxShadow: theme.shadows[1],
+      backgroundColor: emphasize(backgroundColor, 0.12),
+    },
+  };
 });
 
 const Wrapper = styles.section`
@@ -93,27 +91,27 @@ const Wrapper = styles.section`
 `;
 
 export default function CustomizedBreadcrumbs() {
-    const navigate = useNavigate();
-    function handleClick(event) {
-        event.preventDefault();
-        navigate("/Home");
-    }
+  const navigate = useNavigate();
+  function handleClick(event) {
+    event.preventDefault();
+    navigate("/Home");
+  }
 
-    return (
-        <>
-            <Wrapper>
-                <div role="presentation" onClick={handleClick}>
-                    <Breadcrumbs aria-label="breadcrumb">
-                        <StyledBreadcrumb
-                            className="backbtn"
-                            component="a"
-                            href="/"
-                            label="Home"
-                            icon={<HomeIcon fontSize="small" />}
-                        />
-                    </Breadcrumbs>
-                </div>
-            </Wrapper>
-        </>
-    );
+  return (
+    <>
+      <Wrapper>
+        <div role="presentation" onClick={handleClick}>
+          <Breadcrumbs aria-label="breadcrumb">
+            <StyledBreadcrumb
+              className="backbtn"
+              component="a"
+              href="/"
+              label="Home"
+              icon={<HomeIcon fontSize="small" />}
+            />
+          </Breadcrumbs>
+        </div>
+      </Wrapper>
+    </>
+  );
 }

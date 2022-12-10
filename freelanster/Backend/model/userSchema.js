@@ -29,31 +29,24 @@ const userSchema = new mongoose.Schema({
 
     special: {
         type: String,
-        // required: true
     },
     time: {
         type: String,
-        // required: true
     },
     price: {
         type: Number,
-        // required: true
     },
     description: {
         type: String,
-        // required: true
     },
     img: {
         type: String,
-        // required: true
     },
     reviews: {
         type: String,
-        // required: true
     },
     stars: {
         type: Number,
-        // required: true
     },
     tokens: [
         {                                       // There are going to be many tokens right thats why taking an array.
@@ -87,7 +80,7 @@ userSchema.methods.generateAuthToken = async function () {
         return token;
     }
     catch (err) {
-        console.log(err);
+        console.log("🚀 ~ file: userSchema.js:83 ~ err", err)
     }
 }
 

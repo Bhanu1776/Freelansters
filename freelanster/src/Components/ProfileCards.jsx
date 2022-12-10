@@ -5,7 +5,6 @@ import ProStars from "./ProStars";
 import FormatPrice from "../Helpers/FormatPrice";
 
 const ProfileCards = (props) => {
-  // const { id, title, hours,price,name } = curElem;
   return (
     <>
       <Wrapper>

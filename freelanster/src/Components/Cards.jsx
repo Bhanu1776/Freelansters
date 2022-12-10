@@ -1,14 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-// import Images from '../Img/imgindex'
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 const Cards = (curElem) => {
-  let { _id,category, title, date,duration, description,price,image} = curElem;
-  
-  // console.log("🚀 ~ file: Cards.jsx ~ line 8 ~ Cards ~ title", title);
+  let { _id, category, title, date, duration, description, price, image } =
+    curElem;
+
   const Wrapper = styled.section`
-    /* DISPLAYED JOBS CARDS ON THE RIGHT OF THE PAGE  */
     .jobs {
       display: flex;
       border-top: 1px grey solid;
@@ -21,8 +19,6 @@ const Cards = (curElem) => {
     .inside-jobs {
       display: flex;
       flex-wrap: wrap;
-      /* justify-content: center;
-    align-items: center; */
       padding: 30px 0px 30px 30px;
       row-gap: 20px;
       column-gap: 20px;
@@ -56,28 +52,6 @@ const Cards = (curElem) => {
     .images-jobs img {
       width: 100%;
     }
-    /* .cate-content .cate-title {
-  display: flex;
-  padding: 2px;
-  color: rgb(0, 0, 0);
-  background-color: #1cd6c3c0;
-  border: 1px var(--cate-text) solid;
-  box-shadow: inset 0 0 0 0 var(--cate-text);
-  border-radius: 10px;
-  transition: ease-out 0.3s;
-  outline: none;
-  margin: 5px 10px;
-  justify-content: center;
-  padding-left: 1rem;
-}
-.cate-title {
-  text-align: center;
-}
-.cate-content .cate-title:hover {
-  color: rgb(0, 0, 0);
-  border-color: #c3f8ff;
-  box-shadow: inset 300px 0 0 0 var(--cate-text);
-} */
 
     .cate-foot {
       color: var(--cate-foot-text);
@@ -100,35 +74,24 @@ const Cards = (curElem) => {
     }
   `;
 
-  // const imagesData = curElem.images;
-
-  // const img = imagesData.map((imagesData) => {
-  //   return imagesData.title;
-  // });
-
-  // let images = null;
-  // let element = null;
-  // for (element of img) {
-  //   // console.log(element);
-  // }
-
-  // image = `https://source.unsplash.com/1600x900/?${title}`;
-
   return (
     <>
-    <Wrapper>
+      <Wrapper>
         <Link to={`/FindJobs/${_id}`}>
-      <li className='inside-jobs-li'>
-        <div className="images-jobs">
-              <img src={`https://source.unsplash.com/1600x900/?${title}`} alt="Video" />
-        </div>
-        <div className="cate-content">
-          <div className="cate-title">{title}</div>
-          <div className="cate-foot">Posted on: {date}</div>
-            <div className="cate-body"> {description}</div>
-        </div>
-      </li>     
-    </Link>
+          <li className="inside-jobs-li">
+            <div className="images-jobs">
+              <img
+                src={`https://source.unsplash.com/1600x900/?${title}`}
+                alt="Video"
+              />
+            </div>
+            <div className="cate-content">
+              <div className="cate-title">{title}</div>
+              <div className="cate-foot">Posted on: {date}</div>
+              <div className="cate-body"> {description}</div>
+            </div>
+          </li>
+        </Link>
       </Wrapper>
     </>
   );

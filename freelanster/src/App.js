@@ -95,7 +95,6 @@ const App = () => {
                             navigation={true}
                             modules={[Parallax, Autoplay, Pagination, Navigation]}
                             className="mySwiper">
-                            {/* <div className="slider"> */}
                             {/*  slide 1 */}
                             <SwiperSlide className="slide">
                                 <div

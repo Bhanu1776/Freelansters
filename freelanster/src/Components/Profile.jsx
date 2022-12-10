@@ -1,13 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import Images from './Img/imgindex.js'
 import { styled } from "@mui/material/styles";
 import { UserContext } from "../Routing";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
-import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -17,8 +15,6 @@ import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import Images from "../Img/imgindex";
-// import TextField from '@mui/material/TextField';
-// import { typography } from '@mui/system';
 import { teal } from "@mui/material/colors";
 import LinearProgress, {
   linearProgressClasses,
@@ -84,24 +80,13 @@ const Profile = () => {
       backgroundColor: teal["A400"],
     },
   }));
-  // const Item = styled(Paper)(({ theme }) => ({
-  //     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  //     ...theme.typography.body2,
-  //     padding: theme.spacing(1),
-  //     textAlign: 'center',
-  //     color: theme.palette.text.secondary,
-  // }));
 
   const styling = {
     container: {
       padding: 3,
       marginTop: 14,
-      // flexGrow: 2,
       width: "60%",
       boxShadow: "rgba(0, 0, 0, 0.35) 0px 10px 25px",
-      // bgcolor: 'background.paper',
-      // borderColor: 'text.primary',
-      // border: 1,
       borderRadius: "16px",
     },
     typography: {
@@ -119,7 +104,6 @@ const Profile = () => {
         <form method="GET"></form>
 
         <CssBaseline />
-        {/* <Card sx={styling.container} fixed> */}
         <Container sx={styling.container} fixed>
           <Box sx={{ flexGrow: 2 }}>
             <Grid container spacing={2}>
@@ -165,11 +149,9 @@ const Profile = () => {
                     </ColorButton>
                   </CardActions>
                 </Card>
-                {/* </Item> */}
               </Grid>
               <Grid item xs={8}>
                 <Card sx={{ minWidth: 280 }}>
-                  {/* <Stack direction="row" spacing={2}> */}
                   <CardContent>
                     <Box
                       sx={{
@@ -207,11 +189,6 @@ const Profile = () => {
                       <Typography variant="body2">{userData.phone}</Typography>
                     </Box>
                   </CardContent>
-
-                  {/* </Stack> */}
-                  {/* <CardActions>
-                                        <Button size="small" variant='contained' sx={{ mr: -2 }}>Edit Profile</Button>
-                                    </CardActions> */}
                 </Card>
               </Grid>
               <Grid item xs={12}>
@@ -256,7 +233,6 @@ const Profile = () => {
             </Grid>
           </Box>
         </Container>
-        {/* </Card> */}
       </>
     )
   );

@@ -37,7 +37,6 @@ const About = () => {
       text-align: center;
       overflow: hidden;
       border-radius: 5px;
-      /* box-shadow: 5px 5px 15px black; */
       box-shadow: 2.9px 3.4px 3.6px rgba(0, 0, 0, 0.045),
         7.9px 9.3px 10px rgba(0, 0, 0, 0.065),
         19px 22.3px 24.1px rgba(0, 0, 0, 0.085),

@@ -1,7 +1,7 @@
 import React from "react";
 
 const GetHired = () => {
-  return <div>GetHired</div>;
+  return <div>Work In Progress!</div>;
 };
 
 export default GetHired;

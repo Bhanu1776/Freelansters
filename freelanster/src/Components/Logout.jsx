@@ -1,39 +1,37 @@
-import React, { useEffect,useContext } from 'react'
-import { useNavigate } from 'react-router-dom';
-import { UserContext } from '../Routing';
+import React, { useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { UserContext } from "../Routing";
 /* eslint-disable no-unused-vars */
 
-
 const Logout = () => {
+  const { state, dispatch } = useContext(UserContext);
 
-    const { state, dispatch } = useContext(UserContext);
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
-
-    // * Promises
-    useEffect(() => {
-        fetch('/Logout', {
-            method: "GET",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json"
-            },
-            credentials: "include"
-        }).then((res) => {
-            dispatch({ type: "USER", payload: false })
-            navigate('/Login')
-            if (!res.status === 200) {
-                const error = new Error(res.error);
-                throw error;
-            }
-        }).catch((err) => {
-            console.log(err);
-        })
+  // * Promises
+  useEffect(() => {
+    fetch("/Logout", {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
     })
-    
-  return (
-    <div>Logout</div>
-  )
-}
+      .then((res) => {
+        dispatch({ type: "USER", payload: false });
+        navigate("/Login");
+        if (!res.status === 200) {
+          const error = new Error(res.error);
+          throw error;
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
 
-export default Logout
+  return <div>Logout</div>;
+};
+
+export default Logout;

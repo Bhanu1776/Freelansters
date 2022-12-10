@@ -128,7 +128,7 @@ const Login = () => {
         var signpassword = document.forms.SignUpForm.password.value;
         var signphone = document.forms.SignUpForm.phone.value;
         var signcpassword = document.forms.SignUpForm.cpassword.value;
-        var regemail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+        var regemail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/g;
         var regphone = /^\d{10}$/;
         if (signname == null || signname === "") {
             window.alert("Please enter your first name.");
@@ -168,11 +168,6 @@ const Login = () => {
         }
         return true;
     }
-
-    // useEffect(() => {
-    //     ValidateForm();
-
-    // }, [])
 
     return (
         <>

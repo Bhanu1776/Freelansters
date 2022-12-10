@@ -13,7 +13,6 @@ const Footer = () => {
     }
     .center-div {
       position: relative;
-      /* border: 2px solid red; */
       width: 269px;
       height: 235px;
       top: 114px;

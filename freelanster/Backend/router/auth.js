@@ -1,4 +1,3 @@
-// const jwt = require('jsonwebtoken');
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
@@ -91,43 +90,27 @@ router.post('/Login', async (req, res) => {
 
 //* Profile Page
 router.get('/profile', authenticate, (req, res) => {
-    // console.log("Hello Im About");
     res.send(req.rootUser);
 })
 
 //* FindJobs Page
 router.get('/Findjobs', authenticate, (req, res) => {
-    // console.log("Hello Im FJ");
     res.send(req.rootUser);
 })
 
 //* FindFreelancers Page
 router.get('/FindFreelancer', authenticate, (req, res) => {
-    // console.log("Hello Im FF");
     res.send(req.rootUser);
 })
 
 //* LogOut Page
 router.get('/Logout', (req, res) => {
-    // console.log("Byee Loging Out");
     res.clearCookie('jwtoken1', { path: '/' })
     res.status(200).send('User Logout');
 });
 
 //* Get user data for Home page
 router.get('/getdata', authenticate, (req, res) => {
-    // const twilio = require('twilio');
-    // const accountSid = 'AC1a240acde71a76e682f8ec05da6c266d';
-    // const authToken = 'dfc03a5b85c077c952a4b9b9014543d6';
-    // const client = new twilio(accountSid, authToken);
-
-    // client.messages
-    //     .create({
-    //         body: 'Your OTP is ',
-    //         to: '+919619349968', // Text this number
-    //         from: '+18563862117', // From a valid Twilio number
-    //     })
-    //     .then((message) => console.log(message.sid));
     console.log('Fetching user Info');
     res.send(req.rootUser);
 })
