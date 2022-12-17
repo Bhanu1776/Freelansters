@@ -139,6 +139,7 @@
 
 /* Buttons to control the slide */
 .catecards-slider-control {
+    cursor: pointer;
     position: relative;
     top: 5rem;
     display: flex;
@@ -149,6 +150,7 @@
 
 .catecards-slider-control .swiper-button-next {
     left: 58% !important;
+    cursor: pointer;
     transform: translateX(-58%) !important;
 }
 
@@ -179,9 +181,13 @@
         transform: translateX(-20%) !important;
     }
 } */
+.swiper-button-prev .slider-arrow .swiper-button-next .slider-arrow {
+    cursor: pointer;
+}
 
 .catecards-slider-control .slider-arrow {
     background: var(--white);
+    cursor: pointer;
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
@@ -195,6 +201,7 @@
     width: 1.5rem;
     height: 1.5rem;
     color: #180117;
+    cursor: pointer;
 }
 
 .catecards-slider-control .slider-arrow::after {
