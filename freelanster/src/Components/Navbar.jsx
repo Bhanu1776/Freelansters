@@ -2,7 +2,9 @@ import React, { useEffect, useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { UserContext } from "../Routing";
 import styled from "styled-components";
+import Images from "../Img/imgindex";
 /* eslint-disable no-unused-vars */
+
 
 const Navbar = (props) => {
   const { state, dispatch } = useContext(UserContext);
@@ -62,7 +64,7 @@ const Navbar = (props) => {
       <Wrapper navColor={props.color}>
         <nav id="navbar">
           <div className="d-logo">
-            <span id="logo">Freelanster</span>
+            <span id="logo"><img className="Logo" src={Images.logo1} alt="logo" /></span>
           </div>
           <ul>
             <li>
@@ -106,15 +108,23 @@ const Wrapper = styled.section`
     top: 0px;
   }
 
-  #logo {
-    font-family: "PT Serif", "Caveat";
+.Logo{
+  display: inline-block;
+  height: 2.7rem;
+  width: 13rem;
+  margin-left: 50px;
+    transition: 0.6s;
+
+}
+  /* #logo {
+    font-family: "PT Serif", "Caveat"; */
     /* position:relative; */
-    display: inline-block;
+    /* display: inline-block;
     font-size: 1.5rem;
     margin-left: 50px;
     transition: 0.6s;
     color: ${(props) => props.navColor};
-  }
+  } */
 
   #logo:hover {
     transform: scale(1.1);
@@ -228,8 +238,13 @@ const Wrapper = styled.section`
     height: 60px !important;
   }
 
-  nav.sticky #logo {
-    color: #fff;
+  nav.sticky .logo {
+    background-image:url(https://imgur.com/Q6ijkld);
+    display: inline-block;
+  height: 2.7rem;
+  width: 12rem;
+  margin-left: 50px;
+    transition: 0.6s;
   }
   nav.sticky #nav-a {
     color: #fff;

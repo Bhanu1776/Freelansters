@@ -27,5 +27,9 @@ const Images = {
     s2: require('./s2.jpg'),
     s3: require('./s3.jpg'),
     s4: require('./s4.jpg'),
+    logo1: require('./freelansters-logo1.png'),
+    logo: require('./freelansters-logo.png'),
+
+
 }
 export default Images;
