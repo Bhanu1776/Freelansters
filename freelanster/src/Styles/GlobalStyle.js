@@ -7,6 +7,12 @@ export const GlobalStyle = createGlobalStyle`
   padding: 0px;
   box-sizing: border-box;
 }
+img{
+user-select: none;
+}
+button{
+cursor: pointer;
+}
 body {
   background-color: var(--shady-white-color);
 }
