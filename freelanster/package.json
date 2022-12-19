@@ -1,72 +1,42 @@
 {
-  "name": "freelanster",
-  "version": "0.1.0",
-  "private": true,
-  "proxy": "http://localhost:5000",
+  "name": "freelansters",
+  "version": "1.0.0",
+  "description": "Backend for Freelansters",
+  "main": "server.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bhanu1776/Freelancers-Hub.git"
+  },
+  "keywords": [
+    "Express",
+    "Mongodb",
+    "NodeJS"
+  ],
+  "author": "Bhanu1776",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bhanu1776/Freelancers-Hub/issues"
+  },
+  "homepage": "https://github.com/Bhanu1776/Freelancers-Hub#readme",
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "@mui/icons-material": "^5.10.9",
-    "@mui/material": "^5.10.12",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.1.3",
-    "bcryptjs": "^2.4.3",
-    "cookie-parser": "^1.4.6",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "formik": "^2.2.9",
-    "framer-motion": "^7.6.4",
-    "http-proxy-middleware": "^2.0.6",
-    "jsonwebtoken": "^8.5.1",
-    "rc-slider": "^10.1.0",
-    "razorpay": "^2.8.3",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.3",
+    "node-latest": "^4.0.1",
+    "nodemon": "^2.0.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "react-icons": "^4.6.0",
-    "react-intersection-observer": "^9.4.0",
-    "react-modal": "^3.16.1",
     "react-router-dom": "^6.4.1",
     "react-scripts": "^5.0.1",
-    "react-tippy": "^1.4.0",
-    "react-toastify": "^9.0.8",
-    "sass": "^1.56.0",
-    "styled-components": "^5.3.6",
-    "swiper": "^8.4.4",
-    "twilio": "^3.83.1",
     "web-vitals": "^2.1.4",
-    "yup": "^0.32.11"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "config": {
-    "cz-emoji": {
-       "skipQuestions": ["issues", "breaking"]
-    }
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "cookie-parser": "^1.4.6",
+    "http-proxy-middleware": "^2.0.6",
+    "jsonwebtoken": "^8.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "axios": "^1.1.3",
+    "bcryptjs": "^2.4.3"
   }
 }

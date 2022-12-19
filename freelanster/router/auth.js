@@ -7,9 +7,9 @@ require('../db/conn');
 const User = require('../model/userSchema');
 
 
-router.get('/', (req, res) => {
-    res.send('Hello world from the router js');
-})
+// router.get('/', (req, res) => {
+//     res.send('Hello world from the router js');
+// })
 
 // SingUp Route
 
@@ -23,6 +23,7 @@ router.post('/register', async (req, res) => {
     if (!name || !email || !phone || !password || !cpassword) {             // If user doesn't fill any of the values then it will simply return error
         return res.status(422).json({ error: "Pls fill all the values properly!" });
     }
+
 
     try {
         const userExist = await User.findOne({ email: email });                 // left one is database email and right one is input email!!
