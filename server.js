@@ -17,9 +17,12 @@ app.use(cookie_parser());
 app.use(require('./router/auth'));
 
 
+
 app.get('/', (req, res) => {
-    res.send('Hello world from the server');
+    app.use(express.static(path.resolve(__dirname, 'Client', 'build')))
+    res.sendFile(path.resolve(__dirname, 'Client', 'build', 'index.html'))
 })
+
 app.get('/Login', (req, res) => {
     res.send('Hello world from the Login server');
 })
