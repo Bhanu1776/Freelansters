@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from './Routing';
 import { ToastContainer, toast } from 'react-toastify';
@@ -6,7 +6,7 @@ import Images from './Img/imgindex.js'
 import './Login.css'
 import 'react-toastify/dist/ReactToastify.css';
 import CustomizedBreadcrumbs from './Components/Breadcrumb.jsx';
-import './Styles/Modal.scss'
+// import './Styles/Modal.scss'
 /* eslint-disable no-unused-vars */
 
 
@@ -24,23 +24,6 @@ const Login = () => {
         value = e.target.value;
         setUser({ ...user, [name]: value });
     }
-
-    const otp = async (e) => {
-        const res = await fetch("/otp", {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
-            }
-
-        });
-        // console.log('otp wala call ho raha hai');
-    }
-
-    useEffect(() => {
-        otp();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
-
 
     //* Signup Auth
     const PostData = async (e) => {
@@ -256,7 +239,7 @@ const Login = () => {
                                                                         placeholder="Confirm Password" id="logpass" autoComplete="off" value={user.cpassword} onChange={handleInputs} />
                                                                     <i className="input-icon uil uil-lock-access"></i>
                                                                     <div className='btnSig'>
-                                                                        <a type="text" value='Submit' className="mt-4 btn" href="#open-modal" id="sbtn">Submit</a>
+                                                                        <input type="submit" value='Submit' className="mt-4 btn" onClick={PostData} id="sbtn"></input>
                                                                     </div>
                                                                 </div>
                                                             </form>
@@ -272,32 +255,6 @@ const Login = () => {
                     </div>
                 </div>
                 {/* onClick={() => { PostData(); temp() }} */}
-                <div id="open-modal" class="modal-window">
-                    <div>
-                        <a href="/Login" title="Close" class="modal-close otp-a">
-                            Close
-                        </a>
-                        <h1 class="otp-h1">OTP Verification</h1>
-                        <div class="otp-desc">
-                            Enter the verification code we just sent you on your registered
-                            number
-                        </div>
-
-                        <br />
-                        <div class="container1">
-                            <div class="container__item">
-                                <form class="form" method='POST'>
-                                    <input
-                                        type="email"
-                                        class="form__field"
-                                        placeholder="Enter OTP"
-                                    />
-                                    <input type="submit" value='Verify' className="uppercase otp-btn otp-btn--primary otp-btn--inside" onClick={PostData} ></input>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div >
             <ToastContainer />
         </>
