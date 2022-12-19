@@ -41,7 +41,7 @@ const Wrapper = styles.section`
    box-shadow: 
       12px 12px 16px 0 rgba(0, 0, 0, 0.7),
     -8px -8px 16px 0 rgba(255, 255, 255, 0.3);
-     animation: vibrate-1 0.3s linear infinite both;
+    //  animation: vibrate-1 0.3s linear infinite both;
 
 }
 
