@@ -62,9 +62,9 @@ const CateCards = () => {
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                       Inventore, praesentium.
                     </p>
-                    <a href="/" className="button">
+                    {/* <a href="/" className="button">
                       Learn More
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </SwiperSlide>
@@ -95,9 +95,9 @@ const CateCards = () => {
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                       Inventore, praesentium.
                     </p>
-                    <a href="/" className="button">
+                    {/* <a href="/" className="button">
                       Learn More
-                    </a>
+                    </a> */}
                   </div>
                 </div>
                 {/* </motion.div> */}
