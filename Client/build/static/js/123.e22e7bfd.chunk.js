@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkfreelanster=self.webpackChunkfreelanster||[]).push([[123],{3123:function(e,r,n){n.r(r);n(2791);var s=n(184);r.default=function(){return(0,s.jsx)("div",{children:"Work In Progress!"})}}}]);
-//# sourceMappingURL=123.e22e7bfd.chunk.js.map
