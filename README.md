@@ -28,7 +28,7 @@ If you have any issues, please let me know in the issues section or directly to 
 ## Installation 💾
 
 ```bash
-git clone https://github.com/Bhanu1776/Freelancers-Hub.git
+git clone https://github.com/Bhanu1776/Freelansters.git
 ```
 
 Create config.env file in `backend` folder and Fill your `.env` variables:
@@ -45,13 +45,13 @@ Install deps:
 npm install
 ```
 
-Run React server from `freelanster` folder :
+Run React server from `Client` folder :
 
 ```bash
 npm start
 ```
 
-Simultaneously Run Node.js Server from `freelanster/Backend` folder :
+Simultaneously Run Node.js Server :
 
 ```bash
 node server.js
@@ -63,11 +63,9 @@ This is an open source project, and contributions of any kind are welcome and ap
 
 ## Contributors 💣
 
-<p align="center">
 <a href="https://github.com/Bhanu1776/Freelansters/graphs/contributors">
   <img  src="https://contrib.rocks/image?repo=Bhanu1776/Freelansters" />
 </a>
-</p>
 
 ## Support Me 🫂
 
