@@ -5,7 +5,7 @@ const app = express();
 
 dotenv.config({ path: './config.env' });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 require('./db/conn.js')
 
 const FJSchema = require('./model/FJSchema');
@@ -17,17 +17,15 @@ app.use(cookie_parser());
 app.use(require('./router/auth'));
 
 if (process.env.NODE_ENV == "production") {
-    app.use(express.static("Client/build"));
     const path = require("path");
-    app.get("*", (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'Client', 'build', 'index.html'));
+
+    app.get('/', (req, res) => {
+        app.use(express.static(path.resolve(__dirname, 'Client', 'build')))
+        res.sendFile(path.resolve(__dirname, 'Client', 'build', 'index.html'))
     })
 }
 
-app.get('/', (req, res) => {
-    app.use(express.static(path.resolve(__dirname, 'Client', 'build')))
-    res.sendFile(path.resolve(__dirname, 'Client', 'build', 'index.html'))
-})
+
 
 app.get('/Login', (req, res) => {
     res.send('Hello world from the Login server');
