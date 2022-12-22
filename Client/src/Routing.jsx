@@ -1,11 +1,12 @@
 import React, { createContext, useReducer, lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { initialState, reducer } from "./reducer/UseReducer";
+import App from "./App";
 import FindJobs from "./FindJobs";
 import Logout from "./Components/Logout";
 import FindFreelancer from "./FindFreelancer";
 
-const App = lazy(() => import("./App"));
+// const App = lazy(() => import("./App"));
 const Login = lazy(() => import("./Login"));
 const Error = lazy(() => import("./Components/Error"));
 const PostJobs = lazy(() => import("./Components/PostJobs"));
