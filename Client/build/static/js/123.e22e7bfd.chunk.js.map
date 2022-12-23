@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/123.e22e7bfd.chunk.js","mappings":"2IAMA,UAJiB,WACf,OAAO,8CACT,C","sources":["Components/GetHired.jsx"],"sourcesContent":["import React from \"react\";\n\nconst GetHired = () => {\n  return <div>Work In Progress!</div>;\n};\n\nexport default GetHired;\n"],"names":[],"sourceRoot":""}
