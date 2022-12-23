@@ -24,7 +24,7 @@ const Navbar = (props) => {
       return (
         <div id="ndb">
           <button className="nbutton" id="nav-btn">
-            <NavLink to="./Login" id="nav-btn-a">
+            <NavLink to="./Login1" id="nav-btn-a">
               Login
             </NavLink>
           </button>
