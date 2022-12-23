@@ -192,7 +192,10 @@ const About = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="fab fa-instagram">
+                  <a
+                    href="https://www.instagram.com/osamashaikh_786/"
+                    className="fab fa-instagram"
+                  >
                     <span></span>
                   </a>
                 </li>
@@ -219,22 +222,34 @@ const About = () => {
               </div>
               <ul className="social">
                 <li>
-                  <a href="/" className="fab fa-facebook">
+                  <a
+                    href="https://github.com/Bhanu1776"
+                    className="fab fa-facebook"
+                  >
                     <span></span>
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="fab fa-twitter">
+                  <a
+                    href="https://twitter.com/SunkaBhanu"
+                    className="fab fa-twitter"
+                  >
                     <span></span>
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="fab fa-instagram">
+                  <a
+                    href="https://www.instagram.com/bhanu_1776/"
+                    className="fab fa-instagram"
+                  >
                     <span></span>
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="fab fa-linkedin">
+                  <a
+                    href="https://www.linkedin.com/in/bhanu-sunka-94a24a21a/"
+                    className="fab fa-linkedin"
+                  >
                     <span></span>
                   </a>
                 </li>
@@ -266,7 +281,10 @@ const About = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="fab fa-instagram">
+                  <a
+                    href="/https://www.instagram.com/harsh_97"
+                    className="fab fa-instagram"
+                  >
                     <span></span>
                   </a>
                 </li>
