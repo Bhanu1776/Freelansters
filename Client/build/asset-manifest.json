@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f4e52759.css",
+    "main.js": "/static/js/main.fe490bc1.js",
+    "static/media/PJImg.jpg": "/static/media/PJImg.a5c9e3f030dedd161f19.jpg",
+    "static/media/s3.jpg": "/static/media/s3.6af90c49ed3ead48f32b.jpg",
+    "static/media/s4.jpg": "/static/media/s4.af6c2349bff585218d85.jpg",
+    "static/media/logistics.jpg": "/static/media/logistics.4d159b76b1bdfe5a8f33.jpg",
+    "static/media/accountant.jpg": "/static/media/accountant.76fdc2ac7417a91763b1.jpg",
+    "static/media/graphic_design.png": "/static/media/graphic_design.58143d82fe784f1642fc.png",
+    "static/media/card-bg.jpg": "/static/media/card-bg.71550beb9e90b0170350.jpg",
+    "static/media/s2.jpg": "/static/media/s2.6c3a0fe2972d6b7d302a.jpg",
+    "static/media/data_entry.png": "/static/media/data_entry.5cf7fe547607d3a39fb9.png",
+    "static/media/FFHero.jpg": "/static/media/FFHero.e177b3dcf2d8079f7777.jpg",
+    "static/media/video_editing.png": "/static/media/video_editing.d1cb7df110e127d85470.png",
+    "static/media/article_writing.png": "/static/media/article_writing.73015a83047882b467b8.png",
+    "static/media/bhanu.jpg": "/static/media/bhanu.128f6fa3936a77691bc5.jpg",
+    "static/media/glass-right.png": "/static/media/glass-right.ea24b06211e2d2217247.png",
+    "static/media/harsh.jpg": "/static/media/harsh.f73562890cfbf477cfef.jpg",
+    "static/media/freelansters-logo.png": "/static/media/freelansters-logo.3eb14736e8d3ce1c83e5.png",
+    "static/media/android_developer.png": "/static/media/android_developer.cdf54b267c58f829b53c.png",
+    "static/media/osama.jpg": "/static/media/osama.7bc61991c5c041b4fbe0.jpg",
+    "static/media/s1.jpg": "/static/media/s1.d188ee8ecd63e9f254da.jpg",
+    "static/media/Features.png": "/static/media/Features.e6e085e5cc62509c9481.png",
+    "static/media/freelansters-logo1.png": "/static/media/freelansters-logo1.2c679b5600aeb404d11a.png",
+    "static/media/1.png": "/static/media/1.c8d0a91f56308d85d671.png",
+    "index.html": "/index.html",
+    "main.f4e52759.css.map": "/static/css/main.f4e52759.css.map",
+    "main.fe490bc1.js.map": "/static/js/main.fe490bc1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f4e52759.css",
+    "static/js/main.fe490bc1.js"
+  ]
+}
