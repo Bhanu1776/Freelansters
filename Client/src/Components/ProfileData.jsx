@@ -6,7 +6,7 @@ const Cdata = [
     proTime: "2hrs",
     proPrice: "1500",
     proImg:
-      "https://learn.microsoft.com/answers/storage/attachments/209536-360-f-364211147-1qglvxv1tcq0ohz3fawufrtonzz8nq3e.jpg",
+    "https://xsgames.co/randomusers/assets/avatars/male/46.jpg",
     proName: "Alex Jordan",
     proStars: "5",
     proReviews: "60",
@@ -27,7 +27,7 @@ const Cdata = [
     proSpecial: "Data Entry Operator",
     proTime: "1hrs",
     proPrice: "500",
-    proImg: Images.osama,
+    proImg: "https://ik.imagekit.io/bhanu1776/Freelansters/osama.jpg?updatedAt=1682608749618",
     proName: "Osama Shaikh",
     proStars: "4.5",
     proReviews: "50",

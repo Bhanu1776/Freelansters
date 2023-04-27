@@ -174,7 +174,7 @@ const About = () => {
               className="about-card"
             >
               <div className="img">
-                <img src={Images.osama} alt="" />
+                <img src="https://ik.imagekit.io/bhanu1776/Freelansters/osama.jpg?updatedAt=1682608749618" alt="" />
               </div>
               <div className="info">
                 <h3>Osama Shaikh</h3>
@@ -214,7 +214,7 @@ const About = () => {
               className="about-card"
             >
               <div className="img">
-                <img src={Images.bhanu} alt="" />
+                <img src="https://ik.imagekit.io/bhanu1776/Freelansters/bhanu.jpg?updatedAt=1682608756655" alt="" />
               </div>
               <div className="info">
                 <h3>Bhanu Sunka</h3>
@@ -263,7 +263,7 @@ const About = () => {
               className="about-card"
             >
               <div className="img">
-                <img src={Images.harsh} alt="" />
+                <img src="https://ik.imagekit.io/bhanu1776/Freelansters/harsh.jpg?updatedAt=1682608753482" alt="" />
               </div>
               <div className="info">
                 <h3>Harsh Dalvi</h3>

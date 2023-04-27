@@ -64,7 +64,7 @@ const Navbar = (props) => {
         <nav id="navbar">
           <div className="d-logo">
             <span id="logo">
-              <img className="Logo" src={Images.logo1} alt="logo" />
+              <img className="Logo" src="https://ik.imagekit.io/bhanu1776/Freelansters/freelansters-logo1.png?updatedAt=1682608753529" alt="Freelansters" />
             </span>
           </div>
           <ul>

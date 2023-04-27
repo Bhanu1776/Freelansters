@@ -156,20 +156,20 @@ const Login = () => {
         <>
             <div className="section1">
                 <CustomizedBreadcrumbs />
-                <div className="shape-img1"><img src={Images.shape1} alt="s" /></div>
-                <div className="shape-img2"><img src={Images.shape2} alt="s" /></div>
-                {/* <div className="shape-img3"><img src={Images.shape3} alt="s" /></div> */}
-                {/* <div className="shape-img4"><img src={Images.shape4} alt="s" /></div>*/}
-                <div className="shape-img5"><img src={Images.shape5} alt="s" /></div>
-                {/* <div className="shape-img6"><img src={Images.shape6} alt="s" /></div> */}
-                <div className="shape-img7"><img src={Images.shape7} alt="s" /></div>
-                <div className="shape-img8"><img src={Images.shape8} alt="s" /></div>
-                <div className="shape-img9"><img src={Images.shape9} alt="s" /></div>
-                {/* <div className="shape-img10"><img src={Images.shape10} alt="s" /></div> */}
-                <div className="shape-img11"><img src={Images.shape11} alt="s" /></div>
-                <div className="shape-img14"><img src={Images.shape11} alt="s" /></div>
-                <div className="shape-img12"><img src={Images.shape14} alt="s" /></div>
-                <div className="shape-img13"><img src={Images.shape15} alt="s" /></div>
+                <div className="shape-img1"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/1.png?updatedAt=1682608761055" alt="s" /></div>
+                <div className="shape-img2"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/2.png?updatedAt=1682608761012" alt="s" /></div>
+                {/* <div className="shape-img3"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/3.png?updatedAt=1682608761027" alt="s" /></div> */}
+                {/* <div className="shape-img4"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/4.png?updatedAt=1682608760997" alt="s" /></div>*/}
+                <div className="shape-img5"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/5.png?updatedAt=1682608761058" alt="s" /></div>
+                {/* <div className="shape-img6"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/6.png?updatedAt=1682608761020" alt="s" /></div> */}
+                <div className="shape-img7"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/7.png?updatedAt=1682608759198" alt="s" /></div>
+                <div className="shape-img8"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/8.png?updatedAt=1682608757447" alt="s" /></div>
+                <div className="shape-img9"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/9.png?updatedAt=1682608757207" alt="s" /></div>
+                {/* <div className="shape-img10"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/10.png?updatedAt=1682608757182" alt="s" /></div> */}
+                <div className="shape-img11"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/11.png?updatedAt=1682608757190" alt="s" /></div>
+                <div className="shape-img14"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/11.png?updatedAt=1682608757190" alt="s" /></div>
+                <div className="shape-img12"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/14.png?updatedAt=1682608757196" alt="s" /></div>
+                <div className="shape-img13"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/15.png?updatedAt=1682608757177" alt="s" /></div>
                 <div className="right">
                     <div className="row full-height justify-content-center">
                         <div className="Glass">
