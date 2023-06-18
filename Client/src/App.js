@@ -3,7 +3,6 @@ import { Parallax, Autoplay, Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Helmet } from "react-helmet";
 import { useRef } from 'react';
-import Images from './Img/imgindex.js'
 import Navbar from './Components/Navbar';
 import About from './Components/About';
 import GoToTop from './Components/GoToTop';
@@ -101,8 +100,8 @@ const App = () => {
                                     slot="container-start"
                                     className="parallax-bg"
                                     data-swiper-parallax="-23%"
-                                > <img
-                                        src="https://ik.imagekit.io/bhanu1776/Freelansters/s3.jpg?updatedAt=1682608750315" alt="Top Jobs" /></div>
+                                > <img loading="lazy"
+                                    src="https://ik.imagekit.io/bhanu1776/Freelansters/s3.jpg?updatedAt=1682608750315" alt="Top Jobs" /></div>
                             </SwiperSlide>
 
                             {/* slide 2 */}
@@ -111,8 +110,8 @@ const App = () => {
                                     slot="container-start"
                                     className="parallax-bg"
                                     data-swiper-parallax="-23%"
-                                > <img
-                                        src="https://ik.imagekit.io/bhanu1776/Freelansters/s1.jpg?updatedAt=1682608749586" alt="Top Jobs" /></div>
+                                > <img loading="lazy"
+                                    src="https://ik.imagekit.io/bhanu1776/Freelansters/s1.jpg?updatedAt=1682608749586" alt="Top Jobs" /></div>
                                 <div className="title1" data-swiper-parallax="-300">
                                     <h1 className="swiper-h1" >Welcome, {username}  </h1> <br />
                                     <h2 className="swiper-h2" >{show ? 'Happy to see you back' : 'The place to get your work done'}</h2>
@@ -125,8 +124,8 @@ const App = () => {
                                     slot="container-start"
                                     className="parallax-bg"
                                     data-swiper-parallax="-23%"
-                                > <img
-                                        src="https://ik.imagekit.io/bhanu1776/Freelansters/s2.jpg?updatedAt=1682608749911" alt="Top Jobs" /></div>
+                                > <img loading="lazy"
+                                    src="https://ik.imagekit.io/bhanu1776/Freelansters/s2.jpg?updatedAt=1682608749911" alt="Top Jobs" /></div>
                                 <div className="title2" data-swiper-parallax="-300">
                                     <h1 className="swiper-h3" >Find Your Desired <br /> Jobs Here</h1>
                                 </div>
@@ -138,8 +137,8 @@ const App = () => {
                                     slot="container-start"
                                     className="parallax-bg"
                                     data-swiper-parallax="-23%"
-                                > <img
-                                        src="https://ik.imagekit.io/bhanu1776/Freelansters/s4.jpg?updatedAt=1682608750273" alt="Top Jobs" /></div>
+                                > <img loading="lazy"
+                                    src="https://ik.imagekit.io/bhanu1776/Freelansters/s4.jpg?updatedAt=1682608750273" alt="Top Jobs" /></div>
                                 <div className="title4" data-swiper-parallax="-300">
                                     <h1 className="swiper-h4" >Choose a perfect <br /> Freelancer Here </h1>
                                 </div>
@@ -205,7 +204,7 @@ const App = () => {
                                 data-aos-easing="ease-out"
                                 className="g-button">See More</button>
                         </div>
-                        <img
+                        <img loading="lazy"
                             data-aos="fade-down-left"
                             data-aos-offset="400"
                             data-aos-duration="4000"
@@ -277,7 +276,7 @@ const App = () => {
                             <h3>We're here to help</h3>
                             <p>Our talented team of recruiter can help you find the best freelancer for the job and our technical co-pilots can even manage the project for you.</p>
                         </div>
-                        <img
+                        <img loading="lazy"
                             data-aos='flip-right'
                             data-aos-offset='400'
                             data-aos-easing="ease-out"
@@ -301,71 +300,71 @@ const App = () => {
                             data-aos-offset='150'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                            className="shape-img1" id='img1'><img src="https://ik.imagekit.io/bhanu1776/Freelansters/1.png?updatedAt=1682608761055" alt="s" /></div>
+                            className="shape-img1" id='img1'><img loading="lazy" src="https://ik.imagekit.io/bhanu1776/Freelansters/1.png?updatedAt=1682608761055" alt="s" /></div>
 
                         <div
                             data-aos='fade-left'
                             data-aos-offset='150'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                            className="shape-img2"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/2.png?updatedAt=1682608761012" alt="s" /></div>
+                            className="shape-img2"><img loading="lazy" src="https://ik.imagekit.io/bhanu1776/Freelansters/2.png?updatedAt=1682608761012" alt="s" /></div>
 
                         <div
                             data-aos='fade-right'
                             data-aos-offset='200'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                            className="shape-img3"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/3.png?updatedAt=1682608761027" alt="s" /></div>
+                            className="shape-img3"><img loading="lazy" src="https://ik.imagekit.io/bhanu1776/Freelansters/3.png?updatedAt=1682608761027" alt="s" /></div>
 
                         <div
                             data-aos='zoom-in'
                             data-aos-offset='200'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                            className="shape-img4"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/4.png?updatedAt=1682608760997" alt="s" /></div>
+                            className="shape-img4"><img loading="lazy" src="https://ik.imagekit.io/bhanu1776/Freelansters/4.png?updatedAt=1682608760997" alt="s" /></div>
 
                         <div
                             data-aos='fade-left'
                             data-aos-offset='200'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                            className="shape-img5"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/5.png?updatedAt=1682608761058" alt="s" /></div>
+                            className="shape-img5"><img loading="lazy" src="https://ik.imagekit.io/bhanu1776/Freelansters/5.png?updatedAt=1682608761058" alt="s" /></div>
 
                         <div
                             data-aos='fade-down'
                             data-aos-offset='200'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                            className="shape-img6"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/6.png?updatedAt=1682608761020" alt="s" id='redirect' ref={ref} /></div>
+                            className="shape-img6"><img loading="lazy" src="https://ik.imagekit.io/bhanu1776/Freelansters/6.png?updatedAt=1682608761020" alt="s" id='redirect' ref={ref} /></div>
 
                         <div
                             data-aos='fade-left'
                             data-aos-offset='50'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                            className="shape-img7"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/7.png?updatedAt=1682608759198" alt="s" /></div>
+                            className="shape-img7"><img loading="lazy" src="https://ik.imagekit.io/bhanu1776/Freelansters/7.png?updatedAt=1682608759198" alt="s" /></div>
 
                         <div
                             ata-aos='fade-down'
                             data-aos-offset='20'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                            className="shape-img8"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/8.png?updatedAt=1682608757447" alt="s" /></div>
+                            className="shape-img8"><img loading="lazy" src="https://ik.imagekit.io/bhanu1776/Freelansters/8.png?updatedAt=1682608757447" alt="s" /></div>
 
                         <div
                             ata-aos='fade-down'
                             data-aos-offset='200'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                            className="shape-img9"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/9.png?updatedAt=1682608757207" alt="s" /></div>
+                            className="shape-img9"><img loading="lazy" src="https://ik.imagekit.io/bhanu1776/Freelansters/9.png?updatedAt=1682608757207" alt="s" /></div>
 
                         <div
                             ata-aos='fade-down'
                             data-aos-offset='200'
                             data-aos-easing="ease-out"
                             data-aos-duration="4000"
-                            className="shape-img10"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/10.png?updatedAt=1682608757182" alt="s" /></div>
-                        <div className="shape-img11"><img src="https://ik.imagekit.io/bhanu1776/Freelansters/11.png?updatedAt=1682608757190" alt="s" /></div>
+                            className="shape-img10"><img loading="lazy" src="https://ik.imagekit.io/bhanu1776/Freelansters/10.png?updatedAt=1682608757182" alt="s" /></div>
+                        <div className="shape-img11"><img loading="lazy" src="https://ik.imagekit.io/bhanu1776/Freelansters/11.png?updatedAt=1682608757190" alt="s" /></div>
                     </div>
                 </article>
 

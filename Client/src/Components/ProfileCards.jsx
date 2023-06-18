@@ -32,7 +32,7 @@ const ProfileCards = (props) => {
 
               <div className="profile-img-name">
                 <div className="profile-img">
-                  <img src={props.proImg} alt="" />
+                  <img src={props.proImg} alt="" loading="lazy"/>
                 </div>
                 <div>
                   <div className="profile-name-stars">

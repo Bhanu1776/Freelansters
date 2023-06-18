@@ -2,7 +2,6 @@ import React, { useEffect, useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { UserContext } from "../Routing";
 import styled from "styled-components";
-import Images from "../Img/imgindex";
 /* eslint-disable no-unused-vars */
 
 const Navbar = (props) => {
@@ -64,7 +63,7 @@ const Navbar = (props) => {
         <nav id="navbar">
           <div className="d-logo">
             <span id="logo">
-              <img className="Logo" src="https://ik.imagekit.io/bhanu1776/Freelansters/freelansters-logo1.png?updatedAt=1682608753529" alt="Freelansters" />
+              <img className="Logo" src="https://ik.imagekit.io/bhanu1776/Freelansters/freelansters-logo1.png?updatedAt=1682608753529" alt="Freelansters" loading="lazy" />
             </span>
           </div>
           <ul>

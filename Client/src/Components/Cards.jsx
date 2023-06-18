@@ -83,6 +83,7 @@ const Cards = (curElem) => {
               <img
                 src={`https://source.unsplash.com/1600x900/?${title}`}
                 alt="Video"
+                loading="lazy"
               />
             </div>
             <div className="cate-content">

@@ -1,5 +1,4 @@
 import React from "react";
-import Images from "../Img/imgindex.js";
 import styled from "styled-components";
 
 const About = () => {
@@ -174,7 +173,7 @@ const About = () => {
               className="about-card"
             >
               <div className="img">
-                <img src="https://ik.imagekit.io/bhanu1776/Freelansters/osama.jpg?updatedAt=1682608749618" alt="" />
+                <img src="https://ik.imagekit.io/bhanu1776/Freelansters/osama.jpg?updatedAt=1682608749618" alt="" loading="lazy"/>
               </div>
               <div className="info">
                 <h3>Osama Shaikh</h3>
@@ -214,7 +213,7 @@ const About = () => {
               className="about-card"
             >
               <div className="img">
-                <img src="https://ik.imagekit.io/bhanu1776/Freelansters/bhanu.jpg?updatedAt=1682608756655" alt="" />
+                <img src="https://ik.imagekit.io/bhanu1776/Freelansters/bhanu.jpg?updatedAt=1682608756655" alt="" loading="lazy" />
               </div>
               <div className="info">
                 <h3>Bhanu Sunka</h3>
@@ -263,7 +262,7 @@ const About = () => {
               className="about-card"
             >
               <div className="img">
-                <img src="https://ik.imagekit.io/bhanu1776/Freelansters/harsh.jpg?updatedAt=1682608753482" alt="" />
+                <img src="https://ik.imagekit.io/bhanu1776/Freelansters/harsh.jpg?updatedAt=1682608753482" alt="" loading="lazy"/>
               </div>
               <div className="info">
                 <h3>Harsh Dalvi</h3>

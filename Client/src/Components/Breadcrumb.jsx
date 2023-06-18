@@ -35,6 +35,7 @@ const Wrapper = styles.section`
   display: flex;
   height: 30px;
   width:100px ;
+  color:white;
   margin: 5px 0px 0px 5px;
   justify-content: center;
   position:absolute;
