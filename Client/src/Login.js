@@ -28,7 +28,7 @@ const Login = () => {
     const PostData = async (e) => {
         e.preventDefault();
         const { name, email, phone, password, cpassword } = user;
-        const res = await fetch("/register", {
+        const res = await fetch("https://freelansters-backend.onrender.com/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -60,7 +60,7 @@ const Login = () => {
     const [logpass, setlogPass] = useState('');
     const loginUser = async (e) => {
         e.preventDefault();
-        const res = await fetch('/Login', {
+        const res = await fetch('https://freelansters-backend.onrender.com/Login', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
