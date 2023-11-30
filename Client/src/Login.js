@@ -5,7 +5,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import './Login.css'
 import 'react-toastify/dist/ReactToastify.css';
 import CustomizedBreadcrumbs from './Components/Breadcrumb.jsx';
-import newRequest from './utils/newRequest.js';
 // import './Styles/Modal.scss'
 /* eslint-disable no-unused-vars */
 
@@ -29,7 +28,7 @@ const Login = () => {
     const PostData = async (e) => {
         e.preventDefault();
         const { name, email, phone, password, cpassword } = user;
-        const res = await fetch("http://localhost:5000/register", {
+        const res = await fetch(process.env.BACKEND_URL+"/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -93,7 +92,7 @@ const Login = () => {
 
     const loginUser = async (e) => {
         e.preventDefault();
-        const res = await fetch('http://localhost:5000/Login', { 
+        const res = await fetch(process.env.BACKEND_URL+'/Login', { 
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

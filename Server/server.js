@@ -14,31 +14,16 @@ const FFSchema = require('./model/FFSchema');
 const tempSchema = require('./model/tempSchema');
 
 app.use(cors({
-    origin: ["http://localhost:3000", "https://freelansters-lsng-4r9xvmlr8-bhanu1776.vercel.app"],
+    origin: ["http://localhost:3000", process.env.BASE_URL],
     credentials: true,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     allowedHeaders: "Content-Type,Authorization",
-  }));  
+  }));
 
-app.use(express.json());                        // To convert the json files into objects, just to understand the javascript
+app.use(express.json());                        
 app.use(cookie_parser());
 app.use(require('./router/auth'));
 
-// if (process.env.NODE_ENV == "production") {
-//     const path = require("path");
-
-//     app.get('/', (req, res) => {
-//         app.use(express.static(path.resolve(__dirname, 'Client', 'build')))
-//         res.sendFile(path.resolve(__dirname, 'Client', 'build', 'index.html'))
-//     })
-// }
-
-
-
-// app.use(cors({   
-//     origin: 'https://your-frontend-domain.com', // Replace with your frontend domain
-//     credentials: true,
-//   }));
 
 app.get('/', (req, res) => {
     res.send("Reserved for Freelansters.com");
