@@ -16,16 +16,18 @@ app.use(express.json());                        // To convert the json files int
 app.use(cookie_parser());
 app.use(require('./router/auth'));
 
-if (process.env.NODE_ENV == "production") {
-    const path = require("path");
+// if (process.env.NODE_ENV == "production") {
+//     const path = require("path");
 
-    app.get('/', (req, res) => {
-        app.use(express.static(path.resolve(__dirname, 'Client', 'build')))
-        res.sendFile(path.resolve(__dirname, 'Client', 'build', 'index.html'))
-    })
-}
+//     app.get('/', (req, res) => {
+//         app.use(express.static(path.resolve(__dirname, 'Client', 'build')))
+//         res.sendFile(path.resolve(__dirname, 'Client', 'build', 'index.html'))
+//     })
+// }
 
-
+app.get('/', (req, res) => {
+    res.send("Reserved for Freelansters.com");
+})
 
 app.get('/Login', (req, res) => {
     res.send('Hello world from the Login server');
