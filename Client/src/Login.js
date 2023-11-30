@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import './Login.css'
 import 'react-toastify/dist/ReactToastify.css';
 import CustomizedBreadcrumbs from './Components/Breadcrumb.jsx';
+import newRequest from './utils/newRequest.js';
 // import './Styles/Modal.scss'
 /* eslint-disable no-unused-vars */
 
@@ -28,7 +29,7 @@ const Login = () => {
     const PostData = async (e) => {
         e.preventDefault();
         const { name, email, phone, password, cpassword } = user;
-        const res = await fetch("https://freelansters-backend.onrender.com/register", {
+        const res = await fetch("http://localhost:5000/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -58,19 +59,51 @@ const Login = () => {
     //* Login Auth
     const [logemail, setlogEmail] = useState('');
     const [logpass, setlogPass] = useState('');
+
+    // const loginUser = async (e) => {
+    //     try {
+    //       e.preventDefault();
+    //       const res = await newRequest.post("/Login", {
+    //         email: logemail,    
+    //         password: logpass
+    //       });
+
+    //     const data = res.json(  );
+    //     if (res.status === 400 || !data) {
+    //         toast.error("Invalid Credentials", {
+    //             position: "bottom-right",
+    //             theme: "colored"
+    //         });
+    //     } else {
+    //         dispatch({ type: "USER", payload: true })
+    //         toast.success("Login Successful", {
+    //             position: "bottom-right",
+    //             theme: "colored"
+    //         });
+    //         setTimeout(() => {
+    //             navigate('/FindJobs')
+    //         }, 2000);
+    //     }
+    
+    //     } catch (error) {
+    //       console.error("Error decoding credentialResponse:", error);
+    //     }
+    //   };
+    
+
     const loginUser = async (e) => {
         e.preventDefault();
-        const res = await fetch('https://freelansters-backend.onrender.com/Login', {
+        const res = await fetch('http://localhost:5000/Login', { 
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                email: logemail,
+                email: logemail,    
                 password: logpass
             })
-        });
-        const data = res.json();
+        }); 
+        const data = res.json(  );
         if (res.status === 400 || !data) {
             toast.error("Invalid Credentials", {
                 position: "bottom-right",

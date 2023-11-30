@@ -1,8 +1,8 @@
 const dotenv = require('dotenv');
 const express = require('express');
+const cors = require('cors');   
 const cookie_parser = require('cookie-parser')
 const app = express();
-const cors = require('cors');
 
 dotenv.config({ path: './config.env' });
 
@@ -12,6 +12,13 @@ require('./db/conn.js')
 const FJSchema = require('./model/FJSchema');
 const FFSchema = require('./model/FFSchema');
 const tempSchema = require('./model/tempSchema');
+
+app.use(cors({
+    origin: ["http://localhost:3000", "https://freelansters-lsng-4r9xvmlr8-bhanu1776.vercel.app"],
+    credentials: true,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    allowedHeaders: "Content-Type,Authorization",
+  }));  
 
 app.use(express.json());                        // To convert the json files into objects, just to understand the javascript
 app.use(cookie_parser());
@@ -26,7 +33,12 @@ app.use(require('./router/auth'));
 //     })
 // }
 
-app.use(cors({ origin: ["http://localhost:3000","https://freelansters-backend.onrender.com"], credentials: true }));
+
+
+// app.use(cors({   
+//     origin: 'https://your-frontend-domain.com', // Replace with your frontend domain
+//     credentials: true,
+//   }));
 
 app.get('/', (req, res) => {
     res.send("Reserved for Freelansters.com");
