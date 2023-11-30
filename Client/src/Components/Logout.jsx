@@ -10,7 +10,7 @@ const Logout = () => {
 
   // * Promises
   useEffect(() => {
-    fetch("/Logout", {
+    fetch(process.env.BACKEND_URL+"/Logout", {
       method: "GET",
       headers: {
         Accept: "application/json",

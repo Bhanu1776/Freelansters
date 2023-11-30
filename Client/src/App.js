@@ -38,7 +38,7 @@ const App = () => {
 
     const userHomePage = async () => {
         try {
-            const res = await fetch('/getdata', {
+            const res = await fetch(process.env.BACKEND_URL+'/getdata', {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"

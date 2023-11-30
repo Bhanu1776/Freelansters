@@ -23,7 +23,7 @@ const FilterJobs = ({ children }) => {
     const getJobs = async () => {
         dispatch({ type: "SET_LOADING" });
         try {
-            const res = await fetch("/JobsFetch", {
+            const res = await fetch(process.env.BACKEND_URL+"/JobsFetch", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -41,7 +41,7 @@ const FilterJobs = ({ children }) => {
     const getSingleJob = async (_id) => {
         dispatch({ type: "SET_SINGLE_LOADING" });
         try {
-            const res = await fetch("/JobsFetch", {
+            const res = await fetch(process.env.BACKEND_URL+"/JobsFetch", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

@@ -32,7 +32,7 @@ const FindJobs = () => {
     const callFJ = async () => {
 
         try {
-            const res = await fetch('/Findjobs', {
+            const res = await fetch(process.env.BACKEND_URL+'/Findjobs', {
                 method: "GET",                        //! IMP
                 headers: {
                     Accept: "application/json",
