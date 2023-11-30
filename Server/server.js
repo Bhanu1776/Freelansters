@@ -2,6 +2,7 @@ const dotenv = require('dotenv');
 const express = require('express');
 const cookie_parser = require('cookie-parser')
 const app = express();
+const cors = require('cors');
 
 dotenv.config({ path: './config.env' });
 
@@ -24,6 +25,8 @@ app.use(require('./router/auth'));
 //         res.sendFile(path.resolve(__dirname, 'Client', 'build', 'index.html'))
 //     })
 // }
+
+app.use(cors({ origin: ["http://localhost:3000","https://freelansters-backend.onrender.com"], credentials: true }));
 
 app.get('/', (req, res) => {
     res.send("Reserved for Freelansters.com");
