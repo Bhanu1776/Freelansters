@@ -1,10 +1,11 @@
 const dotenv = require('dotenv');
 const express = require('express');
-const cors = require('cors');   
+const cors = require('cors');
 const cookie_parser = require('cookie-parser')
 const app = express();
-
-dotenv.config({ path: './config.env' });
+dotenv.config({
+    path: './.env'
+})
 
 const PORT = process.env.PORT || 5000;
 require('./db/conn.js')
@@ -14,13 +15,13 @@ const FFSchema = require('./model/FFSchema');
 const tempSchema = require('./model/tempSchema');
 
 app.use(cors({
-    origin: ["http://localhost:3000", process.env.BASE_URL],
+    origin: process.env.CORS_ORIGIN,
     credentials: true,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     allowedHeaders: "Content-Type,Authorization",
-  }));
+}));
 
-app.use(express.json());                        
+app.use(express.json());
 app.use(cookie_parser());
 app.use(require('./router/auth'));
 
@@ -32,9 +33,12 @@ app.get('/', (req, res) => {
 app.get('/Login', (req, res) => {
     res.send('Hello world from the Login server');
 })
-app.get('/register', (req, res) => {
-    res.send('Hello world from the Login server');
-})
+
+// This is dummy code for testing purpose
+
+// app.get('/register', (req, res) => {
+//     res.send('Hello world from the Login server');
+// })
 
 app.post('/Jobs', (req, res) => {
     const Jobs = FJSchema(req.body);
